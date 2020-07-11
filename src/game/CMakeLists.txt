@@ -8,20 +8,38 @@
 # WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-if (USE_COREPCH)
-  include_directories(${CMAKE_CURRENT_BINARY_DIR})
-endif()
+set(LIBRARY_NAME game)
 
-file(GLOB sources_localdir *.cpp *.h)
+add_definitions(-DDT_POLYREF64)
+add_definitions(-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0)
 
-# Create game-libary
+# Find all the input files
+FILE(GLOB_RECURSE LIBRARY_SRCS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "*.h" "*.cpp")
 
-if (USE_COREPCH AND MSVC)
-  set(game_STAT_SRCS
-    PrecompiledHeaders/gamePCH.cpp
-    PrecompiledHeaders/gamePCH.h
-  )
-endif()
+set(PCH_BASE_FILENAME "pchdef")
+# exclude pchdef files
+set (EXCLUDE_FILE "${PCH_BASE_FILENAME}")
+foreach (TMP_PATH ${LIBRARY_SRCS})
+    string (FIND ${TMP_PATH} ${EXCLUDE_FILE} EXCLUDE_FILE_FOUND)
+    if (NOT ${EXCLUDE_FILE_FOUND} EQUAL -1)
+        list(REMOVE_ITEM LIBRARY_SRCS ${TMP_PATH})
+    endif ()
+endforeach()
+# set pch file names
+set(PCH_FILE_HEADER "${PCH_BASE_FILENAME}.h")
+set(PCH_FILE_SOURCE "${PCH_BASE_FILENAME}.cpp")
+
+# Create visual studio groups using folder structure
+foreach(source ${LIBRARY_SRCS})
+    get_filename_component(source_path "${source}" PATH)
+    string(REPLACE "/" "\\" source_path_msvc "${source_path}")
+    source_group("${source_path_msvc}" FILES "${source}")
+endforeach()
+
+add_library(${LIBRARY_NAME} STATIC
+  ${LIBRARY_SRCS}
+)
+
 
 set(game_STAT_SRCS
   ${game_STAT_SRCS}
@@ -47,19 +65,28 @@ include_directories(
   ${OPENSSL_INCLUDE_DIR}
 )
 
-GroupSources(${CMAKE_CURRENT_SOURCE_DIR})
+if(UNIX)
+  # Both systems don't have libdl and don't need them
+  if (NOT (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD"))
+    target_link_libraries(${LIBRARY_NAME} PUBLIC dl)
+  endif()
+endif()
 
-add_library(game STATIC ${game_STAT_SRCS})
+# Define BUILD_SCRIPTDEV if need
+if (BUILD_SCRIPTDEV)
+  add_definitions(-DBUILD_SCRIPTDEV)
+endif()
 
+# Define BUILD_PLAYERBOT if need
+if (BUILD_PLAYERBOT)
+  add_definitions(-DBUILD_PLAYERBOT)
+endif()
 add_dependencies(game revision.h)
+if (MSVC)
+  set_target_properties(${LIBRARY_NAME} PROPERTIES PROJECT_LABEL "Game")
+endif()
 
 # Generate precompiled header
-if (USE_COREPCH)
-  if (CMAKE_COMPILER_IS_GNUCXX)
-    add_precompiled_header(game ${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders/gamePCH.h)
-  elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-    add_clang_pch(game "${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders" "gamePCH.h" "gamePCH.cpp")
-  elseif (MSVC)
-    add_native_precompiled_header(game ${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders/gamePCH)
-  endif()
+if(USE_COREPCH)
+  target_precompile_headers(${LIBRARY_NAME} PRIVATE "${PCH_FILE_HEADER}")
 endif()

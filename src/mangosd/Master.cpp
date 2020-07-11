@@ -106,7 +106,7 @@ Master::~Master()
 }
 
 // Main function
-int Master::Run(bool runTests)
+int Master::Run()
 {
     int defaultStderr = dup(2);
 
@@ -244,15 +244,6 @@ int Master::Run(bool runTests)
     // Init new SQL thread for the world database
     WorldDatabase.ThreadStart();                    // let thread do safe mySQL requests (one connection call enough)
     sWorld.InitResultQueue();
-
-    // Run regression tests, then gracefully exit with particular exit code
-    if (runTests)
-    {
-        if (RunRegressionTests())
-            World::StopNow(SHUTDOWN_EXIT_CODE);
-        else
-            World::StopNow(ERROR_EXIT_CODE);
-    }
 
     // Run our World, we use main thread for this,
     MainLoop();
@@ -426,12 +417,6 @@ void Master::_UnhookSignals()
     #ifdef _WIN32
     signal(SIGBREAK, 0);
     #endif
-}
-
-bool Master::RunRegressionTests()
-{
-    RegressionTestSuite suite;
-    return suite.RunAll();
 }
 
 // Heartbeat for the World

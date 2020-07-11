@@ -35,7 +35,7 @@
 #include "GameEventMgr.h"
 #include "Spell.h"
 #include "Chat.h"
-#include "AccountMgr.h"
+#include "Accounts/AccountMgr.h"
 #include "InstanceSaveMgr.h"
 #include "SpellAuras.h"
 #include "Utilities/Util.h"

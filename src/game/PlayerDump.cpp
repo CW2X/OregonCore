@@ -21,7 +21,7 @@
 #include "Database/SQLStorage.h"
 #include "UpdateFields.h"
 #include "ObjectMgr.h"
-#include "AccountMgr.h"
+#include "Accounts/AccountMgr.h"
 
 // Character Dump tables
 #define DUMP_TABLE_COUNT 19

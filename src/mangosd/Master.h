@@ -20,7 +20,6 @@
 
 #include "Common.h"
 #include "Policies/Singleton.h"
-#include "RegressionTests/RegressionTest.h"
 
 // Start the server
 class Master
@@ -28,10 +27,9 @@ class Master
     public:
         Master();
         ~Master();
-        int Run(bool runTests);
+        int Run();
         static volatile uint32 m_masterLoopCounter;
 
-        bool RunRegressionTests();
     private:
         void _StartDB();
 

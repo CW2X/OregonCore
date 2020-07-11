@@ -10,7 +10,6 @@
 
 file(GLOB sources_localdir
   *.cpp
-  RegressionTests/*.cpp
 )
 
 set(mangos-core_SRCS

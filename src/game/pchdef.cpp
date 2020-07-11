@@ -15,25 +15,4 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __MANGOS_REGRESSION_TEST_H_DEFINED__
-#define __MANGOS_REGRESSION_TEST_H_DEFINED__
-
-#include "Common.h"
-
-class RegressionTestSuite
-{
-    public:
-        RegressionTestSuite();
-        ~RegressionTestSuite();
-
-        bool RunAll();
-    protected:
-        bool Run(bool(RegressionTestSuite::*)(), const char* comment);
-
-        bool TestBreathingIssues();
-
-        uint32 m_failedTestsCounter = 0;
-        uint32 m_passedTestsCounter = 0;
-};
-
-#endif // __MANGOS_REGRESSION_TEST_H_DEFINED__
+#include "pchdef.h"

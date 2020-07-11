@@ -40,7 +40,7 @@
 #include "ScriptMgr.h"
 #include "CreatureAI.h"
 #include "GameObjectAI.h"
-#include "AccountMgr.h"
+#include "Accounts/AccountMgr.h"
 #include "Item.h"
 
 void WorldSession::HandleRepopRequestOpcode(WorldPacket& recv_data)

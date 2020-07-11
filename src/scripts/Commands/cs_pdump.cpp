@@ -1,7 +1,7 @@
 #include "Player.h"
 #include "ScriptMgr.h"
 #include "Language.h"
-#include "AccountMgr.h"
+#include "Accounts/AccountMgr.h"
 #include "PlayerDump.h"
 
 class pdump_commandscript : CommandScript

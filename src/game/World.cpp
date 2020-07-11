@@ -29,7 +29,7 @@
 #include "SkillExtraItems.h"
 #include "SkillDiscovery.h"
 #include "World.h"
-#include "AccountMgr.h"
+#include "Accounts/AccountMgr.h"
 #include "AuctionHouseMgr.h"
 #include "ObjectMgr.h"
 #include "SpellMgr.h"

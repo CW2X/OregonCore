@@ -68,7 +68,6 @@ void usage(const char* prog)
                    "    -s install               install service\n\r"
                    "    -s uninstall             uninstall service\n\r"
                    #endif
-                   "    -t --run-tests           run regression tests and exit\n\r"
                    , prog);
 }
 
@@ -83,8 +82,6 @@ extern int main(int argc, char** argv)
     #else
     char const* options = ":c:";
     #endif
-
-    bool runRegressionTtests = false;
 
     ACE_Get_Opt cmd_opts(argc, argv, options);
     cmd_opts.long_option("version", 'v');
@@ -129,9 +126,6 @@ extern int main(int argc, char** argv)
                 break;
             }
             #endif
-        case 't':
-            runRegressionTtests = true;
-            break;
         case ':':
             sLog.outError("Runtime-Error: -%c option requires an input argument", cmd_opts.opt_opt());
             usage(argv[0]);
@@ -168,7 +162,7 @@ extern int main(int argc, char** argv)
 
     // and run the 'Master'
     // todo - Why do we need this 'Master'? Can't all of this be in the Main as for Realmd?
-    int exitcode = sMaster.Run(runRegressionTtests);
+    int exitcode = sMaster.Run();
     if (exitcode == 2)
     {
         /* We need to close all fds except the standard ones,

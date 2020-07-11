@@ -25,7 +25,7 @@
 #include "Database/SQLStorage.h"
 #include "DBCStores.h"
 #include "ScriptMgr.h"
-#include "AccountMgr.h"
+#include "Accounts/AccountMgr.h"
 #include "AuctionHouseMgr.h"
 #include "Item.h"
 #include "Language.h"

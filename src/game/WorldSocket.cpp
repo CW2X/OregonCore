@@ -33,7 +33,7 @@
 #include "WorldPacket.h"
 #include "SharedDefines.h"
 #include "ByteBuffer.h"
-#include "AddonHandler.h"
+#include "Addons/AddonHandler.h"
 #include "Opcodes.h"
 #include "Database/DatabaseEnv.h"
 #include "Auth/Sha1.h"
