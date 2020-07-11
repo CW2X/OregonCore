@@ -1,7 +1,7 @@
 
 #include "Console.h"
 #include "Log.h"
-#include "World.h"
+#include "World/World.h"
 #include "TicketMgr.h"
 #include "revision.h"
 

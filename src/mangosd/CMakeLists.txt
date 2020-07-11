@@ -31,7 +31,6 @@ include_directories(
   ${CMAKE_SOURCE_DIR}/dep/sockets/include
   ${CMAKE_SOURCE_DIR}/dep/SFMT
   ${CMAKE_SOURCE_DIR}/dep/mersennetwister
-  ${CMAKE_SOURCE_DIR}/src/collision
   ${CMAKE_SOURCE_DIR}/dep/g3dlite/include
   ${CMAKE_SOURCE_DIR}/src/shared
   ${CMAKE_SOURCE_DIR}/src/shared/Database
@@ -64,9 +63,7 @@ set_target_properties(mangos-core PROPERTIES LINK_FLAGS "${mangos-core_LINK_FLAG
 target_link_libraries(mangos-core
   game
   shared
-  scripts
   mangosframework
-  collision
   g3dlib
   gsoap
   Recast

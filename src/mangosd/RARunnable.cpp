@@ -19,7 +19,7 @@
 #include "Config/Config.h"
 #include "Log.h"
 #include "RARunnable.h"
-#include "World.h"
+#include "World/World.h"
 
 #include <ace/Reactor_Impl.h>
 #include <ace/TP_Reactor.h>

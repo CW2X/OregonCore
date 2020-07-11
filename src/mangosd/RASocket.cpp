@@ -22,7 +22,7 @@
 #include "Log.h"
 #include "RASocket.h"
 #include "Utilities/Util.h"
-#include "World.h"
+#include "World/World.h"
 #include "Auth/Sha1.h"
 
 RASocket::RASocket()
