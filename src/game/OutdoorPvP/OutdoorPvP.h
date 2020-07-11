@@ -19,7 +19,7 @@
 #define OUTDOOR_PVP_H_
 
 #include "Utilities/Util.h"
-#include "AI/ScriptDevAI//scripts/world/ZoneScript.h"
+#include "AI/ScriptDevAI/scripts/world/ZoneScript.h"
 
 class GameObject;
 
@@ -258,5 +258,6 @@ class OutdoorPvP : public ZoneScript
 };
 
 #endif /*OUTDOOR_PVP_H_*/
+
 
 

@@ -1,4 +1,4 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 enum GateWatcherIronHand
@@ -103,4 +103,5 @@ void AddSC_boss_gatewatcher_iron_hand()
 {
     new boss_gatewatcher_iron_hand();
 }
+
 

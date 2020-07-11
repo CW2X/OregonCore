@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -635,4 +635,5 @@ class CreatureEventAI : public CreatureAI
         uint32 InvinceabilityHpLevel;                       // Minimal health level allowed at damage apply
 };
 #endif
+
 

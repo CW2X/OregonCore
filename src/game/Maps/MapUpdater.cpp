@@ -135,3 +135,4 @@ void MapUpdater::update_finished()
     m_condition.broadcast();
 }
 
+

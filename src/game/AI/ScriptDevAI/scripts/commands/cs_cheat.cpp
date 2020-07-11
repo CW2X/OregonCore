@@ -1,6 +1,6 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
-#include "ChannelMgr.h"
+#include "Chat/ChannelMgr.h"
 #include "Tools/Language.h"
 #include "Entities/Player.h"
 
@@ -264,3 +264,4 @@ void AddSC_cheat_commandscript()
 {
     new cheat_commandscript();
 }
+

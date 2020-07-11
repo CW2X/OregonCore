@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,16 +19,16 @@
 #include "AI/EventAI/CreatureEventAI.h"
 #include "AI/EventAI/CreatureEventAIMgr.h"
 #include "Globals/ObjectMgr.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "World/World.h"
 #include "Grids/Cell.h"
 #include "Grids/CellImpl.h"
-#include "GameEventMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "Grids/GridNotifiers.h"
 #include "Grids/GridNotifiersImpl.h"
 #include "Maps/InstanceData.h"
-#include "Spell.h"
-#include "SpellMgr.h"
+#include "Spells/Spell.h"
+#include "Spells/SpellMgr.h"
 #include "AI/BaseAI/CreatureAIImpl.h"
 #include "Globals/Conditions.h"
 
@@ -1409,4 +1409,5 @@ bool CreatureEventAI::SpawnedEventConditionsCheck(CreatureEventAI_Event const& e
 
     return false;
 }
+
 

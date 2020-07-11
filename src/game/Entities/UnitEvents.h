@@ -134,3 +134,4 @@ class ThreatManagerEvent : public ThreatRefStatusChangeEvent
 #endif
 
 
+

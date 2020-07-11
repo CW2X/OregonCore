@@ -172,3 +172,4 @@ void CinematicMgr::UpdateCinematicLocation(uint32 /*diff*/)
         EndCinematic();
 }
 
+

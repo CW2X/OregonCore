@@ -527,3 +527,4 @@ bool TileAssembler::convertRawFile(const std::string& pModelFilename)
 #undef CMP_OR_RETURN
     }
 
+

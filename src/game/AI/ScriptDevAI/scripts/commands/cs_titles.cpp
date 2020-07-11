@@ -1,7 +1,7 @@
-#include "DBScripts/ScriptMgr.h"
-#include "GameEventMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "Globals/ObjectMgr.h"
-#include "PoolMgr.h"
+#include "Pools/PoolMgr.h"
 #include "Maps/MapManager.h"
 #include "Chat/Chat.h"
 #include "Tools/Language.h"
@@ -210,3 +210,4 @@ void AddSC_titles_commandscript()
 {
     new titles_commandscript();
 }
+

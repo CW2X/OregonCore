@@ -420,3 +420,4 @@ template GameObject* ObjectAccessor::GetObjectInWorld<GameObject>(uint32 mapid, 
 template DynamicObject* ObjectAccessor::GetObjectInWorld<DynamicObject>(uint32 mapid, float x, float y, uint64 guid, DynamicObject* /*fake*/);
 
 
+

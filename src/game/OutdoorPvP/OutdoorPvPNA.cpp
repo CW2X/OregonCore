@@ -651,3 +651,4 @@ void OPvPCapturePointNA::UpdateWyvernRoostWorldState(uint32 roost)
 }
 
 
+

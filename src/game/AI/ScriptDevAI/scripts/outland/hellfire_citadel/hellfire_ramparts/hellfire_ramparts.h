@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,3 +23,4 @@
 #define DATA_VAZRUDEN              3
 
 #endif
+

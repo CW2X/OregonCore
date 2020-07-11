@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -27,3 +27,4 @@
 #include "Server/Opcodes.h"
 #include "Globals/SharedDefines.h"
 #include "Globals/ObjectMgr.h"
+

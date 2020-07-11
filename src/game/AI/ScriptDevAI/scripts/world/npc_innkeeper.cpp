@@ -1,4 +1,4 @@
-/*
+ï»¿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,7 +24,7 @@ EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "GameEventMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 #define HALLOWEEN_EVENTID       12
@@ -33,8 +33,8 @@ EndScriptData */
 
 #define LOCALE_TRICK_OR_TREAT_0 "Trick or Treat!"
 #define LOCALE_TRICK_OR_TREAT_2 "Des bonbons ou des blagues!"
-#define LOCALE_TRICK_OR_TREAT_3 "Süßes oder Saures!"
-#define LOCALE_TRICK_OR_TREAT_6 "¡Truco o trato!"
+#define LOCALE_TRICK_OR_TREAT_3 "Sï¿½ï¿½es oder Saures!"
+#define LOCALE_TRICK_OR_TREAT_6 "ï¿½Truco o trato!"
 
 class npc_innkeeper : public CreatureScript
 {
@@ -145,4 +145,5 @@ void AddSC_npc_innkeeper()
 {
     new npc_innkeeper();
 }
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,8 @@
  SDCategory: Karazhan
  EndScriptData */
 
-#include "ScriptPCH.h"
+#include "DBScripts/ScriptMgr.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "karazhan.h"
 
  //phase 1
@@ -503,4 +504,5 @@ void AddSC_boss_nightbane()
 {
     new boss_nightbane();
 }
+
 

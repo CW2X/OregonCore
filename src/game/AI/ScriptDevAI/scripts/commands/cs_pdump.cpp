@@ -1,4 +1,4 @@
-#include "Entities/Player.h"
+﻿#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Tools/Language.h"
 #include "Accounts/AccountMgr.h"
@@ -194,3 +194,4 @@ void AddSC_pdump_commandscript()
 {
     new pdump_commandscript();
 }
+

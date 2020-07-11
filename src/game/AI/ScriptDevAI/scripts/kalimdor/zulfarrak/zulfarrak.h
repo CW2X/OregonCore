@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -63,3 +63,4 @@ enum blyAndCrewFactions
     FACTION_FRIENDLY = 35, //while in cages (so the trolls won't attack them while they're caged)
     FACTION_FREED = 250 //after release (so they'll be hostile towards trolls)
 };
+

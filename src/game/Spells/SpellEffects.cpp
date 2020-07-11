@@ -7463,3 +7463,4 @@ void Spell::EffectSummonFriend(SpellEffIndex /*effIndex*/)
     }
 }
 
+

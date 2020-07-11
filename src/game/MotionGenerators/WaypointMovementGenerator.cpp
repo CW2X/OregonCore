@@ -371,3 +371,4 @@ void FlightPathMovementGenerator::PreloadEndGrid()
         sLog.outDetail("Unable to determine map to preload flightmaster grid");
 }
 
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,6 +24,7 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
+#include "AI/BaseAI/PassiveAI.h"
 #include "steam_vault.h"
 #include "Grids/GridNotifiers.h"
 #include "Grids/Cell.h"
@@ -226,4 +227,5 @@ void AddSC_boss_warlord_kalithresh()
     new mob_naga_distiller();
     new boss_warlord_kalithresh();
 }
+
 

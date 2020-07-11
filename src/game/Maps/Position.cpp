@@ -212,3 +212,4 @@ ByteBuffer& operator>>(ByteBuffer& buf, Position::PositionXYZOStreamer const& st
     return buf;
 }
 
+

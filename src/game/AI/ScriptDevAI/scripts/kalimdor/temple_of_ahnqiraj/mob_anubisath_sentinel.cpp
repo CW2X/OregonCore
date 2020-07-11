@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -28,7 +28,7 @@
 
 #include "Entities/Item.h"
 #include "Entities/Player.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 
 #include "Grids/Cell.h"
 #include "Grids/CellImpl.h"
@@ -265,3 +265,4 @@ void AddSC_npc_anubisath_sentinel()
 {
 	new npc_anubisath_sentinel();
 }
+

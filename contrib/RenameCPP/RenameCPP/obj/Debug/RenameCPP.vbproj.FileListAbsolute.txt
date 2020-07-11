@@ -10,3 +10,15 @@ C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.vbpr
 C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.exe
 C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.xml
 C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.pdb
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\bin\Debug\RenameCPP.exe.config
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\bin\Debug\RenameCPP.exe
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\bin\Debug\RenameCPP.pdb
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\bin\Debug\RenameCPP.xml
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\obj\Debug\RenameCPP.vbprojAssemblyReference.cache
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\obj\Debug\RenameCPP.Form1.resources
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\obj\Debug\RenameCPP.Resources.resources
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\obj\Debug\RenameCPP.vbproj.GenerateResource.cache
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\obj\Debug\RenameCPP.vbproj.CoreCompileInputs.cache
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\obj\Debug\RenameCPP.exe
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\obj\Debug\RenameCPP.xml
+F:\WOWServer\Source\OregonCore-Rebase\contrib\RenameCPP\RenameCPP\obj\Debug\RenameCPP.pdb

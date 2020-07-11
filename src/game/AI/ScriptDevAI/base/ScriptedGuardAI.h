@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -53,4 +53,5 @@ struct guardAI_stormwind : public guardAI
     void ReceiveEmote(Player* player, uint32 text_emote);
 };
 #endif
+
 

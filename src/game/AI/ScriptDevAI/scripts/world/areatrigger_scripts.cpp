@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -236,3 +236,4 @@ void AddSC_areatrigger_scripts()
     new AreaTrigger_at_ancient_leaf();
     new AreaTrigger_at_haramad_teleport();
 }
+

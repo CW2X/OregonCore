@@ -1,7 +1,7 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
-#include "Entities/Group.h"
-#include "InstanceSaveMgr.h"
+#include "Groups/Group.h"
+#include "Maps/InstanceSaveMgr.h"
 #include "Maps/InstanceData.h"
 #include "Maps/MapManager.h"
 #include "Entities/Player.h"
@@ -140,3 +140,4 @@ void AddSC_instance_commandscript()
 {
     new instance_commandscript();
 }
+

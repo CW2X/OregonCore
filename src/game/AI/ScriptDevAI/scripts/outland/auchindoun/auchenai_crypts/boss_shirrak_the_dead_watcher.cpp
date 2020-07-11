@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,6 +24,7 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
+#include "Spells/SpellAuras.h"
 
 enum eShirrak
 {
@@ -240,4 +241,5 @@ void AddSC_boss_shirrak_the_dead_watcher()
     new boss_shirrak_the_dead_watcher();
     new mob_focus_fire();
 }
+
 

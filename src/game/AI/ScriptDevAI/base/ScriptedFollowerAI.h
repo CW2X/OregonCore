@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef SC_FOLLOWERAI_H
 #define SC_FOLLOWERAI_H
 
-#include "ScriptSystem.h"
+#include "AI/ScriptDevAI/system/ScriptSystem.h"
 
 enum eFollowState
 {
@@ -87,4 +87,5 @@ class FollowerAI : public ScriptedAI
 };
 
 #endif
+
 

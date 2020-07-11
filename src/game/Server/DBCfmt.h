@@ -95,3 +95,4 @@ const char WorldSafeLocsEntryfmt[] = "nifffxxxxxxxxxxxxxxxxx";
 #endif
 
 
+

@@ -22,12 +22,13 @@ Public Class Form1
         Next
 
         'rewrite header inside
-        For Each d In dil
-            Dim fil As FileInfo() = d.GetFiles
-            For Each f In fil
-                rewriteheader(f.FullName, dictFI)
-            Next
-        Next
+        'For Each d In dil
+        '    Dim fil As FileInfo() = d.GetFiles
+        '    For Each f In fil
+        '        rewriteheader(f.FullName, dictFI)
+        '    Next
+        'Next
+        GetAllFiles("F:\WOWServer\Source\OregonCore-Rebase\src\game", dictFI)
         MsgBox("done")
     End Sub
 
@@ -79,4 +80,31 @@ Public Class Form1
         sr.Close()
         sr = Nothing
     End Sub
+
+
+    Private Sub GetAllFiles(ByVal strDirect As String, ByVal dict As Dictionary(Of String, String))  '搜索所有目录下的文件
+        If Not (strDirect Is Nothing) Then
+            Dim mFileInfo As System.IO.FileInfo
+            Dim mDir As System.IO.DirectoryInfo
+            Dim mDirInfo As New System.IO.DirectoryInfo(strDirect)
+            Try
+                For Each mFileInfo In mDirInfo.GetFiles("*.h")
+                    'Debug.Print(mFileInfo.FullName)
+                    rewriteheader(mFileInfo.FullName, dict)
+                Next
+
+                For Each mFileInfo In mDirInfo.GetFiles("*.cpp")
+                    rewriteheader(mFileInfo.FullName, dict)
+                Next
+
+                For Each mDir In mDirInfo.GetDirectories
+                    'Debug.Print("******目录回调*******")
+                    GetAllFiles(mDir.FullName, dict)
+                Next
+            Catch ex As System.IO.DirectoryNotFoundException
+                Debug.Print("目录没找到：" + ex.Message)
+            End Try
+        End If
+    End Sub
+
 End Class

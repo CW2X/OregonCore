@@ -1,7 +1,7 @@
-#include "Chat/Chat.h"
+﻿#include "Chat/Chat.h"
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"
-#include "ReputationMgr.h"
+#include "Reputation/ReputationMgr.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Tools/Language.h"
 
@@ -226,3 +226,4 @@ void AddSC_quest_commandscript()
 {
     new quest_commandscript();
 }
+

@@ -54,3 +54,4 @@ class HomeMovementGenerator<Creature>
 #endif
 
 
+

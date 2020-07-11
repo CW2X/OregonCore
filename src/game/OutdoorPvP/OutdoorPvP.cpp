@@ -586,3 +586,4 @@ void OutdoorPvP::OnGameObjectRemove(GameObject* go)
 }
 
 
+

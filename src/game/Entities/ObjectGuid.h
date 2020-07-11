@@ -334,3 +334,4 @@ inline PackedGuid ObjectGuid::WriteAsPacked() const
 #endif
 
 
+

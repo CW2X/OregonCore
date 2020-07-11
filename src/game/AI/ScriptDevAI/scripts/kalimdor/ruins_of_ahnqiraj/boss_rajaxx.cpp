@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -44,4 +44,5 @@ EndScriptData */
 #define SAY_KILLS_ANDOROV   -1509016
 
 #define SAY_COMPLETE_QUEST  -1509017                        //Yell when realm complete quest 8743 for world event
+
 

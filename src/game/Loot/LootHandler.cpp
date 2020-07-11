@@ -547,3 +547,4 @@ void WorldSession::HandleLootMasterGiveOpcode(WorldPacket& recv_data)
 }
 
 
+

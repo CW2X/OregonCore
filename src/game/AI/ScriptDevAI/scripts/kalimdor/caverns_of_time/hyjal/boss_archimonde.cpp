@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,7 +25,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "hyjal.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 #include "hyjal_trash.h"
 
  //text id -1534018 are the text used when previous events complete. Not part of this script.
@@ -749,4 +749,5 @@ void AddSC_boss_archimonde()
     new mob_doomfire_targetting();
     new mob_ancient_wisp();
 }
+
 

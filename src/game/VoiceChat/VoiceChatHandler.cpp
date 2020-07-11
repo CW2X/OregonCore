@@ -49,3 +49,4 @@ void WorldSession::HandleChannelVoiceChatQuery(WorldPacket& recv_data)
 }
 
 
+

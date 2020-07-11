@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -22,10 +22,10 @@
 #include "Entities/Creature.h"
 #include "AI/BaseAI/CreatureAI.h"
 #include "Entities/Unit.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "Grids/GridNotifiers.h"
 
-#include "SmartScriptMgr.h"
+#include "AI/ScriptDevAI/SmartScriptMgr.h"
 //#include "AI/ScriptDevAI/base/SmartAI.h"
 
 class SmartScript
@@ -300,3 +300,4 @@ class SmartScript
 };
 
 #endif
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -84,4 +84,5 @@ void TriggerAI::IsSummonedBy(Unit* summoner)
     if (me->m_spells[0])
         me->CastSpell(me, me->m_spells[0], false, 0, 0, summoner->GetGUID());
 }
+
 

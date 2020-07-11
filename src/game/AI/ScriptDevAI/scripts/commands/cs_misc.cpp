@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,9 +23,12 @@
 #include "World/World.h"
 #include "Entities/Player.h"
 #include "Server/Opcodes.h"
-#include "InstanceSaveMgr.h"
-#include "PointMovementGenerator.h"
-#include "TargetedMovementGenerator.h"
+#include "Maps/InstanceSaveMgr.h"
+#include "MotionGenerators/PointMovementGenerator.h"
+#include "MotionGenerators/TargetedMovementGenerator.h"
+#include "Spells/SpellMgr.h"
+#include "Spells/SpellAuras.h"
+#include "Grids/GridNotifiers.h"
 
 // FOR PINFO
 static uint32 ReputationRankStrIndex[MAX_REPUTATION_RANK] =
@@ -3365,3 +3368,4 @@ void AddSC_misc_commandscript()
 {
     new misc_commandscript();
 }
+

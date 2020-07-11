@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,9 +24,9 @@ EndScriptData */
 
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
-#include "Entities/Group.h"
+#include "Groups/Group.h"
 #include "Entities/Player.h"
-#include "ScriptSystem.h"
+#include "AI/ScriptDevAI/system/ScriptSystem.h"
 
 enum ePoints
 {
@@ -540,4 +540,5 @@ void npc_escortAI::SetEscortPaused(bool bPaused)
     else
         RemoveEscortState(STATE_ESCORT_PAUSED);
 }
+
 

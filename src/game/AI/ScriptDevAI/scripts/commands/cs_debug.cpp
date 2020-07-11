@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,6 +22,8 @@
 #include "Tools/Language.h"
 #include "World/World.h"
 #include "Entities/Player.h"
+#include "Entities/Gossipdef.h"
+#include "Maps/InstanceData.h"
 #include "Server/Opcodes.h"
 #include <fstream>
 
@@ -1008,3 +1010,4 @@ void AddSC_debug_commandscript()
 {
     new debug_commandscript();
 }
+

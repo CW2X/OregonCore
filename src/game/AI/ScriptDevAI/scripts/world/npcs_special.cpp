@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -2152,3 +2152,4 @@ void AddSC_npcs_special()
     new mob_inferno_infernal();
     new npc_barmaid();
 }
+

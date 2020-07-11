@@ -261,3 +261,4 @@ class ObjectAccessor : public MaNGOS::Singleton<ObjectAccessor, MaNGOS::ClassLev
 #endif
 
 
+

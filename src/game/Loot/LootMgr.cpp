@@ -1497,3 +1497,4 @@ void LoadLootTemplates_Reference()
 }
 
 
+

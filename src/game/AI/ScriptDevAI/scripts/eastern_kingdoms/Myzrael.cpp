@@ -1,4 +1,4 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 enum Spells
@@ -223,4 +223,5 @@ void AddSC_npc_myzrael()
     new npc_prismatic_exile();
 
 }
+
 

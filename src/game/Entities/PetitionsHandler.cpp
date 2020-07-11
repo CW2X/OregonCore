@@ -934,3 +934,4 @@ void WorldSession::SendPetitionShowList(uint64 guid)
 }
 
 
+

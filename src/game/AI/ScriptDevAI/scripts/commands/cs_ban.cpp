@@ -1,4 +1,4 @@
-#include "Accounts/AccountMgr.h"
+﻿#include "Accounts/AccountMgr.h"
 #include "Chat/Chat.h"
 #include "Tools/Language.h"
 #include "Globals/ObjectAccessor.h"
@@ -517,3 +517,4 @@ void AddSC_ban_commandscript()
 {
     new ban_commandscript();
 }
+

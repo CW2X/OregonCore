@@ -634,3 +634,4 @@ void WorldSession::HandleAuctionListItems(WorldPacket& recv_data)
 }
 
 
+

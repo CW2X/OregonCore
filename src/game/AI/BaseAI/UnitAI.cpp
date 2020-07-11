@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,8 +18,8 @@
 #include "AI/BaseAI/UnitAI.h"
 #include "Entities/Player.h"
 #include "Entities/Creature.h"
-#include "SpellAuras.h"
-#include "SpellMgr.h"
+#include "Spells/SpellAuras.h"
+#include "Spells/SpellMgr.h"
 #include "AI/BaseAI/CreatureAIImpl.h"
 
 void UnitAI::AttackStart(Unit* victim)
@@ -365,4 +365,5 @@ void SimpleCharmedAI::UpdateAI(const uint32 /*diff*/)
     if (!target || !charmer->IsValidAttackTarget(target))
         AttackStart(charmer->SelectNearestTargetInAttackDistance());
 }
+
 

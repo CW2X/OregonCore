@@ -1,13 +1,13 @@
-#include "Accounts/AccountMgr.h"
+﻿#include "Accounts/AccountMgr.h"
 #include "Chat/Chat.h"
 #include "Globals/ObjectMgr.h"
 #include "Globals/ObjectAccessor.h"
-#include "ReputationMgr.h"
+#include "Reputation/ReputationMgr.h"
 #include "DBScripts/ScriptMgr.h"
-#include "Spell.h"
-#include "SpellMgr.h"
+#include "Spells/Spell.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Player.h"
-#include "GameEventMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "World/World.h"
 #include "Tools/Language.h"
 
@@ -1160,3 +1160,4 @@ void AddSC_lookup_commandscript()
 {
     new lookup_commandscript();
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,7 +25,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "temple_of_ahnqiraj.h"
-#include "Entities/Group.h"
+#include "Groups/Group.h"
 
 #define SAY_AGGRO1                  -1531000
 #define SAY_AGGRO2                  -1531001
@@ -351,4 +351,5 @@ void AddSC_boss_skeram()
 {
     new boss_skeram();
 }
+
 

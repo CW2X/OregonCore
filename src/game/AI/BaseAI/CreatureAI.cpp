@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,8 +19,8 @@
 #include "AI/BaseAI/CreatureAIImpl.h"
 #include "Entities/Creature.h"
 #include "World/World.h"
-#include "SpellMgr.h"
-#include "MapRefManager.h"
+#include "Spells/SpellMgr.h"
+#include "Maps/MapRefManager.h"
 #include "Entities/Player.h"
 
 //Disable CreatureAI when charmed
@@ -345,3 +345,4 @@ Creature* CreatureAI::DoSummonFlyer(uint32 entry, WorldObject* obj, float flight
     pos.m_positionZ += flightZ;
     return me->SummonCreature(entry, pos, summonType, despawnTime);
 }
+

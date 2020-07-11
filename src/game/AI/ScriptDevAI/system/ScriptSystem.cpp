@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "ScriptSystem.h"
+#include "AI/ScriptDevAI/system/ScriptSystem.h"
 #include "Globals/ObjectMgr.h"
 #include "Database/DatabaseEnv.h"
 #include "DBScripts/ScriptMgr.h"
@@ -209,4 +209,5 @@ void SystemMgr::LoadScriptWaypoints()
     else
         outstring_log(">> Loaded 0 Script Waypoints. DB table script_waypoint is empty.");
 }
+
 

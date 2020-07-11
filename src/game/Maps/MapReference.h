@@ -66,3 +66,4 @@ class MapReference : public Reference<Map, Player>
 #endif
 
 
+

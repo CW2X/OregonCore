@@ -1,9 +1,9 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
 #include "Entities/Creature.h"
 #include "Tools/Language.h"
 #include "Entities/Player.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 
 class cast_commandscript : public CommandScript
 {
@@ -247,3 +247,4 @@ void AddSC_cast_commandscript()
 {
     new cast_commandscript();
 }
+

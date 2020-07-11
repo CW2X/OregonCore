@@ -1656,3 +1656,4 @@ void WorldSession::HandleReferAFriend(WorldPacket& /*recv_data*/)
 }
 
 
+

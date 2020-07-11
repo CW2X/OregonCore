@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,7 +24,7 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "scarlet_monastery.h"
 
  //this texts are already used by 3975 and 3976
@@ -920,4 +920,5 @@ void AddSC_boss_headless_horseman()
     new mob_wisp_invis();
     new go_loosely_turned_soil();
 }
+
 

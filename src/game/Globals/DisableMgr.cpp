@@ -263,3 +263,4 @@ bool DisableMgr::IsDisabledFor(DisableType type, uint32 entry, Unit* pUnit, uint
     return false;
 }
 
+

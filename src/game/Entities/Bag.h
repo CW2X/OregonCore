@@ -74,3 +74,4 @@ inline Item* NewItemOrBag(ItemTemplate const* proto)
 #endif
 
 
+

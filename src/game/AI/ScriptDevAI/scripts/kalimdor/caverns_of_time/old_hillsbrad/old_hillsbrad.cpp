@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (C) 2010-2018 MaNGOSCore <https://mangos-core.net/>
  * Copyright (C) 2008-2012 TrinityCore <https://www.trinitycore.org/>
  * Copyright (C) 2006-2012 ScriptDev2 <http://www.scriptdev2.com/>
@@ -1339,3 +1339,4 @@ void AddSC_old_hillsbrad()
     new npc_taretha();
     new erozion_image();
 }
+

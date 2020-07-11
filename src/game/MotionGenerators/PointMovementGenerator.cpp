@@ -146,3 +146,4 @@ void EffectMovementGenerator::Finalize(Unit& unit)
         unit.ToCreature()->AI()->MovementInform(EFFECT_MOTION_TYPE, m_Id);
 }
 
+

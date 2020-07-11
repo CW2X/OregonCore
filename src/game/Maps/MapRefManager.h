@@ -73,3 +73,4 @@ class MapRefManager : public RefManager<Map, Player>
 #endif
 
 
+

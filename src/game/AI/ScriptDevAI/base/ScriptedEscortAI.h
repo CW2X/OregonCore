@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef SC_ESCORTAI_H
 #define SC_ESCORTAI_H
 
-#include "ScriptSystem.h"
+#include "AI/ScriptDevAI/system/ScriptSystem.h"
 
 #define DEFAULT_MAX_PLAYER_DISTANCE 50
 
@@ -173,4 +173,5 @@ struct npc_escortAI : public ScriptedAI
         bool HasPassiveFlag;
 };
 #endif
+
 

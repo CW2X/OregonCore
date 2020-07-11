@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -25,15 +25,15 @@
 #include "Maps/GridDefines.h"
 #include "Grids/GridNotifiers.h"
 #include "Grids/GridNotifiersImpl.h"
-#include "Entities/Group.h"
+#include "Groups/Group.h"
 #include "Tools/Language.h"
 #include "Globals/ObjectMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "AI/ScriptDevAI/include/ScriptedGossip.h"
 #include "AI/ScriptDevAI/base/SmartAI.h"
 #include "AI/ScriptDevAI/base/SmartScript.h"
-#include "SpellMgr.h"
-#include "GameEventMgr.h"
+#include "Spells/SpellMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "DBScripts/ScriptMgr.h"
 
 class MaNGOSStringTextBuilder
@@ -3695,3 +3695,4 @@ Unit* SmartScript::GetLastInvoker()
 {
     return ObjectAccessor::FindUnit(mLastInvoker);
 }
+

@@ -1,4 +1,4 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 
@@ -31,4 +31,5 @@ void AddSC_hillsbrad_foothills()
 {
     new go_helculars_grave();
 }
+
 

@@ -195,3 +195,4 @@ void HostileRefManager::UpdateVisibility()
     }
 }
 
+

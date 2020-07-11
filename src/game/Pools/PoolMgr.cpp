@@ -1026,3 +1026,4 @@ template void PoolMgr::UpdatePool<GameObject>(uint32 pool_id, uint32 db_guid_or_
 template void PoolMgr::UpdatePool<Creature>(uint32 pool_id, uint32 db_guid_or_pool_id);
 template void PoolMgr::UpdatePool<Quest>(uint32 pool_id, uint32 db_guid_or_pool_id);
 
+

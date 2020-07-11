@@ -1,4 +1,4 @@
-#include "Chat/Chat.h"
+﻿#include "Chat/Chat.h"
 #include "Tools/Language.h"
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"
@@ -82,3 +82,4 @@ void AddSC_honor_commandscript()
 {
     new honor_commandscript();
 }
+

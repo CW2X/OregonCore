@@ -722,3 +722,4 @@ uint32 InstanceSaveManager::GetNumBoundGroupsTotal()
 }
 
 
+

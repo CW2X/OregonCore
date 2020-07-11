@@ -1,7 +1,7 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "Entities/Player.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "sunken_temple.h"
 
 enum Spells
@@ -127,4 +127,5 @@ void AddSC_boss_eranikus()
 {
     new boss_eranikus();
 }
+
 

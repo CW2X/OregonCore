@@ -253,3 +253,4 @@ void WorldSession::HandleGMTicketSystemStatusOpcode(WorldPacket& /*recv_data*/)
 }
 
 
+

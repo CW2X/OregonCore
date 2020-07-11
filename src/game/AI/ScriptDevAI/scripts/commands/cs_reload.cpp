@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,9 +25,10 @@
 #include "Server/Opcodes.h"
 #include "Maps/MapManager.h"
 #include "AI/EventAI/CreatureEventAIMgr.h"
-#include "SkillDiscovery.h"
-#include "SkillExtraItems.h"
+#include "Skills/SkillDiscovery.h"
+#include "Skills/SkillExtraItems.h"
 #include "GMTickets/GMTicketMgr.h"
+#include "Spells/SpellMgr.h"
 
 class reload_commandscript : public CommandScript
 {
@@ -912,3 +913,4 @@ void AddSC_reload_commandscript()
 {
     new reload_commandscript();
 }
+

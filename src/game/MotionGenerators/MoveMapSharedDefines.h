@@ -52,3 +52,4 @@ enum NavTerrain
 
 #endif  // _MOVE_MAP_SHARED_DEFINES_H
 
+

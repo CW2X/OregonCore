@@ -94,3 +94,4 @@ class TicketMgr
 #define ticketmgr MaNGOS::Singleton<TicketMgr>::Instance()
 
 
+

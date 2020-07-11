@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -30,7 +30,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "blood_furnace.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 
 enum eKelidan
 {
@@ -434,4 +434,5 @@ void AddSC_boss_kelidan_the_breaker()
     new npc_kelridan_trigger();
 
 }
+
 

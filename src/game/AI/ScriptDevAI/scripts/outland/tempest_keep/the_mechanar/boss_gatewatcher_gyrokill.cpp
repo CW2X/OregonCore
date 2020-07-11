@@ -1,4 +1,4 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 enum GateWatcher
@@ -92,4 +92,5 @@ void AddSC_boss_gatewatcher_gryo()
 {
     new boss_gatewatcher_gryo();
 }
+
 

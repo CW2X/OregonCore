@@ -212,3 +212,4 @@ inline bool IsValidMapCoord(float x, float y, float z, float o)
 #endif
 
 
+

@@ -1,9 +1,10 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
 #include "Tools/Language.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"
+#include "Spells/SpellAuras.h"
 
 class list_commandscript : public CommandScript
 {
@@ -413,3 +414,4 @@ void AddSC_list_commandscript()
 {
     new list_commandscript();
 }
+

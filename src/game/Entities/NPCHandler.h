@@ -80,3 +80,4 @@ struct NpcTextLocale
 #endif
 
 
+

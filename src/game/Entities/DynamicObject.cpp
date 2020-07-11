@@ -173,3 +173,4 @@ void DynamicObject::Delay(int32 delaytime)
             (*iunit)->DelayAura(m_spellId, m_effIndex, delaytime);
 }
 
+

@@ -813,3 +813,4 @@ void BattlegroundWS::FillInitialWorldStates(WorldPacket& data)
 }
 
 
+

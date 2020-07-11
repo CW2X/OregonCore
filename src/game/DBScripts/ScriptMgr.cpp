@@ -16,18 +16,17 @@
  */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptPCH.h"
 #include "Config/Config.h"
 #include "Database/DatabaseEnv.h"
 #include "Server/DBCStores.h"
 #include "Globals/ObjectMgr.h"
-#include "ScriptLoader.h"
-#include "ScriptSystem.h"
+#include "AI/ScriptDevAI/system/ScriptLoader.h"
+#include "AI/ScriptDevAI/system/ScriptSystem.h"
 #include "Spells/SpellMgr.h"
 #include "Entities/GossipDef.h"
 #include "AI/BaseAI/CreatureAIImpl.h"
-#include "ScriptLoader.h"
-#include "ScriptSystem.h"
+#include "AI/ScriptDevAI/system/ScriptLoader.h"
+#include "AI/ScriptDevAI/system/ScriptSystem.h"
 
 INSTANTIATE_SINGLETON_1(ScriptMgr);
 
@@ -1412,4 +1411,5 @@ template class ScriptMgr::ScriptRegistry<BGScript>;
 #undef FOR_SCRIPTS
 #undef SCR_REG_LST
 #undef SCR_REG_MAP
+
 

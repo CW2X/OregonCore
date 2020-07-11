@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include "Entities/Creature.h"
 #include "AI/BaseAI/CreatureAI.h"
 #include "Entities/Unit.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
 
@@ -1673,3 +1673,4 @@ class SmartAIMgr
 #define sSmartScriptMgr SmartAIMgr::instance()
 #define sSmartWaypointMgr SmartWaypointMgr::instance()
 #endif
+

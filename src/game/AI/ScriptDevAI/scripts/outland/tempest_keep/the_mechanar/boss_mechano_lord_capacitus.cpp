@@ -1,7 +1,7 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "mechanar.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 
 enum spells
 {
@@ -137,4 +137,5 @@ void AddSC_boss_mechano_lord_capacitus()
 {
     new boss_mechano_lord_capacitus();
 }
+
 

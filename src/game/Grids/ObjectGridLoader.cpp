@@ -247,3 +247,4 @@ template void ObjectGridCleaner::Visit<DynamicObject>(DynamicObjectMapType&);
 template void ObjectGridCleaner::Visit<Corpse>(CorpseMapType&);
 
 
+

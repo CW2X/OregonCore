@@ -173,3 +173,4 @@ class MapManager : public MaNGOS::Singleton<MapManager, MaNGOS::ClassLevelLockab
 #endif
 
 
+

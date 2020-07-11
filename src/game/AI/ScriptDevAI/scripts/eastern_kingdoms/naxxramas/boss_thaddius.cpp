@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -281,3 +281,4 @@ struct boss_fuegenAI : public BossAI
         m_caster->CastSpell(unitTarget, RAND(28059, 28084), true);
     }
 */
+

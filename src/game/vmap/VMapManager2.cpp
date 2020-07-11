@@ -323,3 +323,4 @@ bool VMapManager2::existsMap(const char* basePath, unsigned int mapId, int x, in
 
 } // namespace VMAP
 
+

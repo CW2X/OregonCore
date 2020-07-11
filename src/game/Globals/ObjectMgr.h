@@ -1297,3 +1297,4 @@ Quest const* GetQuestTemplateStore(uint32 entry);
 #endif
 
 
+

@@ -328,3 +328,4 @@ void WorldSession::HandleSetChannelWatch(WorldPacket& recvPacket)
 }
 
 
+

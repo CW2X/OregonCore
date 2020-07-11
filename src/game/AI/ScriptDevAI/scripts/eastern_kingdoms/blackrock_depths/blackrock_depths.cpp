@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -1707,3 +1707,4 @@ void AddSC_blackrock_depths()
     new npc_jaz();
     new npc_rocknot();
 }
+

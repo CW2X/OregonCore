@@ -872,3 +872,4 @@ class GameObject : public WorldObject, public GridObject<GameObject>
 #endif
 
 
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -26,8 +26,8 @@
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "serpent_shrine.h"
 #include "AI/ScriptDevAI/base/ScriptedSimpleAI.h"
-#include "Spell.h"
-#include "SpellAuras.h"
+#include "Spells/Spell.h"
+#include "Spells/SpellAuras.h"
 
 #define SAY_INTRO                   -1548042
 #define SAY_AGGRO1                  -1548043
@@ -1146,4 +1146,5 @@ void AddSC_boss_lady_vashj()
     new mob_shield_generator_channel();
     new item_tainted_core();
 }
+
 

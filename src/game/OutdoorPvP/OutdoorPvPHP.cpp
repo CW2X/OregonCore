@@ -321,3 +321,4 @@ void OutdoorPvPHP::HandleKillImpl(Player* plr, Unit* killed)
 }
 
 
+

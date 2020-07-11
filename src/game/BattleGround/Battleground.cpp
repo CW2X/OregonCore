@@ -1962,3 +1962,4 @@ void Battleground::RewardXPAtKill(Player* killer, Player* victim)
 }
 
 
+

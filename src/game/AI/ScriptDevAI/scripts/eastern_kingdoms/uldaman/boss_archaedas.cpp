@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -521,4 +521,5 @@ void AddSC_boss_archaedas()
     new go_altar_of_the_keepers();
     new mob_stonekeepers();
 }
+
 

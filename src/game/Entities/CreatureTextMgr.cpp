@@ -520,3 +520,4 @@ std::string CreatureTextMgr::GetLocalizedChatString(uint32 entry, uint8 gender, 
     return baseText;
 }
 
+

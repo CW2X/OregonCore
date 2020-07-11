@@ -1,4 +1,4 @@
-
+﻿
 /*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
@@ -833,4 +833,5 @@ void CreatureEventAIMgr::LoadCreatureEventAI_Scripts()
     else
         sLog.outString(">> Loaded 0 CreatureEventAI scripts. DB table creature_ai_scripts is empty.");
 }
+
 

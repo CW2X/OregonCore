@@ -653,3 +653,4 @@ void BattlegroundAB::UpdatePlayerScore(Player* Source, uint32 type, uint32 value
 }
 
 
+

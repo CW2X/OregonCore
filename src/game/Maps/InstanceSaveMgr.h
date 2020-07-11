@@ -224,3 +224,4 @@ class InstanceSaveManager : public MaNGOS::Singleton<InstanceSaveManager, MaNGOS
 #endif
 
 
+

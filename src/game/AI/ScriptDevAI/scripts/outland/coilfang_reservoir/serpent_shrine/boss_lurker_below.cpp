@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -26,7 +26,7 @@
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "serpent_shrine.h"
 #include "AI/ScriptDevAI/base/ScriptedSimpleAI.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 
 #define SPELL_SPOUT         37433
 #define SPELL_SPOUT_ANIM    42835
@@ -474,4 +474,5 @@ void AddSC_boss_the_lurker_below()
     new mob_coilfang_guardian();
     new mob_coilfang_ambusher();
 }
+
 

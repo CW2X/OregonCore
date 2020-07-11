@@ -1,8 +1,9 @@
-#include "Entities/Player.h"
+﻿#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Entities/Pet.h"
 #include "Tools/Language.h"
 #include "Chat/Chat.h"
+#include "Spells/SpellMgr.h"
 
 class pet_commandscript : CommandScript
 {
@@ -198,3 +199,4 @@ void AddSC_pet_commandscript()
 {
     new pet_commandscript();
 }
+

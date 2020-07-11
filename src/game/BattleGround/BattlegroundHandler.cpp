@@ -893,3 +893,4 @@ void WorldSession::SendBattlegroundOrArenaJoinError(uint8 err)
 }
 
 
+

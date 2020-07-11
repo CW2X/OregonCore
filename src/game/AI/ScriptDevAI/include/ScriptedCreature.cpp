@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,7 +16,7 @@
  */
 
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "Grids/GridNotifiers.h"
 #include "Grids/GridNotifiersImpl.h"
 #include "Grids/Cell.h"
@@ -649,4 +649,5 @@ void GetGameObjectListWithEntryInGrid(std::list<GameObject*>& lList, WorldObject
 {
     return pSource->GetGameObjectListWithEntryInGrid(lList, uiEntry, fMaxSearchRange);
 }
+
 

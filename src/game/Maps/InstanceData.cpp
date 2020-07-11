@@ -275,3 +275,4 @@ void InstanceData::DoCastSpellOnPlayers(uint32 spell)
                 player->CastSpell(player, spell, true);
 }
 
+

@@ -146,3 +146,4 @@ WardenDataResult* CWardenDataStorage::GetWardenResultById(uint32 Id)
     return NULL;
 }
 
+

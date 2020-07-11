@@ -1,6 +1,6 @@
-#include "Chat/Chat.h"
+﻿#include "Chat/Chat.h"
 #include "Tools/Language.h"
-#include "Guild.h"
+#include "Guilds/Guild.h"
 #include "Globals/ObjectAccessor.h"
 #include "DBScripts/ScriptMgr.h"
 
@@ -224,3 +224,4 @@ void AddSC_guild_commandscript()
 {
     new guild_commandscript();
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,7 +24,7 @@ EndScriptData */
 
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "AI/ScriptDevAI/base/ScriptedFollowerAI.h"
-#include "Entities/Group.h"
+#include "Groups/Group.h"
 #include "Entities/Player.h"
 
 const float MAX_PLAYER_DISTANCE = 100.0f;
@@ -406,4 +406,5 @@ void FollowerAI::SetFollowPaused(bool bPaused)
             me->GetMotionMaster()->MoveFollow(pLeader, PET_FOLLOW_DIST, PET_FOLLOW_ANGLE);
     }
 }
+
 

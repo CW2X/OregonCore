@@ -1008,3 +1008,4 @@ void WorldSession::HandleGroupSwapSubGroupOpcode(WorldPacket& recv_data)
     group->ChangeMembersGroup(guid2, subgroup1);
 }
 
+

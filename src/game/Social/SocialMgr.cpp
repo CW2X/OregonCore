@@ -337,3 +337,4 @@ PlayerSocial* SocialMgr::LoadFromDB(QueryResult_AutoPtr result, uint32 guid)
 }
 
 
+

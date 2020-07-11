@@ -583,3 +583,4 @@ void WorldSession::HandleSpellClick(WorldPacket& recvData)
         creature->AI()->OnSpellClick(_player);
 }
 
+

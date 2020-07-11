@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,7 +25,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "shadow_labyrinth.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 
 #define SAY_INTRO                       -1555028
 #define SAY_AGGRO1                      -1555029
@@ -351,4 +351,5 @@ void AddSC_boss_grandmaster_vorpil()
     new mob_voidtraveler();
 
 }
+
 

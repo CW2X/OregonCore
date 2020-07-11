@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -104,3 +104,4 @@ static const float aSoccotharesStartPos[4] = { 122.1035f, 192.7203f, 22.44115f, 
 static const float aEntranceMoveLoc[3] = { 82.020f, 0.306f, -11.026f };
 static const float aEntranceSpawnLoc[4] = { 173.471f, -0.138f, -10.101f, 3.123f };
 #endif
+

@@ -1,5 +1,5 @@
-#include "Chat/Chat.h"
-#include "GameEventMgr.h"
+﻿#include "Chat/Chat.h"
+#include "GameEvents/GameEventMgr.h"
 #include "Tools/Language.h"
 #include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
@@ -190,3 +190,4 @@ void AddSC_event_commandscript()
 {
     new event_commandscript();
 }
+

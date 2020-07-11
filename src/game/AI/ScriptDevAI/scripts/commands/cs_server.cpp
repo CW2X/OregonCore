@@ -1,4 +1,4 @@
-#include "Chat/Chat.h"
+﻿#include "Chat/Chat.h"
 #include "Tools/Language.h"
 #include "Globals/ObjectAccessor.h"
 #include "Entities/Player.h"
@@ -319,3 +319,4 @@ void AddSC_server_commandscript()
 {
     new server_commandscript();
 }
+

@@ -398,3 +398,4 @@ void MaNGOS::LocalizedPacketListDo<Builder>::operator()(Player* p)
 #endif                                                      // MANGOS_GRIDNOTIFIERSIMPL_H
 
 
+

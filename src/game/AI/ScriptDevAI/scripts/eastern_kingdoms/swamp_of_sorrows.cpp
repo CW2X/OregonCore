@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -146,4 +146,5 @@ void AddSC_swamp_of_sorrows()
 {
     new npc_galen_goodward();
 }
+
 

@@ -2005,3 +2005,4 @@ void Pet::ApplyModeFlags(PetModeFlags mode, bool apply)
     ((Player*)owner)->GetSession()->SendPacket(&data);
 }
 
+

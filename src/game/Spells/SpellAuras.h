@@ -532,3 +532,4 @@ Aura* CreateAura(SpellEntry const* spellproto, uint32 eff, int32* currentBasePoi
 #endif
 
 
+

@@ -137,3 +137,4 @@ class Corpse : public WorldObject, public GridObject<Corpse>
 #endif
 
 
+

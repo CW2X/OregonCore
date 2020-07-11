@@ -257,3 +257,4 @@ float DynamicMapTree::getHeight(float x, float y, float z, float maxSearchDist) 
         return -G3D::inf();
 }
 
+

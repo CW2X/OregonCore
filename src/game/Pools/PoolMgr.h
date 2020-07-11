@@ -207,3 +207,4 @@ inline uint32 PoolMgr::IsPartOfAPool<Pool>(uint32 pool_id) const
 
 #endif
 
+

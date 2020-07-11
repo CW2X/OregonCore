@@ -198,3 +198,4 @@ bool Totem::IsImmuneToSpellEffect(SpellEntry const* spellInfo, uint32 index, boo
 }
 
 
+

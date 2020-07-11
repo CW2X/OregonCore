@@ -2037,3 +2037,4 @@ bool GuildItemPosCount::isContainedIn(GuildItemPosCountVec const& vec) const
 }
 
 
+

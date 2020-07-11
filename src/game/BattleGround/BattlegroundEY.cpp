@@ -873,3 +873,4 @@ WorldSafeLocsEntry const* BattlegroundEY::GetClosestGraveYard(Player* player)
 }
 
 
+

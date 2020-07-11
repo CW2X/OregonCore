@@ -172,3 +172,4 @@ bool RandomMovementGenerator<Creature>::Update(Creature& creature, const uint32&
 }
 
 
+

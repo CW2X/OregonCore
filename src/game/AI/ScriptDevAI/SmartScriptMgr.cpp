@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -19,12 +19,12 @@
 #include "Globals/ObjectMgr.h"
 #include "Maps/GridDefines.h"
 #include "Grids/GridNotifiers.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Grids/Cell.h"
-#include "GameEventMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "Entities/CreatureTextMgr.h"
 
-#include "SmartScriptMgr.h"
+#include "AI/ScriptDevAI/SmartScriptMgr.h"
 
 void SmartWaypointMgr::LoadFromDB()
 {
@@ -1316,4 +1316,5 @@ CacheSpellContainerBounds SmartAIMgr::GetCreateItemSpellContainerBounds(uint32 i
 {
     return CreateItemSpellStore.equal_range(itemId);
 }
+
 

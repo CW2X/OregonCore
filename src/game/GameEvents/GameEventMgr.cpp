@@ -1485,3 +1485,4 @@ void GameEventMgr::RunSmartAIScripts(uint16 event_id, bool activate)
     }
 }
 
+

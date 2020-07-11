@@ -633,3 +633,4 @@ void WorldSession::SendWrongFactionNotice()
 }
 
 
+

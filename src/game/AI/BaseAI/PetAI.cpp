@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,9 +19,9 @@
 #include "Errors.h"
 #include "Entities/Pet.h"
 #include "Entities/Player.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "Globals/ObjectAccessor.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Creature.h"
 
 int PetAI::Permissible(const Creature* creature)
@@ -558,3 +558,4 @@ void PetAI::ClearCharmInfoFlags()
         ci->SetIsReturning(false);
     }
 }
+

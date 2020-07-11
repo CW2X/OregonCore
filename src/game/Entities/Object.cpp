@@ -2747,3 +2747,4 @@ void WorldObject::BuildUpdate(UpdateDataMapType& data_map)
 }
 
 
+

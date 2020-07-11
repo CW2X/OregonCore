@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -37,4 +37,5 @@ EndScriptData */
 
 #define SAY_SLAY        -1509026
 #define SAY_DEATH       -1509027
+
 

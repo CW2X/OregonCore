@@ -69,3 +69,4 @@ class GameObjectModel /*, public Intersectable*/
 
 #endif // _GAMEOBJECT_MODEL_H
 
+

@@ -1360,3 +1360,4 @@ bool ChatHandler::GetPlayerGroupAndGUIDByName(const char* cname, Player*& plr, G
     return true;
 }
 
+

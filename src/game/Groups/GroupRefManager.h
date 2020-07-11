@@ -36,3 +36,4 @@ class GroupRefManager : public RefManager<Group, Player>
 #endif
 
 
+

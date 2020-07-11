@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -29,4 +29,5 @@ EndScriptData */
 #define SPELL_POISONBOLT_VOLLEY     25991
 
 #define SPELL_TOXIN_CLOUD           25989
+
 

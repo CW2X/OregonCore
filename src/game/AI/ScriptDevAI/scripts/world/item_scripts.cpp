@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -42,8 +42,8 @@ EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "SpellMgr.h"
-#include "Spell.h"
+#include "Spells/SpellMgr.h"
+#include "Spells/Spell.h"
 #include "WorldPacket.h"
 
 /*#####
@@ -720,4 +720,5 @@ void AddSC_item_scripts()
     new item_battery();
 
 }
+
 

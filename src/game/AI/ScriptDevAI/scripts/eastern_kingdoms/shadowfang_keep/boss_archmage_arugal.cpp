@@ -1,4 +1,4 @@
-/* Script Created by Lee
+﻿/* Script Created by Lee
 
 Comments: Not sure on the timers.
 Scripted: 95%
@@ -138,4 +138,5 @@ void AddSC_boss_archmage_arugal()
 {
     new boss_archmage_arugal();
 }
+
 

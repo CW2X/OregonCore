@@ -437,3 +437,4 @@ void WorldSession::HandlePageQueryOpcode(WorldPacket& recv_data)
 }
 
 
+

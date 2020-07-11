@@ -823,3 +823,4 @@ float PathInfo::dist3DSqr(const Vector3& p1, const Vector3& p2) const
     return (dx * dx + dy * dy + dz * dz);
 }
 
+

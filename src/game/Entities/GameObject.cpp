@@ -1680,3 +1680,4 @@ void GameObject::UpdateModel()
         GetMap()->Insert(*m_model);
 }
 
+

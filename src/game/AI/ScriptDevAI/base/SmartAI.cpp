@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -19,9 +19,9 @@
 #include "Globals/ObjectMgr.h"
 #include "Maps/GridDefines.h"
 #include "Grids/GridNotifiers.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Grids/Cell.h"
-#include "Entities/Group.h"
+#include "Groups/Group.h"
 #include "AI/ScriptDevAI/base/SmartAI.h"
 #include "DBScripts/ScriptMgr.h"
 
@@ -887,3 +887,4 @@ void SmartGameObjectAI::OnStateChanged(uint32 state, Unit* unit)
 void AddSC_SmartScripts()
 {
 }
+

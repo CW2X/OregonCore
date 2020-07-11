@@ -2795,3 +2795,4 @@ void Creature::SetBaseRunSpeed(float speed)
     }
 }
 
+

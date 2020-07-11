@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,7 +23,7 @@
 #include "World/World.h"
 #include "Entities/Player.h"
 #include "Server/Opcodes.h"
-#include "TargetedMovementGenerator.h"
+#include "MotionGenerators/TargetedMovementGenerator.h"
 
 class npc_commandscript : public CommandScript
 {
@@ -1065,3 +1065,4 @@ void AddSC_npc_commandscript()
 {
     new npc_commandscript();
 }
+

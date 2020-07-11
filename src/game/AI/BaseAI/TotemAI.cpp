@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,7 +21,7 @@
 #include "Entities/Player.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectAccessor.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 
 #include "Grids/GridNotifiers.h"
 #include "Grids/GridNotifiersImpl.h"
@@ -129,4 +129,5 @@ TotemAI::AttackStart(Unit*)
         i_totem.GetOwner()->ToPlayer()->GetSession()->SendPacket(&data);
     }
 }
+
 

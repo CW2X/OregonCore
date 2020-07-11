@@ -130,3 +130,4 @@ void WaypointMgr::ReloadPath(uint32 id)
     while (result->NextRow());
 }
 
+

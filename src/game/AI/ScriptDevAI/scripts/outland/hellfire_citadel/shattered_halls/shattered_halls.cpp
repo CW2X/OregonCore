@@ -1,4 +1,4 @@
-#include "AI/ScriptDevAI/include/ScriptedCreature.h"
+﻿#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "DBScripts/ScriptMgr.h"
 
 #define SAY_NEXT   -1910118
@@ -429,4 +429,5 @@ void AddSC_shattered_halls()
     new npc_shatteredscout();
 
 }
+
 

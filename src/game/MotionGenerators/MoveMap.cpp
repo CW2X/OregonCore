@@ -391,3 +391,4 @@ dtNavMeshQuery const* MMapManager::GetNavMeshQuery(uint32 mapId, uint32 instance
 }
 }
 
+

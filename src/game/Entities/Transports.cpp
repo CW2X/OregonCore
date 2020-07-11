@@ -573,3 +573,4 @@ void Transport::DoEventIfAny(WayPointMap::value_type const& node, bool departure
     }
 }
 
+

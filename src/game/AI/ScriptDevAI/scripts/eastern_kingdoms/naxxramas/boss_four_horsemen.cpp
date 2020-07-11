@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -427,4 +427,5 @@ void AddSC_boss_four_horsemen()
     new boss_thane_korthazz();
     new boss_sir_zeliek();
 }
+
 

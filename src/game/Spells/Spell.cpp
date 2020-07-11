@@ -6484,3 +6484,4 @@ void Spell::SetSpellValue(SpellValueMod mod, int32 value)
     }
 }
 
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,7 +25,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "serpent_shrine.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 
  // --- Spells used by Leotheras The Blind
 #define SPELL_WHIRLWIND         37640
@@ -861,4 +861,5 @@ void AddSC_boss_leotheras_the_blind()
     new mob_greyheart_spellbinder();
     new mob_inner_demon();
 }
+
 

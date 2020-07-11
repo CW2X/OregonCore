@@ -75,3 +75,4 @@ bool HomeMovementGenerator<Creature>::Update(Creature& owner, const uint32& time
 }
 
 
+

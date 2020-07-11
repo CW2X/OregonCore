@@ -476,3 +476,4 @@ void StaticMapTree::UnloadMapTile(uint32 tileX, uint32 tileY, VMapManager2* vm)
 
 }
 
+

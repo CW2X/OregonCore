@@ -182,3 +182,4 @@ class GameEventMgr
 bool isGameEventActive(uint16 event_id);
 
 
+

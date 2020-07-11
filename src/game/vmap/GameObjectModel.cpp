@@ -216,3 +216,4 @@ bool GameObjectModel::intersectRay(const G3D::Ray& ray, float& MaxDist, bool Sto
     return hit;
 }
 
+

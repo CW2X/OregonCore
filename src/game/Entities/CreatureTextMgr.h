@@ -246,3 +246,4 @@ void CreatureTextMgr::SendChatPacket(WorldObject* source, Builder const& builder
 
 #endif
 
+

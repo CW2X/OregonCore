@@ -1652,3 +1652,4 @@ void WorldSession::SendSaveGuildEmblem(uint32 msg)
 }
 
 
+

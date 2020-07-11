@@ -1,7 +1,7 @@
-#include "DBScripts/ScriptMgr.h"
+﻿#include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "Entities/Player.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 
 enum Spells
 {
@@ -157,4 +157,5 @@ void AddSC_boss_Jammal()
 {
     new boss_Jammal();
 }
+
 

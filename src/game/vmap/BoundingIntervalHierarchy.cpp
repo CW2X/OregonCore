@@ -302,3 +302,4 @@ void BIH::BuildStats::printStats()
     printf("  * BVH2 nodes:     %d (%3d%%)\n", numBVH2, 100 * numBVH2 / (numNodes + numLeaves - 2 * numBVH2));
 }
 
+

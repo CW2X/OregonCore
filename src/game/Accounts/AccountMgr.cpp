@@ -249,3 +249,4 @@ std::string AccountMgr::CalculateShaPassHash(std::string& name, std::string& pas
     return encoded;
 }
 
+

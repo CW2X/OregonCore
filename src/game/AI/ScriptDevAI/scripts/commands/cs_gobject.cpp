@@ -1,10 +1,10 @@
-#include "Entities/Player.h"
+﻿#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Entities/GameObject.h"
 #include "Tools/Language.h"
-#include "GameEventMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "Maps/MapManager.h"
-#include "PoolMgr.h"
+#include "Pools/PoolMgr.h"
 
 
 class gameobject_commandscript : CommandScript
@@ -496,3 +496,4 @@ void AddSC_gameobject_commandscript()
 {
     new gameobject_commandscript();
 }
+

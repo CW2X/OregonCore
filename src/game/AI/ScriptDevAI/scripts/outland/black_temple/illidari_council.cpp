@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,7 +25,7 @@ EndScriptData */
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "black_temple.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 
 //Speech'n'Sounds
 #define SAY_GATH_SLAY           -1564085
@@ -967,4 +967,5 @@ void AddSC_boss_illidari_council()
     new boss_high_nethermancer_zerevor();
 
 }
+
 

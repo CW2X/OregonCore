@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -28,7 +28,7 @@
 #include "WorldPacket.h"
 
 #include "Entities/Item.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 
 #include "Grids/GridNotifiers.h"
 #include "Grids/GridNotifiersImpl.h"
@@ -649,4 +649,5 @@ void AddSC_boss_twinemperors()
     new boss_veknilash();
     new boss_veklor();
 }
+
 

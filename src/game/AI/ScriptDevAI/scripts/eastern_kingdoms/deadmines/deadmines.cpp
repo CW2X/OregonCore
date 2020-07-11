@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,7 +25,7 @@ EndScriptData */
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "deadmines.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 
 /*#####
 # item_Defias_Gunpowder
@@ -60,3 +60,4 @@ void AddSC_deadmines()
 {
     new item_defias_gunpowder();
 }
+

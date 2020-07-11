@@ -367,3 +367,4 @@ template void FollowMovementGenerator<Player>::Reset(Player&);
 template void FollowMovementGenerator<Creature>::Reset(Creature&);
 template void FollowMovementGenerator<Player>::MovementInform(Player&);
 
+

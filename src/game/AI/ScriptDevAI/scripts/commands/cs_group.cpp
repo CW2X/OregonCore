@@ -1,4 +1,4 @@
-#include "Entities/Group.h"
+﻿#include "Groups/Group.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
 #include "Tools/Language.h"
@@ -225,3 +225,4 @@ void AddSC_group_commandscript()
 {
     new group_commandscript();
 }
+

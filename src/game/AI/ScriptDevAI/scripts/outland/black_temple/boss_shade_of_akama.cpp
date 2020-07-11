@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -938,4 +938,5 @@ void AddSC_boss_shade_of_akama()
     new mob_ashtongue_sorcerer();
     new npc_akama_shade();
 }
+
 
