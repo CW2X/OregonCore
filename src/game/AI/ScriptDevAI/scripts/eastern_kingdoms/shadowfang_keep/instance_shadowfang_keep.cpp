@@ -23,7 +23,7 @@ SDCategory: Shadowfang Keep
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "shadowfang_keep.h"
 
 #define MAX_ENCOUNTER              4

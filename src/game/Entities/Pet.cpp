@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,11 +21,11 @@
 #include "Server/WorldSession.h"
 #include "WorldPacket.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Pet.h"
 #include "Maps/MapManager.h"
-#include "Formulas.h"
-#include "SpellAuras.h"
+#include "Tools/Formulas.h"
+#include "Spells/SpellAuras.h"
 #include "Entities/Unit.h"
 #include "Utilities/Util.h"
 
@@ -2004,3 +2004,4 @@ void Pet::ApplyModeFlags(PetModeFlags mode, bool apply)
     data << uint32(m_petModeFlags);
     ((Player*)owner)->GetSession()->SendPacket(&data);
 }
+

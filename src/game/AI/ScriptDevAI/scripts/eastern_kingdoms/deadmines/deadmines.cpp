@@ -23,7 +23,7 @@ SDCategory: Deadmines
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "deadmines.h"
 #include "Spell.h"
 

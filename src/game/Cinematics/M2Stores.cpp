@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -17,8 +17,8 @@
 
 #include "Console.h"
 #include "Server/DBCStores.h"
-#include "M2Structure.h"
-#include "M2Stores.h"
+#include "Cinematics/M2Structure.h"
+#include "Cinematics/M2Stores.h"
 #include "Common.h"
 #include "Log.h"
 #include "World/World.h"
@@ -237,3 +237,4 @@ void LoadM2Cameras(std::string const& dataPath)
         }
     }
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "OutdoorPvPZM.h"
+#include "OutdoorPvP/OutdoorPvPZM.h"
 #include "Globals/ObjectMgr.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "Entities/Player.h"
@@ -417,4 +417,5 @@ void OutdoorPvPZM::SendRemoveWorldStates(Player* plr)
     plr->SendUpdateWorldState(ZM_MAP_ALLIANCE_FLAG_NOT_READY, 0);
     plr->SendUpdateWorldState(ZM_MAP_ALLIANCE_FLAG_READY, 0);
 }
+
 

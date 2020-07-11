@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "BoundingIntervalHierarchy.h"
+#include "vmap/BoundingIntervalHierarchy.h"
 
 void BIH::buildHierarchy(std::vector<uint32> &tempTree, buildData &dat, BuildStats &stats)
 {
@@ -301,3 +301,4 @@ void BIH::BuildStats::printStats()
     printf("               N>4  %3d%%\n", 100 * numLeavesN[5] / numLeaves);
     printf("  * BVH2 nodes:     %d (%3d%%)\n", numBVH2, 100 * numBVH2 / (numNodes + numLeaves - 2 * numBVH2));
 }
+

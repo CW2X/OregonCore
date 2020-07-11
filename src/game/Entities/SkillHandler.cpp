@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,7 +23,7 @@
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
 #include "Globals/ObjectAccessor.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 
 void WorldSession::HandleLearnTalentOpcode(WorldPacket& recv_data)
 {
@@ -166,4 +166,5 @@ void WorldSession::HandleUnlearnSkillOpcode(WorldPacket& recv_data)
     recv_data >> skill_id;
     GetPlayer()->SetSkill(skill_id, 0, 0);
 }
+
 

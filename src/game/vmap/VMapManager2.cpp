@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,11 +19,11 @@
 #include <iomanip>
 #include <string>
 #include <sstream>
-#include "VMapManager2.h"
-#include "MapTree.h"
-#include "ModelInstance.h"
-#include "WorldModel.h"
-#include "VMapDefinitions.h"
+#include "vmap/VMapManager2.h"
+#include "vmap/MapTree.h"
+#include "vmap/ModelInstance.h"
+#include "vmap/WorldModel.h"
+#include "vmap/VMapDefinitions.h"
 #include <G3D/Vector3.h>
 #include <ace/Null_Mutex.h>
 #include <ace/Singleton.h>
@@ -322,3 +322,4 @@ bool VMapManager2::existsMap(const char* basePath, unsigned int mapId, int x, in
 }
 
 } // namespace VMAP
+

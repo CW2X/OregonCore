@@ -27,7 +27,7 @@ npc_blood_knight_stillblade
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 /*#######
 # npc_blood_knight_stillblade

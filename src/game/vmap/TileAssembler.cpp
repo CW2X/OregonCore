@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,10 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "TileAssembler.h"
-#include "MapTree.h"
-#include "BoundingIntervalHierarchy.h"
-#include "VMapDefinitions.h"
+#include "vmap/TileAssembler.h"
+#include "vmap/MapTree.h"
+#include "vmap/BoundingIntervalHierarchy.h"
+#include "vmap/VMapDefinitions.h"
 
 #include <set>
 #include <iomanip>
@@ -526,3 +526,4 @@ bool TileAssembler::convertRawFile(const std::string& pModelFilename)
 #undef READ_OR_RETURN
 #undef CMP_OR_RETURN
     }
+

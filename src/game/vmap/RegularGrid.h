@@ -1,4 +1,4 @@
-#ifndef _REGULAR_GRID_H
+﻿#ifndef _REGULAR_GRID_H
 #define _REGULAR_GRID_H
 
 
@@ -216,3 +216,4 @@ public:
 #undef HGRID_MAP_SIZE
 
 #endif
+

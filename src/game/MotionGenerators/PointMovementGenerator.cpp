@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "PointMovementGenerator.h"
+#include "MotionGenerators/PointMovementGenerator.h"
 #include "Errors.h"
 #include "Entities/Creature.h"
 #include "CreatureAI.h"
@@ -23,9 +23,9 @@
 #include "Entities/TemporarySummon.h"
 #include "Maps/MapManager.h"
 #include "World/World.h"
-#include "PathFinder.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "MotionGenerators/PathFinder.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 
 //----- Point Movement Generator
 template<class T>
@@ -145,3 +145,4 @@ void EffectMovementGenerator::Finalize(Unit& unit)
     if (unit.ToCreature()->AI())
         unit.ToCreature()->AI()->MovementInform(EFFECT_MOTION_TYPE, m_Id);
 }
+

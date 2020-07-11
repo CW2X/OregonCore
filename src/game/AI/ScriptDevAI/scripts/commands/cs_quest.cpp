@@ -3,7 +3,7 @@
 #include "Entities/Player.h"
 #include "ReputationMgr.h"
 #include "DBScripts/ScriptMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 class quest_commandscript : public CommandScript
 {

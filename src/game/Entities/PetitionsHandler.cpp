@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,14 +16,14 @@
  */
 
 #include "Common.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Log.h"
 #include "Server/Opcodes.h"
-#include "Guild.h"
+#include "Guilds/Guild.h"
 #include "Arena/ArenaTeam.h"
 #include "Maps/MapManager.h"
 
@@ -932,4 +932,5 @@ void WorldSession::SendPetitionShowList(uint64 guid)
     SendPacket(&data);
     sLog.outDebug("Sent SMSG_PETITION_SHOWLIST");
 }
+
 

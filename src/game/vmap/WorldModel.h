@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include <G3D/Vector3.h>
 #include <G3D/AABox.h>
 #include <G3D/Ray.h>
-#include "BoundingIntervalHierarchy.h"
+#include "vmap/BoundingIntervalHierarchy.h"
 
 #include "Platform/Define.h"
 
@@ -135,3 +135,4 @@ class WorldModel
 } // namespace VMAP
 
 #endif // _WORLDMODEL_H
+

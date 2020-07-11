@@ -23,7 +23,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 #define SPELL_SHADOWBOLTVOLLEY      20741
 #define SPELL_BONESHIELD            27688

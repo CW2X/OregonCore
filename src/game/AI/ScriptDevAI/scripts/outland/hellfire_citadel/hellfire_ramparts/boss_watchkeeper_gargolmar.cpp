@@ -23,7 +23,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "hellfire_ramparts.h"
 
 #define SAY_TAUNT               -1543000

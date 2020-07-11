@@ -22,7 +22,7 @@ SDComment: Support for quest 219.
 Script Data End */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "ScriptedEscortAI.h"
 
 enum eCorporalKeeshan

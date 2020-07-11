@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -26,15 +26,15 @@
 #include "Database/DatabaseEnv.h"
 #include "Server/DBCStores.h"
 #include "Entities/NPCHandler.h"
-#include "QuestDef.h"
-#include "Group.h"
+#include "Quests/QuestDef.h"
+#include "Groups/Group.h"
 #include "Entities/Bag.h"
 #include "Server/WorldSession.h"
-#include "CinematicMgr.h"
+#include "Cinematics/CinematicMgr.h"
 #include "Entities/Pet.h"
-#include "MapReference.h"
+#include "Maps/MapReference.h"
 #include "Utilities/Util.h"                                           // for Tokens typedef
-#include "ReputationMgr.h"
+#include "Reputation/ReputationMgr.h"
 
 #include<string>
 #include<vector>
@@ -3074,4 +3074,5 @@ template <class T> T Player::ApplySpellMod(uint32 spellId, SpellModOp op, T& bas
     return T(diff);
 }
 #endif
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,7 +21,7 @@
 #include "G3D/Table.h"
 #include "G3D/Array.h"
 #include "G3D/Set.h"
-#include "BoundingIntervalHierarchy.h"
+#include "vmap/BoundingIntervalHierarchy.h"
 
 
 template<class T, class BoundsFunc = BoundsTrait<T> >
@@ -114,3 +114,4 @@ public:
 };
 
 #endif // _BIH_WRAP
+

@@ -22,7 +22,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "sunwell_plateau.h"
 
 enum Quotes

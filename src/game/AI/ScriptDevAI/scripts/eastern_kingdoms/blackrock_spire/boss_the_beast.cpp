@@ -23,7 +23,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 #define SPELL_FLAMEBREAK            16785
 #define SPELL_IMMOLATE              20294

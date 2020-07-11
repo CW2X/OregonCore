@@ -23,7 +23,7 @@ SDCategory: Tempest Keep, The Botanica
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 #define SAY_AGGRO                   -1553000
 #define SAY_KILL_1                  -1553001

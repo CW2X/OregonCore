@@ -19,7 +19,7 @@
 #include "Globals/ObjectMgr.h"
 #include "Chat/Chat.h"
 #include "Accounts/AccountMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "World/World.h"
 #include "Entities/Player.h"
 #include "Server/Opcodes.h"

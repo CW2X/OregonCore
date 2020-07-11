@@ -23,7 +23,7 @@ SDCategory: Hellfire Citadel, Magtheridon's lair
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "magtheridons_lair.h"
 
 #define SPELL_SOUL_TRANSFER         30531 // core bug, does not support target 7

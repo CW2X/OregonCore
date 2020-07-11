@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,7 +23,7 @@
 #include "Globals/ObjectMgr.h"
 #include "ScriptLoader.h"
 #include "ScriptSystem.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/GossipDef.h"
 #include "CreatureAIImpl.h"
 #include "ScriptLoader.h"
@@ -1412,3 +1412,4 @@ template class ScriptMgr::ScriptRegistry<BGScript>;
 #undef FOR_SCRIPTS
 #undef SCR_REG_LST
 #undef SCR_REG_MAP
+

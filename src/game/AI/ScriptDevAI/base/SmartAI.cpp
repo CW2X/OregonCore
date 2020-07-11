@@ -21,7 +21,7 @@
 #include "GridNotifiers.h"
 #include "SpellMgr.h"
 #include "Grids/Cell.h"
-#include "Group.h"
+#include "Entities/Group.h"
 #include "SmartAI.h"
 #include "DBScripts/ScriptMgr.h"
 

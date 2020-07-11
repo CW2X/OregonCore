@@ -27,7 +27,7 @@ npc_henry_stern
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "razorfen_downs.h"
 #include "ScriptedGossip.h"
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -17,12 +17,12 @@
 
 #include "Entities/Creature.h"
 #include "CreatureAI.h"
-#include "FleeingMovementGenerator.h"
+#include "MotionGenerators/FleeingMovementGenerator.h"
 #include "Globals/ObjectAccessor.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
-#include "PathFinder.h"
-#include "VMapFactory.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
+#include "MotionGenerators/PathFinder.h"
+#include "vmap/VMapFactory.h"
 
 #define MIN_QUIET_DISTANCE 20.0f
 #define MAX_QUIET_DISTANCE 25.0f
@@ -199,4 +199,5 @@ bool TimedFleeingMovementGenerator::Update(Unit& owner, const uint32& time_diff)
     // This is done instead of casting Unit& to Creature& and call parent method, then we can use Unit directly
     return MovementGeneratorMedium< Creature, FleeingMovementGenerator<Creature> >::Update(owner, time_diff);
 }
+
 

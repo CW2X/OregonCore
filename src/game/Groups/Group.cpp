@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,12 +22,12 @@
 #include "Entities/Player.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "Group.h"
-#include "Formulas.h"
+#include "Groups/Group.h"
+#include "Tools/Formulas.h"
 #include "Globals/ObjectAccessor.h"
 #include "Battleground/Battleground.h"
 #include "Maps/MapManager.h"
-#include "InstanceSaveMgr.h"
+#include "Maps/InstanceSaveMgr.h"
 #include "Utilities/Util.h"
 #include "DBScripts/ScriptMgr.h"
 
@@ -1703,4 +1703,5 @@ void Group::BroadcastGroupUpdate(void)
         }
     }
 }
+
 

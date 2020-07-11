@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef DBCSTRUCTURE_H
 #define DBCSTRUCTURE_H
 
-#include "DBCEnums.h"
+#include "Server/DBCEnums.h"
 #include "Platform/Define.h"
 #include "MotionGenerators/Path.h"
 #include "Globals/SharedDefines.h"
@@ -1085,4 +1085,5 @@ typedef std::vector<TaxiPathNodeList> TaxiPathNodesByPath;
 #define TaxiMaskSize 16
 typedef uint32 TaxiMask[TaxiMaskSize];
 #endif
+
 

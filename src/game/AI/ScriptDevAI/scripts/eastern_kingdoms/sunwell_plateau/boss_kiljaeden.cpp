@@ -25,7 +25,7 @@
  //TODO rewrite Armageddon
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "sunwell_plateau.h"
 #include <math.h>
 

@@ -30,7 +30,7 @@ at_map_chamber
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "uldaman.h"
 #include "ScriptedGossip.h"
 

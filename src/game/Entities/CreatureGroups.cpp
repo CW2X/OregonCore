@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -258,4 +258,5 @@ void CreatureGroup::LeaderMoveTo(float x, float y, float z)
         member->SetHomePosition(dx, dy, dz, pathangle);
     }
 }
+
 

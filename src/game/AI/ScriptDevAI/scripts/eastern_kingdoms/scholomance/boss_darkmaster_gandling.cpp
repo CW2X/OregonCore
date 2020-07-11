@@ -23,7 +23,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "scholomance.h"
 
 #define SPELL_ARCANEMISSILES           22272

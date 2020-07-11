@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,7 +21,7 @@
 #include "Battleground/BattlegroundAB.h"
 #include "Entities/Creature.h"
 #include "Maps/MapManager.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Utilities/Util.h"
 
 // these variables aren't used outside of this file, so declare them only here
@@ -651,4 +651,5 @@ void BattlegroundAB::UpdatePlayerScore(Player* Source, uint32 type, uint32 value
         break;
     }
 }
+
 

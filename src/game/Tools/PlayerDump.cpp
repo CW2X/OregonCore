@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,7 +16,7 @@
  */
 
 #include "Common.h"
-#include "PlayerDump.h"
+#include "Tools/PlayerDump.h"
 #include "Database/DatabaseEnv.h"
 #include "Database/SQLStorage.h"
 #include "Entities/UpdateFields.h"
@@ -667,4 +667,5 @@ DumpReturn PlayerDumpReader::LoadDump(const std::string& file, uint32 account, s
 
     return DUMP_SUCCESS;
 }
+
 

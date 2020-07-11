@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Entities/Player.h"
 #include "World/World.h"
 
@@ -194,4 +194,5 @@ int32 Quest::GetRewOrReqMoney() const
 
     return int32(RewOrReqMoney * sWorld.getRate(RATE_DROP_MONEY));
 }
+
 

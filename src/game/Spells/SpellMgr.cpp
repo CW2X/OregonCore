@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,12 +16,12 @@
  */
 
 #include "Entities/Unit.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Globals/ObjectMgr.h"
 #include "Spells/SpellAuraDefines.h"
 #include "Server/DBCStores.h"
 #include "Chat/Chat.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "CreatureAI.h"
 #include "BattleGround/BattlegroundMgr.h"
 
@@ -3269,3 +3269,4 @@ DiminishingReturnsType GetDiminishingReturnsGroupType(DiminishingGroup group)
 
     return DRTYPE_NONE;
 }
+

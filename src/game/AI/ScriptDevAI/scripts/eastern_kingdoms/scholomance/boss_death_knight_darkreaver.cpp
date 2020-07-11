@@ -23,7 +23,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 class boss_death_knight_darkreaver : public CreatureScript
 {

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include "Entities/Player.h"
 #include "Globals/ObjectAccessor.h"
 #include "Entities/UnitEvents.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 
 //==============================================================
 //================= ThreatCalcHelper ===========================
@@ -567,4 +567,5 @@ void ThreatManager::resetAllAggro()
 
     setDirty(true);
 }
+
 

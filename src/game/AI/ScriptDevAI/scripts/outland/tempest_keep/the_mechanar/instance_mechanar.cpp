@@ -23,7 +23,7 @@ SDCategory: Mechanar
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "mechanar.h"
 
 #define ENCOUNTERS      1

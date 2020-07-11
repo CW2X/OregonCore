@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Entities/GossipDef.h"
 #include "Globals/ObjectMgr.h"
 #include "Server/Opcodes.h"
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
-#include "Formulas.h"
+#include "Tools/Formulas.h"
 
 GossipMenu::GossipMenu()
 {
@@ -792,4 +792,5 @@ void PlayerMenu::AddQuestLevelToTitle(std::string& title, int32 level)
     questTitlePretty << "[" << level << "] " << title;
     title = questTitlePretty.str();
 }
+
 

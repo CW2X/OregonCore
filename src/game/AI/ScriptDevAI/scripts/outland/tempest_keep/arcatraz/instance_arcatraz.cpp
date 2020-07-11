@@ -23,7 +23,7 @@ SDCategory: Tempest Keep, The Arcatraz
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "arcatraz.h"
 
 /* Arcatraz encounters:

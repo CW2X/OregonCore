@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef OUTDOOR_PVP_TF_
 #define OUTDOOR_PVP_TF_
 
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 
 const uint8 OutdoorPvPTFBuffZonesNum = 5;
 
@@ -180,4 +180,5 @@ class OutdoorPvPTF : public OutdoorPvP
 };
 
 #endif
+
 

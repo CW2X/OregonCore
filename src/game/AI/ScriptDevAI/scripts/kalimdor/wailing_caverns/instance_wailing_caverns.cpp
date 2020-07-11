@@ -23,7 +23,7 @@ SDCategory: Wailing Caverns
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "wailing_caverns.h"
 
 #define MAX_ENCOUNTER   9

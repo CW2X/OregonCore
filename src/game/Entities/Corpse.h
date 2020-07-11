@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,7 +21,7 @@
 #include "Entities/Object.h"
 #include "Database/DatabaseEnv.h"
 #include "Maps/GridDefines.h"
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 
 enum CorpseType
 {
@@ -135,4 +135,5 @@ class Corpse : public WorldObject, public GridObject<Corpse>
         GridCoord _gridCoord;                                    // gride for corpse position for fast search
 };
 #endif
+
 

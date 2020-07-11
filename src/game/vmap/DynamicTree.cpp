@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,8 +18,8 @@
 #include "vmap/DynamicTree.h"
 #include "Log.h"
 #include "Timer.h"
-#include "BoundingIntervalHierarchyWrapper.h"
-#include "RegularGrid.h"
+#include "vmap/BoundingIntervalHierarchyWrapper.h"
+#include "vmap/RegularGrid.h"
 #include "vmap/GameObjectModel.h"
 
 using G3D::Ray;
@@ -256,3 +256,4 @@ float DynamicMapTree::getHeight(float x, float y, float z, float maxSearchDist) 
     else
         return -G3D::inf();
 }
+

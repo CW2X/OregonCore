@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,9 +15,9 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Channel.h"
+#include "Chat/Channel.h"
 #include "Globals/ObjectMgr.h"
-#include "SocialMgr.h"
+#include "Social/SocialMgr.h"
 #include "World/World.h"
 
 Channel::Channel(const std::string& name, uint32 channel_id)
@@ -988,4 +988,5 @@ void Channel::LeaveNotify(uint64 guid)
     data << GetName();
     SendToAll(&data);
 }
+
 

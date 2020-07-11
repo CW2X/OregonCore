@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -17,7 +17,7 @@
 
 #include "Database/DatabaseEnv.h"
 #include "Maps/GridDefines.h"
-#include "WaypointManager.h"
+#include "MotionGenerators/WaypointManager.h"
 #include "Maps/MapManager.h"
 
 WaypointMgr::WaypointMgr() { }
@@ -129,3 +129,4 @@ void WaypointMgr::ReloadPath(uint32 id)
     }
     while (result->NextRow());
 }
+

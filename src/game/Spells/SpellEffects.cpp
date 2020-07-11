@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,14 +25,14 @@
 #include "Entities/UpdateMask.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Player.h"
-#include "SkillExtraItems.h"
+#include "Skills/SkillExtraItems.h"
 #include "Entities/Unit.h"
 #include "CreatureAI.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "Entities/DynamicObject.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 #include "Entities/Pet.h"
 #include "Entities/GameObject.h"
 #include "Entities/GossipDef.h"
@@ -40,19 +40,19 @@
 #include "Entities/Totem.h"
 #include "Battleground/Battleground.h"
 #include "Battleground/BattlegroundEY.h"
-#include "BattlegroundWS.h"
+#include "BattleGround/BattlegroundWS.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
-#include "Language.h"
-#include "SocialMgr.h"
+#include "Tools/Language.h"
+#include "Social/SocialMgr.h"
 #include "Utilities/Util.h"
 #include "Entities/TemporarySummon.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
 #include "DBScripts/ScriptMgr.h"
 #include "GameObjectAI.h"
-#include "InstanceData.h"
-#include "MoveSplineInit.h"
+#include "Maps/InstanceData.h"
+#include "Movement/MoveSplineInit.h"
 
 pEffect SpellEffects[TOTAL_SPELL_EFFECTS] =
 {
@@ -7462,3 +7462,4 @@ void Spell::EffectSummonFriend(SpellEffIndex /*effIndex*/)
         buddy->GetSession()->SendPacket(&data);
     }
 }
+

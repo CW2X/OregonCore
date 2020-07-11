@@ -23,7 +23,7 @@ SDCategory: Ruins of Ahn'Qiraj
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 #define SAY_ANDOROV_INTRO   -1509003
 #define SAY_ANDOROV_ATTACK  -1509004

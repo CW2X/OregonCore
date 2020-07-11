@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,7 +19,7 @@
 #define MANGOSCORE_GOSSIP_H
 
 #include "Common.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Entities/NPCHandler.h"
 
 class WorldSession;
@@ -282,4 +282,5 @@ class PlayerMenu
         void SendQuestGiverRequestItems(Quest const* pQuest, uint64 npcGUID, bool Completable, bool CloseOnCancel);
 };
 #endif
+
 

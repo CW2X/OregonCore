@@ -1,5 +1,5 @@
 #include "Chat/Chat.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Globals/ObjectAccessor.h"
 #include "Entities/Player.h"
 #include "Entities/Pet.h"

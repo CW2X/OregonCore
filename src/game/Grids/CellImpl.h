@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,7 +21,7 @@
 #include <cmath>
 
 #include "Grids/Cell.h"
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Entities/Object.h"
 
 inline Cell::Cell(CellCoord const& p)
@@ -177,4 +177,5 @@ inline void Cell::VisitCircle(TypeContainerVisitor<T, CONTAINER>& visitor, Map& 
     }
 }
 #endif
+
 

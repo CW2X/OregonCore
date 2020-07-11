@@ -23,7 +23,7 @@ SDCategory: Uldaman
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "uldaman.h"
 
 #define SPELL_ARCHAEDAS_AWAKEN        10347

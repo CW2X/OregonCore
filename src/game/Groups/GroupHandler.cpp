@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,10 +24,10 @@
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"
-#include "Group.h"
+#include "Groups/Group.h"
 #include "Globals/ObjectAccessor.h"
 #include "Maps/MapManager.h"
-#include "SocialMgr.h"
+#include "Social/SocialMgr.h"
 #include "Utilities/Util.h"
 
 /* differeces from off:
@@ -1007,3 +1007,4 @@ void WorldSession::HandleGroupSwapSubGroupOpcode(WorldPacket& recv_data)
     group->ChangeMembersGroup(guid1, subgroup2);
     group->ChangeMembersGroup(guid2, subgroup1);
 }
+

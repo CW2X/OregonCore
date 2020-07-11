@@ -29,7 +29,7 @@ npc_parqual_fintallas
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "MoveSplineInit.h"
 #include "MoveSpline.h"
 #include "ScriptedGossip.h"

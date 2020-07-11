@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "ReputationMgr.h"
+#include "Reputation/ReputationMgr.h"
 #include "Server/DBCStores.h"
 #include "Entities/Player.h"
 #include "WorldPacket.h"
@@ -477,3 +477,4 @@ void ReputationMgr::SaveToDB()
         }
     }
 }
+

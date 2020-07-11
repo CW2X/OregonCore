@@ -1,4 +1,4 @@
-/* Copyright (C) 2008-2010 Trinity <http://www.trinitycore.org/>
+﻿/* Copyright (C) 2008-2010 Trinity <http://www.trinitycore.org/>
  *
  * Thanks to the original authors: ScriptDev2 <https://scriptdev2.svn.sourceforge.net/>
  *
@@ -935,3 +935,4 @@ public: /* ScriptRegistry */
 };
 
 #endif
+

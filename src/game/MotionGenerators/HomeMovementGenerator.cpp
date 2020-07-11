@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "HomeMovementGenerator.h"
+#include "MotionGenerators/HomeMovementGenerator.h"
 #include "Entities/Creature.h"
 #include "CreatureAI.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectAccessor.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 
 void HomeMovementGenerator<Creature>::Initialize(Creature& owner)
 {
@@ -73,4 +73,5 @@ bool HomeMovementGenerator<Creature>::Update(Creature& owner, const uint32& time
     arrived = skipToHome || owner.movespline->Finalized();
     return !arrived;
 }
+
 

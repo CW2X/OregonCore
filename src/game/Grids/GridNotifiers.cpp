@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,16 +15,16 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
 #include "Entities/UpdateData.h"
 #include "Maps/MapManager.h"
 #include "Entities/Transports.h"
 #include "Globals/ObjectAccessor.h"
-#include "CellImpl.h"
-#include "SpellAuras.h"
+#include "Grids/CellImpl.h"
+#include "Spells/SpellAuras.h"
 
 using namespace MaNGOS;
 
@@ -428,4 +428,5 @@ bool CannibalizeObjectCheck::operator()(Corpse* u)
 
 template void ObjectUpdater::Visit<GameObject>(GameObjectMapType&);
 template void ObjectUpdater::Visit<DynamicObject>(DynamicObjectMapType&);
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,9 +18,9 @@
 #ifndef MANGOSCORE_GROUP_H
 #define MANGOSCORE_GROUP_H
 
-#include "GroupReference.h"
-#include "GroupRefManager.h"
-#include "LootMgr.h"
+#include "Groups/GroupReference.h"
+#include "Groups/GroupRefManager.h"
+#include "Loot/LootMgr.h"
 
 #include <map>
 #include <vector>
@@ -525,4 +525,5 @@ class Group
 
 #define sScriptMgr MaNGOS::Singleton<ScriptMgr>::Instance()
 #endif
+
 

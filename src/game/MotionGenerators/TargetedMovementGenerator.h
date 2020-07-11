@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,9 +18,9 @@
 #ifndef MANGOS_TARGETEDMOVEMENTGENERATOR_H
 #define MANGOS_TARGETEDMOVEMENTGENERATOR_H
 
-#include "MovementGenerator.h"
+#include "MotionGenerators/MovementGenerator.h"
 #include "MotionGenerators/FollowerReference.h"
-#include "PathFinder.h"
+#include "MotionGenerators/PathFinder.h"
 
 class TargetedMovementGeneratorBase
 {
@@ -123,3 +123,4 @@ public:
 };
 
 #endif
+

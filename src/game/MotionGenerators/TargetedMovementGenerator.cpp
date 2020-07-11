@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,7 +16,7 @@
  */
 
 #include "ByteBuffer.h"
-#include "TargetedMovementGenerator.h"
+#include "MotionGenerators/TargetedMovementGenerator.h"
 #include "Errors.h"
 #include "Entities/Creature.h"
 #include "CreatureAI.h"
@@ -24,8 +24,8 @@
 #include "Entities/Unit.h"
 #include "Entities/Player.h"
 #include "Entities/Pet.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 #include <cmath>
 
 template<class T, typename D>
@@ -366,3 +366,4 @@ template void FollowMovementGenerator<Creature>::Finalize(Creature&);
 template void FollowMovementGenerator<Player>::Reset(Player&);
 template void FollowMovementGenerator<Creature>::Reset(Creature&);
 template void FollowMovementGenerator<Player>::MovementInform(Player&);
+

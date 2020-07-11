@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,8 +16,8 @@
  */
 
 #include "Server/WorldSession.h"
-#include "Channel.h"
-#include "ChannelMgr.h"
+#include "Chat/Channel.h"
+#include "Chat/ChannelMgr.h"
 #include "Server/DBCStores.h"
 #include "Log.h"
 #include "Globals/ObjectMgr.h"                                      // for normalizePlayerName
@@ -326,4 +326,5 @@ void WorldSession::HandleSetChannelWatch(WorldPacket& recvPacket)
         if (Channel *chn = cMgr->GetChannel(channelname, _player))
             chn->JoinNotify(_player->GetGUID());*/
 }
+
 

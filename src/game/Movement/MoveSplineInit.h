@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -18,8 +18,8 @@
 #ifndef MANGOS_MOVESPLINEINIT_H
 #define MANGOS_MOVESPLINEINIT_H
 
-#include "MoveSplineInitArgs.h"
-#include "PathFinder.h"
+#include "Movement/MoveSplineInitArgs.h"
+#include "MotionGenerators/PathFinder.h"
 
 class Unit;
 
@@ -118,3 +118,4 @@ namespace Movement
     }
 }
 #endif // MANGOS_MOVESPLINEINIT_H
+

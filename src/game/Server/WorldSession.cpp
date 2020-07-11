@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,13 +24,13 @@
 #include "Server/WorldSession.h"
 #include "Entities/Player.h"
 #include "Globals/ObjectMgr.h"
-#include "Group.h"
-#include "Guild.h"
+#include "Groups/Group.h"
+#include "Guilds/Guild.h"
 #include "World/World.h"
 #include "BattleGround/BattlegroundMgr.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "Chat/Chat.h"
-#include "SocialMgr.h"
+#include "Social/SocialMgr.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Warden/WardenWin.h"
 #include "Warden/WardenMac.h"
@@ -625,4 +625,5 @@ void WorldSession::ExecuteOpcode(OpcodeHandler const& opHandle, WorldPacket* pac
     if (packet->rpos() < packet->wpos())
         LogUnprocessedTail(packet);
 }
+
 

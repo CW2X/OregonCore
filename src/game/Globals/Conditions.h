@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef CONDITIONMGR_H
 #define CONDITIONMGR_H
 
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 
 class Player;
 class Unit;
@@ -312,3 +312,4 @@ template <class T> bool CompareValues(ComparisionType type,  T val1, T val2)
 #define sConditionMgr MaNGOS::Singleton<ConditionMgr>::Instance()
 
 #endif
+

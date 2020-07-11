@@ -1,7 +1,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
 #include "Entities/Creature.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Entities/Player.h"
 #include "Spell.h"
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,13 +18,13 @@
 #ifndef MANGOS_GRIDNOTIFIERSIMPL_H
 #define MANGOS_GRIDNOTIFIERSIMPL_H
 
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 #include "WorldPacket.h"
 #include "Entities/Corpse.h"
 #include "Entities/Player.h"
 #include "Entities/UpdateData.h"
 #include "CreatureAI.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 
 template<class T>
 inline void
@@ -396,4 +396,5 @@ void MaNGOS::LocalizedPacketListDo<Builder>::operator()(Player* p)
 }
 
 #endif                                                      // MANGOS_GRIDNOTIFIERSIMPL_H
+
 

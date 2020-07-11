@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,10 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "InstanceData.h"
-#include "MapReference.h"
+#include "Maps/InstanceData.h"
+#include "Maps/MapReference.h"
 #include "Database/DatabaseEnv.h"
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Entities/GameObject.h"
 #include "Entities/Creature.h"
 #include "CreatureAI.h"
@@ -274,3 +274,4 @@ void InstanceData::DoCastSpellOnPlayers(uint32 spell)
             if (Player* player = i->GetSource())
                 player->CastSpell(player, spell, true);
 }
+

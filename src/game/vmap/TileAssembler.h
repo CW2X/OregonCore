@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,8 +23,8 @@
 #include <map>
 #include <set>
 
-#include "ModelInstance.h"
-#include "WorldModel.h"
+#include "vmap/ModelInstance.h"
+#include "vmap/WorldModel.h"
 
 namespace VMAP
 {
@@ -114,3 +114,4 @@ class TileAssembler
 
 }                                                           // VMAP
 #endif                                                      /*_TILEASSEMBLER_H_*/
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,9 +16,9 @@
  */
 
 #include "Entities/Creature.h"
-#include "CreatureAISelector.h"
+#include "AI/CreatureAISelector.h"
 #include "PassiveAI.h"
-#include "MovementGenerator.h"
+#include "MotionGenerators/MovementGenerator.h"
 #include "Entities/TemporarySummon.h"
 #include "CreatureAIFactory.h"
 #include "DBScripts/ScriptMgr.h"
@@ -146,4 +146,5 @@ GameObjectAI* SelectGameObjectAI(GameObject* go)
     return (ai_factory == NULL ? new NullGameObjectAI(go) : ai_factory->Create(go));
 }
 }
+
 

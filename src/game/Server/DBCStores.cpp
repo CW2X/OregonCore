@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,7 +19,7 @@
 #include "Log.h"
 #include "Globals/SharedDefines.h"
 
-#include "DBCfmt.h"
+#include "Server/DBCfmt.h"
 
 #include <map>
 
@@ -788,4 +788,5 @@ DBCStorage <EmotesTextEntry>    const* GetEmotesTextStore()
 {
     return &sEmotesTextStore;
 }
+
 

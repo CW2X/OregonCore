@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,11 +18,11 @@
 #ifndef MANGOS_PATH_FINDER_H
 #define MANGOS_PATH_FINDER_H
 
-#include "MoveMapSharedDefines.h"
+#include "MotionGenerators/MoveMapSharedDefines.h"
 #include "DetourNavMesh.h"
 #include "DetourNavMeshQuery.h"
 
-#include "MoveSplineInitArgs.h"
+#include "Movement/MoveSplineInitArgs.h"
 
 using Movement::Vector3;
 using Movement::PointsArray;
@@ -226,3 +226,4 @@ class PathInfo
 };
 
 #endif
+

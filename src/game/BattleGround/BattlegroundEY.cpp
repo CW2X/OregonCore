@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include "Entities/Creature.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Utilities/Util.h"
 
 // these variables aren't used outside of this file, so declare them only here
@@ -871,4 +871,5 @@ WorldSafeLocsEntry const* BattlegroundEY::GetClosestGraveYard(Player* player)
 
     return nearestEntry;
 }
+
 

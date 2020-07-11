@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,9 +21,9 @@
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Log.h"
-#include "Guild.h"
+#include "Guilds/Guild.h"
 #include "Maps/MapManager.h"
-#include "SocialMgr.h"
+#include "Social/SocialMgr.h"
 
 void WorldSession::HandleGuildQueryOpcode(WorldPacket& recvPacket)
 {
@@ -1650,4 +1650,5 @@ void WorldSession::SendSaveGuildEmblem(uint32 msg)
     data << uint32(msg);                                    // not part of guild
     SendPacket(&data);
 }
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -19,7 +19,7 @@
 #define CinematicMgr_h__
 
 #include "Entities/Object.h"
-#include "M2Stores.h"
+#include "Cinematics/M2Stores.h"
 
 #define CINEMATIC_LOOKAHEAD (2 * IN_MILLISECONDS)
 #define CINEMATIC_UPDATEDIFF 500
@@ -56,3 +56,4 @@ protected:
 };
 
 #endif
+

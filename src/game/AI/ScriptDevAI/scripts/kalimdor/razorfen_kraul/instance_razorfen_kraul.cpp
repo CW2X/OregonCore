@@ -23,7 +23,7 @@ SDCategory: Razorfen Kraul
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "razorfen_kraul.h"
 
 #define WARD_KEEPERS_NR 2

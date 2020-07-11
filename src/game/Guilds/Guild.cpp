@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -20,11 +20,11 @@
 #include "Entities/Player.h"
 #include "Server/Opcodes.h"
 #include "Globals/ObjectMgr.h"
-#include "Guild.h"
+#include "Guilds/Guild.h"
 #include "Chat/Chat.h"
-#include "SocialMgr.h"
+#include "Social/SocialMgr.h"
 #include "Utilities/Util.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 Guild::Guild()
 {
@@ -2035,4 +2035,5 @@ bool GuildItemPosCount::isContainedIn(GuildItemPosCountVec const& vec) const
 
     return false;
 }
+
 

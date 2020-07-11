@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,29 +19,29 @@
 #include "Database/DatabaseEnv.h"
 #include "Database/SQLStorage.h"
 #include "Database/SQLStorageImpl.h"
-#include "PoolMgr.h"
+#include "Pools/PoolMgr.h"
 #include "Log.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/UpdateMask.h"
 #include "World/World.h"
 #include "Server/WorldSession.h"
-#include "Group.h"
-#include "Guild.h"
+#include "Groups/Group.h"
+#include "Guilds/Guild.h"
 #include "Arena/ArenaTeam.h"
 #include "Entities/Transports.h"
-#include "Language.h"
-#include "GameEventMgr.h"
-#include "Spell.h"
+#include "Tools/Language.h"
+#include "GameEvents/GameEventMgr.h"
+#include "Spells/Spell.h"
 #include "Chat/Chat.h"
 #include "Accounts/AccountMgr.h"
-#include "InstanceSaveMgr.h"
-#include "SpellAuras.h"
+#include "Maps/InstanceSaveMgr.h"
+#include "Spells/SpellAuras.h"
 #include "Utilities/Util.h"
-#include "WaypointManager.h"
+#include "MotionGenerators/WaypointManager.h"
 #include "Entities/GossipDef.h"
-#include "DisableMgr.h"
+#include "Globals/DisableMgr.h"
 
 INSTANTIATE_SINGLETON_1(ObjectMgr);
 
@@ -7686,4 +7686,5 @@ void ObjectMgr::LoadTransportEvents()
 
     sLog.outString("\n>> Loaded " UI64FMTD " transport events \n", result->GetRowCount());
 }
+
 

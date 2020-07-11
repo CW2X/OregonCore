@@ -27,7 +27,7 @@ npc_forest_frog
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "zulaman.h"
 #include "ScriptedGossip.h"
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_SPLINE_H
 #define MANGOS_SPLINE_H
 
-#include "typedefs.h"
+#include "Movement/typedefs.h"
 #include "G3D/Vector3.h"
 
 namespace Movement
@@ -206,6 +206,7 @@ namespace Movement
     };
 }
 
-#include "spline.impl.h"
+#include "Movement/spline.impl.h"
 
 #endif // MANGOS_SPLINE_H
+

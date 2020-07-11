@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,12 +16,12 @@
  */
 
 #include "OutdoorPvP/OutdoorPvPMgr.h"
-#include "OutdoorPvPHP.h"
-#include "OutdoorPvPNA.h"
-#include "OutdoorPvPTF.h"
-#include "OutdoorPvPZM.h"
-#include "OutdoorPvPSI.h"
-#include "OutdoorPvPEP.h"
+#include "OutdoorPvP/OutdoorPvPHP.h"
+#include "OutdoorPvP/OutdoorPvPNA.h"
+#include "OutdoorPvP/OutdoorPvPTF.h"
+#include "OutdoorPvP/OutdoorPvPZM.h"
+#include "OutdoorPvP/OutdoorPvPSI.h"
+#include "OutdoorPvP/OutdoorPvPEP.h"
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
@@ -233,4 +233,5 @@ void OutdoorPvPMgr::HandleDropFlag(Player* plr, uint32 spellId)
             return;
     }
 }
+
 

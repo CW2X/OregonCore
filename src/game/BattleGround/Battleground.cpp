@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,13 +19,13 @@
 #include "Entities/Player.h"
 #include "Battleground/Battleground.h"
 #include "Entities/Creature.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Chat/Chat.h"
 #include "Arena/ArenaTeam.h"
 #include "World/World.h"
 #include "Utilities/Util.h"
 #include "World/World.h"
-#include "GridNotifiersImpl.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "DBScripts/ScriptMgr.h"
 
 namespace MaNGOS
@@ -1960,4 +1960,5 @@ void Battleground::RewardXPAtKill(Player* killer, Player* victim)
     if (sWorld.getConfig(CONFIG_BG_XP_FOR_KILL) && killer && victim)
         killer->RewardPlayerAndGroupAtKill(victim, true);
 }
+
 

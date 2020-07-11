@@ -23,7 +23,7 @@ SDCategory: Ruins of Ahn'Qiraj
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 #define EMOTE_TARGET        -1509002
 

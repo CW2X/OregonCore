@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_MOVESPLINEFLAG_H
 #define MANGOS_MOVESPLINEFLAG_H
 
-#include "typedefs.h"
+#include "Movement/typedefs.h"
 #include <string>
 
 namespace Movement
@@ -143,3 +143,4 @@ namespace Movement
 }
 
 #endif // MANGOSSERVER_MOVESPLINEFLAG_H
+

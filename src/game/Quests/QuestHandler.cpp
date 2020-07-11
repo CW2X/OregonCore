@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,9 +24,9 @@
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"
 #include "Entities/GossipDef.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Globals/ObjectAccessor.h"
-#include "Group.h"
+#include "Groups/Group.h"
 #include "Battleground/Battleground.h"
 #include "Battleground/BattlegroundAV.h"
 #include "DBScripts/ScriptMgr.h"
@@ -735,4 +735,5 @@ void WorldSession::HandleQuestgiverStatusQueryMultipleOpcode(WorldPacket& /*recv
     data.put<uint32>(0, count);                             // write real count
     SendPacket(&data);
 }
+
 

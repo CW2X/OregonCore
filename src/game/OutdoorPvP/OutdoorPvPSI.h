@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef OUTDOOR_PVP_SI_
 #define OUTDOOR_PVP_SI_
 
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 
 enum OutdoorPvPSISpells
 {
@@ -85,4 +85,5 @@ class OutdoorPvPSI : public OutdoorPvP
 };
 
 #endif
+
 

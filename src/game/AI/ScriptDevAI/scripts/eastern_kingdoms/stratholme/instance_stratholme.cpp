@@ -23,7 +23,7 @@ SDCategory: Stratholme
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "stratholme.h"
 
 #define GO_SERVICE_ENTRANCE     175368

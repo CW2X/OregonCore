@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,18 +22,18 @@
 #include "Server/WorldSession.h"
 #include "Database/DatabaseEnv.h"
 
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 #include "Chat/Chat.h"
-#include "GridNotifiersImpl.h"
-#include "Language.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Tools/Language.h"
 #include "Log.h"
 #include "Server/Opcodes.h"
 #include "Entities/Player.h"
 #include "Entities/UpdateMask.h"
 #include "Maps/MapManager.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "DBScripts/ScriptMgr.h"
-#include "InstanceSaveMgr.h"
+#include "Maps/InstanceSaveMgr.h"
 
 bool ChatHandler::load_command_table = true;
 
@@ -1359,3 +1359,4 @@ bool ChatHandler::GetPlayerGroupAndGUIDByName(const char* cname, Player*& plr, G
 
     return true;
 }
+

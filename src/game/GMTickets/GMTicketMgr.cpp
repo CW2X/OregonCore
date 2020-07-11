@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #include "GMTickets/GMTicketMgr.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Entities/Player.h"
 #include "Common.h"
 #include "Globals/ObjectAccessor.h"
@@ -219,4 +219,5 @@ uint64 TicketMgr::GenerateTicketID()
 {
     return ++m_ticketid;
 }
+
 

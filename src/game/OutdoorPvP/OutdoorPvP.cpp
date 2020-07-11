@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,17 +15,17 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Maps/MapManager.h"
-#include "Group.h"
+#include "Groups/Group.h"
 #include "WorldPacket.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
 
 OPvPCapturePoint::OPvPCapturePoint(OutdoorPvP* pvp)
     : m_capturePointGUID(0), m_capturePoint(NULL), m_maxValue(0), m_maxSpeed(0), m_value(0), m_team(TEAM_NEUTRAL),
@@ -584,4 +584,5 @@ void OutdoorPvP::OnGameObjectRemove(GameObject* go)
     if (OPvPCapturePoint *cp = GetCapturePoint(go->GetDBTableGUIDLow()))
         cp->m_capturePoint = NULL;
 }
+
 

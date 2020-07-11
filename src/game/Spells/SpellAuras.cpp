@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,28 +24,28 @@
 #include "Entities/UpdateMask.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Player.h"
 #include "Entities/Unit.h"
-#include "Spell.h"
-#include "SpellAuras.h"
+#include "Spells/Spell.h"
+#include "Spells/SpellAuras.h"
 #include "Entities/DynamicObject.h"
-#include "Group.h"
+#include "Groups/Group.h"
 #include "Entities/UpdateData.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectAccessor.h"
 #include "Entities/Totem.h"
 #include "Entities/Creature.h"
-#include "Formulas.h"
+#include "Tools/Formulas.h"
 #include "Battleground/Battleground.h"
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "CreatureAI.h"
 #include "Utilities/Util.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "DBScripts/ScriptMgr.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 
 #define NULL_AURA_SLOT 0xFF
 
@@ -6846,4 +6846,5 @@ void Aura::HandleIncreasePetOutdoorSpeed(bool apply, bool /*Real*/)
         }
     }
 }
+
 

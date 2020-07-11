@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,12 +15,12 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Log.h"
 #include "World/World.h"
 
-#include "MoveMap.h"
-#include "MoveMapSharedDefines.h"
+#include "MotionGenerators/MoveMap.h"
+#include "MotionGenerators/MoveMapSharedDefines.h"
 
 namespace MMAP
 {
@@ -390,3 +390,4 @@ dtNavMeshQuery const* MMapManager::GetNavMeshQuery(uint32 mapId, uint32 instance
     return mmap->navMeshQueries[instanceId];
 }
 }
+

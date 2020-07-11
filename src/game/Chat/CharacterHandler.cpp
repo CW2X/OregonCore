@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -27,15 +27,15 @@
 
 #include "Arena/ArenaTeam.h"
 #include "Chat/Chat.h"
-#include "Group.h"
-#include "Guild.h"
-#include "Language.h"
+#include "Groups/Group.h"
+#include "Guilds/Guild.h"
+#include "Tools/Language.h"
 #include "Log.h"
 #include "Server/Opcodes.h"
 #include "Entities/Player.h"
-#include "PlayerDump.h"
+#include "Tools/PlayerDump.h"
 #include "Globals/SharedDefines.h"
-#include "SocialMgr.h"
+#include "Social/SocialMgr.h"
 #include "Entities/UpdateMask.h"
 #include "Utilities/Util.h"
 #include "Maps/MapManager.h"
@@ -1027,4 +1027,5 @@ void WorldSession::HandleDeclinedPlayerNameOpcode(WorldPacket& recv_data)
     data << uint64(guid);
     SendPacket(&data);
 }
+
 

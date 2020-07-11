@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include "Entities/Unit.h"
 #include "Entities/UpdateMask.h"
 #include "Entities/ItemPrototype.h"
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 #include "Database/DatabaseEnv.h"
 #include "Grids/Cell.h"
 #include "Entities/CreatureGroups.h"
@@ -903,4 +903,5 @@ class ForcedDespawnDelayEvent : public BasicEvent
 };
 
 #endif
+
 

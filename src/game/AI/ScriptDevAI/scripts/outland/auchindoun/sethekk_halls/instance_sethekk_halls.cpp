@@ -23,7 +23,7 @@ SDCategory: Auchindoun, Sethekk Halls
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "sethekk_halls.h"
 #include "ScriptedEscortAI.h"
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,54 +16,54 @@
  */
 
 #include "Common.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Database/DatabaseEnv.h"
 #include "Log.h"
 #include "Server/Opcodes.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "World/World.h"
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
 #include "Entities/UpdateMask.h"
 #include "Entities/Player.h"
-#include "SkillDiscovery.h"
-#include "QuestDef.h"
+#include "Skills/SkillDiscovery.h"
+#include "Quests/QuestDef.h"
 #include "Entities/GossipDef.h"
 #include "Entities/UpdateData.h"
-#include "Channel.h"
-#include "ChannelMgr.h"
+#include "Chat/Channel.h"
+#include "Chat/ChannelMgr.h"
 #include "Maps/MapManager.h"
-#include "InstanceSaveMgr.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
+#include "Maps/InstanceSaveMgr.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
 #include "Globals/ObjectAccessor.h"
 #include "CreatureAI.h"
-#include "Formulas.h"
-#include "Group.h"
-#include "Guild.h"
+#include "Tools/Formulas.h"
+#include "Groups/Group.h"
+#include "Guilds/Guild.h"
 #include "Entities/Pet.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 #include "Utilities/Util.h"
 #include "Entities/Transports.h"
 #include "Weather/Weather.h"
 #include "Battleground/Battleground.h"
 #include "Battleground/BattlegroundAV.h"
 #include "BattleGround/BattlegroundMgr.h"
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "Arena/ArenaTeam.h"
 #include "Chat/Chat.h"
 #include "Database/DatabaseImpl.h"
-#include "Spell.h"
-#include "SocialMgr.h"
-#include "Mail.h"
-#include "GameEventMgr.h"
-#include "DisableMgr.h"
+#include "Spells/Spell.h"
+#include "Social/SocialMgr.h"
+#include "Mails/Mail.h"
+#include "GameEvents/GameEventMgr.h"
+#include "Globals/DisableMgr.h"
 #include "Globals/Conditions.h"
 #include "DBScripts/ScriptMgr.h"
-#include "PoolMgr.h"
+#include "Pools/PoolMgr.h"
 
 #include <cmath>
 
@@ -20935,3 +20935,4 @@ void Player::RemoveRestFlag(RestFlag restFlag)
         RemoveFlag(PLAYER_FLAGS, PLAYER_FLAGS_RESTING);
     }
 }
+

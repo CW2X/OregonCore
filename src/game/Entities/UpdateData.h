@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -71,4 +71,5 @@ class UpdateData
         void Compress(void* dst, uint32* dst_size, void* src, int src_size);
 };
 #endif
+
 

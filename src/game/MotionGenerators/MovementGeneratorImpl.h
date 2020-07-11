@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_MOVEMENTGENERATOR_IMPL_H
 #define MANGOS_MOVEMENTGENERATOR_IMPL_H
 
-#include "MovementGenerator.h"
+#include "MotionGenerators/MovementGenerator.h"
 
 template<class MOVEMENT_GEN>
 inline MovementGenerator*
@@ -27,4 +27,5 @@ MovementGeneratorFactory<MOVEMENT_GEN>::Create(void* /*data*/) const
     return (new MOVEMENT_GEN());
 }
 #endif
+
 

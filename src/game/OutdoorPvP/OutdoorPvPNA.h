@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef OUTDOOR_PVP_NA_
 #define OUTDOOR_PVP_NA_
 
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 
 // @todo "sometimes" set to neutral
 
@@ -334,4 +334,5 @@ class OutdoorPvPNA : public OutdoorPvP
 };
 
 #endif
+
 

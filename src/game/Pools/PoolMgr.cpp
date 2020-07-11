@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "PoolMgr.h"
+#include "Pools/PoolMgr.h"
 #include "Globals/ObjectMgr.h"
 #include "Log.h"
 #include "Maps/MapManager.h"
@@ -1025,3 +1025,4 @@ template void PoolMgr::UpdatePool<Pool>(uint32 pool_id, uint32 db_guid_or_pool_i
 template void PoolMgr::UpdatePool<GameObject>(uint32 pool_id, uint32 db_guid_or_pool_id);
 template void PoolMgr::UpdatePool<Creature>(uint32 pool_id, uint32 db_guid_or_pool_id);
 template void PoolMgr::UpdatePool<Quest>(uint32 pool_id, uint32 db_guid_or_pool_id);
+

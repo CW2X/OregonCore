@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,11 +15,11 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "GameEventMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "PoolMgr.h"
-#include "Language.h"
+#include "Pools/PoolMgr.h"
+#include "Tools/Language.h"
 #include "Log.h"
 #include "Maps/MapManager.h"
 #include "Entities/Player.h"
@@ -1484,3 +1484,4 @@ void GameEventMgr::RunSmartAIScripts(uint16 event_id, bool activate)
                     iter->second->AI()->OnGameEvent(activate, event_id);
     }
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -572,3 +572,4 @@ void Transport::DoEventIfAny(WayPointMap::value_type const& node, bool departure
         GetMap()->ScriptsStart(sEventScripts, eventid, this, this);
     }
 }
+

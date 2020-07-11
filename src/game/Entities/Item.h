@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -20,7 +20,7 @@
 
 #include "Common.h"
 #include "Entities/Object.h"
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 #include "Entities/ItemPrototype.h"
 #include "QueryResult.h"
 
@@ -380,4 +380,5 @@ class Item : public Object
         bool mb_in_trade;                                   // true if item is currently in trade-window
 };
 #endif
+
 

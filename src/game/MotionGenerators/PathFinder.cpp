@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,10 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "MoveMap.h"
-#include "Map.h"
+#include "MotionGenerators/MoveMap.h"
+#include "Maps/Map.h"
 #include "Entities/Creature.h"
-#include "PathFinder.h"
+#include "MotionGenerators/PathFinder.h"
 #include "Log.h"
 
 #include "DetourCommon.h"
@@ -822,3 +822,4 @@ float PathInfo::dist3DSqr(const Vector3& p1, const Vector3& p2) const
     const float dz = p2.z - p1.z;
     return (dx * dx + dy * dy + dz * dz);
 }
+

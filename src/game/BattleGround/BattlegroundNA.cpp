@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include "Entities/Creature.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 BattlegroundNA::BattlegroundNA()
 {
@@ -167,4 +167,5 @@ bool BattlegroundNA::SetupBattleground()
 0040: 00 00 00 00 00 00 d5 08 00 00 00 00 00 00 d3 08  |  ................
 0050: 00 00 00 00 00 00                                |  ......
 */
+
 

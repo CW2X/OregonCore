@@ -29,5 +29,5 @@ Mutating Injection 28169
 Enrages 26527*/
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 

@@ -29,7 +29,7 @@ npc_weegli_blastfuse
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "zulfarrak.h"
 #include "ScriptedGossip.h"
 

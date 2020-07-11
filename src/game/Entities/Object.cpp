@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -30,14 +30,14 @@
 #include "Utilities/Util.h"
 #include "Globals/ObjectAccessor.h"
 #include "Entities/Transports.h"
-#include "VMapFactory.h"
-#include "CellImpl.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "vmap/VMapFactory.h"
+#include "Grids/CellImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "Entities/TemporarySummon.h"
 #include "Entities/Totem.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
-#include "packet_builder.h"
+#include "Movement/packet_builder.h"
 #include "Maps/MapManager.h"
 
 uint32 GuidHigh2TypeId(uint32 guid_hi)
@@ -2745,4 +2745,5 @@ void WorldObject::BuildUpdate(UpdateDataMapType& data_map)
 
     ClearUpdateMask(false);
 }
+
 

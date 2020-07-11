@@ -22,9 +22,9 @@ SDComment:
 SDCategory: Npc
 EndScriptData */
 
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "ScriptedEscortAI.h"
-#include "Group.h"
+#include "Entities/Group.h"
 #include "Entities/Player.h"
 #include "ScriptSystem.h"
 

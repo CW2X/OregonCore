@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_GRIDSTATES_H
 #define MANGOS_GRIDSTATES_H
 
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Entities/Object.h"
 
 class GridState
@@ -56,4 +56,5 @@ class RemovalState : public GridState
         void Update(Map &, NGridType &, GridInfo &, const uint32 t_diff) const override;
 };
 #endif
+
 

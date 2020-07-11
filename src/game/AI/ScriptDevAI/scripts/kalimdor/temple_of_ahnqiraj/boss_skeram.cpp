@@ -23,9 +23,9 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "temple_of_ahnqiraj.h"
-#include "Group.h"
+#include "Entities/Group.h"
 
 #define SAY_AGGRO1                  -1531000
 #define SAY_AGGRO2                  -1531001

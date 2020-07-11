@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,15 +15,15 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "WaypointMovementGenerator.h"
+#include "MotionGenerators/WaypointMovementGenerator.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h" // for flightmaster grid preloading
 #include "Entities/Creature.h"
 #include "CreatureAI.h"
 #include "Entities/CreatureGroups.h"
 #include "Entities/Player.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 
 template<class T>
 void WaypointMovementGenerator<T>::Initialize(T& /*u*/) {}
@@ -370,3 +370,4 @@ void FlightPathMovementGenerator::PreloadEndGrid()
     else
         sLog.outDetail("Unable to determine map to preload flightmaster grid");
 }
+

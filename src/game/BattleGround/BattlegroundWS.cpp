@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,10 +18,10 @@
 #include "Entities/Object.h"
 #include "Entities/Player.h"
 #include "Battleground/Battleground.h"
-#include "BattlegroundWS.h"
+#include "BattleGround/BattlegroundWS.h"
 #include "Entities/GameObject.h"
 #include "Maps/MapManager.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "World/World.h"
 
 // these variables aren't used outside of this file, so declare them only here
@@ -811,4 +811,5 @@ void BattlegroundWS::FillInitialWorldStates(WorldPacket& data)
         data << uint32(BG_WS_FLAG_STATE_HORDE) << uint32(1);
 
 }
+
 

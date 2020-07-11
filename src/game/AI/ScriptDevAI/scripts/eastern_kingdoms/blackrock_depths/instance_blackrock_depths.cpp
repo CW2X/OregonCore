@@ -31,7 +31,7 @@ update `instance_template` set `script`='instance_blackrock_depths' where `map`=
 */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "ScriptedInstance.h"
 #include "blackrock_depths.h"
 

@@ -1,6 +1,6 @@
 #include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"

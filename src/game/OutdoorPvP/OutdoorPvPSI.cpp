@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,14 +15,14 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "OutdoorPvPSI.h"
+#include "OutdoorPvP/OutdoorPvPSI.h"
 #include "WorldPacket.h"
 #include "Entities/Player.h"
 #include "Entities/GameObject.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectMgr.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "World/World.h"
 
 OutdoorPvPSI::OutdoorPvPSI()
@@ -219,4 +219,5 @@ bool OutdoorPvPSI::HandleCustomSpell(Player* plr, uint32 spellId, GameObject* go
     }
     return true;
 }
+
 

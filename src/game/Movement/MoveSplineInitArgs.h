@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_MOVESPLINEINIT_ARGS_H
 #define MANGOS_MOVESPLINEINIT_ARGS_H
 
-#include "MoveSplineFlag.h"
+#include "Movement/MoveSplineFlag.h"
 #include "G3D/Vector3.h"
 
 class Unit;
@@ -64,3 +64,4 @@ namespace Movement
 }
 
 #endif // MANGOS_MOVESPLINEINIT_ARGS_H
+

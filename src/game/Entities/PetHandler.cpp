@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -20,16 +20,16 @@
 #include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Log.h"
 #include "Server/Opcodes.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "Globals/ObjectAccessor.h"
 #include "Maps/MapManager.h"
 #include "CreatureAI.h"
 #include "Utilities/Util.h"
 #include "Entities/Pet.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 void WorldSession::HandlePetAction(WorldPacket& recv_data)
 {
@@ -774,4 +774,5 @@ void WorldSession::SendPetNameInvalid(uint32 error, const std::string& name, Dec
         data << uint8(0);
     SendPacket(&data);
 }
+
 

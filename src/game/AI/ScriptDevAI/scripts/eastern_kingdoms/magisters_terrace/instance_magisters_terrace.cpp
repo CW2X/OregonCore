@@ -23,7 +23,7 @@ SDCategory: Magister's Terrace
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "magisters_terrace.h"
 
 #define MAX_ENCOUNTER      4

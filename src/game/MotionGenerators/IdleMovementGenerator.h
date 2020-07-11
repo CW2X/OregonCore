@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_IDLEMOVEMENTGENERATOR_H
 #define MANGOS_IDLEMOVEMENTGENERATOR_H
 
-#include "MovementGenerator.h"
+#include "MotionGenerators/MovementGenerator.h"
 
 class IdleMovementGenerator : public MovementGenerator
 {
@@ -98,4 +98,5 @@ class AssistanceDistractMovementGenerator : public DistractMovementGenerator
 };
 
 #endif
+
 

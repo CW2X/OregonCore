@@ -28,7 +28,7 @@
  EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "blood_furnace.h"
 #include "SpellAuras.h"
 

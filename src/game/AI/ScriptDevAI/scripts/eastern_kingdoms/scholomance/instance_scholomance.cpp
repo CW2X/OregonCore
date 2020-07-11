@@ -23,7 +23,7 @@ SDCategory: Scholomance
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "scholomance.h"
 
 #define GO_GATE_KIRTONOS    175570

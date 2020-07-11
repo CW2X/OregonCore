@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_FLEEINGMOVEMENTGENERATOR_H
 #define MANGOS_FLEEINGMOVEMENTGENERATOR_H
 
-#include "MovementGenerator.h"
+#include "MotionGenerators/MovementGenerator.h"
 #include "Maps/MapManager.h"
 
 template<class T>
@@ -66,4 +66,5 @@ class TimedFleeingMovementGenerator
 };
 
 #endif
+
 

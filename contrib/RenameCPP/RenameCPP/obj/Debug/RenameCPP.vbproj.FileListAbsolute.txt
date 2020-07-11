@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\bin\Debug\RenameCPP.exe.config
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\bin\Debug\RenameCPP.exe
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\bin\Debug\RenameCPP.pdb
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\bin\Debug\RenameCPP.xml
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.vbprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.Form1.resources
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.Resources.resources
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.vbproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.exe
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.xml
+C:\Users\Administrator\source\repos\RenameCPP\RenameCPP\obj\Debug\RenameCPP.pdb

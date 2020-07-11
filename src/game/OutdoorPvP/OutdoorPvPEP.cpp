@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,14 +15,14 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "OutdoorPvPEP.h"
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvPEP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "Entities/Player.h"
 #include "WorldPacket.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Entities/GossipDef.h"
 
 const uint32 EP_LANG_LOOSE_A[EP_TOWER_NUM] = {LANG_OPVP_EP_LOOSE_CROWNGUARD_A, LANG_OPVP_EP_LOOSE_EASTWALL_A, LANG_OPVP_EP_LOOSE_NORTHPASS_A, LANG_OPVP_EP_LOOSE_PLAGUEWOOD_A};
@@ -468,4 +468,5 @@ void OPvPCapturePointEP::UnsummonFlightMaster()
     DelCreature(EP_PWT_FLIGHTMASTER);
     EP_TOWER_EVENT_TEAM[EP_TOWER_PLAGUEWOOD] = 0;
 }
+
 

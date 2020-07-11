@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Mail.h"
+#include "Mails/Mail.h"
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
 #include "Server/Opcodes.h"
@@ -25,7 +25,7 @@
 #include "Entities/Player.h"
 #include "Entities/UpdateMask.h"
 #include "Entities/Unit.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Server/DBCStores.h"
 #include "BattleGround/BattlegroundMgr.h"
 #include "AuctionHouseBot/AuctionHouseBot.h"
@@ -1113,4 +1113,5 @@ void WorldSession::SendExternalMails()
     }
     sLog.outDebug("External Mail - All Mails Sent...");
 }
+
 

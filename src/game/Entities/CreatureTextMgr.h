@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -19,11 +19,11 @@
 #define TRINITY_CREATURE_TEXT_MGR_H
 
 #include "Entities/Creature.h"
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/SharedDefines.h"
 #include "Server/Opcodes.h"
-#include "Group.h"
+#include "Groups/Group.h"
 #include "WorldPacket.h"
 
 enum CreatureTextRange
@@ -245,3 +245,4 @@ void CreatureTextMgr::SendChatPacket(WorldObject* source, Builder const& builder
 }
 
 #endif
+

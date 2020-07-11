@@ -1,6 +1,6 @@
 #include "Chat/Chat.h"
 #include "GameEventMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 

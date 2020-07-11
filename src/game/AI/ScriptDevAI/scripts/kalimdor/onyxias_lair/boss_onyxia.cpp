@@ -22,7 +22,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 #define SAY_AGGRO                   -1249000
 #define SAY_KILL                    -1249001

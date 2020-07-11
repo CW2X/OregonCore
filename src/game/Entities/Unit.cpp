@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,35 +22,35 @@
 #include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Unit.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Entities/Player.h"
 #include "Entities/Creature.h"
-#include "Spell.h"
-#include "Group.h"
-#include "SpellAuras.h"
+#include "Spells/Spell.h"
+#include "Groups/Group.h"
+#include "Spells/SpellAuras.h"
 #include "Globals/ObjectAccessor.h"
 #include "CreatureAI.h"
-#include "Formulas.h"
+#include "Tools/Formulas.h"
 #include "Entities/Pet.h"
 #include "Utilities/Util.h"
 #include "Entities/Totem.h"
 #include "Battleground/Battleground.h"
-#include "OutdoorPvP.h"
-#include "InstanceSaveMgr.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
+#include "OutdoorPvP/OutdoorPvP.h"
+#include "Maps/InstanceSaveMgr.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
 #include "Entities/CreatureGroups.h"
 #include "PetAI.h"
 #include "PassiveAI.h"
 #include "Entities/TemporarySummon.h"
-#include "PathFinder.h"
+#include "MotionGenerators/PathFinder.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Entities/Object.h"
-#include "MovementGenerator.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "MotionGenerators/MovementGenerator.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 
 #include <math.h>
 #include <array>
@@ -13832,3 +13832,4 @@ bool Unit::SetHover(bool enable, bool /*packetOnly = false*/)
 
     return true;
 }
+

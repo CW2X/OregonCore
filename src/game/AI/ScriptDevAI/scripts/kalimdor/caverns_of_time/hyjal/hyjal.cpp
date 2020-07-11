@@ -29,7 +29,7 @@ npc_tyrande_whisperwind
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "hyjalAI.h"
 #include "ScriptedGossip.h"
 

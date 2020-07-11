@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,10 +18,10 @@
 #include "Entities/Totem.h"
 #include "WorldPacket.h"
 #include "Maps/MapManager.h"
-#include "Group.h"
+#include "Groups/Group.h"
 #include "Entities/Player.h"
-#include "SpellMgr.h"
-#include "SpellAuras.h"
+#include "Spells/SpellMgr.h"
+#include "Spells/SpellAuras.h"
 
 Totem::Totem(SummonPropertiesEntry const* properties, Unit* owner) : Minion(properties, owner, false)
 {
@@ -196,4 +196,5 @@ bool Totem::IsImmuneToSpellEffect(SpellEntry const* spellInfo, uint32 index, boo
 
     return Creature::IsImmuneToSpellEffect(spellInfo, index, castOnSelf);
 }
+
 

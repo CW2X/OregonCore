@@ -4,7 +4,7 @@
 #include "PoolMgr.h"
 #include "Maps/MapManager.h"
 #include "Chat/Chat.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Entities/Player.h"
 #include "Server/Opcodes.h"
 #include "Entities/GameObject.h"

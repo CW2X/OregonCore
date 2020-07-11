@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include "Globals/SharedDefines.h"
 #include "Entities/Unit.h"
 #include "Entities/Object.h"
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 #include "Database/DatabaseEnv.h"
 
 // GCC have alternative #pragma pack(N) syntax and old gcc version not support pack(push,N), also any gcc version not support it at some platform
@@ -870,4 +870,5 @@ class GameObject : public WorldObject, public GridObject<GameObject>
         void UpdateModel();                                 // updates model in case displayId were changed
 };
 #endif
+
 

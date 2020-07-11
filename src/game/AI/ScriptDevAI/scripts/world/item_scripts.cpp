@@ -41,7 +41,7 @@ item_inoculating_crystal            Quest Inoculating. Prevent abuse
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "SpellMgr.h"
 #include "Spell.h"
 #include "WorldPacket.h"

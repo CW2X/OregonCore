@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,9 +15,9 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "MapUpdater.h"
+#include "Maps/MapUpdater.h"
 #include "DelayExecutor.h"
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Database/DatabaseEnv.h"
 
 #include <ace/Guard_T.h>
@@ -134,3 +134,4 @@ void MapUpdater::update_finished()
 
     m_condition.broadcast();
 }
+

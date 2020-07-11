@@ -23,7 +23,7 @@ SDCategory: Molten Core
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "molten_core.h"
 
 #define MAX_ENCOUNTER      9

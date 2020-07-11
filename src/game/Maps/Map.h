@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -29,7 +29,7 @@
 #include "Timer.h"
 #include "Globals/SharedDefines.h"
 #include "GameSystem/GridRefManager.h"
-#include "MapRefManager.h"
+#include "Maps/MapRefManager.h"
 
 #include "vmap/DynamicTree.h"
 #include "vmap/GameObjectModel.h"
@@ -805,4 +805,5 @@ inline void Map::VisitGrid(const float &x, const float &y, float radius, NOTIFIE
     cell.Visit(p, grid_object_notifier, *this, radius, x, y);
 }
 #endif
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,11 +21,11 @@
 #include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Log.h"
 #include "Server/Opcodes.h"
-#include "Spell.h"
-#include "SpellAuras.h"
+#include "Spells/Spell.h"
+#include "Spells/SpellAuras.h"
 #include "Battleground/Battleground.h"
 #include "Maps/MapManager.h"
 #include "Entities/Totem.h"
@@ -582,3 +582,4 @@ void WorldSession::HandleSpellClick(WorldPacket& recvData)
     if (creature && creature->IsAIEnabled)
         creature->AI()->OnSpellClick(_player);
 }
+

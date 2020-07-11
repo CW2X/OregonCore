@@ -16,7 +16,7 @@
  */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "gnomeregan.h"
 
 #define    MAX_ENCOUNTER  1

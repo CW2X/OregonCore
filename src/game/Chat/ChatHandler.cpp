@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,15 +23,15 @@
 #include "Server/WorldSession.h"
 #include "Database/DatabaseEnv.h"
 #include "Chat/Chat.h"
-#include "ChannelMgr.h"
-#include "Group.h"
-#include "Guild.h"
-#include "Language.h"
+#include "Chat/ChannelMgr.h"
+#include "Groups/Group.h"
+#include "Guilds/Guild.h"
+#include "Tools/Language.h"
 #include "Log.h"
 #include "Server/Opcodes.h"
 #include "Maps/MapManager.h"
 #include "Entities/Player.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 #include "CreatureAI.h"
 #include "Utilities/Util.h"
 #include "DBScripts/ScriptMgr.h"
@@ -631,4 +631,5 @@ void WorldSession::SendWrongFactionNotice()
     WorldPacket data(SMSG_CHAT_WRONG_FACTION, 0);
     SendPacket(&data);
 }
+
 

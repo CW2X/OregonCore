@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "CombatAI.h"
-#include "SpellMgr.h"
+#include "Combat/CombatAI.h"
+#include "Spells/SpellMgr.h"
 
 int AggressorAI::Permissible(const Creature* creature)
 {
@@ -150,4 +150,5 @@ void CasterAI::UpdateAI(const uint32 diff)
         events.ScheduleEvent(spellId, (casttime ? casttime : 500) + GetAISpellInfo(spellId)->realCooldown);
     }
 }
+
 

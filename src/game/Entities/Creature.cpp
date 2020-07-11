@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,28 +22,28 @@
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Creature.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Entities/GossipDef.h"
 #include "Entities/Player.h"
-#include "PoolMgr.h"
+#include "Pools/PoolMgr.h"
 #include "Server/Opcodes.h"
 #include "Log.h"
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 #include "CreatureAI.h"
-#include "CreatureAISelector.h"
-#include "Formulas.h"
-#include "SpellAuras.h"
-#include "InstanceData.h"
+#include "AI/CreatureAISelector.h"
+#include "Tools/Formulas.h"
+#include "Spells/SpellAuras.h"
+#include "Maps/InstanceData.h"
 #include "Battleground/Battleground.h"
 #include "Utilities/Util.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
-#include "GameEventMgr.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
+#include "GameEvents/GameEventMgr.h"
 #include "Entities/CreatureGroups.h"
-#include "MoveSpline.h"
+#include "Movement/MoveSpline.h"
 #include <fstream>
 
 void TrainerSpellData::Clear()
@@ -2794,3 +2794,4 @@ void Creature::SetBaseRunSpeed(float speed)
         UpdateSpeed(MOVE_RUN, false);
     }
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,21 +19,21 @@
 #include "Database/SQLStorage.h"
 
 #include "Entities/Player.h"
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 #include "Server/WorldSession.h"
 #include "Log.h"
 #include "Grids/GridStates.h"
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Maps/MapManager.h"
-#include "MapInstanced.h"
-#include "InstanceSaveMgr.h"
+#include "Maps/MapInstanced.h"
+#include "Maps/InstanceSaveMgr.h"
 #include "Timer.h"
 #include "Config/Config.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
 #include "World/World.h"
-#include "Group.h"
-#include "InstanceData.h"
+#include "Groups/Group.h"
+#include "Maps/InstanceData.h"
 #include "Policies/Singleton.h"
 
 INSTANTIATE_SINGLETON_1(InstanceSaveManager);
@@ -720,4 +720,5 @@ uint32 InstanceSaveManager::GetNumBoundGroupsTotal()
         ret += itr->second->GetGroupCount();
     return ret;
 }
+
 

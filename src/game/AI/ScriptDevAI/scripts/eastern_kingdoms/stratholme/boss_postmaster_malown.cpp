@@ -23,7 +23,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
  //Spell ID to summon this guy is 24627 "Summon Postmaster Malown"
  //He should be spawned along with three other elites once the third postbox has been opened

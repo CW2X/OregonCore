@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -145,3 +145,4 @@ WardenDataResult* CWardenDataStorage::GetWardenResultById(uint32 Id)
         return itr->second;
     return NULL;
 }
+

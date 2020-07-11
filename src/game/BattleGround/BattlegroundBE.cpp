@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include "Entities/Creature.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 BattlegroundBE::BattlegroundBE()
 {
@@ -190,4 +190,5 @@ spell 32725 - Green Team
 35774 Gold Team
 35775 Green Team
 */
+
 

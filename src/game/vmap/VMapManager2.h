@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef _VMAPMANAGER2_H
 #define _VMAPMANAGER2_H
 
-#include "IVMapManager.h"
+#include "vmap/IVMapManager.h"
 #include "Utilities/UnorderedMap.h"
 #include "Platform/Define.h"
 #include <ace/Thread_Mutex.h>
@@ -127,3 +127,4 @@ class VMapManager2 : public IVMapManager
 }
 
 #endif
+

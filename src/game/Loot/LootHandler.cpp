@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,9 +23,9 @@
 #include "Entities/Player.h"
 #include "Globals/ObjectAccessor.h"
 #include "Server/WorldSession.h"
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 #include "Entities/Object.h"
-#include "Group.h"
+#include "Groups/Group.h"
 #include "World/World.h"
 #include "Utilities/Util.h"
 
@@ -545,4 +545,5 @@ void WorldSession::HandleLootMasterGiveOpcode(WorldPacket& recv_data)
     pLoot->NotifyItemRemoved(slotid);
     --pLoot->unlootedCount;
 }
+
 

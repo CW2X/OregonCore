@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,8 +25,8 @@
 #include "Server/WorldSession.h"
 #include "WorldPacket.h"
 #include "Entities/Item.h"
-#include "GridNotifiers.h"
-#include "Map.h"
+#include "Grids/GridNotifiers.h"
+#include "Maps/Map.h"
 #include "Entities/ObjectGuid.h"
 #include "World/World.h"
 
@@ -418,4 +418,5 @@ template Creature* ObjectAccessor::GetObjectInWorld<Creature>(uint32 mapid, floa
 template Corpse* ObjectAccessor::GetObjectInWorld<Corpse>(uint32 mapid, float x, float y, uint64 guid, Corpse* /*fake*/);
 template GameObject* ObjectAccessor::GetObjectInWorld<GameObject>(uint32 mapid, float x, float y, uint64 guid, GameObject* /*fake*/);
 template DynamicObject* ObjectAccessor::GetObjectInWorld<DynamicObject>(uint32 mapid, float x, float y, uint64 guid, DynamicObject* /*fake*/);
+
 

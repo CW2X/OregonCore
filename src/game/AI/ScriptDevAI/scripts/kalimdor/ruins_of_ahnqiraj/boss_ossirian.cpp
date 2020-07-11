@@ -23,7 +23,7 @@ SDCategory: Ruins of Ahn'Qiraj
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 #define SAY_SURPREME2   -1509019
 #define SAY_SURPREME3   -1509020

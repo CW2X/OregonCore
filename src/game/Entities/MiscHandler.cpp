@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,7 +16,7 @@
  */
 
 #include "Common.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Database/DatabaseEnv.h"
 #include "Database/DatabaseImpl.h"
 #include "WorldPacket.h"
@@ -27,16 +27,16 @@
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Server/WorldSession.h"
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 #include "Chat/Chat.h"
 #include "zlib.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectAccessor.h"
 #include "Entities/Object.h"
 #include "Battleground/Battleground.h"
-#include "OutdoorPvP.h"
-#include "SpellAuras.h"
-#include "SocialMgr.h"
+#include "OutdoorPvP/OutdoorPvP.h"
+#include "Spells/SpellAuras.h"
+#include "Social/SocialMgr.h"
 #include "DBScripts/ScriptMgr.h"
 #include "CreatureAI.h"
 #include "GameObjectAI.h"
@@ -1654,4 +1654,5 @@ void WorldSession::HandleReferAFriend(WorldPacket& /*recv_data*/)
 {
     DEBUG_LOG("WORLD: CMSG_REFER_A_FRIEND");
 }
+
 

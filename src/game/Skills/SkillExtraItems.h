@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -27,4 +27,5 @@ bool canCreateExtraItems(Player* player, uint32 spellId, float& additionalChance
 // function to load the extra item creation info from DB
 void LoadSkillExtraItemTable();
 #endif
+
 

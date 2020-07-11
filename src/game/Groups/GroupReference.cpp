@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,8 +16,8 @@
  */
 
 #include "Entities/Player.h"
-#include "Group.h"
-#include "GroupReference.h"
+#include "Groups/Group.h"
+#include "Groups/GroupReference.h"
 
 void GroupReference::targetObjectBuildLink()
 {
@@ -36,4 +36,5 @@ void GroupReference::sourceObjectDestroyLink()
     // called from invalidate()
     getTarget()->DelinkMember(this);
 }
+
 

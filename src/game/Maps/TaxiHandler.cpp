@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,7 +25,7 @@
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"
 #include "MotionGenerators/Path.h"
-#include "WaypointMovementGenerator.h"
+#include "MotionGenerators/WaypointMovementGenerator.h"
 
 void WorldSession::HandleTaxiNodeStatusQueryOpcode(WorldPacket& recv_data)
 {
@@ -251,4 +251,5 @@ void WorldSession::HandleActivateTaxiOpcode(WorldPacket& recv_data)
 
     GetPlayer()->ActivateTaxiPathTo(nodes, 0, npc);
 }
+
 

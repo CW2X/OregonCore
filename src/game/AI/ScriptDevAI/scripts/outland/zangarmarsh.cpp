@@ -31,7 +31,7 @@ npc_kayra_longmane
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "ScriptedEscortAI.h"
 #include "Globals/ObjectMgr.h"
 #include "ScriptedGossip.h"

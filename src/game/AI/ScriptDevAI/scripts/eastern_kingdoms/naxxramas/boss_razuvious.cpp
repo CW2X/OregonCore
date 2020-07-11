@@ -23,7 +23,7 @@
  EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
  //Razuvious - NO TEXT sound only
  //8852 aggro01 - Hah hah, I'm just getting warmed up!

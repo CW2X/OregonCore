@@ -1,4 +1,4 @@
-# This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
+﻿# This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 #
 # This file is free software; as a special exception the author gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -43,3 +43,4 @@ include_directories(
 GroupSources(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(collision STATIC ${collision_STAT_SRCS})
+

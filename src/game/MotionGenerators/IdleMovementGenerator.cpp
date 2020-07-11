@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "IdleMovementGenerator.h"
+#include "MotionGenerators/IdleMovementGenerator.h"
 #include "CreatureAI.h"
 #include "Entities/Creature.h"
 
@@ -119,4 +119,5 @@ AssistanceDistractMovementGenerator::Finalize(Unit& unit)
     unit.ClearUnitState(UNIT_STATE_DISTRACTED);
     unit.ToCreature()->SetReactState(REACT_AGGRESSIVE);
 }
+
 

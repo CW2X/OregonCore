@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,10 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "MapTree.h"
-#include "ModelInstance.h"
-#include "VMapManager2.h"
-#include "VMapDefinitions.h"
+#include "vmap/MapTree.h"
+#include "vmap/ModelInstance.h"
+#include "vmap/VMapManager2.h"
+#include "vmap/VMapDefinitions.h"
 
 #include <string>
 #include <sstream>
@@ -475,3 +475,4 @@ void StaticMapTree::UnloadMapTile(uint32 tileX, uint32 tileY, VMapManager2* vm)
 }
 
 }
+

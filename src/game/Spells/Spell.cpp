@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,33 +19,33 @@
 #include "Database/DatabaseEnv.h"
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "Server/Opcodes.h"
 #include "Log.h"
 #include "Entities/UpdateMask.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Player.h"
 #include "Entities/Pet.h"
 #include "Entities/Unit.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "Entities/DynamicObject.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 #include "Entities/UpdateData.h"
 #include "Globals/ObjectAccessor.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 #include "Globals/SharedDefines.h"
-#include "LootMgr.h"
-#include "VMapFactory.h"
+#include "Loot/LootMgr.h"
+#include "vmap/VMapFactory.h"
 #include "Battleground/Battleground.h"
 #include "Utilities/Util.h"
 #include "Entities/TemporarySummon.h"
-#include "GameEventMgr.h"
-#include "DisableMgr.h"
+#include "GameEvents/GameEventMgr.h"
+#include "Globals/DisableMgr.h"
 #include "Globals/Conditions.h"
-#include "MoveMap.h"
+#include "MotionGenerators/MoveMap.h"
 
 #define SPELL_CHANNEL_UPDATE_INTERVAL (1*IN_MILLISECONDS)
 
@@ -6483,3 +6483,4 @@ void Spell::SetSpellValue(SpellValueMod mod, int32 value)
         break;
     }
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -26,46 +26,46 @@
 #include "WorldPacket.h"
 #include "Weather/Weather.h"
 #include "Entities/Player.h"
-#include "SkillExtraItems.h"
-#include "SkillDiscovery.h"
+#include "Skills/SkillExtraItems.h"
+#include "Skills/SkillDiscovery.h"
 #include "World/World.h"
 #include "Accounts/AccountMgr.h"
 #include "AuctionHouse/AuctionHouseMgr.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Chat/Chat.h"
 #include "Server/DBCStores.h"
-#include "LootMgr.h"
+#include "Loot/LootMgr.h"
 #include "Entities/ItemEnchantmentMgr.h"
 #include "Maps/MapManager.h"
-#include "CreatureAIRegistry.h"
+#include "AI/CreatureAIRegistry.h"
 #include "BattleGround/BattlegroundMgr.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "Entities/TemporarySummon.h"
 #include "AuctionHouseBot/AuctionHouseBot.h"
-#include "WaypointMovementGenerator.h"
-#include "VMapFactory.h"
-#include "MoveMap.h"
-#include "GameEventMgr.h"
-#include "PoolMgr.h"
+#include "MotionGenerators/WaypointMovementGenerator.h"
+#include "vmap/VMapFactory.h"
+#include "MotionGenerators/MoveMap.h"
+#include "GameEvents/GameEventMgr.h"
+#include "Pools/PoolMgr.h"
 #include "Database/DatabaseImpl.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
-#include "InstanceSaveMgr.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
+#include "Maps/InstanceSaveMgr.h"
 #include "SmartAI.h"
 #include "GMTickets/GMTicketMgr.h"
 #include "Utilities/Util.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Entities/CreatureGroups.h"
 #include "Entities/Transports.h"
 #include "CreatureEventAIMgr.h"
 #include "Entities/CreatureTextMgr.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Warden/WardenDataStorage.h"
-#include "DisableMgr.h"
+#include "Globals/DisableMgr.h"
 #include "Globals/Conditions.h"
-#include "VMapManager2.h"
-#include "M2Stores.h"
+#include "vmap/VMapManager2.h"
+#include "Cinematics/M2Stores.h"
 
 #include <ace/Dirent.h>
 #include <ace/OS_NS_sys_stat.h>
@@ -2858,4 +2858,5 @@ void World::LoadDBVersion()
     else
         m_DBVersion = "unknown world database";
 }
+
 

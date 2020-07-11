@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,4 +23,5 @@ void LoadRandomEnchantmentsTable();
 uint32 GetItemEnchantMod(uint32 entry);
 uint32 GenerateEnchSuffixFactor(uint32 item_id);
 #endif
+
 

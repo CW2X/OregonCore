@@ -29,7 +29,7 @@ npc_image_of_medivh
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "karazhan.h"
 #include "ScriptedEscortAI.h"
 #include "ScriptedGossip.h"

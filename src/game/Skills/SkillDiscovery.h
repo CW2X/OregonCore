@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,4 +25,5 @@ class Player;
 void LoadSkillDiscoveryTable();
 uint32 GetSkillDiscoverySpell(uint32 skillId, uint32 spellId, Player* player);
 #endif
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,11 +18,11 @@
 #include "Entities/Object.h"
 #include "Entities/Player.h"
 #include "Battleground/Battleground.h"
-#include "BattlegroundRL.h"
+#include "BattleGround/BattlegroundRL.h"
 #include "Entities/Creature.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 BattlegroundRL::BattlegroundRL()
 {
@@ -166,4 +166,5 @@ Packet S->C, id 600, SMSG_INIT_WORLD_STATES (706), len 86
 0040: 00 00 00 00 00 00 D3 08 00 00 00 00 00 00 D4 08 | ................
 0050: 00 00 00 00 00 00                               | ......
 */
+
 

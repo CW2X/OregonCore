@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "SkillExtraItems.h"
+#include "Skills/SkillExtraItems.h"
 #include "Database/DatabaseEnv.h"
 #include "Log.h"
 #include "Entities/Player.h"
@@ -133,4 +133,5 @@ bool canCreateExtraItems(Player* player, uint32 spellId, float& additionalChance
     // enable extra item creation
     return true;
 }
+
 

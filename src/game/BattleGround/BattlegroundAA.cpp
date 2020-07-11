@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #include "Entities/Player.h"
 #include "Battleground/Battleground.h"
 #include "Battleground/BattlegroundAA.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 BattlegroundAA::BattlegroundAA()
 {
@@ -77,4 +77,5 @@ bool BattlegroundAA::SetupBattleground()
 {
     return true;
 }
+
 

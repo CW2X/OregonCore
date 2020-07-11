@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,14 +16,14 @@
  */
 
 #include "Common.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "GameObjectAI.h"
 #include "Entities/GameObject.h"
 #include "Globals/ObjectMgr.h"
-#include "PoolMgr.h"
-#include "SpellMgr.h"
+#include "Pools/PoolMgr.h"
+#include "Spells/SpellMgr.h"
 #include "DBScripts/ScriptMgr.h"
-#include "Spell.h"
+#include "Spells/Spell.h"
 #include "Entities/UpdateMask.h"
 #include "Server/Opcodes.h"
 #include "WorldPacket.h"
@@ -31,12 +31,12 @@
 #include "World/World.h"
 #include "Database/DatabaseEnv.h"
 #include "Maps/MapManager.h"
-#include "LootMgr.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
-#include "CreatureAISelector.h"
-#include "InstanceData.h"
+#include "Loot/LootMgr.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
+#include "AI/CreatureAISelector.h"
+#include "Maps/InstanceData.h"
 #include "Battleground/Battleground.h"
 #include "Utilities/Util.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
@@ -1679,3 +1679,4 @@ void GameObject::UpdateModel()
     if (m_model)
         GetMap()->Insert(*m_model);
 }
+

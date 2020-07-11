@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,14 +19,14 @@
 #define _OBJECT_H
 
 #include "Common.h"
-#include "Position.h"
+#include "Maps/Position.h"
 #include "ByteBuffer.h"
 #include "Entities/UpdateFields.h"
 #include "Entities/UpdateData.h"
 #include "GameSystem/GridReference.h"
 #include "Entities/ObjectGuid.h"
 #include "Maps/GridDefines.h"
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Utilities/DataMap.h"
 
 #include <set>
@@ -974,4 +974,5 @@ class ObjectDistanceOrderPred
 }
 
 #endif
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -530,4 +530,5 @@ class PersistentAreaAura : public Aura
 
 Aura* CreateAura(SpellEntry const* spellproto, uint32 eff, int32* currentBasePoints, Unit* target, Unit* caster = NULL, Item* castItem = NULL);
 #endif
+
 

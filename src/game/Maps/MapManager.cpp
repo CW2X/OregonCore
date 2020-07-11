@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,13 +16,13 @@
  */
 
 #include "Maps/MapManager.h"
-#include "InstanceSaveMgr.h"
+#include "Maps/InstanceSaveMgr.h"
 #include "Database/DatabaseEnv.h"
 #include "Log.h"
 #include "Globals/ObjectAccessor.h"
 #include "Entities/Transports.h"
 #include "Maps/GridDefines.h"
-#include "MapInstanced.h"
+#include "Maps/MapInstanced.h"
 #include "World/World.h"
 #include "Entities/Corpse.h"
 #include "Globals/ObjectMgr.h"
@@ -327,4 +327,5 @@ uint32 MapManager::GetNumPlayersInInstances()
     }
     return ret;
 }
+
 

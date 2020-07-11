@@ -23,7 +23,7 @@ SDCategory: Scarlet Monastery
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "scarlet_monastery.h"
 
 enum eEnums

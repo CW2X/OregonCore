@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,7 +16,7 @@
  */
 
 #include "Grids/GridStates.h"
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 #include "Log.h"
 
 void InvalidState::Update(Map&, NGridType&, GridInfo&, const uint32) const
@@ -60,4 +60,5 @@ void RemovalState::Update(Map& map, NGridType& grid, GridInfo& info, const uint3
         }
     }
 }
+
 

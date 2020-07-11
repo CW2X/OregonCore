@@ -23,7 +23,7 @@ SDCategory: Black Temple
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "black_temple.h"
 
 #define ENCOUNTERS     9

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,10 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "VMapFactory.h"
-#include "VMapManager2.h"
-#include "VMapDefinitions.h"
-#include "WorldModel.h"
+#include "vmap/VMapFactory.h"
+#include "vmap/VMapManager2.h"
+#include "vmap/VMapDefinitions.h"
+#include "vmap/WorldModel.h"
 
 #include "vmap/GameObjectModel.h"
 #include "Entities/GameObject.h"
@@ -215,3 +215,4 @@ bool GameObjectModel::intersectRay(const G3D::Ray& ray, float& MaxDist, bool Sto
     }
     return hit;
 }
+

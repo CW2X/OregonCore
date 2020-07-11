@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,8 +18,8 @@
 #ifndef OUTDOOR_PVP_ZM_
 #define OUTDOOR_PVP_ZM_
 
-#include "Language.h"
-#include "OutdoorPvP.h"
+#include "Tools/Language.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 
 const uint8 OutdoorPvPZMBuffZonesNum = 5;
 
@@ -267,4 +267,5 @@ class OutdoorPvPZM : public OutdoorPvP
 
 // @todo flag carrier death/leave/mount/activitychange should give back the gossip options
 #endif
+
 

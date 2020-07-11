@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -21,19 +21,19 @@
 #include "Battleground/BattlegroundAV.h"
 #include "Battleground/BattlegroundAB.h"
 #include "Battleground/BattlegroundEY.h"
-#include "BattlegroundWS.h"
+#include "BattleGround/BattlegroundWS.h"
 #include "Battleground/BattlegroundNA.h"
 #include "Battleground/BattlegroundBE.h"
 #include "Battleground/BattlegroundAA.h"
-#include "BattlegroundRL.h"
+#include "BattleGround/BattlegroundRL.h"
 #include "Globals/SharedDefines.h"
 #include "Maps/MapManager.h"
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Globals/ObjectMgr.h"
 #include "World/World.h"
 #include "Chat/Chat.h"
 #include "Arena/ArenaTeam.h"
-#include "DisableMgr.h"
+#include "Globals/DisableMgr.h"
 
 INSTANTIATE_SINGLETON_1(BattlegroundMgr);
 
@@ -1848,4 +1848,5 @@ void BattlegroundMgr::SetHolidayWeekends(uint32 mask)
             bg->SetHoliday(mask & (1 << bgtype));
     }
 }
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,9 +19,9 @@
 #define __SPELL_H
 
 #include "Maps/GridDefines.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Globals/SharedDefines.h"
-#include "PathFinder.h"
+#include "MotionGenerators/PathFinder.h"
 
 static const uint32 MAX_SPELL_ID = 53085;
 
@@ -833,4 +833,5 @@ class SpellEvent : public BasicEvent
         Spell* m_Spell;
 };
 #endif
+
 

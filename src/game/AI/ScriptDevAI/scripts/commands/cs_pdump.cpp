@@ -1,6 +1,6 @@
 #include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Accounts/AccountMgr.h"
 #include "PlayerDump.h"
 

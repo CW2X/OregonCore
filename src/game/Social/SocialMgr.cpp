@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "SocialMgr.h"
+#include "Social/SocialMgr.h"
 #include "Database/DatabaseEnv.h"
 #include "Server/Opcodes.h"
 #include "WorldPacket.h"
@@ -335,4 +335,5 @@ PlayerSocial* SocialMgr::LoadFromDB(QueryResult_AutoPtr result, uint32 guid)
     while (result->NextRow());
     return social;
 }
+
 

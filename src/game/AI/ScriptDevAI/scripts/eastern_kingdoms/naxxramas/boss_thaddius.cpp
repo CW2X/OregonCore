@@ -23,7 +23,7 @@ SDCategory: Naxxramas
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 // move it later to header file used by whole instance
 enum eEncounters

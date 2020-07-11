@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,8 +18,8 @@
 #ifndef MANGOS_HOMEMOVEMENTGENERATOR_H
 #define MANGOS_HOMEMOVEMENTGENERATOR_H
 
-#include "MovementGenerator.h"
-#include "PathFinder.h"
+#include "MotionGenerators/MovementGenerator.h"
+#include "MotionGenerators/PathFinder.h"
 
 class Creature;
 
@@ -52,4 +52,5 @@ class HomeMovementGenerator<Creature>
         bool skipToHome;
 };
 #endif
+
 

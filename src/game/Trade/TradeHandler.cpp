@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,8 +24,8 @@
 #include "Server/Opcodes.h"
 #include "Entities/Player.h"
 #include "Entities/Item.h"
-#include "SocialMgr.h"
-#include "Language.h"
+#include "Social/SocialMgr.h"
+#include "Tools/Language.h"
 
 enum TradeStatus
 {
@@ -637,4 +637,5 @@ void WorldSession::HandleClearTradeItemOpcode(WorldPacket& recvPacket)
 
     _player->pTrader->GetSession()->SendUpdateTrade();
 }
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Globals/ObjectAccessor.h"
 #include "WorldPacket.h"
 #include "Common.h"
@@ -251,4 +251,5 @@ void WorldSession::HandleGMTicketSystemStatusOpcode(WorldPacket& /*recv_data*/)
     // Send Packet
     SendPacket(&data);
 }
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,7 +19,7 @@
 #define _MAPREFERENCE_H
 
 #include "Utilities/LinkedReference/Reference.h"
-#include "Map.h"
+#include "Maps/Map.h"
 
 class MapReference : public Reference<Map, Player>
 {
@@ -64,4 +64,5 @@ class MapReference : public Reference<Map, Player>
         }
 };
 #endif
+
 

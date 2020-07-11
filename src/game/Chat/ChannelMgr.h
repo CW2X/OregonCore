@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOSCORE_CHANNELMGR_H
 #define MANGOSCORE_CHANNELMGR_H
 
-#include "Channel.h"
+#include "Chat/Channel.h"
 #include "Policies/Singleton.h"
 #include "World/World.h"
 
@@ -102,4 +102,5 @@ inline ChannelMgr* channelMgr(uint32 team)
     return NULL;
 }
 #endif
+
 

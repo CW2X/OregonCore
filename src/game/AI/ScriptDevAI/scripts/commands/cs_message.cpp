@@ -1,7 +1,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
 #include "ChannelMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Entities/Player.h"
 
 class message_commandscript : public CommandScript

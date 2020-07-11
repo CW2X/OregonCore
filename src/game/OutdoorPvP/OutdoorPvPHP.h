@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef OUTDOOR_PVP_HP_
 #define OUTDOOR_PVP_HP_
 
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 
 #define OutdoorPvPHPBuffZonesNum 6
 //  HP, citadel, ramparts, blood furnace, shattered halls, mag's lair
@@ -135,4 +135,5 @@ class OutdoorPvPHP : public OutdoorPvP
 };
 
 #endif
+
 

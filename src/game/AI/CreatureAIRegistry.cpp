@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -17,15 +17,15 @@
 
 #include "PassiveAI.h"
 #include "ReactorAI.h"
-#include "CombatAI.h"
+#include "Combat/CombatAI.h"
 #include "GuardAI.h"
 #include "PetAI.h"
 #include "TotemAI.h"
 #include "CreatureEventAI.h"
-#include "RandomMovementGenerator.h"
-#include "MovementGeneratorImpl.h"
-#include "CreatureAIRegistry.h"
-#include "WaypointMovementGenerator.h"
+#include "MotionGenerators/RandomMovementGenerator.h"
+#include "MotionGenerators/MovementGeneratorImpl.h"
+#include "AI/CreatureAIRegistry.h"
+#include "MotionGenerators/WaypointMovementGenerator.h"
 #include "CreatureAIFactory.h"
 #include "SmartAI.h"
 
@@ -55,4 +55,5 @@ void Initialize()
     (new MovementGeneratorFactory<WaypointMovementGenerator<Creature> >(WAYPOINT_MOTION_TYPE))->RegisterSelf();
 }
 }
+
 

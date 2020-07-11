@@ -22,7 +22,7 @@
 #include "GridNotifiersImpl.h"
 #include "Maps/MapManager.h"
 #include "Entities/Transports.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "WaypointManager.h"
 #include "Entities/GossipDef.h"
 #include "Globals/ObjectMgr.h"

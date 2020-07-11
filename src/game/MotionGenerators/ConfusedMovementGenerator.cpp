@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,9 +18,9 @@
 #include "Entities/Creature.h"
 #include "Server/Opcodes.h"
 #include "Entities/Player.h"
-#include "ConfusedMovementGenerator.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "MotionGenerators/ConfusedMovementGenerator.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 
 template<class T>
 void ConfusedMovementGenerator<T>::Initialize(T& unit)
@@ -118,3 +118,4 @@ template void ConfusedMovementGenerator<Player>::Reset(Player& player);
 template void ConfusedMovementGenerator<Creature>::Reset(Creature& creature);
 template bool ConfusedMovementGenerator<Player>::Update(Player& player, const uint32& diff);
 template bool ConfusedMovementGenerator<Creature>::Update(Creature& creature, const uint32& diff);
+

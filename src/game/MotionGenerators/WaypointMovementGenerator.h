@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,10 +18,10 @@
 #ifndef MANGOS_WAYPOINTMOVEMENTGENERATOR_H
 #define MANGOS_WAYPOINTMOVEMENTGENERATOR_H
 
-#include "MovementGenerator.h"
-#include "WaypointManager.h"
+#include "MotionGenerators/MovementGenerator.h"
+#include "MotionGenerators/WaypointManager.h"
 #include "MotionGenerators/Path.h"
-#include "PathFinder.h"
+#include "MotionGenerators/PathFinder.h"
 #include "Entities/Player.h"
 
 #include <vector>
@@ -132,4 +132,5 @@ class FlightPathMovementGenerator
         void InitEndGridInfo();
 };
 #endif
+
 

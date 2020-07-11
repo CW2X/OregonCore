@@ -28,7 +28,7 @@
  EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 #define SAY_INTRO                       -1557000
 #define SAY_AGGRO_1                     -1557001

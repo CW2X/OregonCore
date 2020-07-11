@@ -27,7 +27,7 @@
  EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "shattered_halls.h"
 
 #define SAY_AGGRO1                      -1540042

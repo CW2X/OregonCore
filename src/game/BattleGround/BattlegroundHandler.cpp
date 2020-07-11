@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -27,12 +27,12 @@
 #include "Entities/Object.h"
 #include "Chat/Chat.h"
 #include "BattleGround/BattlegroundMgr.h"
-#include "BattlegroundWS.h"
+#include "BattleGround/BattlegroundWS.h"
 #include "Battleground/Battleground.h"
 #include "Arena/ArenaTeam.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "World/World.h"
-#include "DisableMgr.h"
+#include "Globals/DisableMgr.h"
 #include "DBScripts/ScriptMgr.h"
 
 void WorldSession::HandleBattlegroundHelloOpcode(WorldPacket& recv_data)
@@ -891,4 +891,5 @@ void WorldSession::SendBattlegroundOrArenaJoinError(uint8 err)
     SendPacket(&data);
     return;
 }
+
 

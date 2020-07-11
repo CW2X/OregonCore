@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,11 +23,11 @@
 #include "World/World.h"
 #include "Globals/ObjectAccessor.h"
 #include "Database/DatabaseEnv.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 #include "Maps/MapManager.h"
-#include "GridNotifiers.h"
-#include "CellImpl.h"
-#include "GridNotifiersImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/CellImpl.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "DBScripts/ScriptMgr.h"
 
 DynamicObject::DynamicObject(bool isWorldObject) : WorldObject(isWorldObject)
@@ -172,3 +172,4 @@ void DynamicObject::Delay(int32 delaytime)
         if (*iunit)
             (*iunit)->DelayAura(m_spellId, m_effIndex, delaytime);
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,8 +16,8 @@
  */
 
 #include <sys/types.h>
-#include "VMapFactory.h"
-#include "VMapManager2.h"
+#include "vmap/VMapFactory.h"
+#include "vmap/VMapManager2.h"
 #include "G3D/Table.h"
 
 using namespace G3D;
@@ -116,3 +116,4 @@ namespace VMAP
         gVMapManager = NULL;
     }
 }
+

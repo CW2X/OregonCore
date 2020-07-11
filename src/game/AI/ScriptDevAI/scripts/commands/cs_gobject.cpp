@@ -1,7 +1,7 @@
 #include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Entities/GameObject.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "GameEventMgr.h"
 #include "Maps/MapManager.h"
 #include "PoolMgr.h"

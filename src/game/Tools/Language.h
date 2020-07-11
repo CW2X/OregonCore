@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -946,4 +946,5 @@ enum MaNGOSStrings
     // For other tables maybe             2000010000-2147483647 (max index)
 };
 #endif
+
 

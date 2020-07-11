@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -24,7 +24,7 @@
 #include "Arena/ArenaTeam.h"
 #include "Log.h"
 #include "Globals/ObjectMgr.h"
-#include "SocialMgr.h"
+#include "Social/SocialMgr.h"
 
 void WorldSession::HandleInspectArenaStatsOpcode(WorldPacket& recv_data)
 {
@@ -419,4 +419,5 @@ ERR_ARENA_TEAM_TOO_MANY_MEMBERS_S "%s is full"
 
 ERR_ARENA_TEAM_LEVEL_TOO_LOW_I "You must be level %d to form an arena team"
 */
+
 

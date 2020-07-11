@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,7 +16,7 @@
  */
 
 #include "Common.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Database/DatabaseEnv.h"
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
@@ -24,16 +24,16 @@
 #include "Log.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Entities/Player.h"
 #include "Entities/GossipDef.h"
-#include "SpellAuras.h"
+#include "Spells/SpellAuras.h"
 #include "Entities/Creature.h"
 #include "Maps/MapManager.h"
 #include "Entities/Pet.h"
 #include "BattleGround/BattlegroundMgr.h"
 #include "Battleground/Battleground.h"
-#include "Guild.h"
+#include "Guilds/Guild.h"
 #include "DBScripts/ScriptMgr.h"
 #include "CreatureAI.h"
 
@@ -770,4 +770,5 @@ void WorldSession::HandleRepairItemOpcode(WorldPacket& recv_data)
         pGuild->SendMoneyInfo(this, _player->GetGUIDLow());
     }
 }
+
 

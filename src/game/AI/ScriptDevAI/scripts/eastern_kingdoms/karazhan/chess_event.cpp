@@ -23,7 +23,7 @@ SDCategory: Karazhan
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "karazhan.h"
 #include "ScriptedGossip.h"
 #include "GridNotifiers.h"

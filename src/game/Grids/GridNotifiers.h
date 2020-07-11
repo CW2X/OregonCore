@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_GRIDNOTIFIERS_H
 #define MANGOS_GRIDNOTIFIERS_H
 
-#include "ObjectGridLoader.h"
+#include "Grids/ObjectGridLoader.h"
 #include "ByteBuffer.h"
 #include "Entities/UpdateData.h"
 #include <iostream>
@@ -1249,4 +1249,5 @@ class LocalizedPacketListDo
 };
 }
 #endif
+
 

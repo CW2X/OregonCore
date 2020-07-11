@@ -28,9 +28,9 @@ npc_ringo
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "ScriptedEscortAI.h"
-#include "ScriptedFollowerAI.h"
+#include "AI/ScriptDevAI/base/ScriptedFollowerAI.h"
 
 enum eAME
 {

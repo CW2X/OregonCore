@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,14 +15,14 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "OutdoorPvPHP.h"
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvPHP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "Entities/Player.h"
 #include "WorldPacket.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 const uint32 HP_LANG_LOOSE_A[HP_TOWER_NUM] = {LANG_OPVP_HP_LOOSE_BROKENHILL_A, LANG_OPVP_HP_LOOSE_OVERLOOK_A, LANG_OPVP_HP_LOOSE_STADIUM_A};
 
@@ -319,4 +319,5 @@ void OutdoorPvPHP::HandleKillImpl(Player* plr, Unit* killed)
     else if (plr->GetTeam() == HORDE && killed->ToPlayer()->GetTeam() != HORDE)
         plr->CastSpell(plr, HordePlayerKillReward, true);
 }
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -15,9 +15,9 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
-#include "packet_builder.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
+#include "Movement/packet_builder.h"
 #include "Entities/Unit.h"
 
 namespace Movement
@@ -169,3 +169,4 @@ namespace Movement
         }
     }
 }
+

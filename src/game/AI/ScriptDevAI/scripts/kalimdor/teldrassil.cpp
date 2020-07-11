@@ -27,8 +27,8 @@ npc_mist
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
-#include "ScriptedFollowerAI.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
+#include "AI/ScriptDevAI/base/ScriptedFollowerAI.h"
 
 /*####
 # npc_mist

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_CONFUSEDGENERATOR_H
 #define MANGOS_CONFUSEDGENERATOR_H
 
-#include "MovementGenerator.h"
+#include "MotionGenerators/MovementGenerator.h"
 
 template<class T>
 class ConfusedMovementGenerator
@@ -41,4 +41,5 @@ class ConfusedMovementGenerator
         float i_x, i_y, i_z;
 };
 #endif
+
 

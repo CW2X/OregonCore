@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef MANGOS_RANDOMMOTIONGENERATOR_H
 #define MANGOS_RANDOMMOTIONGENERATOR_H
 
-#include "MovementGenerator.h"
+#include "MotionGenerators/MovementGenerator.h"
 
 // define chance for creature to not stop after reaching a waypoint
 #define MOVEMENT_RANDOM_MMGEN_CHANCE_NO_BREAK 50
@@ -51,4 +51,5 @@ class RandomMovementGenerator
         uint32 i_nextMove;
 };
 #endif
+
 

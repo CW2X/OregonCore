@@ -23,7 +23,7 @@ SDCategory: Coilfang Resevoir, The Steamvault
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "steam_vault.h"
 
 #define ENCOUNTERS 4

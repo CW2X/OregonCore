@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,15 +16,15 @@
  */
 
 #include "Entities/Player.h"
-#include "SpellAuras.h"
-#include "SpellMgr.h"
-#include "GameEventMgr.h"
+#include "Spells/SpellAuras.h"
+#include "Spells/SpellMgr.h"
+#include "GameEvents/GameEventMgr.h"
 #include "Globals/ObjectMgr.h"
-#include "InstanceData.h"
+#include "Maps/InstanceData.h"
 #include "Globals/Conditions.h"
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
-#include "ReputationMgr.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
+#include "Reputation/ReputationMgr.h"
 
 INSTANTIATE_SINGLETON_1(ConditionMgr);
 
@@ -1710,3 +1710,4 @@ void ConditionMgr::Clean()
 
     AllocatedMemoryStore.clear();
 }
+

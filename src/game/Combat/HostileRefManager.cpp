@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -19,7 +19,7 @@
 #include "Combat/ThreatManager.h"
 #include "Entities/Unit.h"
 #include "Server/DBCStructure.h"
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 
 HostileRefManager::~HostileRefManager()
 {
@@ -194,3 +194,4 @@ void HostileRefManager::UpdateVisibility()
         ref = nextRef;
     }
 }
+

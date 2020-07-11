@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,12 +16,12 @@
  */
 
 #include "Entities/Creature.h"
-#include "RandomMovementGenerator.h"
-#include "Map.h"
+#include "MotionGenerators/RandomMovementGenerator.h"
+#include "Maps/Map.h"
 #include "Utilities/Util.h"
 #include "Entities/CreatureGroups.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 
 #define RUNNING_CHANCE_RANDOMMV 20                                  //will be "1 / RUNNING_CHANCE_RANDOMMV"
 
@@ -170,4 +170,5 @@ bool RandomMovementGenerator<Creature>::Update(Creature& creature, const uint32&
     }
     return true;
 }
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "MoveSplineFlag.h"
+#include "Movement/MoveSplineFlag.h"
 #include <math.h>
 #include <string>
 
@@ -205,3 +205,4 @@ namespace Movement
         return str;
     }
 }
+

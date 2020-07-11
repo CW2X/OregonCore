@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "ObjectGridLoader.h"
+#include "Grids/ObjectGridLoader.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
 #include "Entities/Creature.h"
@@ -23,7 +23,7 @@
 #include "Entities/DynamicObject.h"
 #include "Entities/Corpse.h"
 #include "World/World.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 #include "CreatureAI.h"
 
 void ObjectGridEvacuator::Visit(CreatureMapType &m)
@@ -245,4 +245,5 @@ template void ObjectGridCleaner::Visit(CreatureMapType&);
 template void ObjectGridCleaner::Visit<GameObject>(GameObjectMapType&);
 template void ObjectGridCleaner::Visit<DynamicObject>(DynamicObjectMapType&);
 template void ObjectGridCleaner::Visit<Corpse>(CorpseMapType&);
+
 

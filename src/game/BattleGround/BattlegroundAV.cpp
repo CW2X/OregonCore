@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -23,8 +23,8 @@
 #include "Globals/ObjectMgr.h"
 #include "Globals/ObjectAccessor.h"
 #include "Maps/MapManager.h"
-#include "Language.h"
-#include "Formulas.h"
+#include "Tools/Language.h"
+#include "Tools/Formulas.h"
 
 BattlegroundAV::BattlegroundAV()
 {
@@ -1441,4 +1441,5 @@ void BattlegroundAV::ResetBGSubclass()
             DelCreature(i);
 
 }
+
 

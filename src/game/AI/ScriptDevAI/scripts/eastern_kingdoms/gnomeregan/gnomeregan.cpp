@@ -23,11 +23,11 @@ SDComment: Some visual effects are not implemented. Quest Support: 2904.
 Script Data End */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "gnomeregan.h"
 #include "ScriptedEscortAI.h"
 #include "ScriptedGossip.h"
-#include "ScriptedFollowerAI.h"
+#include "AI/ScriptDevAI/base/ScriptedFollowerAI.h"
 
 #define GOSSIP_START_EVENT "I am ready to being"
 

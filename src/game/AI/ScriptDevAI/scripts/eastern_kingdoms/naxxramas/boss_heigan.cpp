@@ -35,7 +35,7 @@ EndScriptData */
 //8834 taunt5 - Hungry worms will feast on your rotten flesh!
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 
 //Spell used by floor peices to cause damage to players
 #define SPELL_ERUPTION      29371

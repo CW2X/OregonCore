@@ -18,7 +18,7 @@
 #ifndef MANGOS_GUARDAI_H
 #define MANGOS_GUARDAI_H
 
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "Timer.h"
 
 class Creature;

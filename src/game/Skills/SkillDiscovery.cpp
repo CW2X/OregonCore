@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -20,8 +20,8 @@
 #include "Globals/ObjectAccessor.h"
 #include "World/World.h"
 #include "Utilities/Util.h"
-#include "SkillDiscovery.h"
-#include "SpellMgr.h"
+#include "Skills/SkillDiscovery.h"
+#include "Spells/SpellMgr.h"
 #include <map>
 
 struct SkillDiscoveryEntry
@@ -151,4 +151,5 @@ uint32 GetSkillDiscoverySpell(uint32 skillId, uint32 spellId, Player* player)
 
     return 0;
 }
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -632,4 +632,5 @@ void WorldSession::HandleAuctionListItems(WorldPacket& recv_data)
     data << uint32(300);                                    // 2.3.0 delay for next list request?
     SendPacket(&data);
 }
+
 

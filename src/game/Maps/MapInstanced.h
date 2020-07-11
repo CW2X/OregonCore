@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,8 +18,8 @@
 #ifndef MANGOS_MAP_INSTANCED_H
 #define MANGOS_MAP_INSTANCED_H
 
-#include "Map.h"
-#include "InstanceSaveMgr.h"
+#include "Maps/Map.h"
+#include "Maps/InstanceSaveMgr.h"
 
 class MapInstanced : public Map
 {
@@ -74,4 +74,5 @@ class MapInstanced : public Map
         uint16 GridMapReference[MAX_NUMBER_OF_GRIDS][MAX_NUMBER_OF_GRIDS];
 };
 #endif
+
 

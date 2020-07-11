@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,9 +22,9 @@
 #include "Policies/Singleton.h"
 #include "ace/Thread_Mutex.h"
 #include "Common.h"
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Grids/GridStates.h"
-#include "MapUpdater.h"
+#include "Maps/MapUpdater.h"
 
 class Transport;
 
@@ -171,4 +171,5 @@ class MapManager : public MaNGOS::Singleton<MapManager, MaNGOS::ClassLevelLockab
         MapUpdater m_updater;
 };
 #endif
+
 

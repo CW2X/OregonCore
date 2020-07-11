@@ -29,7 +29,7 @@ mob_zerekethvoidzone
 EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "arcatraz.h"
 
 /*#####

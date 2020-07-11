@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,21 +15,21 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Map.h"
+#include "Maps/Map.h"
 #include "Maps/MapManager.h"
 #include "Grids/GridStates.h"
 #include "DBScripts/ScriptMgr.h"
-#include "VMapFactory.h"
-#include "MapInstanced.h"
-#include "CellImpl.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "vmap/VMapFactory.h"
+#include "Maps/MapInstanced.h"
+#include "Grids/CellImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "Entities/Transports.h"
-#include "InstanceData.h"
+#include "Maps/InstanceData.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
 #include "vmap/DynamicTree.h"
-#include "MoveMap.h"
+#include "MotionGenerators/MoveMap.h"
 
 #define DEFAULT_GRID_EXPIRY     300
 #define MAX_GRID_LOAD_TIME      50
@@ -2682,4 +2682,5 @@ void Map::UpdateIteratorBack(Player* player)
     if (m_mapRefIter == player->GetMapRef())
         m_mapRefIter = m_mapRefIter->nocheck_prev();
 }
+
 

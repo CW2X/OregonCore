@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,12 +15,12 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "MapInstanced.h"
+#include "Maps/MapInstanced.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h"
 #include "Battleground/Battleground.h"
-#include "VMapFactory.h"
-#include "InstanceSaveMgr.h"
+#include "vmap/VMapFactory.h"
+#include "Maps/InstanceSaveMgr.h"
 #include "World/World.h"
 
 MapInstanced::MapInstanced(uint32 id, time_t expiry) : Map(id, expiry, 0, DIFFICULTY_NORMAL)
@@ -266,4 +266,5 @@ Map::EnterState MapInstanced::CannotEnter(Player* /*player*/)
     //ASSERT(false);
     return CAN_ENTER;
 }
+
 

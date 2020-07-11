@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -1082,4 +1082,5 @@ OpcodeHandler opcodeTable[NUM_MSG_TYPES] =
     /*0x422*/ { "SMSG_SPLINE_MOVE_UNSET_FLYING",    STATUS_NEVER,    &WorldSession::Handle_ServerSide               },
     /*0x423*/ { "SMSG_SUMMON_CANCEL",               STATUS_NEVER,    &WorldSession::Handle_ServerSide               },
 };
+
 

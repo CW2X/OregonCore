@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -27,10 +27,10 @@
 #include "Server/DBCStores.h"
 #include "Database/SQLStorage.h"
 #include "Spells/SpellAuraDefines.h"
-#include "DisableMgr.h"
+#include "Globals/DisableMgr.h"
 
 #include "Utilities/UnorderedMap.h"
-#include "VMapFactory.h"
+#include "vmap/VMapFactory.h"
 #include <map>
 
 class Unit;
@@ -1238,4 +1238,5 @@ class SpellMgr
 
 #define sSpellMgr SpellMgr::Instance()
 #endif
+
 

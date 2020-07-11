@@ -1,7 +1,7 @@
-#include "Group.h"
+#include "Entities/Group.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Chat/Chat.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "Entities/Player.h"
 
 class group_commandscript : public CommandScript

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -16,18 +16,18 @@
  */
 
 #include "MotionGenerators/MotionMaster.h"
-#include "CreatureAISelector.h"
+#include "AI/CreatureAISelector.h"
 #include "Entities/Creature.h"
-#include "ConfusedMovementGenerator.h"
-#include "FleeingMovementGenerator.h"
-#include "HomeMovementGenerator.h"
-#include "IdleMovementGenerator.h"
-#include "PointMovementGenerator.h"
-#include "TargetedMovementGenerator.h"
-#include "WaypointMovementGenerator.h"
-#include "RandomMovementGenerator.h"
-#include "MoveSpline.h"
-#include "MoveSplineInit.h"
+#include "MotionGenerators/ConfusedMovementGenerator.h"
+#include "MotionGenerators/FleeingMovementGenerator.h"
+#include "MotionGenerators/HomeMovementGenerator.h"
+#include "MotionGenerators/IdleMovementGenerator.h"
+#include "MotionGenerators/PointMovementGenerator.h"
+#include "MotionGenerators/TargetedMovementGenerator.h"
+#include "MotionGenerators/WaypointMovementGenerator.h"
+#include "MotionGenerators/RandomMovementGenerator.h"
+#include "Movement/MoveSpline.h"
+#include "Movement/MoveSplineInit.h"
 
 inline bool isStatic(MovementGenerator* mv)
 {
@@ -588,3 +588,4 @@ bool MotionMaster::GetDestination(float& x, float& y, float& z)
     z = dest.z;
     return true;
 }
+

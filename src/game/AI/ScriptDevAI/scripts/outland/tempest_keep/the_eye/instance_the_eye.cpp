@@ -23,7 +23,7 @@ SDCategory: Tempest Keep, The Eye
 EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
-#include "ScriptedCreature.h"
+#include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "the_eye.h"
 
 #define ENCOUNTERS 5

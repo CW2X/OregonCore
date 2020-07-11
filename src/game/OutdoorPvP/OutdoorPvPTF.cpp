@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "OutdoorPvPTF.h"
+#include "OutdoorPvP/OutdoorPvPTF.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 #include "WorldPacket.h"
 #include "Entities/Player.h"
 #include "Globals/ObjectMgr.h"
-#include "Language.h"
+#include "Tools/Language.h"
 #include "World/World.h"
 
 OutdoorPvPTF::OutdoorPvPTF()
@@ -305,4 +305,5 @@ void OPvPCapturePointTF::SendChangePhase()
     // send this too, sometimes it resets :S
     SendUpdateWorldState(TF_UI_TOWER_SLIDER_N, m_neutralValuePct);
 }
+
 

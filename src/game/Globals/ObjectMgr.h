@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -26,12 +26,12 @@
 #include "Entities/DynamicObject.h"
 #include "Entities/GameObject.h"
 #include "Entities/Corpse.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Entities/ItemPrototype.h"
 #include "Entities/NPCHandler.h"
 #include "Database/DatabaseEnv.h"
-#include "Mail.h"
-#include "Map.h"
+#include "Mails/Mail.h"
+#include "Maps/Map.h"
 #include "Globals/ObjectAccessor.h"
 #include "Entities/ObjectGuid.h"
 #include "Policies/Singleton.h"
@@ -1295,4 +1295,5 @@ CreatureInfo const* GetCreatureTemplateStore(uint32 entry);
 Quest const* GetQuestTemplateStore(uint32 entry);
 
 #endif
+
 

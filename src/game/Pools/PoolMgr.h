@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -22,7 +22,7 @@
 #include "Policies/Singleton.h"
 #include "Entities/Creature.h"
 #include "Entities/GameObject.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 
 struct PoolTemplateData
 {
@@ -206,3 +206,4 @@ inline uint32 PoolMgr::IsPartOfAPool<Pool>(uint32 pool_id) const
 }
 
 #endif
+

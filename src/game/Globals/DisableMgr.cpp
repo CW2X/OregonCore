@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -15,9 +15,9 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "SpellMgr.h"
+#include "Spells/SpellMgr.h"
 #include "Globals/ObjectMgr.h"
-#include "DisableMgr.h"
+#include "Globals/DisableMgr.h"
 
 DisableMgr::DisableMgr()
 {
@@ -262,3 +262,4 @@ bool DisableMgr::IsDisabledFor(DisableType type, uint32 entry, Unit* pUnit, uint
 
     return false;
 }
+

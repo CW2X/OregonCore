@@ -9,7 +9,7 @@
 #include "Entities/Player.h"
 #include "GameEventMgr.h"
 #include "World/World.h"
-#include "Language.h"
+#include "Tools/Language.h"
 
 static uint32 ReputationRankStrIndex[MAX_REPUTATION_RANK] =
 {

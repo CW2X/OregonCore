@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -18,7 +18,7 @@
 #ifndef __BATTLEGROUNDEY_H
 #define __BATTLEGROUNDEY_H
 
-#include "Language.h"
+#include "Tools/Language.h"
 
 class Battleground;
 
@@ -407,4 +407,5 @@ class BattlegroundEY : public Battleground
         int32 m_PointAddingTimer;
 };
 #endif
+
 

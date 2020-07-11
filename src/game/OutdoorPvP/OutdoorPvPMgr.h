@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -20,7 +20,7 @@
 
 #define OUTDOORPVP_OBJECTIVE_UPDATE_INTERVAL 1000
 
-#include "OutdoorPvP.h"
+#include "OutdoorPvP/OutdoorPvP.h"
 #include "Policies/Singleton.h"
 
 class Player;
@@ -79,4 +79,5 @@ class OutdoorPvPMgr
 #define sOutdoorPvPMgr MaNGOS::Singleton<OutdoorPvPMgr>::Instance()
 
 #endif /*OUTDOOR_PVP_MGR_H_*/
+
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "CinematicMgr.h"
+#include "Cinematics/CinematicMgr.h"
 #include "Entities/Creature.h"
 #include "Entities/Player.h"
 #include "Entities/TemporarySummon.h"
@@ -171,3 +171,4 @@ void CinematicMgr::UpdateCinematicLocation(uint32 /*diff*/)
     if (m_cinematicDiff > m_cinematicLength + 10 * IN_MILLISECONDS)
         EndCinematic();
 }
+

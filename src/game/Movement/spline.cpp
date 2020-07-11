@@ -1,4 +1,4 @@
-/*
+﻿/*
 * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "spline.h"
+#include "Movement/spline.h"
 #include <sstream>
 #include "G3D/Matrix4.h"
 
@@ -303,3 +303,4 @@ namespace Movement
         return str.str();
     }
 }
+

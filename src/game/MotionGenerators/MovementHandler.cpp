@@ -1,4 +1,4 @@
-/*
+﻿/*
  * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -25,8 +25,8 @@
 #include "Maps/MapManager.h"
 #include "Entities/Transports.h"
 #include "Battleground/Battleground.h"
-#include "WaypointMovementGenerator.h"
-#include "InstanceSaveMgr.h"
+#include "MotionGenerators/WaypointMovementGenerator.h"
+#include "Maps/InstanceSaveMgr.h"
 #include "DBScripts/ScriptMgr.h"
 
 #define MOVEMENT_PACKET_TIME_DELAY 0
@@ -590,4 +590,5 @@ void WorldSession::HandleSummonResponseOpcode(WorldPacket& recv_data)
 
     GetPlayer()->SummonIfPossible(agree);
 }
+
 
