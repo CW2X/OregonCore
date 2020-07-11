@@ -17,15 +17,15 @@
 
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Log.h"
-#include "Opcodes.h"
+#include "Server/Opcodes.h"
 #include "ByteBuffer.h"
 #include <openssl/sha.h>
 #include "World/World.h"
 #include "Utilities/Util.h"
-#include "WardenBase.h"
-#include "WardenWin.h"
+#include "Warden/WardenBase.h"
+#include "Warden/WardenWin.h"
 
 WardenBase::WardenBase() : iCrypto(16), oCrypto(16), m_WardenCheckTimer(10000/*10 sec*/), m_WardenKickTimer(0), m_WardenDataSent(false), m_initialized(false)
 {

@@ -12,16 +12,16 @@
 
 #include "Server/DBCStructure.h"
 #include "Globals/ObjectMgr.h"
-#include "Battleground.h"
+#include "Battleground/Battleground.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
-#include "SharedDefines.h"
-#include "Chat.h"
-#include "Weather.h"
-#include "AuctionHouseMgr.h"
-#include "ConditionMgr.h"
-#include "Player.h"
-#include "Transports.h"
-#include "WorldSession.h"
+#include "Globals/SharedDefines.h"
+#include "Chat/Chat.h"
+#include "Weather/Weather.h"
+#include "AuctionHouse/AuctionHouseMgr.h"
+#include "Globals/Conditions.h"
+#include "Entities/Player.h"
+#include "Entities/Transports.h"
+#include "Server/WorldSession.h"
 
 class Player;
 class BattlegroundScript;

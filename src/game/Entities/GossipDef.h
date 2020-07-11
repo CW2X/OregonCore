@@ -20,7 +20,7 @@
 
 #include "Common.h"
 #include "QuestDef.h"
-#include "NPCHandler.h"
+#include "Entities/NPCHandler.h"
 
 class WorldSession;
 

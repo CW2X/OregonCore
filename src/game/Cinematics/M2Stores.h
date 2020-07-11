@@ -18,7 +18,7 @@
 #ifndef MANGOS_M2STORES_H
 #define MANGOS_M2STORES_H
 
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "Common.h"
 
 struct FlyByCamera

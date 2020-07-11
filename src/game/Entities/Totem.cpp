@@ -15,11 +15,11 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Totem.h"
+#include "Entities/Totem.h"
 #include "WorldPacket.h"
 #include "Maps/MapManager.h"
 #include "Group.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "SpellMgr.h"
 #include "SpellAuras.h"
 

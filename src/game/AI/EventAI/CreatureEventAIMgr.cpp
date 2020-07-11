@@ -23,9 +23,9 @@
 #include "CreatureEventAI.h"
 #include "CreatureEventAIMgr.h"
 #include "Globals/ObjectMgr.h"
-#include "ObjectGuid.h"
-#include "GridDefines.h"
-#include "ConditionMgr.h"
+#include "Entities/ObjectGuid.h"
+#include "Maps/GridDefines.h"
+#include "Globals/Conditions.h"
 
 INSTANTIATE_SINGLETON_1(CreatureEventAIMgr);
 

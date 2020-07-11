@@ -26,7 +26,7 @@
 #include "ScriptedCreature.h"
 #include "magisters_terrace.h"
 #include "WorldPacket.h"
-#include "Unit.h"
+#include "Entities/Unit.h"
 
 #define SAY_AGGRO                   -1585023                //This yell should be done when the room is cleared. For now, set it as a movelineofsight yell.
 #define SAY_PHOENIX                 -1585024

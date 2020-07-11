@@ -20,9 +20,9 @@
 
 #include "MovementGenerator.h"
 #include "WaypointManager.h"
-#include "Path.h"
+#include "MotionGenerators/Path.h"
 #include "PathFinder.h"
-#include "Player.h"
+#include "Entities/Player.h"
 
 #include <vector>
 #include <set>

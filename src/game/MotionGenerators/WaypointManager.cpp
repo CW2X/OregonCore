@@ -16,7 +16,7 @@
  */
 
 #include "Database/DatabaseEnv.h"
-#include "GridDefines.h"
+#include "Maps/GridDefines.h"
 #include "WaypointManager.h"
 #include "Maps/MapManager.h"
 

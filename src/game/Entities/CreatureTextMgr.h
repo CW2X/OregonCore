@@ -18,11 +18,11 @@
 #ifndef TRINITY_CREATURE_TEXT_MGR_H
 #define TRINITY_CREATURE_TEXT_MGR_H
 
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "GridNotifiers.h"
 #include "Globals/ObjectAccessor.h"
-#include "SharedDefines.h"
-#include "Opcodes.h"
+#include "Globals/SharedDefines.h"
+#include "Server/Opcodes.h"
 #include "Group.h"
 #include "WorldPacket.h"
 

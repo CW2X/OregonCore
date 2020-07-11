@@ -1,11 +1,11 @@
 #include "Accounts/AccountMgr.h"
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Language.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 
 
 class ban_commandscript : public CommandScript

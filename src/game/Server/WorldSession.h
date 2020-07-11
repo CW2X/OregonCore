@@ -21,7 +21,7 @@
 #include "Common.h"
 #include "QueryResult.h"
 #include "World/World.h"
-#include "WardenBase.h"
+#include "Warden/WardenBase.h"
 
 struct ItemTemplate;
 struct AuctionEntry;

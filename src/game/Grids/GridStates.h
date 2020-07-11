@@ -19,7 +19,7 @@
 #define MANGOS_GRIDSTATES_H
 
 #include "Map.h"
-#include "Object.h"
+#include "Entities/Object.h"
 
 class GridState
 {

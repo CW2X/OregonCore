@@ -1,10 +1,10 @@
 #include "DBScripts/ScriptMgr.h"
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Group.h"
 #include "InstanceSaveMgr.h"
 #include "InstanceData.h"
 #include "Maps/MapManager.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Language.h"
 
 class instance_commandscript : public CommandScript

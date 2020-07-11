@@ -42,7 +42,7 @@
 #include "ScriptedEscortAI.h"
 #include "ScriptedGossip.h"
 #include "GridNotifiers.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 
 

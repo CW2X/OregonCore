@@ -19,7 +19,7 @@
 #define MANGOS_FORMULAS_H
 
 #include "World/World.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "DBScripts/ScriptMgr.h"
 #include <math.h>
 

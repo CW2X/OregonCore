@@ -17,10 +17,10 @@
 
 #include "SocialMgr.h"
 #include "Database/DatabaseEnv.h"
-#include "Opcodes.h"
+#include "Server/Opcodes.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
-#include "Player.h"
+#include "Server/WorldSession.h"
+#include "Entities/Player.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h"
 #include "World/World.h"

@@ -25,7 +25,7 @@ EndScriptData */
 #include "ScriptedCreature.h"
 #include "ScriptedEscortAI.h"
 #include "Group.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "ScriptSystem.h"
 
 enum ePoints

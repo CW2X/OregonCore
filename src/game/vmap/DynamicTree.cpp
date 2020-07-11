@@ -15,12 +15,12 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "DynamicTree.h"
+#include "vmap/DynamicTree.h"
 #include "Log.h"
 #include "Timer.h"
 #include "BoundingIntervalHierarchyWrapper.h"
 #include "RegularGrid.h"
-#include "GameObjectModel.h"
+#include "vmap/GameObjectModel.h"
 
 using G3D::Ray;
 

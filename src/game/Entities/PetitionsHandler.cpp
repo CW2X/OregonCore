@@ -18,13 +18,13 @@
 #include "Common.h"
 #include "Language.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Log.h"
-#include "Opcodes.h"
+#include "Server/Opcodes.h"
 #include "Guild.h"
-#include "ArenaTeam.h"
+#include "Arena/ArenaTeam.h"
 #include "Maps/MapManager.h"
 
 #define CHARTER_DISPLAY_ID 16161

@@ -19,9 +19,9 @@
 #include "Globals/ObjectMgr.h"
 #include "Database/DatabaseEnv.h"
 
-#include "Bag.h"
+#include "Entities/Bag.h"
 #include "Log.h"
-#include "UpdateData.h"
+#include "Entities/UpdateData.h"
 
 Bag::Bag(): Item()
 {

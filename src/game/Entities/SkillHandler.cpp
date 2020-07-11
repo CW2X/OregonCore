@@ -16,12 +16,12 @@
  */
 
 #include "Common.h"
-#include "Opcodes.h"
+#include "Server/Opcodes.h"
 #include "Log.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "World/World.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Globals/ObjectAccessor.h"
 #include "SpellAuras.h"
 

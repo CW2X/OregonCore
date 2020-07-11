@@ -17,7 +17,7 @@
 
 #include <stdlib.h>
 #include <functional>
-#include "ItemEnchantmentMgr.h"
+#include "Entities/ItemEnchantmentMgr.h"
 #include "Database/DatabaseEnv.h"
 #include "Log.h"
 #include "Globals/ObjectMgr.h"

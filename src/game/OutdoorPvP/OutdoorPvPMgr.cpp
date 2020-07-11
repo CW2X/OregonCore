@@ -23,7 +23,7 @@
 #include "OutdoorPvPSI.h"
 #include "OutdoorPvPEP.h"
 #include "Globals/ObjectMgr.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 
 INSTANTIATE_SINGLETON_1(OutdoorPvPMgr);

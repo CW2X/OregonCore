@@ -1,8 +1,8 @@
 #include "DBScripts/ScriptMgr.h"
-#include "Chat.h"
-#include "Creature.h"
+#include "Chat/Chat.h"
+#include "Entities/Creature.h"
 #include "Language.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Spell.h"
 
 class cast_commandscript : public CommandScript

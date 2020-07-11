@@ -3,11 +3,11 @@
 #include "Globals/ObjectMgr.h"
 #include "PoolMgr.h"
 #include "Maps/MapManager.h"
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Language.h"
-#include "Player.h"
-#include "Opcodes.h"
-#include "GameObject.h"
+#include "Entities/Player.h"
+#include "Server/Opcodes.h"
+#include "Entities/GameObject.h"
 
 class titles_commandscript : public CommandScript
 {

@@ -19,7 +19,7 @@
 #define MANGOS_POINTMOVEMENTGENERATOR_H
 
 #include "MovementGenerator.h"
-#include "FollowerReference.h"
+#include "MotionGenerators/FollowerReference.h"
 
 template<class T>
 class PointMovementGenerator

@@ -27,12 +27,12 @@
 #include "temple_of_ahnqiraj.h"
 #include "WorldPacket.h"
 
-#include "Item.h"
+#include "Entities/Item.h"
 #include "Spell.h"
 
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 
 #define SPELL_HEAL_BROTHER          7393

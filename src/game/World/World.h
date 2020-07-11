@@ -21,7 +21,7 @@
 #include "Common.h"
 #include "Timer.h"
 #include "Policies/Singleton.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "QueryResult.h"
 
 #include <atomic>

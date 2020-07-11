@@ -18,9 +18,9 @@
 #ifndef __SPELL_H
 #define __SPELL_H
 
-#include "GridDefines.h"
+#include "Maps/GridDefines.h"
 #include "SpellMgr.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "PathFinder.h"
 
 static const uint32 MAX_SPELL_ID = 53085;

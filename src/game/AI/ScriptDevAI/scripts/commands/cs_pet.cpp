@@ -1,8 +1,8 @@
-#include "Player.h"
+#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
-#include "Pet.h"
+#include "Entities/Pet.h"
 #include "Language.h"
-#include "Chat.h"
+#include "Chat/Chat.h"
 
 class pet_commandscript : CommandScript
 {

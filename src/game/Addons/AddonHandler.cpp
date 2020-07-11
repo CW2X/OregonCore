@@ -16,8 +16,8 @@
  */
 
 #include "zlib.h"
-#include "AddonHandler.h"
-#include "Opcodes.h"
+#include "Addons/AddonHandler.h"
+#include "Server/Opcodes.h"
 #include "Log.h"
 
 INSTANTIATE_SINGLETON_1( AddonHandler);

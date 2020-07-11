@@ -24,7 +24,7 @@
 #include "ScriptLoader.h"
 #include "ScriptSystem.h"
 #include "SpellMgr.h"
-#include "GossipDef.h"
+#include "Entities/GossipDef.h"
 #include "CreatureAIImpl.h"
 #include "ScriptLoader.h"
 #include "ScriptSystem.h"

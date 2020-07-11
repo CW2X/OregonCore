@@ -18,8 +18,8 @@
 #ifndef SC_PLAYER_H
 #define SC_PLAYER_H
 
-#include "Player.h"
-#include "GossipDef.h"
+#include "Entities/Player.h"
+#include "Entities/GossipDef.h"
 #include "QuestDef.h"
 
 // Gossip Item Text

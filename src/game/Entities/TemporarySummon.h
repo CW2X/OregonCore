@@ -18,7 +18,7 @@
 #ifndef MANGOSCORE_TEMPSUMMON_H
 #define MANGOSCORE_TEMPSUMMON_H
 
-#include "Creature.h"
+#include "Entities/Creature.h"
 
 enum SummonerType
 {

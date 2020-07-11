@@ -26,7 +26,7 @@
 #include "ScriptedCreature.h"
 #include "steam_vault.h"
 #include "GridNotifiers.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 
 enum NagaDistiller

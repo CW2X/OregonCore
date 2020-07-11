@@ -19,9 +19,9 @@
 #define MANGOS_SMARTSCRIPT_H
 
 #include "Common.h"
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "CreatureAI.h"
-#include "Unit.h"
+#include "Entities/Unit.h"
 #include "Spell.h"
 #include "GridNotifiers.h"
 

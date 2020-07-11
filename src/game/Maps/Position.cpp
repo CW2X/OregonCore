@@ -17,7 +17,7 @@
 
 #include "Position.h"
 #include "ByteBuffer.h"
-#include "GridDefines.h"
+#include "Maps/GridDefines.h"
 
 #include <G3D/g3dmath.h>
 

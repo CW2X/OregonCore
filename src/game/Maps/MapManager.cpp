@@ -20,11 +20,11 @@
 #include "Database/DatabaseEnv.h"
 #include "Log.h"
 #include "Globals/ObjectAccessor.h"
-#include "Transports.h"
-#include "GridDefines.h"
+#include "Entities/Transports.h"
+#include "Maps/GridDefines.h"
 #include "MapInstanced.h"
 #include "World/World.h"
-#include "Corpse.h"
+#include "Entities/Corpse.h"
 #include "Globals/ObjectMgr.h"
 
 #define CLASS_LOCK MaNGOS::ClassLevelLockable<MapManager, ACE_Thread_Mutex>

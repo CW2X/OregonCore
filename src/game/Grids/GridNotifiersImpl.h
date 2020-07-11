@@ -20,9 +20,9 @@
 
 #include "GridNotifiers.h"
 #include "WorldPacket.h"
-#include "Corpse.h"
-#include "Player.h"
-#include "UpdateData.h"
+#include "Entities/Corpse.h"
+#include "Entities/Player.h"
+#include "Entities/UpdateData.h"
 #include "CreatureAI.h"
 #include "SpellAuras.h"
 

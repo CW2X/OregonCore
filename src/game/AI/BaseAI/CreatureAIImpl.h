@@ -20,7 +20,7 @@
 
 #include "Common.h"
 #include "Platform/Define.h"
-#include "TemporarySummon.h"
+#include "Entities/TemporarySummon.h"
 #include "CreatureAI.h"
 
 #define HEROIC(n,h) (HeroicMode ? h : n)

@@ -17,10 +17,10 @@
 
 #include "DatabaseEnv.h"
 #include "Globals/ObjectMgr.h"
-#include "GridDefines.h"
+#include "Maps/GridDefines.h"
 #include "GridNotifiers.h"
 #include "SpellMgr.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "Group.h"
 #include "SmartAI.h"
 #include "DBScripts/ScriptMgr.h"

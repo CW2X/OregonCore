@@ -19,12 +19,12 @@
 #define MANGOSCORE_CREATURE_H
 
 #include "Common.h"
-#include "Unit.h"
-#include "UpdateMask.h"
-#include "ItemPrototype.h"
+#include "Entities/Unit.h"
+#include "Entities/UpdateMask.h"
+#include "Entities/ItemPrototype.h"
 #include "LootMgr.h"
 #include "Database/DatabaseEnv.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "Entities/CreatureGroups.h"
 
 #include <list>

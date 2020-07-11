@@ -17,13 +17,13 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "Globals/ObjectMgr.h"
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Accounts/AccountMgr.h"
 #include "Language.h"
 #include "World/World.h"
-#include "Player.h"
-#include "Opcodes.h"
-#include "TicketMgr.h"
+#include "Entities/Player.h"
+#include "Server/Opcodes.h"
+#include "GMTickets/GMTicketMgr.h"
 
 class ticket_commandscript : public CommandScript
 {

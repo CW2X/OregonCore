@@ -15,9 +15,9 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Creature.h"
-#include "Opcodes.h"
-#include "Player.h"
+#include "Entities/Creature.h"
+#include "Server/Opcodes.h"
+#include "Entities/Player.h"
 #include "ConfusedMovementGenerator.h"
 #include "MoveSplineInit.h"
 #include "MoveSpline.h"

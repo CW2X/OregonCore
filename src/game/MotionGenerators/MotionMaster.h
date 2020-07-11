@@ -20,8 +20,8 @@
 
 #include "Common.h"
 #include <vector>
-#include "SharedDefines.h"
-#include "Object.h"
+#include "Globals/SharedDefines.h"
+#include "Entities/Object.h"
 
 class MovementGenerator;
 class Unit;

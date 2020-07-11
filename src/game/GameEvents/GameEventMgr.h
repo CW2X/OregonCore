@@ -19,8 +19,8 @@
 #define MANGOS_GAMEEVENT_MGR_H
 
 #include "Platform/Define.h"
-#include "Creature.h"
-#include "GameObject.h"
+#include "Entities/Creature.h"
+#include "Entities/GameObject.h"
 
 #define max_ge_check_delay 86400                            // 1 day in seconds
 

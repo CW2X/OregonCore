@@ -17,12 +17,12 @@
 
 #include "Common.h"
 #include "DBScripts/ScriptMgr.h"
-#include "Transports.h"
+#include "Entities/Transports.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectMgr.h"
 #include "WorldPacket.h"
 #include "Server/DBCStores.h"
-#include "Player.h"
+#include "Entities/Player.h"
 
 void MapManager::LoadTransports()
 {

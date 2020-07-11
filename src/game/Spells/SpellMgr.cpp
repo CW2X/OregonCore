@@ -15,12 +15,12 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Unit.h"
+#include "Entities/Unit.h"
 #include "SpellMgr.h"
 #include "Globals/ObjectMgr.h"
-#include "SpellAuraDefines.h"
+#include "Spells/SpellAuraDefines.h"
 #include "Server/DBCStores.h"
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Spell.h"
 #include "CreatureAI.h"
 #include "BattleGround/BattlegroundMgr.h"

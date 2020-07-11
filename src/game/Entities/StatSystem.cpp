@@ -15,11 +15,11 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Unit.h"
-#include "Player.h"
-#include "Pet.h"
-#include "Creature.h"
-#include "SharedDefines.h"
+#include "Entities/Unit.h"
+#include "Entities/Player.h"
+#include "Entities/Pet.h"
+#include "Entities/Creature.h"
+#include "Globals/SharedDefines.h"
 #include "SpellAuras.h"
 
 /*#######################################

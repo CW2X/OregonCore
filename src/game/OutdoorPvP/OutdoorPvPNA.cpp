@@ -16,7 +16,7 @@
  */
 
 #include "OutdoorPvPNA.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Globals/ObjectMgr.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "WorldPacket.h"

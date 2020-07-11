@@ -17,7 +17,7 @@
 
 #include "Globals/ObjectMgr.h"
 #include "WorldPacket.h"
-#include "ArenaTeam.h"
+#include "Arena/ArenaTeam.h"
 #include "BattleGround/BattlegroundMgr.h"
 
 void ArenaTeamMember::ModifyPersonalRating(Player* plr, int32 mod, uint32 slot)

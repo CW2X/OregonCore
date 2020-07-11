@@ -17,12 +17,12 @@
 
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
-#include "Opcodes.h"
+#include "Server/WorldSession.h"
+#include "Server/Opcodes.h"
 #include "Log.h"
 #include "Globals/ObjectMgr.h"
-#include "Player.h"
-#include "Item.h"
+#include "Entities/Player.h"
+#include "Entities/Item.h"
 
 void WorldSession::HandleSplitItemOpcode(WorldPacket& recv_data)
 {

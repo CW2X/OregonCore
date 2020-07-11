@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "GridStates.h"
+#include "Grids/GridStates.h"
 #include "GridNotifiers.h"
 #include "Log.h"
 

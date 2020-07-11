@@ -19,7 +19,7 @@
 #include "PlayerDump.h"
 #include "Database/DatabaseEnv.h"
 #include "Database/SQLStorage.h"
-#include "UpdateFields.h"
+#include "Entities/UpdateFields.h"
 #include "Globals/ObjectMgr.h"
 #include "Accounts/AccountMgr.h"
 

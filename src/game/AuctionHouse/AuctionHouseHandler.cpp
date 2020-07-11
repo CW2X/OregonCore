@@ -16,16 +16,16 @@
  */
 
 #include "Globals/ObjectMgr.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "World/World.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 
-#include "AuctionHouseBot.h"
-#include "AuctionHouseMgr.h"
+#include "AuctionHouseBot/AuctionHouseBot.h"
+#include "AuctionHouse/AuctionHouseMgr.h"
 #include "Log.h"
-#include "Opcodes.h"
-#include "UpdateMask.h"
+#include "Server/Opcodes.h"
+#include "Entities/UpdateMask.h"
 #include "Utilities/Util.h"
 
 // please DO NOT use iterator++, because it is slower than ++iterator!!!

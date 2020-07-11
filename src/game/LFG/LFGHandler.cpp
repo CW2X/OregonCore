@@ -15,10 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Log.h"
 #include "Database/DatabaseEnv.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "WorldPacket.h"
 #include "Globals/ObjectMgr.h"
 #include "World/World.h"

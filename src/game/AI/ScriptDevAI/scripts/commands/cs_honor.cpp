@@ -1,7 +1,7 @@
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Language.h"
 #include "Globals/ObjectMgr.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 
 class honor_commandscript : public CommandScript

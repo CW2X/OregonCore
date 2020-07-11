@@ -15,10 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Weather.h"
+#include "Weather/Weather.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
-#include "Player.h"
+#include "Server/WorldSession.h"
+#include "Entities/Player.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Log.h"

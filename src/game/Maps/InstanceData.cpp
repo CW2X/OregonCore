@@ -19,10 +19,10 @@
 #include "MapReference.h"
 #include "Database/DatabaseEnv.h"
 #include "Map.h"
-#include "GameObject.h"
-#include "Creature.h"
+#include "Entities/GameObject.h"
+#include "Entities/Creature.h"
 #include "CreatureAI.h"
-#include "Player.h"
+#include "Entities/Player.h"
 
 void InstanceData::SaveToDB()
 {

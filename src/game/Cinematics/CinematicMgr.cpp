@@ -16,9 +16,9 @@
 */
 
 #include "CinematicMgr.h"
-#include "Creature.h"
-#include "Player.h"
-#include "TemporarySummon.h"
+#include "Entities/Creature.h"
+#include "Entities/Player.h"
+#include "Entities/TemporarySummon.h"
 
 CinematicMgr::CinematicMgr(Player* playerref)
 {

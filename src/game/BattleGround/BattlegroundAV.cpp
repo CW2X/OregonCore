@@ -15,11 +15,11 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Player.h"
-#include "Battleground.h"
-#include "BattlegroundAV.h"
-#include "Creature.h"
-#include "Object.h"
+#include "Entities/Player.h"
+#include "Battleground/Battleground.h"
+#include "Battleground/BattlegroundAV.h"
+#include "Entities/Creature.h"
+#include "Entities/Object.h"
 #include "Globals/ObjectMgr.h"
 #include "Globals/ObjectAccessor.h"
 #include "Maps/MapManager.h"

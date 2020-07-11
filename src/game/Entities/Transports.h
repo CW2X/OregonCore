@@ -18,7 +18,7 @@
 #ifndef TRANSPORTS_H
 #define TRANSPORTS_H
 
-#include "GameObject.h"
+#include "Entities/GameObject.h"
 
 #include <map>
 #include <set>

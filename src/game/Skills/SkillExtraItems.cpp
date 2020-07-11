@@ -18,7 +18,7 @@
 #include "SkillExtraItems.h"
 #include "Database/DatabaseEnv.h"
 #include "Log.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include <map>
 
 // some type definitions

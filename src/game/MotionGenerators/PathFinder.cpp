@@ -17,7 +17,7 @@
 
 #include "MoveMap.h"
 #include "Map.h"
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "PathFinder.h"
 #include "Log.h"
 

@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "Entities/CreatureGroups.h"
 #include "Globals/ObjectMgr.h"
 

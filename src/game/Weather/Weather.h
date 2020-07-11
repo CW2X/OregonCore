@@ -19,7 +19,7 @@
 #define __WEATHER_H
 
 #include "Common.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "Timer.h"
 
 class Player;

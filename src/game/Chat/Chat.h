@@ -18,7 +18,7 @@
 #ifndef MANGOSCORE_CHAT_H
 #define MANGOSCORE_CHAT_H
 
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 
 class ChatHandler;
 class WorldSession;

@@ -19,7 +19,7 @@
 #define MANGOS_TARGETEDMOVEMENTGENERATOR_H
 
 #include "MovementGenerator.h"
-#include "FollowerReference.h"
+#include "MotionGenerators/FollowerReference.h"
 #include "PathFinder.h"
 
 class TargetedMovementGeneratorBase

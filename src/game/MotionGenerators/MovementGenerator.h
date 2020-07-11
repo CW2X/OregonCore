@@ -23,7 +23,7 @@
 #include "Dynamic/ObjectRegistry.h"
 #include "Dynamic/FactoryHolder.h"
 #include "Common.h"
-#include "MotionMaster.h"
+#include "MotionGenerators/MotionMaster.h"
 
 class Unit;
 

@@ -20,15 +20,15 @@
 
 #include "ObjectGridLoader.h"
 #include "ByteBuffer.h"
-#include "UpdateData.h"
+#include "Entities/UpdateData.h"
 #include <iostream>
 
-#include "Corpse.h"
-#include "Object.h"
-#include "DynamicObject.h"
-#include "GameObject.h"
-#include "Player.h"
-#include "Unit.h"
+#include "Entities/Corpse.h"
+#include "Entities/Object.h"
+#include "Entities/DynamicObject.h"
+#include "Entities/GameObject.h"
+#include "Entities/Player.h"
+#include "Entities/Unit.h"
 #include "CreatureAI.h"
 
 class Player;

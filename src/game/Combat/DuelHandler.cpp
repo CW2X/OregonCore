@@ -17,11 +17,11 @@
 
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Log.h"
 #include "Maps/MapManager.h"
-#include "Player.h"
+#include "Entities/Player.h"
 
 void WorldSession::HandleDuelAcceptedOpcode(WorldPacket& recvPacket)
 {

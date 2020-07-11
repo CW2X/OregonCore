@@ -20,8 +20,8 @@
 
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
-#include "Creature.h"
-#include "GameObject.h"
+#include "Entities/Creature.h"
+#include "Entities/GameObject.h"
 #include "QuestDef.h"
 
 struct PoolTemplateData

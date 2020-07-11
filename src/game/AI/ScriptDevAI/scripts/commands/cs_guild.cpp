@@ -1,4 +1,4 @@
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Language.h"
 #include "Guild.h"
 #include "Globals/ObjectAccessor.h"

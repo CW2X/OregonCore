@@ -18,7 +18,7 @@
 #ifndef MANGOSCORE_TOTEM_H
 #define MANGOSCORE_TOTEM_H
 
-#include "TemporarySummon.h"
+#include "Entities/TemporarySummon.h"
 
 enum TotemType
 {

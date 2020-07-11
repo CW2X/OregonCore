@@ -19,8 +19,8 @@
 #define _AUCTION_HOUSE_MGR_H
 
 #include "ace/Singleton.h"
-#include "SharedDefines.h"
-#include "AuctionHouseBot.h"
+#include "Globals/SharedDefines.h"
+#include "AuctionHouseBot/AuctionHouseBot.h"
 
 class Item;
 class Player;

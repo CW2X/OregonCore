@@ -16,11 +16,11 @@
  */
 
 #include "Common.h"
-#include "Item.h"
+#include "Entities/Item.h"
 #include "Globals/ObjectMgr.h"
 #include "WorldPacket.h"
 #include "Database/DatabaseEnv.h"
-#include "ItemEnchantmentMgr.h"
+#include "Entities/ItemEnchantmentMgr.h"
 
 void AddItemsSetItem(Player* player, Item* item)
 {

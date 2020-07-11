@@ -21,7 +21,7 @@
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Config/Config.h"
-#include "ItemPrototype.h"
+#include "Entities/ItemPrototype.h"
 #include "Utilities/Util.h"
 
 #define AHB_GREY        0

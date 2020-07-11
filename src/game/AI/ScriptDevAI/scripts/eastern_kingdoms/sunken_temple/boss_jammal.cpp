@@ -1,6 +1,6 @@
 #include "DBScripts/ScriptMgr.h"
 #include "ScriptedCreature.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Spell.h"
 
 enum Spells

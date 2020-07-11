@@ -28,11 +28,11 @@ EndScriptData */
 #include "hyjal_trash.h"
 #include "Maps/MapManager.h"
 #include "Language.h"
-#include "Chat.h"
-#include "Object.h"
+#include "Chat/Chat.h"
+#include "Entities/Object.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 
 #define SPAWN_GARG_GATE 0

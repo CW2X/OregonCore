@@ -18,10 +18,10 @@
 #ifndef MANGOS_LOOTMGR_H
 #define MANGOS_LOOTMGR_H
 
-#include "ItemEnchantmentMgr.h"
+#include "Entities/ItemEnchantmentMgr.h"
 #include "ByteBuffer.h"
 #include "Utilities/LinkedReference/RefManager.h"
-#include "ConditionMgr.h"
+#include "Globals/Conditions.h"
 
 #include <map>
 #include <vector>

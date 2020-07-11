@@ -1,7 +1,7 @@
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Language.h"
 #include "Globals/ObjectAccessor.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 #include "SystemConfig.h"
 

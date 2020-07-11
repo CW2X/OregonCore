@@ -1,4 +1,4 @@
-#include "Player.h"
+#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 #include "Language.h"
 #include "Accounts/AccountMgr.h"

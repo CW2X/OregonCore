@@ -18,7 +18,7 @@
 #ifndef MANGOS_CREATUREAI_H
 #define MANGOS_CREATUREAI_H
 
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "UnitAI.h"
 #include "Common.h"
 

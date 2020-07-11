@@ -19,7 +19,7 @@
 #define __MANGOS_REPUTATION_MGR_H
 
 #include "Common.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "Server/DBCStructure.h"
 #include "QueryResult.h"
 #include <map>

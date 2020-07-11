@@ -16,10 +16,10 @@
  */
 
 #include "Common.h"
-#include "GameObject.h"
-#include "UpdateMask.h"
+#include "Entities/GameObject.h"
+#include "Entities/UpdateMask.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Globals/ObjectAccessor.h"
 #include "Database/DatabaseEnv.h"

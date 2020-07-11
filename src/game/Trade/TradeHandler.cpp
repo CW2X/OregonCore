@@ -17,13 +17,13 @@
 
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Globals/ObjectAccessor.h"
 #include "Log.h"
-#include "Opcodes.h"
-#include "Player.h"
-#include "Item.h"
+#include "Server/Opcodes.h"
+#include "Entities/Player.h"
+#include "Entities/Item.h"
 #include "SocialMgr.h"
 #include "Language.h"
 

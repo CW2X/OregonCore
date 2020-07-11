@@ -21,17 +21,17 @@
 #define __UNIT_H
 
 #include "Common.h"
-#include "Object.h"
-#include "Opcodes.h"
-#include "SpellAuraDefines.h"
-#include "UpdateFields.h"
-#include "SharedDefines.h"
-#include "ThreatManager.h"
-#include "HostileRefManager.h"
-#include "FollowerReference.h"
-#include "FollowerRefManager.h"
+#include "Entities/Object.h"
+#include "Server/Opcodes.h"
+#include "Spells/SpellAuraDefines.h"
+#include "Entities/UpdateFields.h"
+#include "Globals/SharedDefines.h"
+#include "Combat/ThreatManager.h"
+#include "Combat/HostileRefManager.h"
+#include "MotionGenerators/FollowerReference.h"
+#include "MotionGenerators/FollowerRefManager.h"
 #include "Utilities/EventProcessor.h"
-#include "MotionMaster.h"
+#include "MotionGenerators/MotionMaster.h"
 #include "Server/DBCStructure.h"
 #include <list>
 

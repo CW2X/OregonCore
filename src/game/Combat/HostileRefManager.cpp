@@ -15,9 +15,9 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "HostileRefManager.h"
-#include "ThreatManager.h"
-#include "Unit.h"
+#include "Combat/HostileRefManager.h"
+#include "Combat/ThreatManager.h"
+#include "Entities/Unit.h"
 #include "Server/DBCStructure.h"
 #include "SpellMgr.h"
 

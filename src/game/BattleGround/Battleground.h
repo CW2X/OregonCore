@@ -20,11 +20,11 @@
 
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
-#include "Opcodes.h"
+#include "Server/WorldSession.h"
+#include "Server/Opcodes.h"
 #include "Globals/ObjectMgr.h"
 #include "BattleGround/BattlegroundMgr.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 
 enum BattlegroundSounds
 {

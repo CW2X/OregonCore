@@ -18,13 +18,13 @@
 #include "Common.h"
 #include "Database/DatabaseEnv.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
-#include "Opcodes.h"
+#include "Server/WorldSession.h"
+#include "Server/Opcodes.h"
 #include "Log.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "Player.h"
-#include "Path.h"
+#include "Entities/Player.h"
+#include "MotionGenerators/Path.h"
 #include "WaypointMovementGenerator.h"
 
 void WorldSession::HandleTaxiNodeStatusQueryOpcode(WorldPacket& recv_data)

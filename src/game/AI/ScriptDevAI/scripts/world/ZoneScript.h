@@ -21,7 +21,7 @@
 #define ZONE_SCRIPT_H_
 
 #include "Common.h"
-#include "Creature.h"
+#include "Entities/Creature.h"
 
 //struct CreatureData;
 class Creature;

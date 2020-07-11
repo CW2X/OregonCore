@@ -18,7 +18,7 @@
 #ifndef MANGOSCORE_DYNAMICOBJECT_H
 #define MANGOSCORE_DYNAMICOBJECT_H
 
-#include "Object.h"
+#include "Entities/Object.h"
 
 class Unit;
 struct SpellEntry;

@@ -16,8 +16,8 @@
  */
 
 #include "UnitAI.h"
-#include "Player.h"
-#include "Creature.h"
+#include "Entities/Player.h"
+#include "Entities/Creature.h"
 #include "SpellAuras.h"
 #include "SpellMgr.h"
 #include "CreatureAIImpl.h"

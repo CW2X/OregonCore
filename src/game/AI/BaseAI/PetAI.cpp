@@ -17,12 +17,12 @@
 
 #include "PetAI.h"
 #include "Errors.h"
-#include "Pet.h"
-#include "Player.h"
+#include "Entities/Pet.h"
+#include "Entities/Player.h"
 #include "Spell.h"
 #include "Globals/ObjectAccessor.h"
 #include "SpellMgr.h"
-#include "Creature.h"
+#include "Entities/Creature.h"
 
 int PetAI::Permissible(const Creature* creature)
 {

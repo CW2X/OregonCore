@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "ThreatManager.h"
-#include "Unit.h"
-#include "Creature.h"
+#include "Combat/ThreatManager.h"
+#include "Entities/Unit.h"
+#include "Entities/Creature.h"
 #include "Maps/MapManager.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Globals/ObjectAccessor.h"
-#include "UnitEvents.h"
+#include "Entities/UnitEvents.h"
 #include "SpellMgr.h"
 
 //==============================================================

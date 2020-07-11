@@ -18,10 +18,10 @@
 #include "Common.h"
 #include "Log.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Globals/ObjectAccessor.h"
 #include "CreatureAI.h"
-#include "ObjectGuid.h"
+#include "Entities/ObjectGuid.h"
 
 void WorldSession::HandleAttackSwingOpcode(WorldPacket& recv_data)
 {

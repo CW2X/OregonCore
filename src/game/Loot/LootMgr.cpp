@@ -20,7 +20,7 @@
 #include "Globals/ObjectMgr.h"
 #include "World/World.h"
 #include "Utilities/Util.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 
 static Rates const qualityToRate[MAX_ITEM_QUALITY] =
 {

@@ -18,15 +18,15 @@
 #include "Common.h"
 #include "Database/DatabaseEnv.h"
 #include "Log.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "WorldPacket.h"
 #include "Globals/ObjectMgr.h"
 #include "SpellMgr.h"
-#include "Pet.h"
+#include "Entities/Pet.h"
 #include "Maps/MapManager.h"
 #include "Formulas.h"
 #include "SpellAuras.h"
-#include "Unit.h"
+#include "Entities/Unit.h"
 #include "Utilities/Util.h"
 
 

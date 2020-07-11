@@ -17,11 +17,11 @@
 
 #include "CreatureAI.h"
 #include "CreatureAIImpl.h"
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "World/World.h"
 #include "SpellMgr.h"
 #include "MapRefManager.h"
-#include "Player.h"
+#include "Entities/Player.h"
 
 //Disable CreatureAI when charmed
 void CreatureAI::OnCharmed(bool apply)

@@ -22,7 +22,7 @@
 #include "Language.h"
 #include "Log.h"
 #include "Maps/MapManager.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "BattleGround/BattlegroundMgr.h"
 #include "UnitAI.h"
 #include "GameObjectAI.h"

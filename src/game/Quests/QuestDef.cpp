@@ -16,7 +16,7 @@
  */
 
 #include "QuestDef.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "World/World.h"
 
 Quest::Quest(Field* questRecord)

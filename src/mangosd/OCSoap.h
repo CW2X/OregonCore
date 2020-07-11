@@ -19,7 +19,7 @@
 #define _MANGOSSOAP_H
 
 #include "Common.h"
-#include "World.h"
+#include "World/World.h"
 #include "Accounts/AccountMgr.h"
 #include "Log.h"
 

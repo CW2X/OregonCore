@@ -19,19 +19,19 @@
 #define _PLAYER_H
 
 #include "Common.h"
-#include "ItemPrototype.h"
-#include "Unit.h"
-#include "Item.h"
+#include "Entities/ItemPrototype.h"
+#include "Entities/Unit.h"
+#include "Entities/Item.h"
 
 #include "Database/DatabaseEnv.h"
 #include "Server/DBCStores.h"
-#include "NPCHandler.h"
+#include "Entities/NPCHandler.h"
 #include "QuestDef.h"
 #include "Group.h"
-#include "Bag.h"
-#include "WorldSession.h"
+#include "Entities/Bag.h"
+#include "Server/WorldSession.h"
 #include "CinematicMgr.h"
-#include "Pet.h"
+#include "Entities/Pet.h"
 #include "MapReference.h"
 #include "Utilities/Util.h"                                           // for Tokens typedef
 #include "ReputationMgr.h"

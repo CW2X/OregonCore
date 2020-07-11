@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Opcodes.h"
-#include "WorldSession.h"
+#include "Server/Opcodes.h"
+#include "Server/WorldSession.h"
 
 // Correspondence between opcodes and their names
 OpcodeHandler opcodeTable[NUM_MSG_TYPES] =

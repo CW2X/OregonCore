@@ -17,10 +17,10 @@
 
 #include "PointMovementGenerator.h"
 #include "Errors.h"
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "CreatureAI.h"
 #include "ScriptedInstance.h"
-#include "TemporarySummon.h"
+#include "Entities/TemporarySummon.h"
 #include "Maps/MapManager.h"
 #include "World/World.h"
 #include "PathFinder.h"

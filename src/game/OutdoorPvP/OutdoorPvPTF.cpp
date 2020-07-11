@@ -19,7 +19,7 @@
 #include "OutdoorPvP/OutdoorPvPMgr.h"
 #include "OutdoorPvP.h"
 #include "WorldPacket.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Globals/ObjectMgr.h"
 #include "Language.h"
 #include "World/World.h"

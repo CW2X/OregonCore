@@ -20,9 +20,9 @@
 
 #include <cmath>
 
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "Map.h"
-#include "Object.h"
+#include "Entities/Object.h"
 
 inline Cell::Cell(CellCoord const& p)
 {

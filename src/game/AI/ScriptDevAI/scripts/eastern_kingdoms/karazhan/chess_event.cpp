@@ -28,7 +28,7 @@ EndScriptData */
 #include "ScriptedGossip.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 
 //this enum let you custom configure your chess script

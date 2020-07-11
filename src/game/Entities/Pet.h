@@ -18,9 +18,9 @@
 #ifndef MANGOSCORE_PET_H
 #define MANGOSCORE_PET_H
 
-#include "ObjectGuid.h"
-#include "Unit.h"
-#include "TemporarySummon.h"
+#include "Entities/ObjectGuid.h"
+#include "Entities/Unit.h"
+#include "Entities/TemporarySummon.h"
 
 enum PetType
 {

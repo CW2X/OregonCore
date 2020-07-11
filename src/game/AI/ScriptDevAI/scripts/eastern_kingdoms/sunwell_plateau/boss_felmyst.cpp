@@ -25,7 +25,7 @@
 #include "ScriptedCreature.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 #include "sunwell_plateau.h"
 

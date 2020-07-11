@@ -1,8 +1,8 @@
 #include "Group.h"
 #include "DBScripts/ScriptMgr.h"
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "Language.h"
-#include "Player.h"
+#include "Entities/Player.h"
 
 class group_commandscript : public CommandScript
 {

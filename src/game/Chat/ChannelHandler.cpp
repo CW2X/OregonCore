@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Channel.h"
 #include "ChannelMgr.h"
 #include "Server/DBCStores.h"
 #include "Log.h"
 #include "Globals/ObjectMgr.h"                                      // for normalizePlayerName
-#include "Player.h"
+#include "Entities/Player.h"
 
 INSTANTIATE_SINGLETON_1(AllianceChannelMgr);
 INSTANTIATE_SINGLETON_1(HordeChannelMgr);

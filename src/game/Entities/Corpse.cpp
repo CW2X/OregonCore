@@ -16,13 +16,13 @@
  */
 
 #include "Common.h"
-#include "Corpse.h"
-#include "Player.h"
-#include "UpdateMask.h"
+#include "Entities/Corpse.h"
+#include "Entities/Player.h"
+#include "Entities/UpdateMask.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectAccessor.h"
 #include "Database/DatabaseEnv.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "WorldPacket.h"
 
 Corpse::Corpse(CorpseType type) : WorldObject(type != CORPSE_BONES), m_type(type)

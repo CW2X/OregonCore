@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Player.h"
+#include "Entities/Player.h"
 #include "SpellAuras.h"
 #include "SpellMgr.h"
 #include "GameEventMgr.h"
 #include "Globals/ObjectMgr.h"
 #include "InstanceData.h"
-#include "ConditionMgr.h"
+#include "Globals/Conditions.h"
 #include "DBScripts/ScriptMgr.h"
 #include "ScriptedCreature.h"
 #include "ReputationMgr.h"

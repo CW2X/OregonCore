@@ -21,9 +21,9 @@
 #include "Common.h"
 #include "Log.h"
 #include "Globals/ObjectAccessor.h"
-#include "Player.h"
-#include "Chat.h"
-#include "TicketMgr.h"
+#include "Entities/Player.h"
+#include "Chat/Chat.h"
+#include "GMTickets/GMTicketMgr.h"
 #include "World/World.h"
 
 void WorldSession::HandleGMTicketCreateOpcode(WorldPacket& recv_data)

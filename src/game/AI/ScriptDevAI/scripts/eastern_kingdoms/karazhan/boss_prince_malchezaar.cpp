@@ -25,7 +25,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "ScriptedCreature.h"
 #include "karazhan.h"
-#include "Unit.h"
+#include "Entities/Unit.h"
 
 #define SAY_AGGRO           -1532091
 #define SAY_AXE_TOSS1       -1532092

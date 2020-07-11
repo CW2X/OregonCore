@@ -19,9 +19,9 @@
 #define _THREATMANAGER
 
 #include "Common.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "Utilities/LinkedReference/Reference.h"
-#include "UnitEvents.h"
+#include "Entities/UnitEvents.h"
 
 #include <list>
 

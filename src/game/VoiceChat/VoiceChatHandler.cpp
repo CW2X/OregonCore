@@ -17,7 +17,7 @@
 
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "World/World.h"
 #include "Log.h"
 

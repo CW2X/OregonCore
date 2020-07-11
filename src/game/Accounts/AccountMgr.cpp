@@ -19,7 +19,7 @@
 
 #include "Accounts/AccountMgr.h"
 #include "Globals/ObjectAccessor.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Utilities/Util.h"
 #include "Auth/Sha1.h"
 

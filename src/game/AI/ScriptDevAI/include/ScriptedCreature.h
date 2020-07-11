@@ -18,7 +18,7 @@
 #ifndef SC_CREATURE_H
 #define SC_CREATURE_H
 
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "CreatureAI.h"
 #include "CreatureAIImpl.h"
 #include "ScriptedInstance.h"

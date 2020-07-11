@@ -1,7 +1,7 @@
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "GameEventMgr.h"
 #include "Language.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
 
 class event_commandscript : public CommandScript

@@ -2,7 +2,7 @@
 #include "Console.h"
 #include "Log.h"
 #include "World/World.h"
-#include "TicketMgr.h"
+#include "GMTickets/GMTicketMgr.h"
 #include "revision.h"
 
 #ifdef __PDCURSES__

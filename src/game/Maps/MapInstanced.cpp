@@ -18,7 +18,7 @@
 #include "MapInstanced.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h"
-#include "Battleground.h"
+#include "Battleground/Battleground.h"
 #include "VMapFactory.h"
 #include "InstanceSaveMgr.h"
 #include "World/World.h"

@@ -18,12 +18,12 @@
 #include "Common.h"
 #include "DatabaseEnv.h"
 #include "Globals/ObjectMgr.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
-#include "Chat.h"
+#include "Chat/Chat.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "CreatureTextMgr.h"
+#include "Entities/CreatureTextMgr.h"
 #include "World/World.h"
 
 class CreatureTextBuilder

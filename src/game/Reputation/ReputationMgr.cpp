@@ -17,7 +17,7 @@
 
 #include "ReputationMgr.h"
 #include "Server/DBCStores.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "WorldPacket.h"
 #include "Globals/ObjectMgr.h"
 

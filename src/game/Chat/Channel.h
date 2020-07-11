@@ -24,8 +24,8 @@
 
 #include "Common.h"
 
-#include "Opcodes.h"
-#include "Player.h"
+#include "Server/Opcodes.h"
+#include "Entities/Player.h"
 #include "WorldPacket.h"
 
 enum ChatNotify

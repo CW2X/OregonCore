@@ -18,10 +18,10 @@
 #include "WaypointMovementGenerator.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/MapManager.h" // for flightmaster grid preloading
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "CreatureAI.h"
 #include "Entities/CreatureGroups.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "MoveSplineInit.h"
 #include "MoveSpline.h"
 

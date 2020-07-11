@@ -15,9 +15,9 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Unit.h"
+#include "Entities/Unit.h"
 #include "TargetedMovementGenerator.h"
-#include "FollowerReference.h"
+#include "MotionGenerators/FollowerReference.h"
 
 void FollowerReference::targetObjectBuildLink()
 {

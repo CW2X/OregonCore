@@ -17,11 +17,11 @@
 
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Log.h"
 #include "Database/DatabaseEnv.h"
-#include "WardenDataStorage.h"
-#include "WardenWin.h"
+#include "Warden/WardenDataStorage.h"
+#include "Warden/WardenWin.h"
 
 CWardenDataStorage::CWardenDataStorage()
 {

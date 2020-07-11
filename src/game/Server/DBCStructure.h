@@ -20,8 +20,8 @@
 
 #include "DBCEnums.h"
 #include "Platform/Define.h"
-#include "Path.h"
-#include "SharedDefines.h"
+#include "MotionGenerators/Path.h"
+#include "Globals/SharedDefines.h"
 
 #include <map>
 #include <set>

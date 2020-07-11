@@ -19,7 +19,7 @@
 #include "Spell.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 #include "Globals/ObjectMgr.h"
 #include "MoveSplineInit.h"

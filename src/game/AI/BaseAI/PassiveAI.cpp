@@ -16,7 +16,7 @@
  */
 
 #include "PassiveAI.h"
-#include "Creature.h"
+#include "Entities/Creature.h"
 
 PassiveAI::PassiveAI(Creature* c) : CreatureAI(c)
 {

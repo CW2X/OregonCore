@@ -17,18 +17,18 @@
 
 #include "Map.h"
 #include "Maps/MapManager.h"
-#include "GridStates.h"
+#include "Grids/GridStates.h"
 #include "DBScripts/ScriptMgr.h"
 #include "VMapFactory.h"
 #include "MapInstanced.h"
 #include "CellImpl.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "Transports.h"
+#include "Entities/Transports.h"
 #include "InstanceData.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
-#include "DynamicTree.h"
+#include "vmap/DynamicTree.h"
 #include "MoveMap.h"
 
 #define DEFAULT_GRID_EXPIRY     300

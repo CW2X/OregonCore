@@ -15,9 +15,9 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Player.h"
-#include "Battleground.h"
-#include "BattlegroundAA.h"
+#include "Entities/Player.h"
+#include "Battleground/Battleground.h"
+#include "Battleground/BattlegroundAA.h"
 #include "Language.h"
 
 BattlegroundAA::BattlegroundAA()

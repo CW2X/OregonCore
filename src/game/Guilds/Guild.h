@@ -21,7 +21,7 @@
 #define WITHDRAW_MONEY_UNLIMITED    0xFFFFFFFF
 #define WITHDRAW_SLOT_UNLIMITED     0xFFFFFFFF
 
-#include "Item.h"
+#include "Entities/Item.h"
 
 class Item;
 

@@ -19,18 +19,18 @@
 #include "Auth/WardenKeyGeneration.h"
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Log.h"
-#include "Opcodes.h"
+#include "Server/Opcodes.h"
 #include "ByteBuffer.h"
 #include <openssl/md5.h>
 #include "Database/DatabaseEnv.h"
 #include "World/World.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Utilities/Util.h"
-#include "WardenWin.h"
-#include "WardenModuleWin.h"
-#include "WardenDataStorage.h"
+#include "Warden/WardenWin.h"
+#include "Warden/WardenModuleWin.h"
+#include "Warden/WardenDataStorage.h"
 
 CWardenDataStorage WardenDataStorage;
 

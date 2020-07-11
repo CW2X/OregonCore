@@ -16,7 +16,7 @@
  */
 
 #include "HomeMovementGenerator.h"
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "CreatureAI.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectAccessor.h"

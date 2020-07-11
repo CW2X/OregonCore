@@ -25,11 +25,11 @@
 #include "Policies/ThreadingModel.h"
 
 #include "ByteBuffer.h"
-#include "UpdateData.h"
+#include "Entities/UpdateData.h"
 
-#include "GridDefines.h"
-#include "Object.h"
-#include "Player.h"
+#include "Maps/GridDefines.h"
+#include "Entities/Object.h"
+#include "Entities/Player.h"
 
 #include <set>
 

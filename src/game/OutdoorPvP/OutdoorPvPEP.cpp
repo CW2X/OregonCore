@@ -18,12 +18,12 @@
 #include "OutdoorPvPEP.h"
 #include "OutdoorPvP.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "WorldPacket.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Language.h"
-#include "GossipDef.h"
+#include "Entities/GossipDef.h"
 
 const uint32 EP_LANG_LOOSE_A[EP_TOWER_NUM] = {LANG_OPVP_EP_LOOSE_CROWNGUARD_A, LANG_OPVP_EP_LOOSE_EASTWALL_A, LANG_OPVP_EP_LOOSE_NORTHPASS_A, LANG_OPVP_EP_LOOSE_PLAGUEWOOD_A};
 

@@ -16,9 +16,9 @@
  */
 
 #include "TotemAI.h"
-#include "Totem.h"
-#include "Creature.h"
-#include "Player.h"
+#include "Entities/Totem.h"
+#include "Entities/Creature.h"
+#include "Entities/Player.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectAccessor.h"
 #include "SpellMgr.h"

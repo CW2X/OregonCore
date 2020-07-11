@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Object.h"
-#include "Player.h"
-#include "Battleground.h"
-#include "Creature.h"
+#include "Entities/Object.h"
+#include "Entities/Player.h"
+#include "Battleground/Battleground.h"
+#include "Entities/Creature.h"
 #include "Language.h"
-#include "Chat.h"
-#include "ArenaTeam.h"
+#include "Chat/Chat.h"
+#include "Arena/ArenaTeam.h"
 #include "World/World.h"
 #include "Utilities/Util.h"
 #include "World/World.h"

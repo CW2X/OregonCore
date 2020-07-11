@@ -18,9 +18,9 @@
 #ifndef MANGOS_INSTANCE_DATA_H
 #define MANGOS_INSTANCE_DATA_H
 
-#include "ZoneScript.h"
+#include "AI/ScriptDevAI//scripts/world/ZoneScript.h"
 #include "Globals/ObjectMgr.h"
-//#include "GameObject.h"
+//#include "Entities/GameObject.h"
 //#include "Map.h"
 
 class Map;

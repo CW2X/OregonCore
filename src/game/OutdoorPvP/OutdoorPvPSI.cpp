@@ -17,8 +17,8 @@
 
 #include "OutdoorPvPSI.h"
 #include "WorldPacket.h"
-#include "Player.h"
-#include "GameObject.h"
+#include "Entities/Player.h"
+#include "Entities/GameObject.h"
 #include "Maps/MapManager.h"
 #include "Globals/ObjectMgr.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"

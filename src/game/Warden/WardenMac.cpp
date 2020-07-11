@@ -18,16 +18,16 @@
 #include "Auth/WardenKeyGeneration.h"
 #include "Common.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Log.h"
-#include "Opcodes.h"
+#include "Server/Opcodes.h"
 #include "ByteBuffer.h"
 #include <openssl/md5.h>
 #include "World/World.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Utilities/Util.h"
-#include "WardenMac.h"
-#include "WardenModuleMac.h"
+#include "Warden/WardenMac.h"
+#include "Warden/WardenModuleMac.h"
 
 WardenMac::WardenMac()
 {

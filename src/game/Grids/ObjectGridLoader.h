@@ -21,8 +21,8 @@
 #include "Utilities/TypeList.h"
 #include "Platform/Define.h"
 #include "GameSystem/GridLoader.h"
-#include "GridDefines.h"
-#include "Cell.h"
+#include "Maps/GridDefines.h"
+#include "Grids/Cell.h"
 
 class ObjectWorldLoader;
 

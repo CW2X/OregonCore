@@ -27,7 +27,7 @@
 #include "ScriptedCreature.h"
 #include "ScriptedSimpleAI.h"
 #include "karazhan.h"
-#include "Player.h"
+#include "Entities/Player.h"
 
 enum Text
 {

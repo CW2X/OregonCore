@@ -16,11 +16,11 @@
  */
 
 #include "QuestDef.h"
-#include "GossipDef.h"
+#include "Entities/GossipDef.h"
 #include "Globals/ObjectMgr.h"
-#include "Opcodes.h"
+#include "Server/Opcodes.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Formulas.h"
 
 GossipMenu::GossipMenu()

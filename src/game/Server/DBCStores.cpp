@@ -17,7 +17,7 @@
 
 #include "Server/DBCStores.h"
 #include "Log.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 
 #include "DBCfmt.h"
 

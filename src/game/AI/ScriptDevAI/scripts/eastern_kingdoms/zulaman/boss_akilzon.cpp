@@ -29,10 +29,10 @@
 #include "MoveSplineInit.h"
 #include "MoveSpline.h"
 #include "zulaman.h"
-#include "Weather.h"
+#include "Weather/Weather.h"
 #include "GridNotifiers.h"
 #include "WorldPacket.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 
 enum //Spells

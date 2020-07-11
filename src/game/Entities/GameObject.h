@@ -19,9 +19,9 @@
 #define MANGOSCORE_GAMEOBJECT_H
 
 #include "Common.h"
-#include "SharedDefines.h"
-#include "Unit.h"
-#include "Object.h"
+#include "Globals/SharedDefines.h"
+#include "Entities/Unit.h"
+#include "Entities/Object.h"
 #include "LootMgr.h"
 #include "Database/DatabaseEnv.h"
 

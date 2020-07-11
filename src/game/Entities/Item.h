@@ -19,9 +19,9 @@
 #define MANGOSCORE_ITEM_H
 
 #include "Common.h"
-#include "Object.h"
+#include "Entities/Object.h"
 #include "LootMgr.h"
-#include "ItemPrototype.h"
+#include "Entities/ItemPrototype.h"
 #include "QueryResult.h"
 
 struct SpellEntry;

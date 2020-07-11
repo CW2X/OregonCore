@@ -20,9 +20,9 @@
 
 #include "Platform/Define.h"
 #include <list>
-#include "Object.h"
+#include "Entities/Object.h"
 #include "QuestDef.h"
-#include "GameObject.h"
+#include "Entities/GameObject.h"
 #include "CreatureAI.h"
 
 class GameObjectAI

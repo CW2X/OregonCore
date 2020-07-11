@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Player.h"
+#include "Entities/Player.h"
 #include "World/World.h"
 #include "WorldPacket.h"
-#include "WorldSession.h"
+#include "Server/WorldSession.h"
 #include "Database/DatabaseEnv.h"
 
-#include "ArenaTeam.h"
+#include "Arena/ArenaTeam.h"
 #include "Log.h"
 #include "Globals/ObjectMgr.h"
 #include "SocialMgr.h"

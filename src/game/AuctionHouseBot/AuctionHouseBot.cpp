@@ -16,8 +16,8 @@
  */
 
 #include "Globals/ObjectMgr.h"
-#include "AuctionHouseMgr.h"
-#include "AuctionHouseBot.h"
+#include "AuctionHouse/AuctionHouseMgr.h"
+#include "AuctionHouseBot/AuctionHouseBot.h"
 #include <vector>
 
 INSTANTIATE_SINGLETON_1(AuctionHouseBot);

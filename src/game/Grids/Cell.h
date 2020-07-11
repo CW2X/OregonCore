@@ -20,7 +20,7 @@
 
 #include "GameSystem/TypeContainer.h"
 #include "GameSystem/TypeContainerVisitor.h"
-#include "GridDefines.h"
+#include "Maps/GridDefines.h"
 #include <cmath>
 
 class Map;

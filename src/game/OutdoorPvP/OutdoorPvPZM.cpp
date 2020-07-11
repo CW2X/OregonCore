@@ -18,11 +18,11 @@
 #include "OutdoorPvPZM.h"
 #include "Globals/ObjectMgr.h"
 #include "OutdoorPvP/OutdoorPvPMgr.h"
-#include "Player.h"
-#include "Creature.h"
+#include "Entities/Player.h"
+#include "Entities/Creature.h"
 #include "Globals/ObjectAccessor.h"
 #include "WorldPacket.h"
-#include "GossipDef.h"
+#include "Entities/GossipDef.h"
 #include "World/World.h"
 
 OPvPCapturePointZM_Beacon::OPvPCapturePointZM_Beacon(OutdoorPvP* pvp, ZM_BeaconType type)

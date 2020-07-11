@@ -22,11 +22,11 @@
 // For more high level function for sSpellStore data
 
 #include <ace/Singleton.h>
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "Server/DBCStructure.h"
 #include "Server/DBCStores.h"
 #include "Database/SQLStorage.h"
-#include "SpellAuraDefines.h"
+#include "Spells/SpellAuraDefines.h"
 #include "DisableMgr.h"
 
 #include "Utilities/UnorderedMap.h"

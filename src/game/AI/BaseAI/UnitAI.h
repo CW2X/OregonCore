@@ -20,7 +20,7 @@
 
 #include "Platform/Define.h"
 #include <list>
-#include "Unit.h"
+#include "Entities/Unit.h"
 #include "QuestDef.h"
 #include "Utilities/EventMap.h"
 

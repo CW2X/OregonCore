@@ -15,11 +15,11 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Creature.h"
+#include "Entities/Creature.h"
 #include "CreatureAISelector.h"
 #include "PassiveAI.h"
 #include "MovementGenerator.h"
-#include "TemporarySummon.h"
+#include "Entities/TemporarySummon.h"
 #include "CreatureAIFactory.h"
 #include "DBScripts/ScriptMgr.h"
 

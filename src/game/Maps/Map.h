@@ -24,15 +24,15 @@
 #include "ace/Thread_Mutex.h"
 
 #include "Server/DBCStructure.h"
-#include "GridDefines.h"
-#include "Cell.h"
+#include "Maps/GridDefines.h"
+#include "Grids/Cell.h"
 #include "Timer.h"
-#include "SharedDefines.h"
+#include "Globals/SharedDefines.h"
 #include "GameSystem/GridRefManager.h"
 #include "MapRefManager.h"
 
-#include "DynamicTree.h"
-#include "GameObjectModel.h"
+#include "vmap/DynamicTree.h"
+#include "vmap/GameObjectModel.h"
 
 #include <bitset>
 #include <list>

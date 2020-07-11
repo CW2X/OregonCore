@@ -18,7 +18,7 @@
 #ifndef CinematicMgr_h__
 #define CinematicMgr_h__
 
-#include "Object.h"
+#include "Entities/Object.h"
 #include "M2Stores.h"
 
 #define CINEMATIC_LOOKAHEAD (2 * IN_MILLISECONDS)

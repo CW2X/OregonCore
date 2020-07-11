@@ -20,11 +20,11 @@
 #include "VMapDefinitions.h"
 #include "WorldModel.h"
 
-#include "GameObjectModel.h"
-#include "GameObject.h"
-#include "Creature.h"
-#include "TemporarySummon.h"
-#include "Object.h"
+#include "vmap/GameObjectModel.h"
+#include "Entities/GameObject.h"
+#include "Entities/Creature.h"
+#include "Entities/TemporarySummon.h"
+#include "Entities/Object.h"
 #include "Server/DBCStores.h"
 
 using G3D::Vector3;

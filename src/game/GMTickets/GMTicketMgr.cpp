@@ -15,11 +15,11 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "TicketMgr.h"
+#include "GMTickets/GMTicketMgr.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
 #include "Language.h"
-#include "Player.h"
+#include "Entities/Player.h"
 #include "Common.h"
 #include "Globals/ObjectAccessor.h"
 INSTANTIATE_SINGLETON_1(TicketMgr);

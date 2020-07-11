@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "ObjectGuid.h"
+#include "Entities/ObjectGuid.h"
 #include <sstream>
 
 char const* ObjectGuid::GetTypeName() const

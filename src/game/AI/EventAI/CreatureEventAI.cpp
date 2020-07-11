@@ -21,7 +21,7 @@
 #include "Globals/ObjectMgr.h"
 #include "Spell.h"
 #include "World/World.h"
-#include "Cell.h"
+#include "Grids/Cell.h"
 #include "CellImpl.h"
 #include "GameEventMgr.h"
 #include "GridNotifiers.h"
@@ -30,7 +30,7 @@
 #include "Spell.h"
 #include "SpellMgr.h"
 #include "CreatureAIImpl.h"
-#include "ConditionMgr.h"
+#include "Globals/Conditions.h"
 
 bool CreatureEventAIHolder::UpdateRepeatTimer(Creature* creature, uint32 repeatMin, uint32 repeatMax)
 {

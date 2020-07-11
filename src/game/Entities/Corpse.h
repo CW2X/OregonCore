@@ -18,9 +18,9 @@
 #ifndef MANGOSCORE_CORPSE_H
 #define MANGOSCORE_CORPSE_H
 
-#include "Object.h"
+#include "Entities/Object.h"
 #include "Database/DatabaseEnv.h"
-#include "GridDefines.h"
+#include "Maps/GridDefines.h"
 #include "LootMgr.h"
 
 enum CorpseType
