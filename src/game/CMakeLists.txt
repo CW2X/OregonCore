@@ -13,6 +13,10 @@ set(LIBRARY_NAME game)
 add_definitions(-DDT_POLYREF64)
 add_definitions(-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0)
 
+CU_RUN_HOOK(BEFORE_SCRIPTS_LIBRARY)
+
+CU_SET_PATH("AC_SCRIPTS_DIR" "${CMAKE_CURRENT_LIST_DIR}")
+
 # Find all the input files
 FILE(GLOB_RECURSE LIBRARY_SRCS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "*.h" "*.cpp")
 
@@ -40,11 +44,26 @@ add_library(${LIBRARY_NAME} STATIC
   ${LIBRARY_SRCS}
 )
 
+CU_SET_PATH("CMAKE_AC_MODULE_DIR" "${CMAKE_CURRENT_LIST_DIR}")
+
+CU_GET_GLOBAL("AC_ADD_SCRIPTS_LIST")
+CU_GET_GLOBAL("AC_ADD_SCRIPTS_INCLUDE")
+CU_GET_GLOBAL("AC_SCRIPTS_SOURCES")
 
 set(game_STAT_SRCS
+  ${BUILDDIR}/GenLoader.cpp
+  ${AC_SCRIPTS_SOURCES}
   ${game_STAT_SRCS}
   ${sources_localdir}
 )
+
+set("AC_SCRIPTS_INCLUDES" "")
+
+FOREACH (include ${AC_ADD_SCRIPTS_INCLUDE})
+    set("AC_SCRIPTS_INCLUDES" "#include \"${include}\"\n${AC_SCRIPTS_INCLUDES}")
+ENDFOREACH()
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/GenLoader.cpp.cmake ${BUILDDIR}/GenLoader.cpp)
 
 include_directories(
   ${CMAKE_BINARY_DIR}
@@ -63,6 +82,7 @@ include_directories(
   ${ACE_INCLUDE_DIR}
   ${MYSQL_INCLUDE_DIR}
   ${OPENSSL_INCLUDE_DIR}
+
 )
 
 if(UNIX)
