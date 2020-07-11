@@ -20,13 +20,13 @@
 
 #include "Common.h"
 #include "Entities/Creature.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Entities/Unit.h"
 #include "Spell.h"
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 
 #include "SmartScriptMgr.h"
-//#include "SmartAI.h"
+//#include "AI/ScriptDevAI/base/SmartAI.h"
 
 class SmartScript
 {

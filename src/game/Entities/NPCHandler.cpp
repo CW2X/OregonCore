@@ -35,7 +35,7 @@
 #include "Battleground/Battleground.h"
 #include "Guilds/Guild.h"
 #include "DBScripts/ScriptMgr.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 
 void WorldSession::HandleTabardVendorActivateOpcode(WorldPacket& recv_data)
 {

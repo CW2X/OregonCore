@@ -16,7 +16,7 @@
  */
 
 #include "Entities/Creature.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "MotionGenerators/FleeingMovementGenerator.h"
 #include "Globals/ObjectAccessor.h"
 #include "Movement/MoveSplineInit.h"

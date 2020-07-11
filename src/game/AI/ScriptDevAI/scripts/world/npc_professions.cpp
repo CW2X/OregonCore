@@ -24,7 +24,7 @@ EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 /*
 A few notes for future developement:

@@ -33,7 +33,7 @@
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "World/World.h"
 #include "WorldPacket.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
  /*######
  ## mobs_spitelashes

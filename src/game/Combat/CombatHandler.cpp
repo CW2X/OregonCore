@@ -20,7 +20,7 @@
 #include "WorldPacket.h"
 #include "Server/WorldSession.h"
 #include "Globals/ObjectAccessor.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Entities/ObjectGuid.h"
 
 void WorldSession::HandleAttackSwingOpcode(WorldPacket& recv_data)

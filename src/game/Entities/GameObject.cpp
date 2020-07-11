@@ -17,7 +17,7 @@
 
 #include "Common.h"
 #include "Quests/QuestDef.h"
-#include "GameObjectAI.h"
+#include "AI/BaseAI/GameObjectAI.h"
 #include "Entities/GameObject.h"
 #include "Globals/ObjectMgr.h"
 #include "Pools/PoolMgr.h"

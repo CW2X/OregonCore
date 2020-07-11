@@ -29,7 +29,7 @@ EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
 #include "AI/ScriptDevAI/base/ScriptedFollowerAI.h"
 
 enum eAME

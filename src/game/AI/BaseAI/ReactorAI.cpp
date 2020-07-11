@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 #include "ByteBuffer.h"
-#include "ReactorAI.h"
+#include "AI/BaseAI/ReactorAI.h"
 
 #define REACTOR_VISIBLE_RANGE (26.46f)
 

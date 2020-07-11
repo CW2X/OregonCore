@@ -31,7 +31,7 @@
 #include "Server/Opcodes.h"
 #include "Log.h"
 #include "Loot/LootMgr.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "AI/CreatureAISelector.h"
 #include "Tools/Formulas.h"
 #include "Spells/SpellAuras.h"

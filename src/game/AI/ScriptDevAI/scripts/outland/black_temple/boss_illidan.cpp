@@ -25,9 +25,9 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "black_temple.h"
-#include "MoveSplineInit.h"
-#include "ScriptedGossip.h"
-#include "PassiveAI.h"
+#include "Movement/MoveSplineInit.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
+#include "AI/BaseAI/PassiveAI.h"
 
 #define GETGO(obj, guid)      GameObject* obj = GameObject::GetGameObject(*me, guid)
 #define GETUNIT(unit, guid)   Unit* unit = Unit::GetUnit(*me, guid)

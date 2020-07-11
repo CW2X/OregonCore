@@ -25,7 +25,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "serpent_shrine.h"
-#include "ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
 
 #define SAY_AGGRO                   -1548021
 #define SAY_GAIN_BLESSING           -1548022

@@ -29,7 +29,7 @@
 #include "Entities/GameObject.h"
 #include "Entities/Player.h"
 #include "Entities/Unit.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 
 class Player;
 //class Map;

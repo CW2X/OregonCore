@@ -25,7 +25,7 @@ EndScriptData */
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "deadmines.h"
-#include "ScriptedInstance.h"
+#include "AI/ScriptDevAI/include/ScriptedInstance.h"
 #include "WorldPacket.h"
 
 enum Sounds

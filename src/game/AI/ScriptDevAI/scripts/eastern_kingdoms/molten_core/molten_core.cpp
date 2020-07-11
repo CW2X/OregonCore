@@ -28,7 +28,7 @@ EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedSimpleAI.h"
+#include "AI/ScriptDevAI/base/ScriptedSimpleAI.h"
 
 #define SPELL_CONE_OF_FIRE          19630
 #define SPELL_BITE                  19771

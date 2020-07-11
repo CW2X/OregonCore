@@ -15,12 +15,12 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "UnitAI.h"
+#include "AI/BaseAI/UnitAI.h"
 #include "Entities/Player.h"
 #include "Entities/Creature.h"
 #include "SpellAuras.h"
 #include "SpellMgr.h"
-#include "CreatureAIImpl.h"
+#include "AI/BaseAI/CreatureAIImpl.h"
 
 void UnitAI::AttackStart(Unit* victim)
 {

@@ -24,8 +24,8 @@
 #include "Maps/MapManager.h"
 #include "Entities/Player.h"
 #include "BattleGround/BattlegroundMgr.h"
-#include "UnitAI.h"
-#include "GameObjectAI.h"
+#include "AI/BaseAI/UnitAI.h"
+#include "AI/BaseAI/GameObjectAI.h"
 
 INSTANTIATE_SINGLETON_1(GameEventMgr);
 

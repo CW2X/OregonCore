@@ -24,7 +24,7 @@ EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedSimpleAI.h"
+#include "AI/ScriptDevAI/base/ScriptedSimpleAI.h"
 
 SimpleAI::SimpleAI(Creature* c) : ScriptedAI(c)
 {

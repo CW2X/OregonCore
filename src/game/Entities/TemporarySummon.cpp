@@ -17,7 +17,7 @@
 
 #include "Log.h"
 #include "Globals/ObjectAccessor.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Entities/TemporarySummon.h"
 
 TempSummon::TempSummon(SummonPropertiesEntry const* properties, Unit* owner, bool isWorldObject) :

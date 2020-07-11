@@ -31,7 +31,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "dark_portal.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 #define SAY_ENTER               -1269020                    //where does this belong?
 #define SAY_INTRO               -1269021

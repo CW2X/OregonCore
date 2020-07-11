@@ -19,7 +19,7 @@
 #define SC_HYJALAI_H
 
 #include "hyjal.h"
-#include "ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
 
 // Trash Mobs summoned in waves
 #define NECROMANCER         17899//done

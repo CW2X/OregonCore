@@ -39,11 +39,11 @@ EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedEscortAI.h"
-#include "ScriptedGossip.h"
-#include "GridNotifiers.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
+#include "Grids/GridNotifiers.h"
 #include "Grids/Cell.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 
 /*######
 ## npc_manaforge_control_console

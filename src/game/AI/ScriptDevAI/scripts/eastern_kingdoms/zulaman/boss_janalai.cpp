@@ -25,8 +25,8 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "zulaman.h"
-#include "GridNotifiers.h"
-#include "CellImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/CellImpl.h"
 
 enum eEnums
 {

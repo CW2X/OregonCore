@@ -17,10 +17,10 @@
 
 #include "Entities/Creature.h"
 #include "AI/CreatureAISelector.h"
-#include "PassiveAI.h"
+#include "AI/BaseAI/PassiveAI.h"
 #include "MotionGenerators/MovementGenerator.h"
 #include "Entities/TemporarySummon.h"
-#include "CreatureAIFactory.h"
+#include "AI/BaseAI/CreatureAIFactory.h"
 #include "DBScripts/ScriptMgr.h"
 
 INSTANTIATE_SINGLETON_1(CreatureAIRegistry);

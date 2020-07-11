@@ -24,7 +24,7 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
 
 #define SAY_AGGRO                   -1189000
 #define SAY_WHIRLWIND               -1189001

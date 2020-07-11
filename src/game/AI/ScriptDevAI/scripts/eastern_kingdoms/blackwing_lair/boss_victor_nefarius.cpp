@@ -24,7 +24,7 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 #define SAY_GAMESBEGIN_1        -1469004
 #define SAY_GAMESBEGIN_2        -1469005

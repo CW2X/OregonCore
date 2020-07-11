@@ -26,14 +26,14 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 #include "zulaman.h"
 #include "Weather/Weather.h"
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 #include "WorldPacket.h"
 #include "Grids/Cell.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 
 enum //Spells
 {

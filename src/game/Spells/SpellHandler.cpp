@@ -30,7 +30,7 @@
 #include "Maps/MapManager.h"
 #include "Entities/Totem.h"
 #include "DBScripts/ScriptMgr.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 
 void WorldSession::HandleUseItemOpcode(WorldPacket& recvPacket)
 {

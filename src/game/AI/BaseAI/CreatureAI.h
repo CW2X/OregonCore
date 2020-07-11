@@ -19,7 +19,7 @@
 #define MANGOS_CREATUREAI_H
 
 #include "Entities/Creature.h"
-#include "UnitAI.h"
+#include "AI/BaseAI/UnitAI.h"
 #include "Common.h"
 
 class WorldObject;

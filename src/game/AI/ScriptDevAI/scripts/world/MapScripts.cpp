@@ -15,19 +15,19 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "Map.h"
+#include "Maps/Map.h"
 #include "World/World.h"
-#include "CellImpl.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "Maps/MapManager.h"
 #include "Entities/Transports.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "WaypointManager.h"
+#include "MotionGenerators/WaypointManager.h"
 #include "Entities/GossipDef.h"
 #include "Globals/ObjectMgr.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
 
 // Put scripts in the execution queue
 void Map::ScriptsStart(ScriptMapMap const& scripts, uint32 id, Object* source, Object* target)

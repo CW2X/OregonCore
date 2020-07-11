@@ -30,9 +30,9 @@ EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "MoveSplineInit.h"
-#include "MoveSpline.h"
-#include "ScriptedGossip.h"
+#include "Movement/MoveSplineInit.h"
+#include "Movement/MoveSpline.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 /*######
 ## npc_lady_sylvanas_windrunner

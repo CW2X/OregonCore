@@ -21,7 +21,7 @@
 #include "AI/ScriptDevAI//scripts/world/ZoneScript.h"
 #include "Globals/ObjectMgr.h"
 //#include "Entities/GameObject.h"
-//#include "Map.h"
+//#include "Maps/Map.h"
 
 class Map;
 class Unit;

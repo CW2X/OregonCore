@@ -3,7 +3,7 @@
 #include "Globals/ObjectMgr.h"
 #include "Entities/Player.h"
 #include "DBScripts/ScriptMgr.h"
-#include "WaypointManager.h"
+#include "MotionGenerators/WaypointManager.h"
 
 class wp_commandscript : public CommandScript
 {

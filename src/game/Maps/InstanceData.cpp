@@ -21,7 +21,7 @@
 #include "Maps/Map.h"
 #include "Entities/GameObject.h"
 #include "Entities/Creature.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Entities/Player.h"
 
 void InstanceData::SaveToDB()

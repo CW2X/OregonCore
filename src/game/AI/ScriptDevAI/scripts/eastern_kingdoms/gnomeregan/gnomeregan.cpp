@@ -25,8 +25,8 @@ Script Data End */
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "gnomeregan.h"
-#include "ScriptedEscortAI.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 #include "AI/ScriptDevAI/base/ScriptedFollowerAI.h"
 
 #define GOSSIP_START_EVENT "I am ready to being"

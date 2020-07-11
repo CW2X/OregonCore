@@ -15,7 +15,7 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "GameObjectAI.h"
+#include "AI/BaseAI/GameObjectAI.h"
 
 //GameObjectAI::GameObjectAI(GameObject* g) : go(g) { }
 int GameObjectAI::Permissible(const GameObject* go)

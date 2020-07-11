@@ -38,8 +38,8 @@
 #include "Spells/SpellAuras.h"
 #include "Social/SocialMgr.h"
 #include "DBScripts/ScriptMgr.h"
-#include "CreatureAI.h"
-#include "GameObjectAI.h"
+#include "AI/BaseAI/CreatureAI.h"
+#include "AI/BaseAI/GameObjectAI.h"
 #include "Accounts/AccountMgr.h"
 #include "Entities/Item.h"
 

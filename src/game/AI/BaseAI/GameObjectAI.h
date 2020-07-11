@@ -21,9 +21,9 @@
 #include "Platform/Define.h"
 #include <list>
 #include "Entities/Object.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Entities/GameObject.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 
 class GameObjectAI
 {

@@ -18,7 +18,7 @@
 #ifndef MANGOS_REACTORAI_H
 #define MANGOS_REACTORAI_H
 
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 
 class Unit;
 

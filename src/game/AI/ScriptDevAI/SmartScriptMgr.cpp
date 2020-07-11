@@ -18,7 +18,7 @@
 #include "DatabaseEnv.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/GridDefines.h"
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 #include "SpellMgr.h"
 #include "Grids/Cell.h"
 #include "GameEventMgr.h"

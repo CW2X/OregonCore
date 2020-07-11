@@ -18,8 +18,8 @@
 #ifndef MANGOS_PASSIVEAI_H
 #define MANGOS_PASSIVEAI_H
 
-#include "CreatureAI.h"
-//#include "CreatureAIImpl.h"
+#include "AI/BaseAI/CreatureAI.h"
+//#include "AI/BaseAI/CreatureAIImpl.h"
 
 class PassiveAI : public CreatureAI
 {

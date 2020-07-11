@@ -32,7 +32,7 @@
 #include "Maps/MapManager.h"
 #include "Entities/Player.h"
 #include "Spells/SpellAuras.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Utilities/Util.h"
 #include "DBScripts/ScriptMgr.h"
 

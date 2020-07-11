@@ -22,7 +22,7 @@
 #include "Server/DBCStores.h"
 #include "Chat/Chat.h"
 #include "Spells/Spell.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "BattleGround/BattlegroundMgr.h"
 
 bool IsAreaEffectTarget[TOTAL_SPELL_TARGETS];

@@ -19,7 +19,7 @@
 #include "Entities/CreatureGroups.h"
 #include "Globals/ObjectMgr.h"
 
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 
 #define MAX_DESYNC 5.0f
 

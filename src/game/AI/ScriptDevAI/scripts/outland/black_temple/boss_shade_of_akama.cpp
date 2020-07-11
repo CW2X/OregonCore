@@ -25,7 +25,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "black_temple.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 #define SAY_DEATH                   -1564013
 #define SAY_LOW_HEALTH              -1564014

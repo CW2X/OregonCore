@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "TotemAI.h"
+#include "AI/BaseAI/TotemAI.h"
 #include "Entities/Totem.h"
 #include "Entities/Creature.h"
 #include "Entities/Player.h"
@@ -23,9 +23,9 @@
 #include "Globals/ObjectAccessor.h"
 #include "SpellMgr.h"
 
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Grids/CellImpl.h"
 
 int
 TotemAI::Permissible(const Creature* creature)

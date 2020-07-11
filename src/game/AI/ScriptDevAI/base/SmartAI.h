@@ -20,13 +20,13 @@
 
 #include "Common.h"
 #include "Entities/Creature.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Entities/Unit.h"
 #include "Spell.h"
 
-#include "SmartScript.h"
+#include "AI/ScriptDevAI/base/SmartScript.h"
 #include "SmartScriptMgr.h"
-#include "GameObjectAI.h"
+#include "AI/BaseAI/GameObjectAI.h"
 
 enum SmartEscortState
 {

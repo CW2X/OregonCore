@@ -26,7 +26,7 @@
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "the_eye.h"
 #include "WorldPacket.h"
-#include "MoveSplineInit.h"
+#include "Movement/MoveSplineInit.h"
 
 enum
 {

@@ -21,7 +21,7 @@
 //#include "Policies/Singleton.h"
 #include "Dynamic/ObjectRegistry.h"
 #include "Dynamic/FactoryHolder.h"
-#include "GameObjectAI.h"
+#include "AI/BaseAI/GameObjectAI.h"
 
 struct SelectableAI : public FactoryHolder<CreatureAI>, public Permissible<Creature>
 {

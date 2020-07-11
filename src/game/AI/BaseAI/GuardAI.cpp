@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "GuardAI.h"
+#include "AI/BaseAI/GuardAI.h"
 #include "Errors.h"
 #include "Entities/Player.h"
 #include "Globals/ObjectAccessor.h"

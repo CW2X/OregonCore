@@ -24,8 +24,8 @@ EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedEscortAI.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 #define SAY_WALK        "Hmm a nice day for a walk alright"
 #define SAY_ATTACK      "Wild Felboar attack!"

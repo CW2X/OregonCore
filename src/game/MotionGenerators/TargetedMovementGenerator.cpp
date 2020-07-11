@@ -19,7 +19,7 @@
 #include "MotionGenerators/TargetedMovementGenerator.h"
 #include "Errors.h"
 #include "Entities/Creature.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "World/World.h"
 #include "Entities/Unit.h"
 #include "Entities/Player.h"

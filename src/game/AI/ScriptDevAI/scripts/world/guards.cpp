@@ -47,8 +47,8 @@ EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedGuardAI.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/base/ScriptedGuardAI.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 //script spesific action
 #define GOSSIP_ACTION_TAVERN                  101

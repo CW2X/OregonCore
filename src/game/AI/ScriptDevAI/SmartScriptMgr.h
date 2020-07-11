@@ -20,14 +20,14 @@
 
 #include "Common.h"
 #include "Entities/Creature.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Entities/Unit.h"
 #include "Spell.h"
 #include "Globals/ObjectAccessor.h"
 #include "Globals/ObjectMgr.h"
 
-//#include "SmartScript.h"
-//#include "SmartAI.h"
+//#include "AI/ScriptDevAI/base/SmartScript.h"
+//#include "AI/ScriptDevAI/base/SmartAI.h"
 
 struct WayPoint
 {

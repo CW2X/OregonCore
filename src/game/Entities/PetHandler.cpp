@@ -26,7 +26,7 @@
 #include "Spells/Spell.h"
 #include "Globals/ObjectAccessor.h"
 #include "Maps/MapManager.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Utilities/Util.h"
 #include "Entities/Pet.h"
 #include "Tools/Language.h"

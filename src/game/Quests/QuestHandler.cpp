@@ -30,8 +30,8 @@
 #include "Battleground/Battleground.h"
 #include "Battleground/BattlegroundAV.h"
 #include "DBScripts/ScriptMgr.h"
-#include "CreatureAI.h"
-#include "GameObjectAI.h"
+#include "AI/BaseAI/CreatureAI.h"
+#include "AI/BaseAI/GameObjectAI.h"
 #include "Globals/Conditions.h"
 
 void WorldSession::HandleQuestgiverStatusQueryOpcode(WorldPacket& recv_data)

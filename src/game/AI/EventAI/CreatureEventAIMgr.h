@@ -19,7 +19,7 @@
 #define MANGOS_CREATURE_EAI_MGR_H
 
 #include "Common.h"
-#include "CreatureEventAI.h"
+#include "AI/EventAI/CreatureEventAI.h"
 
 class CreatureEventAIMgr
 {

@@ -24,8 +24,8 @@ EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedGuardAI.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/base/ScriptedGuardAI.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 // **** This script is for use within every single guard to save coding time ****
 

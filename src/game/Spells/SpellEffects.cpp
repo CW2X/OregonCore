@@ -29,7 +29,7 @@
 #include "Entities/Player.h"
 #include "Skills/SkillExtraItems.h"
 #include "Entities/Unit.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Spells/Spell.h"
 #include "Entities/DynamicObject.h"
 #include "Spells/SpellAuras.h"
@@ -50,7 +50,7 @@
 #include "Grids/GridNotifiersImpl.h"
 #include "Grids/CellImpl.h"
 #include "DBScripts/ScriptMgr.h"
-#include "GameObjectAI.h"
+#include "AI/BaseAI/GameObjectAI.h"
 #include "Maps/InstanceData.h"
 #include "Movement/MoveSplineInit.h"
 

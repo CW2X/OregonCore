@@ -24,7 +24,7 @@ EndScriptData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedInstance.h"
+#include "AI/ScriptDevAI/include/ScriptedInstance.h"
 #include "karazhan.h"
 
 #define MAX_ENCOUNTER      12

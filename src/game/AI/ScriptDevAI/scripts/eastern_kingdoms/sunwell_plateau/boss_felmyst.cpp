@@ -23,10 +23,10 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "Grids/Cell.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 #include "sunwell_plateau.h"
 
 enum Yells

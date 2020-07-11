@@ -23,7 +23,7 @@ SDCategory: Npc
 EndScriptData */
 
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
 #include "Entities/Group.h"
 #include "Entities/Player.h"
 #include "ScriptSystem.h"

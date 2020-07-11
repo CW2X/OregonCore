@@ -16,20 +16,20 @@
  */
 
 #include "Common.h"
-#include "CreatureEventAI.h"
-#include "CreatureEventAIMgr.h"
+#include "AI/EventAI/CreatureEventAI.h"
+#include "AI/EventAI/CreatureEventAIMgr.h"
 #include "Globals/ObjectMgr.h"
 #include "Spell.h"
 #include "World/World.h"
 #include "Grids/Cell.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 #include "GameEventMgr.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "InstanceData.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
+#include "Maps/InstanceData.h"
 #include "Spell.h"
 #include "SpellMgr.h"
-#include "CreatureAIImpl.h"
+#include "AI/BaseAI/CreatureAIImpl.h"
 #include "Globals/Conditions.h"
 
 bool CreatureEventAIHolder::UpdateRepeatTimer(Creature* creature, uint32 repeatMin, uint32 repeatMax)

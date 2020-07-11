@@ -25,7 +25,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "serpent_shrine.h"
-#include "ScriptedSimpleAI.h"
+#include "AI/ScriptDevAI/base/ScriptedSimpleAI.h"
 #include "Spell.h"
 #include "SpellAuras.h"
 

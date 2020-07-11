@@ -17,12 +17,12 @@
 
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "Spell.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "Grids/GridNotifiers.h"
+#include "Grids/GridNotifiersImpl.h"
 #include "Grids/Cell.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 #include "Globals/ObjectMgr.h"
-#include "MoveSplineInit.h"
+#include "Movement/MoveSplineInit.h"
 
 // Spell summary for ScriptedAI::SelectSpell
 struct TSpellSummary

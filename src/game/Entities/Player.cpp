@@ -39,7 +39,7 @@
 #include "Grids/GridNotifiersImpl.h"
 #include "Grids/CellImpl.h"
 #include "Globals/ObjectAccessor.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Tools/Formulas.h"
 #include "Groups/Group.h"
 #include "Guilds/Guild.h"

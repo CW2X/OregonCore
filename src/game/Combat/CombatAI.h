@@ -18,8 +18,8 @@
 #ifndef MANGOS_COMBATAI_H
 #define MANGOS_COMBATAI_H
 
-#include "CreatureAI.h"
-#include "CreatureAIImpl.h"
+#include "AI/BaseAI/CreatureAI.h"
+#include "AI/BaseAI/CreatureAIImpl.h"
 
 class Creature;
 

@@ -24,7 +24,7 @@
 #include "Entities/Player.h"
 #include "Server/Opcodes.h"
 #include "Maps/MapManager.h"
-#include "CreatureEventAIMgr.h"
+#include "AI/EventAI/CreatureEventAIMgr.h"
 #include "SkillDiscovery.h"
 #include "SkillExtraItems.h"
 #include "GMTickets/GMTicketMgr.h"

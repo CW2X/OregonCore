@@ -15,21 +15,21 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "PassiveAI.h"
-#include "ReactorAI.h"
+#include "AI/BaseAI/PassiveAI.h"
+#include "AI/BaseAI/ReactorAI.h"
 #include "Combat/CombatAI.h"
-#include "GuardAI.h"
-#include "PetAI.h"
-#include "TotemAI.h"
-#include "CreatureEventAI.h"
+#include "AI/BaseAI/GuardAI.h"
+#include "AI/BaseAI/PetAI.h"
+#include "AI/BaseAI/TotemAI.h"
+#include "AI/EventAI/CreatureEventAI.h"
 #include "MotionGenerators/RandomMovementGenerator.h"
 #include "MotionGenerators/MovementGeneratorImpl.h"
 #include "AI/CreatureAIRegistry.h"
 #include "MotionGenerators/WaypointMovementGenerator.h"
-#include "CreatureAIFactory.h"
-#include "SmartAI.h"
+#include "AI/BaseAI/CreatureAIFactory.h"
+#include "AI/ScriptDevAI/base/SmartAI.h"
 
-//#include "CreatureAIImpl.h"
+//#include "AI/BaseAI/CreatureAIImpl.h"
 namespace AIRegistry
 {
 void Initialize()

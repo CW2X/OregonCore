@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "PetAI.h"
+#include "AI/BaseAI/PetAI.h"
 #include "Errors.h"
 #include "Entities/Pet.h"
 #include "Entities/Player.h"

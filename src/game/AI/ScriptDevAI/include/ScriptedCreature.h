@@ -19,9 +19,9 @@
 #define SC_CREATURE_H
 
 #include "Entities/Creature.h"
-#include "CreatureAI.h"
-#include "CreatureAIImpl.h"
-#include "ScriptedInstance.h"
+#include "AI/BaseAI/CreatureAI.h"
+#include "AI/BaseAI/CreatureAIImpl.h"
+#include "AI/ScriptDevAI/include/ScriptedInstance.h"
 
 #define SCRIPT_CAST_TYPE dynamic_cast
 

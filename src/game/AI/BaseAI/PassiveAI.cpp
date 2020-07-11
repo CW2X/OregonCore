@@ -15,7 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "PassiveAI.h"
+#include "AI/BaseAI/PassiveAI.h"
 #include "Entities/Creature.h"
 
 PassiveAI::PassiveAI(Creature* c) : CreatureAI(c)

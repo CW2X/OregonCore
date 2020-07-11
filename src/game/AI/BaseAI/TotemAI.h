@@ -18,7 +18,7 @@
 #ifndef MANGOS_TOTEMAI_H
 #define MANGOS_TOTEMAI_H
 
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Timer.h"
 
 class Creature;

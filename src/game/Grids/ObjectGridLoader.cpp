@@ -24,7 +24,7 @@
 #include "Entities/Corpse.h"
 #include "World/World.h"
 #include "Grids/CellImpl.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 
 void ObjectGridEvacuator::Visit(CreatureMapType &m)
 {

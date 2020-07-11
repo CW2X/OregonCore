@@ -24,7 +24,7 @@
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "PassiveAI.h"
+#include "AI/BaseAI/PassiveAI.h"
 #include "black_temple.h"
 
 #define EMOTE_NEW_TARGET            -1564010

@@ -21,7 +21,7 @@
 #include "Platform/Define.h"
 #include <list>
 #include "Entities/Unit.h"
-#include "QuestDef.h"
+#include "Quests/QuestDef.h"
 #include "Utilities/EventMap.h"
 
 class Unit;

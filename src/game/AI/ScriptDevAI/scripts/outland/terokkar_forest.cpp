@@ -34,8 +34,8 @@ EndContentData */
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedEscortAI.h"
-#include "ScriptedGossip.h"
+#include "AI/ScriptDevAI/base/ScriptedEscortAI.h"
+#include "AI/ScriptDevAI/include/ScriptedGossip.h"
 
 /*######
 ## mob_unkor_the_ruthless

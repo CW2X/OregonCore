@@ -18,11 +18,11 @@
 #include "DatabaseEnv.h"
 #include "Globals/ObjectMgr.h"
 #include "Maps/GridDefines.h"
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 #include "SpellMgr.h"
 #include "Grids/Cell.h"
 #include "Entities/Group.h"
-#include "SmartAI.h"
+#include "AI/ScriptDevAI/base/SmartAI.h"
 #include "DBScripts/ScriptMgr.h"
 
 SmartAI::SmartAI(Creature* c) : CreatureAI(c)

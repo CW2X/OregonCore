@@ -2,7 +2,7 @@
 #include "DBScripts/ScriptMgr.h"
 #include "Tools/Language.h"
 #include "Accounts/AccountMgr.h"
-#include "PlayerDump.h"
+#include "Tools/PlayerDump.h"
 
 class pdump_commandscript : CommandScript
 {

@@ -18,10 +18,10 @@
 #ifndef SC_INSTANCE_H
 #define SC_INSTANCE_H
 
-#include "InstanceData.h"
+#include "Maps/InstanceData.h"
 #include "World/World.h"
 #include "Globals/ObjectMgr.h"
-#include "Map.h"
+#include "Maps/Map.h"
 
 #define OUT_SAVE_INST_DATA             debug_log("OSCR: Saving Instance Data for Instance %s (Map %d, Instance Id %d)", instance->GetMapName(), instance->GetId(), instance->GetInstanceId())
 #define OUT_SAVE_INST_DATA_COMPLETE    debug_log("OSCR: Saving Instance Data for Instance %s (Map %d, Instance Id %d) completed.", instance->GetMapName(), instance->GetId(), instance->GetInstanceId())

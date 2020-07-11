@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "CreatureAI.h"
-#include "CreatureAIImpl.h"
+#include "AI/BaseAI/CreatureAI.h"
+#include "AI/BaseAI/CreatureAIImpl.h"
 #include "Entities/Creature.h"
 #include "World/World.h"
 #include "SpellMgr.h"

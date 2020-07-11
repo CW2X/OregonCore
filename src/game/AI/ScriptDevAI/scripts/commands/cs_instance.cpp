@@ -2,7 +2,7 @@
 #include "Chat/Chat.h"
 #include "Entities/Group.h"
 #include "InstanceSaveMgr.h"
-#include "InstanceData.h"
+#include "Maps/InstanceData.h"
 #include "Maps/MapManager.h"
 #include "Entities/Player.h"
 #include "Tools/Language.h"

@@ -25,9 +25,9 @@
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
 #include "steam_vault.h"
-#include "GridNotifiers.h"
+#include "Grids/GridNotifiers.h"
 #include "Grids/Cell.h"
-#include "CellImpl.h"
+#include "Grids/CellImpl.h"
 
 enum NagaDistiller
 {

@@ -23,7 +23,7 @@
 #include "Entities/Corpse.h"
 #include "Entities/Player.h"
 #include "Entities/UpdateData.h"
-#include "CreatureAI.h"
+#include "AI/BaseAI/CreatureAI.h"
 #include "Spells/SpellAuras.h"
 
 template<class T>

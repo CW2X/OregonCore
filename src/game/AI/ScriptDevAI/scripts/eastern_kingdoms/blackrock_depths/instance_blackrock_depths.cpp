@@ -32,7 +32,7 @@ update `instance_template` set `script`='instance_blackrock_depths' where `map`=
 
 #include "DBScripts/ScriptMgr.h"
 #include "AI/ScriptDevAI/include/ScriptedCreature.h"
-#include "ScriptedInstance.h"
+#include "AI/ScriptDevAI/include/ScriptedInstance.h"
 #include "blackrock_depths.h"
 
 #define TIMER_TOMBOFTHESEVEN    15000
