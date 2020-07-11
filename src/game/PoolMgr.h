@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -159,7 +159,7 @@ class PoolMgr
         ActivePoolData mSpawnedData;
 };
 
-#define sPoolMgr Oregon::Singleton<PoolMgr>::Instance()
+#define sPoolMgr MaNGOS::Singleton<PoolMgr>::Instance()
 
 // Method that tell if the creature is part of a pool and return the pool id if yes
 template<>

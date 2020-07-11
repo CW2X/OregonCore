@@ -1,5 +1,5 @@
 /**
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -2115,7 +2115,7 @@ class Unit : public WorldObject
         void UpdateSplineMovement(uint32 t_diff);
 };
 
-namespace Oregon
+namespace MaNGOS
 {
 template<class T>
 void RandomResizeList(std::list<T>& _list, uint32 _size)

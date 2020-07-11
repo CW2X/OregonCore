@@ -1,4 +1,4 @@
-# This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+# This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 #
 # This file is free software; as a special exception the author gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -25,11 +25,11 @@ if( SERVERS )
   add_subdirectory(genrev)
   add_subdirectory(framework)
   add_subdirectory(shared)
-  add_subdirectory(oregonrealm)
+  add_subdirectory(realmd)
   add_subdirectory(collision)
   add_subdirectory(game)
   add_subdirectory(scripts)
-  add_subdirectory(oregoncore)
+  add_subdirectory(mangosd)
 else()
   if( TOOLS )
     add_subdirectory(collision)

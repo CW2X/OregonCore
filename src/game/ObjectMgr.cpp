@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -191,7 +191,7 @@ std::string GetScriptCommandName(ScriptCommands command)
     case SCRIPT_COMMAND_KILL:
         res = "SCRIPT_COMMAND_KILL";
         break;
-    // Oregon only
+    // MaNGOS only
     case SCRIPT_COMMAND_ORIENTATION:
         res = "SCRIPT_COMMAND_ORIENTATION";
         break;
@@ -1387,7 +1387,7 @@ void ObjectMgr::AddCreatureToGrid(uint32 guid, CreatureData const* data)
     {
         if (mask & 1)
         {
-            CellCoord cellCoord = Oregon::ComputeCellCoord(data->posX, data->posY);
+            CellCoord cellCoord = MaNGOS::ComputeCellCoord(data->posX, data->posY);
             CellObjectGuids& cell_guids = mMapObjectGuids[MAKE_PAIR32(data->mapid, i)][cellCoord.GetId()];
             cell_guids.creatures.insert(guid);
         }
@@ -1401,7 +1401,7 @@ void ObjectMgr::RemoveCreatureFromGrid(uint32 guid, CreatureData const* data)
     {
         if (mask & 1)
         {
-            CellCoord cellCoord = Oregon::ComputeCellCoord(data->posX, data->posY);
+            CellCoord cellCoord = MaNGOS::ComputeCellCoord(data->posX, data->posY);
             CellObjectGuids& cell_guids = mMapObjectGuids[MAKE_PAIR32(data->mapid, i)][cellCoord.GetId()];
             cell_guids.creatures.erase(guid);
         }
@@ -1602,7 +1602,7 @@ void ObjectMgr::AddGameobjectToGrid(uint32 guid, GameObjectData const* data)
     {
         if (mask & 1)
         {
-            CellCoord cellCoord = Oregon::ComputeCellCoord(data->posX, data->posY);
+            CellCoord cellCoord = MaNGOS::ComputeCellCoord(data->posX, data->posY);
             CellObjectGuids& cell_guids = mMapObjectGuids[MAKE_PAIR32(data->mapid, i)][cellCoord.GetId()];
             cell_guids.gameobjects.insert(guid);
         }
@@ -1616,7 +1616,7 @@ void ObjectMgr::RemoveGameobjectFromGrid(uint32 guid, GameObjectData const* data
     {
         if (mask & 1)
         {
-            CellCoord cellCoord = Oregon::ComputeCellCoord(data->posX, data->posY);
+            CellCoord cellCoord = MaNGOS::ComputeCellCoord(data->posX, data->posY);
             CellObjectGuids& cell_guids = mMapObjectGuids[MAKE_PAIR32(data->mapid, i)][cellCoord.GetId()];
             cell_guids.gameobjects.erase(guid);
         }
@@ -2164,7 +2164,7 @@ void ObjectMgr::LoadPetLevelInfo()
                 if (current_level > STRONG_MAX_LEVEL)        // hardcoded level maximum
                     sLog.outErrorDb("Wrong (> %u) level %u in pet_levelstats table, ignoring.", STRONG_MAX_LEVEL, current_level);
                 else
-                    sLog.outDetail("Unused (> MaxPlayerLevel in Oregond.conf) level %u in pet_levelstats table, ignoring.", current_level);
+                    sLog.outDetail("Unused (> MaxPlayerLevel in MaNGOSd.conf) level %u in pet_levelstats table, ignoring.", current_level);
                 continue;
             }
             else if (current_level < 1)
@@ -2503,7 +2503,7 @@ void ObjectMgr::LoadPlayerInfo()
                 if (current_level > STRONG_MAX_LEVEL)        // hardcoded level maximum
                     sLog.outErrorDb("Wrong (> %u) level %u in player_classlevelstats table, ignoring.", STRONG_MAX_LEVEL, current_level);
                 else
-                    sLog.outDetail("Unused (> MaxPlayerLevel in Oregond.conf) level %u in player_classlevelstats table, ignoring.", current_level);
+                    sLog.outDetail("Unused (> MaxPlayerLevel in MaNGOSd.conf) level %u in player_classlevelstats table, ignoring.", current_level);
                 continue;
             }
 
@@ -2586,7 +2586,7 @@ void ObjectMgr::LoadPlayerInfo()
                 if (current_level > STRONG_MAX_LEVEL)        // hardcoded level maximum
                     sLog.outErrorDb("Wrong (> %u) level %u in player_levelstats table, ignoring.", STRONG_MAX_LEVEL, current_level);
                 else
-                    sLog.outDetail("Unused (> MaxPlayerLevel in Oregond.conf) level %u in player_levelstats table, ignoring.", current_level);
+                    sLog.outDetail("Unused (> MaxPlayerLevel in MaNGOSd.conf) level %u in player_levelstats table, ignoring.", current_level);
                 continue;
             }
 
@@ -4036,7 +4036,7 @@ void ObjectMgr::LoadScripts(ScriptsType type)
                     continue;
                 }
 
-                if (!Oregon::IsValidMapCoord(tmp.TeleportTo.DestX, tmp.TeleportTo.DestY, tmp.TeleportTo.DestZ, tmp.TeleportTo.Orientation))
+                if (!MaNGOS::IsValidMapCoord(tmp.TeleportTo.DestX, tmp.TeleportTo.DestY, tmp.TeleportTo.DestZ, tmp.TeleportTo.Orientation))
                 {
                     sLog.outErrorDb("Table `%s` has invalid coordinates (X: %f Y: %f Z: %f O: %f) in SCRIPT_COMMAND_TELEPORT_TO for script id %u",
                                     tableName.c_str(), tmp.TeleportTo.DestX, tmp.TeleportTo.DestY, tmp.TeleportTo.DestZ, tmp.TeleportTo.Orientation, tmp.id);
@@ -4134,7 +4134,7 @@ void ObjectMgr::LoadScripts(ScriptsType type)
 
         case SCRIPT_COMMAND_TEMP_SUMMON_CREATURE:
             {
-                if (!Oregon::IsValidMapCoord(tmp.TempSummonCreature.PosX, tmp.TempSummonCreature.PosY, tmp.TempSummonCreature.PosZ, tmp.TempSummonCreature.Orientation))
+                if (!MaNGOS::IsValidMapCoord(tmp.TempSummonCreature.PosX, tmp.TempSummonCreature.PosY, tmp.TempSummonCreature.PosZ, tmp.TempSummonCreature.Orientation))
                 {
                     sLog.outErrorDb("Table `%s` has invalid coordinates (X: %f Y: %f Z: %f O: %f) in SCRIPT_COMMAND_TEMP_SUMMON_CREATURE for script id %u",
                                     tableName.c_str(), tmp.TempSummonCreature.PosX, tmp.TempSummonCreature.PosY, tmp.TempSummonCreature.PosZ, tmp.TempSummonCreature.Orientation, tmp.id);
@@ -4868,7 +4868,7 @@ void ObjectMgr::LoadQuestAreaTriggers()
 
         if (!quest->HasSpecialFlag(QUEST_SPECIAL_FLAGS_EXPLORATION_OR_EVENT))
         {
-            sLog.outErrorDb("Table areatrigger_involvedrelation has record (id: %u) for not quest %u, but quest does not have flag QUEST_OREGON_FLAGS_EXPLORATION_OR_EVENT. Trigger or quest flags must be fixed, quest modified to require objective.", trigger_ID, quest_ID);
+            sLog.outErrorDb("Table areatrigger_involvedrelation has record (id: %u) for not quest %u, but quest does not have flag QUEST_MANGOS_FLAGS_EXPLORATION_OR_EVENT. Trigger or quest flags must be fixed, quest modified to require objective.", trigger_ID, quest_ID);
 
             // this will prevent quest completing without objective
             const_cast<Quest*>(quest)->SetSpecialFlag(QUEST_SPECIAL_FLAGS_EXPLORATION_OR_EVENT);
@@ -6769,7 +6769,7 @@ void ObjectMgr::LoadGameObjectForQuests()
     sLog.outString(">> Loaded %u GameObject for quests", count);
 }
 
-bool ObjectMgr::LoadOregonStrings(DatabaseType& db, char const* table, int32 min_value, int32 max_value)
+bool ObjectMgr::LoadMaNGOSStrings(DatabaseType& db, char const* table, int32 min_value, int32 max_value)
 {
     int32 start_value = min_value;
     int32 end_value   = max_value;
@@ -6797,10 +6797,10 @@ bool ObjectMgr::LoadOregonStrings(DatabaseType& db, char const* table, int32 min
     }
 
     // cleanup affected map part for reloading case
-    for (OregonStringLocaleMap::iterator itr = mOregonStringLocaleMap.begin(); itr != mOregonStringLocaleMap.end();)
+    for (MaNGOSStringLocaleMap::iterator itr = mMaNGOSStringLocaleMap.begin(); itr != mMaNGOSStringLocaleMap.end();)
     {
         if (itr->first >= start_value && itr->first < end_value)
-            mOregonStringLocaleMap.erase(itr++);
+            mMaNGOSStringLocaleMap.erase(itr++);
         else
             ++itr;
     }
@@ -6811,8 +6811,8 @@ bool ObjectMgr::LoadOregonStrings(DatabaseType& db, char const* table, int32 min
     {
 
 
-        if (min_value == MIN_OREGON_STRING_ID)              // error only in case internal strings
-            sLog.outErrorDb(">> Loaded 0 Oregon strings. DB table %s is empty. Cannot continue.", table);
+        if (min_value == MIN_MANGOS_STRING_ID)              // error only in case internal strings
+            sLog.outErrorDb(">> Loaded 0 MaNGOS strings. DB table %s is empty. Cannot continue.", table);
         else
             sLog.outString(">> Loaded 0 string templates. DB table %s is empty.", table);
         return false;
@@ -6838,7 +6838,7 @@ bool ObjectMgr::LoadOregonStrings(DatabaseType& db, char const* table, int32 min
             continue;
         }
 
-        OregonStringLocale& data = mOregonStringLocaleMap[entry];
+        MaNGOSStringLocale& data = mMaNGOSStringLocaleMap[entry];
 
         if (data.Content.size() > 0)
         {
@@ -6871,19 +6871,19 @@ bool ObjectMgr::LoadOregonStrings(DatabaseType& db, char const* table, int32 min
     }
     while (result->NextRow());
 
-    if (min_value == MIN_OREGON_STRING_ID)
-        sLog.outString(">> Loaded %u Oregon strings from table %s", count, table);
+    if (min_value == MIN_MANGOS_STRING_ID)
+        sLog.outString(">> Loaded %u MaNGOS strings from table %s", count, table);
     else
         sLog.outString(">> Loaded %u string templates from %s", count, table);
 
     return true;
 }
 
-const char* ObjectMgr::GetOregonString(int32 entry, int locale_idx) const
+const char* ObjectMgr::GetMaNGOSString(int32 entry, int locale_idx) const
 {
     // locale_idx == -1 -> default, locale_idx >= 0 in to idx+1
-    // Content[0] always exist if exist OregonStringLocale
-    if (OregonStringLocale const* msl = GetOregonStringLocale(entry))
+    // Content[0] always exist if exist MaNGOSStringLocale
+    if (MaNGOSStringLocale const* msl = GetMaNGOSStringLocale(entry))
     {
         if (msl->Content.size() > locale_idx + 1 && !msl->Content[locale_idx + 1].empty())
             return msl->Content[locale_idx + 1].c_str();
@@ -6892,9 +6892,9 @@ const char* ObjectMgr::GetOregonString(int32 entry, int locale_idx) const
     }
 
     if (entry > 0)
-        sLog.outErrorDb("Entry %i not found in oregon_string table.", entry);
+        sLog.outErrorDb("Entry %i not found in mangos_string table.", entry);
     else
-        sLog.outErrorDb("Oregon string entry %i not found in DB.", entry);
+        sLog.outErrorDb("MaNGOS string entry %i not found in DB.", entry);
     return "<error>";
 }
 
@@ -7578,7 +7578,7 @@ void ObjectMgr::CheckScripts(ScriptsType type, std::set<int32>& ids)
             {
             case SCRIPT_COMMAND_TALK:
                 {
-                    if (!GetOregonStringLocale (itrM->second.Talk.TextID))
+                    if (!GetMaNGOSStringLocale (itrM->second.Talk.TextID))
                         sLog.outErrorDb("Table `db_script_string` not has string id  %u used db script (ID: %u)", itrM->second.Talk.TextID, itrMM->first);
 
                     if (ids.find(itrM->second.Talk.TextID) != ids.end())
@@ -7593,12 +7593,12 @@ void ObjectMgr::CheckScripts(ScriptsType type, std::set<int32>& ids)
 
 void ObjectMgr::LoadDbScriptStrings()
 {
-    LoadOregonStrings(WorldDatabase, "db_script_string", MIN_DB_SCRIPT_STRING_ID, MAX_DB_SCRIPT_STRING_ID);
+    LoadMaNGOSStrings(WorldDatabase, "db_script_string", MIN_DB_SCRIPT_STRING_ID, MAX_DB_SCRIPT_STRING_ID);
 
     std::set<int32> ids;
 
     for (int32 i = MIN_DB_SCRIPT_STRING_ID; i < MAX_DB_SCRIPT_STRING_ID; ++i)
-        if (GetOregonStringLocale(i))
+        if (GetMaNGOSStringLocale(i))
             ids.insert(i);
 
     for (int type = SCRIPTS_FIRST; type < SCRIPTS_LAST; ++type)
@@ -7614,7 +7614,7 @@ uint32 GetAreaTriggerScriptId(uint32 trigger_id)
     return sObjectMgr.GetAreaTriggerScriptId(trigger_id);
 }
 
-bool LoadOregonStrings(DatabaseType& db, char const* table, int32 start_value, int32 end_value)
+bool LoadMaNGOSStrings(DatabaseType& db, char const* table, int32 start_value, int32 end_value)
 {
     // MAX_DB_SCRIPT_STRING_ID is max allowed negative value for scripts (scrpts can use only more deep negative values
     // start/end reversed for negative values
@@ -7624,7 +7624,7 @@ bool LoadOregonStrings(DatabaseType& db, char const* table, int32 start_value, i
         return false;
     }
 
-    return sObjectMgr.LoadOregonStrings(db, table, start_value, end_value);
+    return sObjectMgr.LoadMaNGOSStrings(db, table, start_value, end_value);
 }
 
 uint32 GetScriptId(const char* name)

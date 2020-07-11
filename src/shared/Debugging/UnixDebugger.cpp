@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -429,7 +429,7 @@ void UnixDebugger::DumpDebugInfo(const char* sig, const char* reason)
 
     std::stringstream ss;
 
-    ss << "OregonCore Crash Report" << std::endl;
+    ss << "MaNGOSCore Crash Report" << std::endl;
     ss << "=======================" << std::endl;
     ss << std::endl;
 
@@ -503,7 +503,7 @@ void UnixDebugger::DumpDebugInfo(const char* sig, const char* reason)
     // or set to absolute path
     chdir(CRASH_DIR);
 
-    std::string filename = "./oregon-core_" _REVISION "_";
+    std::string filename = "./mangos-core_" _REVISION "_";
     filename.append(dateString);
     filename.append(".txt");
     if (FILE* fp = fopen(filename.c_str(), "w"))

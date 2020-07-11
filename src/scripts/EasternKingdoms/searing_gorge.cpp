@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -76,8 +76,10 @@ class npc_kalaran_windblade : public CreatureScript
 {
 public: 
     npc_kalaran_windblade() : CreatureScript("npc_kalaran_windblade") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -90,7 +92,8 @@ public:
     
         return true;
     }
-    
+    
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 /*uiSender*/, uint32 uiAction) override
     {
         switch (uiAction)
@@ -110,8 +113,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -119,8 +124,10 @@ class npc_lothos_riftwaker : public CreatureScript
 {
 public: 
     npc_lothos_riftwaker() : CreatureScript("npc_lothos_riftwaker") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -133,7 +140,8 @@ public:
     
         return true;
     }
-    
+    
+
     bool OnGossipSelect(Player* pPlayer, Creature* /*pCreature*/, uint32 /*uiSender*/, uint32 uiAction) override
     {
         if (uiAction == GOSSIP_ACTION_INFO_DEF + 1)
@@ -144,8 +152,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -153,8 +163,10 @@ class npc_zamael_lunthistle : public CreatureScript
 {
 public: 
     npc_zamael_lunthistle() : CreatureScript("npc_zamael_lunthistle") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -167,8 +179,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 /*uiSender*/, uint32 uiAction) override
     {
         switch (uiAction)
@@ -188,8 +202,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 

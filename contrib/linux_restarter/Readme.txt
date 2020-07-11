@@ -1,11 +1,11 @@
-= Oregon Core -- Linux Restarter =
+= MaNGOS Core -- Linux Restarter =
 
-Copyright (C) 2010-2018 OregonCore <https://oregon-core.net/>
+Copyright (C) 2010-2018 MaNGOSCore <https://mangos-core.net/>
 
 Content :
-- File "oregon" is an interface to use easier "screen" command.
+- File "mangos" is an interface to use easier "screen" command.
 - File "restarter" is to restart a screen if he stopped.
-- install.sh to install oregon in /etc/init.d and restarter in /opt/oregon.
+- install.sh to install mangos in /etc/init.d and restarter in /opt/mangos.
 
 Autor :
 - MiLk

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -982,8 +982,10 @@ class npc_prof_alchemy : public CreatureScript
 {
 public: 
     npc_prof_alchemy() : CreatureScript("npc_prof_alchemy") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -1026,7 +1028,9 @@ public:
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
         return true;
     }
-    
+    
+
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 uiSender, uint32 uiAction) override
     {
         switch (uiSender)
@@ -1046,8 +1050,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -1055,8 +1061,10 @@ class npc_prof_blacksmith : public CreatureScript
 {
 public: 
     npc_prof_blacksmith() : CreatureScript("npc_prof_blacksmith") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -1120,7 +1128,8 @@ public:
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
         return true;
     }
-    
+    
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 uiSender, uint32 uiAction) override
     {
         switch (uiSender)
@@ -1140,8 +1149,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -1149,8 +1160,10 @@ class npc_prof_leather : public CreatureScript
 {
 public: 
     npc_prof_leather() : CreatureScript("npc_prof_leather") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -1187,7 +1200,9 @@ public:
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
         return true;
     }
-    
+    
+
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 uiSender, uint32 uiAction) override
     {
         switch (uiSender)
@@ -1204,8 +1219,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -1213,8 +1230,10 @@ class npc_prof_tailor : public CreatureScript
 {
 public: 
     npc_prof_tailor() : CreatureScript("npc_prof_tailor") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -1257,7 +1276,9 @@ public:
         pPlayer->SEND_GOSSIP_MENU(pPlayer->GetGossipTextId(pCreature), pCreature->GetGUID());
         return true;
     }
-    
+    
+
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 uiSender, uint32 uiAction) override
     {
         switch (uiSender)
@@ -1277,8 +1298,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -1286,8 +1309,10 @@ class go_soothsaying_for_dummies : public GameObjectScript
 {
 public: 
     go_soothsaying_for_dummies() : GameObjectScript("go_soothsaying_for_dummies") { }
-    
-    
+    
+
+    
+
     /*bool OnGossipHello(Player* pPlayer, GameObject* pGo) override
     {
         pPlayer->PlayerTalkClass->GetGossipMenu()->AddMenuItem(0,GOSSIP_LEARN_DRAGON, GOSSIP_SENDER_INFO, GOSSIP_ACTION_INFO_DEF, "", 0);
@@ -1296,7 +1321,8 @@ public:
     
         return true;
     }
-    
+    
+
     /*bool GOHello_go_soothsaying_for_dummies(Player* pPlayer, GameObject* pGo)
     {
         pPlayer->PlayerTalkClass->GetGossipMenu()->AddMenuItem(0,GOSSIP_LEARN_DRAGON, GOSSIP_SENDER_INFO, GOSSIP_ACTION_INFO_DEF, "", 0);
@@ -1305,8 +1331,10 @@ public:
     
         return true;
     }
-    */
-    
+    */
+
+    
+
     
 };
 

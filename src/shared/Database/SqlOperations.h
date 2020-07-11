@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -146,7 +146,7 @@ class SqlResultQueue;                                       // queue for thread 
 class SqlQueryHolder;                                       // groups several async quries
 class SqlQueryHolderEx;                                     // points to a holder, added to the delay thread
 
-class SqlResultQueue : public ACE_Based::LockedQueue<Oregon::IQueryCallback*, ACE_Thread_Mutex>
+class SqlResultQueue : public ACE_Based::LockedQueue<MaNGOS::IQueryCallback*, ACE_Thread_Mutex>
 {
     public:
         SqlResultQueue() {}
@@ -157,10 +157,10 @@ class SqlQuery : public SqlOperation
 {
     private:
         const char* m_sql;
-        Oregon::IQueryCallback* m_callback;
+        MaNGOS::IQueryCallback* m_callback;
         SqlResultQueue* m_queue;
     public:
-        SqlQuery(const char* sql, Oregon::IQueryCallback* callback, SqlResultQueue* queue)
+        SqlQuery(const char* sql, MaNGOS::IQueryCallback* callback, SqlResultQueue* queue)
             : m_sql(strdup(sql)), m_callback(callback), m_queue(queue) {}
         ~SqlQuery()
         {
@@ -184,17 +184,17 @@ class SqlQueryHolder
         void SetSize(size_t size);
         QueryResult_AutoPtr GetResult(size_t index);
         void SetResult(size_t index, QueryResult_AutoPtr result);
-        bool Execute(Oregon::IQueryCallback* callback, SqlDelayThread* thread, SqlResultQueue* queue);
+        bool Execute(MaNGOS::IQueryCallback* callback, SqlDelayThread* thread, SqlResultQueue* queue);
 };
 
 class SqlQueryHolderEx : public SqlOperation
 {
     private:
         SqlQueryHolder* m_holder;
-        Oregon::IQueryCallback* m_callback;
+        MaNGOS::IQueryCallback* m_callback;
         SqlResultQueue* m_queue;
     public:
-        SqlQueryHolderEx(SqlQueryHolder* holder, Oregon::IQueryCallback* callback, SqlResultQueue* queue)
+        SqlQueryHolderEx(SqlQueryHolder* holder, MaNGOS::IQueryCallback* callback, SqlResultQueue* queue)
             : m_holder(holder), m_callback(callback), m_queue(queue) {}
         void Execute(Database* db);
 };

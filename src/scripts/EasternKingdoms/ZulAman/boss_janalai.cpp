@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -240,13 +240,13 @@ public:
             me->GetPosition(x, y, z);
 
             {
-                CellCoord pair(Oregon::ComputeCellCoord(x, y));
+                CellCoord pair(MaNGOS::ComputeCellCoord(x, y));
                 Cell cell(pair);
                 cell.SetNoCreate();
 
-                Oregon::AllCreaturesOfEntryInRange check(me, MOB_EGG, 100);
-                Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange> searcher(templist, check);
-                TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange>, GridTypeMapContainer> cSearcher(searcher);
+                MaNGOS::AllCreaturesOfEntryInRange check(me, MOB_EGG, 100);
+                MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange> searcher(templist, check);
+                TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange>, GridTypeMapContainer> cSearcher(searcher);
                 cell.Visit(pair, cSearcher, *me->GetMap(), *me, me->GetGridActivationRange());
             }
 
@@ -271,13 +271,13 @@ public:
             me->GetPosition(x, y, z);
 
             {
-                CellCoord pair(Oregon::ComputeCellCoord(x, y));
+                CellCoord pair(MaNGOS::ComputeCellCoord(x, y));
                 Cell cell(pair);
                 cell.SetNoCreate();
 
-                Oregon::AllCreaturesOfEntryInRange check(me, MOB_FIRE_BOMB, 100);
-                Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange> searcher(templist, check);
-                TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange>, GridTypeMapContainer> cSearcher(searcher);
+                MaNGOS::AllCreaturesOfEntryInRange check(me, MOB_FIRE_BOMB, 100);
+                MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange> searcher(templist, check);
+                TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange>, GridTypeMapContainer> cSearcher(searcher);
                 cell.Visit(pair, cSearcher, *me->GetMap(), *me, me->GetGridActivationRange());
             }
             for (std::list<Creature*>::const_iterator i = templist.begin(); i != templist.end(); ++i)
@@ -531,13 +531,13 @@ public:
             me->GetPosition(x, y, z);
 
             {
-                CellCoord pair(Oregon::ComputeCellCoord(x, y));
+                CellCoord pair(MaNGOS::ComputeCellCoord(x, y));
                 Cell cell(pair);
                 cell.SetNoCreate();
 
-                Oregon::AllCreaturesOfEntryInRange check(me, 23817, 50);
-                Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange> searcher(templist, check);
-                TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange>, GridTypeMapContainer> cSearcher(searcher);
+                MaNGOS::AllCreaturesOfEntryInRange check(me, 23817, 50);
+                MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange> searcher(templist, check);
+                TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange>, GridTypeMapContainer> cSearcher(searcher);
                 cell.Visit(pair, cSearcher, *me->GetMap(), *me, me->GetGridActivationRange());
             }
 

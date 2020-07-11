@@ -1,5 +1,5 @@
 /*
-* This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+* This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
 * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef OREGON_PACKET_BUILDER_H
-#define OREGON_PACKET_BUILDER_H
+#ifndef MANGOS_PACKET_BUILDER_H
+#define MANGOS_PACKET_BUILDER_H
 
 #include "WorldPacket.h"
 
@@ -32,4 +32,4 @@ namespace Movement
             static void WriteCreate(const MoveSpline& mov, ByteBuffer& data);
     };
 }
-#endif // OREGON_PACKET_BUILDER_H
+#endif // MANGOS_PACKET_BUILDER_H

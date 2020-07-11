@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -43,8 +43,10 @@ class go_main_chambers_access_panel : public GameObjectScript
 {
 public: 
     go_main_chambers_access_panel() : GameObjectScript("go_main_chambers_access_panel") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* /*player*/, GameObject* _GO) override
     {
         ScriptedInstance* pInstance = (ScriptedInstance*)_GO->GetInstanceData();
@@ -67,7 +69,8 @@ class instance_steam_vault : public InstanceMapScript
 {
 public: 
     instance_steam_vault() : InstanceMapScript("instance_steam_vault", 545) { }
-    
+    
+
 
     struct instance_steam_vaultAI : public ScriptedInstance
     {
@@ -271,7 +274,8 @@ public:
                     Encounter[i] = NOT_STARTED;
             OUT_LOAD_INST_DATA_COMPLETE;
         }
-    };
+    };
+
     InstanceData* GetInstanceScript(InstanceMap* pMap) const override    
 	{
         return new instance_steam_vaultAI(pMap);

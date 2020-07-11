@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -47,8 +47,10 @@ class at_malfurion_stormrage : public AreaTriggerScript
 {
 public: 
     at_malfurion_stormrage() : AreaTriggerScript("at_malfurion_stormrage") { }
-    
-    
+    
+
+    
+
     bool OnTrigger(Player* pPlayer, const AreaTriggerEntry* /*at*/) override
     {
         if (/*ScriptedInstance* pInstance = */pPlayer->GetInstanceData())
@@ -59,8 +61,10 @@ public:
         }
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -68,8 +72,10 @@ class go_atalai_statue : public GameObjectScript
 {
 public: 
     go_atalai_statue() : GameObjectScript("go_atalai_statue") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGo) override
     {
         ScriptedInstance* pInstance = (ScriptedInstance*)pPlayer->GetInstanceData();
@@ -78,8 +84,10 @@ public:
         pInstance->SetData(EVENT_STATE, pGo->GetEntry());
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 

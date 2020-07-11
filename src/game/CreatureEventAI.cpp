@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -68,7 +68,7 @@ CreatureEventAI::CreatureEventAI(Creature* c) : CreatureAI(c)
         {
 
             //Debug check
-            #ifndef OREGON_DEBUG
+            #ifndef MANGOS_DEBUG
             if ((*i).event_flags & EFLAG_DEBUG_ONLY)
                 continue;
             #endif
@@ -768,7 +768,7 @@ void CreatureEventAI::ProcessAction(CreatureEventAI_Action const& action, uint32
         }
         break;
 
-    // Oregon ONLY
+    // MaNGOS ONLY
     case ACTION_T_SET_AGGRESSIVE:
         me->SetReactState(ReactStates(action.raw.param1));
         break;
@@ -1172,16 +1172,16 @@ inline Unit* CreatureEventAI::GetTargetByType(uint32 Target, Unit* pActionInvoke
 
 Unit* CreatureEventAI::DoSelectLowestHpFriendly(float range, uint32 MinHPDiff)
 {
-    CellCoord p(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
     Unit* pUnit = NULL;
 
-    Oregon::MostHPMissingInRange u_check(me, range, MinHPDiff);
-    Oregon::UnitLastSearcher<Oregon::MostHPMissingInRange> searcher(pUnit, u_check);
+    MaNGOS::MostHPMissingInRange u_check(me, range, MinHPDiff);
+    MaNGOS::UnitLastSearcher<MaNGOS::MostHPMissingInRange> searcher(pUnit, u_check);
 
-    TypeContainerVisitor<Oregon::UnitLastSearcher<Oregon::MostHPMissingInRange>, GridTypeMapContainer >  grid_unit_searcher(searcher);
+    TypeContainerVisitor<MaNGOS::UnitLastSearcher<MaNGOS::MostHPMissingInRange>, GridTypeMapContainer >  grid_unit_searcher(searcher);
 
     cell.Visit(p, grid_unit_searcher, *me->GetMap(), *me, range);
     return pUnit;
@@ -1189,28 +1189,28 @@ Unit* CreatureEventAI::DoSelectLowestHpFriendly(float range, uint32 MinHPDiff)
 
 void CreatureEventAI::DoFindFriendlyCC(std::list<Creature*>& _list, float range)
 {
-    CellCoord p(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::FriendlyCCedInRange u_check(me, range);
-    Oregon::CreatureListSearcher<Oregon::FriendlyCCedInRange> searcher(_list, u_check);
+    MaNGOS::FriendlyCCedInRange u_check(me, range);
+    MaNGOS::CreatureListSearcher<MaNGOS::FriendlyCCedInRange> searcher(_list, u_check);
 
-    TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::FriendlyCCedInRange>, GridTypeMapContainer >  grid_creature_searcher(searcher);
+    TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::FriendlyCCedInRange>, GridTypeMapContainer >  grid_creature_searcher(searcher);
 
     cell.Visit(p, grid_creature_searcher, *me->GetMap(), *me, range);
 }
 
 void CreatureEventAI::DoFindFriendlyMissingBuff(std::list<Creature*>& _list, float range, uint32 spellid)
 {
-    CellCoord p(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::FriendlyMissingBuffInRange u_check(me, range, spellid);
-    Oregon::CreatureListSearcher<Oregon::FriendlyMissingBuffInRange> searcher(_list, u_check);
+    MaNGOS::FriendlyMissingBuffInRange u_check(me, range, spellid);
+    MaNGOS::CreatureListSearcher<MaNGOS::FriendlyMissingBuffInRange> searcher(_list, u_check);
 
-    TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::FriendlyMissingBuffInRange>, GridTypeMapContainer >  grid_creature_searcher(searcher);
+    TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::FriendlyMissingBuffInRange>, GridTypeMapContainer >  grid_creature_searcher(searcher);
 
     cell.Visit(p, grid_creature_searcher, *me->GetMap(), *me, range);
 }

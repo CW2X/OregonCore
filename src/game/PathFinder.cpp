@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -52,7 +52,7 @@ bool PathInfo::Update(float destX, float destY, float destZ, bool forceDest)
     float x, y, z;
     m_sourceUnit->GetPosition(x, y, z);
 
-    if (!Oregon::IsValidMapCoord(destX, destY, destZ) || !Oregon::IsValidMapCoord(x, y, z))
+    if (!MaNGOS::IsValidMapCoord(destX, destY, destZ) || !MaNGOS::IsValidMapCoord(x, y, z))
     {
         sLog.outMMap("PathInfo::Update() called with invalid map coords, destX: %f destY: %f destZ: %f x: %f y: %f z: %f for creature %u", destX, destY, destZ, x, y, z, m_sourceUnit->GetGUIDLow());
         m_type = PATHFIND_NOPATH;

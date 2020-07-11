@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -76,7 +76,7 @@ public:
             { "item_enchantment_template",      SEC_ADMINISTRATOR, true,  &HandleReloadItemEnchantementsCommand,       "" },
             { "item_loot_template",             SEC_ADMINISTRATOR, true,  &HandleReloadLootTemplatesItemCommand,       "" },
             { "mail_loot_template",             SEC_ADMINISTRATOR, true,  &HandleReloadLootTemplatesMailCommand,       "" },
-            { "oregon_string",                  SEC_ADMINISTRATOR, true,  &HandleReloadOregonStringCommand,            "" },
+            { "mangos_string",                  SEC_ADMINISTRATOR, true,  &HandleReloadMaNGOSStringCommand,            "" },
             { "npc_gossip",                     SEC_ADMINISTRATOR, true,  &HandleReloadNpcGossipCommand,               "" },
             { "npc_trainer",                    SEC_ADMINISTRATOR, true,  &HandleReloadNpcTrainerCommand,              "" },
             { "npc_vendor",                     SEC_ADMINISTRATOR, true,  &HandleReloadNpcVendorCommand,               "" },
@@ -140,7 +140,7 @@ public:
 
         HandleReloadCommandCommand(handler, "");
         HandleReloadReservedNameCommand(handler, "");
-        HandleReloadOregonStringCommand(handler, "");
+        HandleReloadMaNGOSStringCommand(handler, "");
         HandleReloadGameTeleCommand(handler, "");
         HandleReloadAutobroadcastCommand(handler, "");
         return true;
@@ -537,11 +537,11 @@ public:
         return true;
     }
 
-    static bool HandleReloadOregonStringCommand(ChatHandler* handler, const char* /*args*/)
+    static bool HandleReloadMaNGOSStringCommand(ChatHandler* handler, const char* /*args*/)
     {
-        sLog.outString("Re-Loading oregon_string Table!");
-        sObjectMgr.LoadOregonStrings();
-        handler->SendGlobalGMSysMessage("DB table oregon_string reloaded.");
+        sLog.outString("Re-Loading mangos_string Table!");
+        sObjectMgr.LoadMaNGOSStrings();
+        handler->SendGlobalGMSysMessage("DB table mangos_string reloaded.");
         return true;
     }
 

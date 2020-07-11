@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -362,15 +362,15 @@ typedef UNORDERED_MAP<uint32/*(mapid,spawnMode) pair*/, CellObjectGuidsMap> MapO
 typedef UNORDERED_MAP<uint64/*(instance,guid) pair*/, time_t> RespawnTimes;
 
 
-// Oregon string ranges
-#define MIN_OREGON_STRING_ID           1                    // 'mangos_string'
-#define MAX_OREGON_STRING_ID           2000000000
-#define MIN_DB_SCRIPT_STRING_ID        MAX_OREGON_STRING_ID // 'db_script_string'
+// MaNGOS string ranges
+#define MIN_MANGOS_STRING_ID           1                    // 'mangos_string'
+#define MAX_MANGOS_STRING_ID           2000000000
+#define MIN_DB_SCRIPT_STRING_ID        MAX_MANGOS_STRING_ID // 'db_script_string'
 #define MAX_DB_SCRIPT_STRING_ID        2000010000
 #define MIN_CREATURE_AI_TEXT_STRING_ID (-1)                 // 'creature_ai_texts'
 #define MAX_CREATURE_AI_TEXT_STRING_ID (-1000000)
 
-struct OregonStringLocale
+struct MaNGOSStringLocale
 {
     std::vector<std::string> Content;                       // 0 -> default, i -> i-1 locale index
 };
@@ -384,7 +384,7 @@ typedef UNORDERED_MAP<uint32, ItemLocale> ItemLocaleMap;
 typedef UNORDERED_MAP<uint32, QuestLocale> QuestLocaleMap;
 typedef UNORDERED_MAP<uint32, NpcTextLocale> NpcTextLocaleMap;
 typedef UNORDERED_MAP<uint32, PageTextLocale> PageTextLocaleMap;
-typedef UNORDERED_MAP<uint32, OregonStringLocale> OregonStringLocaleMap;
+typedef UNORDERED_MAP<uint32, MaNGOSStringLocale> MaNGOSStringLocaleMap;
 typedef UNORDERED_MAP<uint32, GossipMenuItemsLocale> GossipMenuItemsLocaleMap;
 
 typedef std::multimap<uint32, uint32> QuestRelations;
@@ -804,10 +804,10 @@ class ObjectMgr
 
         void LoadTransportEvents();
 
-        bool LoadOregonStrings(DatabaseType& db, char const* table, int32 min_value, int32 max_value);
-        bool LoadOregonStrings()
+        bool LoadMaNGOSStrings(DatabaseType& db, char const* table, int32 min_value, int32 max_value);
+        bool LoadMaNGOSStrings()
         {
-            return LoadOregonStrings(WorldDatabase, "oregon_string", MIN_OREGON_STRING_ID, MAX_OREGON_STRING_ID);
+            return LoadMaNGOSStrings(WorldDatabase, "mangos_string", MIN_MANGOS_STRING_ID, MAX_MANGOS_STRING_ID);
         }
         void LoadDbScriptStrings();
         void LoadPetCreateSpells();
@@ -1007,16 +1007,16 @@ class ObjectMgr
         }
         void DeleteGOData(uint32 guid);
 
-        OregonStringLocale const* GetOregonStringLocale(int32 entry) const
+        MaNGOSStringLocale const* GetMaNGOSStringLocale(int32 entry) const
         {
-            OregonStringLocaleMap::const_iterator itr = mOregonStringLocaleMap.find(entry);
-            if (itr == mOregonStringLocaleMap.end()) return NULL;
+            MaNGOSStringLocaleMap::const_iterator itr = mMaNGOSStringLocaleMap.find(entry);
+            if (itr == mMaNGOSStringLocaleMap.end()) return NULL;
             return &itr->second;
         }
-        const char* GetOregonString(int32 entry, int locale_idx) const;
-        const char* GetOregonStringForDBCLocale(int32 entry) const
+        const char* GetMaNGOSString(int32 entry, int locale_idx) const;
+        const char* GetMaNGOSStringForDBCLocale(int32 entry) const
         {
-            return GetOregonString(entry, DBCLocaleIndex);
+            return GetMaNGOSString(entry, DBCLocaleIndex);
         }
         int32 GetDBCLocaleIndex() const
         {
@@ -1266,7 +1266,7 @@ class ObjectMgr
         QuestLocaleMap mQuestLocaleMap;
         NpcTextLocaleMap mNpcTextLocaleMap;
         PageTextLocaleMap mPageTextLocaleMap;
-        OregonStringLocaleMap mOregonStringLocaleMap;
+        MaNGOSStringLocaleMap mMaNGOSStringLocaleMap;
         GossipMenuItemsLocaleMap mGossipMenuItemsLocaleMap;
         RespawnTimes mCreatureRespawnTimes;
         RespawnTimes mGORespawnTimes;
@@ -1282,10 +1282,10 @@ class ObjectMgr
         TempSummonDataContainer _tempSummonDataStore;
 };
 
-#define sObjectMgr Oregon::Singleton<ObjectMgr>::Instance()
+#define sObjectMgr MaNGOS::Singleton<ObjectMgr>::Instance()
 
 // scripting access functions
-bool LoadOregonStrings(DatabaseType& db, char const* table, int32 start_value = MAX_CREATURE_AI_TEXT_STRING_ID, int32 end_value = std::numeric_limits<int32>::min());
+bool LoadMaNGOSStrings(DatabaseType& db, char const* table, int32 start_value = MAX_CREATURE_AI_TEXT_STRING_ID, int32 end_value = std::numeric_limits<int32>::min());
 uint32 GetAreaTriggerScriptId(uint32 trigger_id);
 uint32 GetScriptId(const char* name);
 ObjectMgr::ScriptNameMap& GetScriptNames();

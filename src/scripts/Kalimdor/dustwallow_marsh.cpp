@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -1125,13 +1125,13 @@ public:
             float x, y, z;
 
             me->GetPosition(x, y, z);
-            CellCoord pair(Oregon::ComputeCellCoord(x, y));
+            CellCoord pair(MaNGOS::ComputeCellCoord(x, y));
             Cell cell(pair);
             cell.SetNoCreate();
 
-            Oregon::AllCreaturesOfEntryInRange check(me, NPC_SENTRY, 20);
-            Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange> searcher(lCreatureList, check);
-            TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange>, GridTypeMapContainer> cSearcher(searcher);
+            MaNGOS::AllCreaturesOfEntryInRange check(me, NPC_SENTRY, 20);
+            MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange> searcher(lCreatureList, check);
+            TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange>, GridTypeMapContainer> cSearcher(searcher);
             cell.Visit(pair, cSearcher, *(me->GetMap()), *me, me->GetGridActivationRange());
 
             if (!lCreatureList.empty())

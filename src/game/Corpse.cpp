@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -94,7 +94,7 @@ bool Corpse::Create(uint32 guidlow, Player* owner, uint32 /*mapid*/, float x, fl
     SetFloatValue(CORPSE_FIELD_FACING, ang);
     SetUInt64Value(CORPSE_FIELD_OWNER, owner->GetGUID());
 
-    _gridCoord = Oregon::ComputeGridCoord(GetPositionX(), GetPositionY());
+    _gridCoord = MaNGOS::ComputeGridCoord(GetPositionX(), GetPositionY());
 
     return true;
 }
@@ -194,7 +194,7 @@ bool Corpse::LoadCorpseFromDB(uint32 guid, Field* fields)
         return false;
     }
 
-    _gridCoord = Oregon::ComputeGridCoord(GetPositionX(), GetPositionY());
+    _gridCoord = MaNGOS::ComputeGridCoord(GetPositionX(), GetPositionY());
     return true;
 }
 

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -130,14 +130,14 @@ void AuctionHouseMgr::SendAuctionWonMail(AuctionEntry* auction)
             if (bidder_security > SEC_PLAYER) // not do redundant DB requests
             {
                 if (!sObjectMgr.GetPlayerNameByGUID(bidder_guid, bidder_name))
-                    bidder_name = sObjectMgr.GetOregonStringForDBCLocale(LANG_UNKNOWN);
+                    bidder_name = sObjectMgr.GetMaNGOSStringForDBCLocale(LANG_UNKNOWN);
             }
         }
         if (bidder_security > SEC_PLAYER)
         {
             std::string owner_name;
             if (!sObjectMgr.GetPlayerNameByGUID(auction->owner, owner_name))
-                owner_name = sObjectMgr.GetOregonStringForDBCLocale(LANG_UNKNOWN);
+                owner_name = sObjectMgr.GetMaNGOSStringForDBCLocale(LANG_UNKNOWN);
 
             uint32 owner_accid = sObjectMgr.GetPlayerAccountIdByGUID(auction->owner);
 

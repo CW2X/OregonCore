@@ -52,7 +52,7 @@ def ServerNameRealmList():
     user_realmlist = input(str("Please input your server realmlist (without set realmlist) \n >> "))
     server_name = input(str("What would you like to call your server? \n >> "))
     if server_name == "" or server_name == None:
-        server_name = "OregonCore"
+        server_name = "MaNGOSCore"
     if user_realmlist == "" or user_realmlist == None:
         user_realmlist = "127.0.0.1"
     cmd("mysql -u root -p%s -e \"UPDATE realmd.realmlist SET address = '%s', name = '%s' WHERE id = '1'\"" %(mysql_pass, user_realmlist, server_name))
@@ -73,7 +73,7 @@ def DownloadSource():
 
 def DownloadDB():
     print("** Downloading and Importing Database ** \n\n")
-    cmd("wget https://github.com/talamortis/OregonCore/releases/download/v1.0/database_17_11_19.zip -P '%s'" %source_path)
+    cmd("wget https://github.com/talamortis/MaNGOSCore/releases/download/v1.0/database_17_11_19.zip -P '%s'" %source_path)
     cmd("unzip '%s'/database_17_11_19.zip -d '%s'" %(source_path, source_path))
     cmd("mysql -u root -p%s < %s/sql/create/create_mysql.sql" % (mysql_pass, source_path))
     cmd("mysql -u root -p%s realmd < %s/sql/base/realmd.sql" % (mysql_pass, source_path))

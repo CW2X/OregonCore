@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGONCORE_GROUP_H
-#define OREGONCORE_GROUP_H
+#ifndef MANGOSCORE_GROUP_H
+#define MANGOSCORE_GROUP_H
 
 #include "GroupReference.h"
 #include "GroupRefManager.h"
@@ -523,6 +523,6 @@ class Group
         uint8*              m_subGroupsCounts;
 };
 
-#define sScriptMgr Oregon::Singleton<ScriptMgr>::Instance()
+#define sScriptMgr MaNGOS::Singleton<ScriptMgr>::Instance()
 #endif
 

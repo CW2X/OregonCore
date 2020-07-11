@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -234,7 +234,7 @@ void WorldSession::HandleWhoOpcode(WorldPacket& recv_data)
     wstrToLower(wplayer_name);
     wstrToLower(wguild_name);
 
-    // client send in case not set max level value 100 but Oregon supports 255 max level,
+    // client send in case not set max level value 100 but MaNGOS supports 255 max level,
     // update it to show GMs with characters after 100 level
     if (level_max >= MAX_LEVEL)
         level_max = STRONG_MAX_LEVEL;
@@ -403,7 +403,7 @@ void WorldSession::HandleLogoutRequestOpcode(WorldPacket& /*recv_data*/)
         return;
     }
 
-    //instant logout in taverns/cities or on taxi or for admins, gm's, mod's if its enabled in OregonCore.conf
+    //instant logout in taverns/cities or on taxi or for admins, gm's, mod's if its enabled in MaNGOSCore.conf
     if (GetPlayer()->HasFlag(PLAYER_FLAGS, PLAYER_FLAGS_RESTING) || GetPlayer()->IsInFlight() ||
         GetSecurity() >= sWorld.getConfig(CONFIG_INSTANT_LOGOUT))
     {
@@ -551,7 +551,7 @@ void WorldSession::HandleAddFriendOpcode(WorldPacket& recv_data)
 {
     DEBUG_LOG("WORLD: Received CMSG_ADD_FRIEND");
 
-    std::string friendName = GetOregonString(LANG_FRIEND_IGNORE_UNKNOWN);
+    std::string friendName = GetMaNGOSString(LANG_FRIEND_IGNORE_UNKNOWN);
     std::string friendNote;
 
     recv_data >> friendName;
@@ -642,7 +642,7 @@ void WorldSession::HandleAddIgnoreOpcode(WorldPacket& recv_data)
 {
     DEBUG_LOG("WORLD: Received CMSG_ADD_IGNORE");
 
-    std::string IgnoreName = GetOregonString(LANG_FRIEND_IGNORE_UNKNOWN);
+    std::string IgnoreName = GetMaNGOSString(LANG_FRIEND_IGNORE_UNKNOWN);
 
     recv_data >> IgnoreName;
 
@@ -727,7 +727,7 @@ void WorldSession::HandleBugOpcode(WorldPacket& recv_data)
     recv_data >> suggestion >> contentlen >> content;
     recv_data >> typelen >> type;
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     if (suggestion == 0)
         DEBUG_LOG("WORLD: Received CMSG_BUG [Bug Report] \n %s \n %s", type.c_str(), content.c_str());
     else
@@ -906,7 +906,7 @@ void WorldSession::HandleAreaTriggerOpcode(WorldPacket& recv_data)
                     char const* mapName = entry->name[GetPlayer()->GetSession()->GetSessionDbcLocale()];
                     sLog.outDebug("MAP: Player '%s' cannot enter instance map '%s' because their permanent bind is incompatible with their groups.", GetPlayer()->GetName(), mapName);
                     // @todo figure out how to get player localized difficulty string (e.g. "10 player", "Heroic" etc)
-                    ChatHandler(GetPlayer()->GetSession()).PSendSysMessage(GetPlayer()->GetSession()->GetOregonString(LANG_INSTANCE_BIND_MISMATCH), mapName);
+                    ChatHandler(GetPlayer()->GetSession()).PSendSysMessage(GetPlayer()->GetSession()->GetMaNGOSString(LANG_INSTANCE_BIND_MISMATCH), mapName);
                 }
                 reviveAtTrigger = true;
                 break;
@@ -1036,7 +1036,7 @@ void WorldSession::HandleMoveTimeSkippedOpcode(WorldPacket& recv_data)
         DEBUG_LOG("WORLD: CMSG_MOVE_TIME_SKIPPED");
 
         // TODO
-        must be need use in Oregon
+        must be need use in MaNGOS
         We substract server Lags to move time (AntiLags)
         for exmaple
         GetPlayer()->ModifyLastMoveTime(-int32(time_skipped));
@@ -1436,7 +1436,7 @@ void WorldSession::HandleTimeSyncResp(WorldPacket& recv_data)
     uint32 counter, clientTicks;
     recv_data >> counter >> clientTicks;
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     if (counter != _player->m_timeSyncCounter - 1)
         DEBUG_LOG("Wrong time sync counter from player %s (cheater?)", _player->GetName());
 

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -414,8 +414,8 @@ void ScriptedAI::DoTeleportAll(float fX, float fY, float fZ, float fO)
 Unit* ScriptedAI::DoSelectLowestHpFriendly(float fRange, uint32 uiMinHPDiff)
 {
     Unit* pUnit = NULL;
-    Oregon::MostHPMissingInRange u_check(me, fRange, uiMinHPDiff);
-    Oregon::UnitLastSearcher<Oregon::MostHPMissingInRange> searcher(pUnit, u_check);
+    MaNGOS::MostHPMissingInRange u_check(me, fRange, uiMinHPDiff);
+    MaNGOS::UnitLastSearcher<MaNGOS::MostHPMissingInRange> searcher(pUnit, u_check);
     me->VisitNearbyObject(fRange, searcher);
 
     return pUnit;
@@ -424,8 +424,8 @@ Unit* ScriptedAI::DoSelectLowestHpFriendly(float fRange, uint32 uiMinHPDiff)
 std::list<Creature*> ScriptedAI::DoFindFriendlyCC(float fRange)
 {
     std::list<Creature*> pList;
-    Oregon::FriendlyCCedInRange u_check(me, fRange);
-    Oregon::CreatureListSearcher<Oregon::FriendlyCCedInRange> searcher(pList, u_check);
+    MaNGOS::FriendlyCCedInRange u_check(me, fRange);
+    MaNGOS::CreatureListSearcher<MaNGOS::FriendlyCCedInRange> searcher(pList, u_check);
     me->VisitNearbyObject(fRange, searcher);
     return pList;
 }
@@ -433,8 +433,8 @@ std::list<Creature*> ScriptedAI::DoFindFriendlyCC(float fRange)
 std::list<Creature*> ScriptedAI::DoFindFriendlyMissingBuff(float fRange, uint32 uiSpellid)
 {
     std::list<Creature*> pList;
-    Oregon::FriendlyMissingBuffInRange u_check(me, fRange, uiSpellid);
-    Oregon::CreatureListSearcher<Oregon::FriendlyMissingBuffInRange> searcher(pList, u_check);
+    MaNGOS::FriendlyMissingBuffInRange u_check(me, fRange, uiSpellid);
+    MaNGOS::CreatureListSearcher<MaNGOS::FriendlyMissingBuffInRange> searcher(pList, u_check);
     me->VisitNearbyObject(fRange, searcher);
     return pList;
 }
@@ -443,13 +443,13 @@ Player* ScriptedAI::GetPlayerAtMinimumRange(float minimumRange)
 {
     Player* pPlayer = NULL;
 
-    CellCoord pair(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+    CellCoord pair(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
     Cell cell(pair);
     cell.SetNoCreate();
 
-    Oregon::PlayerAtMinimumRangeAway check(me, minimumRange);
-    Oregon::PlayerSearcher<Oregon::PlayerAtMinimumRangeAway> searcher(pPlayer, check);
-    TypeContainerVisitor<Oregon::PlayerSearcher<Oregon::PlayerAtMinimumRangeAway>, GridTypeMapContainer> visitor(searcher);
+    MaNGOS::PlayerAtMinimumRangeAway check(me, minimumRange);
+    MaNGOS::PlayerSearcher<MaNGOS::PlayerAtMinimumRangeAway> searcher(pPlayer, check);
+    TypeContainerVisitor<MaNGOS::PlayerSearcher<MaNGOS::PlayerAtMinimumRangeAway>, GridTypeMapContainer> visitor(searcher);
 
     cell.Visit(pair, visitor, *me->GetMap(), *me, minimumRange);
 

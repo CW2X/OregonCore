@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -113,12 +113,12 @@ class PreparedValues
         };
 
         std::vector<Value> m_values;
-        #ifdef OREGON_DEBUG
+        #ifdef MANGOS_DEBUG
         size_t m_size;
         #endif
     public:
         explicit PreparedValues(size_t size)
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
             : m_size(size)
             #endif
         {
@@ -128,7 +128,7 @@ class PreparedValues
         template<class T>
         PreparedValues& operator<<(T data)
         {
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
             ASSERT(m_values.size() + 1 <= m_size);
             #endif
             m_values.push_back(data);

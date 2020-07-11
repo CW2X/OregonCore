@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -139,7 +139,7 @@ public:
 
         if (!*args)
         {
-            handler->PSendSysMessage(LANG_YOU_ARE, _player->isGMVisible() ? handler->GetOregonString(LANG_VISIBLE) : handler->GetOregonString(LANG_INVISIBLE));
+            handler->PSendSysMessage(LANG_YOU_ARE, _player->isGMVisible() ? handler->GetMaNGOSString(LANG_VISIBLE) : handler->GetMaNGOSString(LANG_INVISIBLE));
             return true;
         }
 

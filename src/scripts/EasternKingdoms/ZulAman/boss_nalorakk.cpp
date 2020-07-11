@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -163,13 +163,13 @@ public:
             me->GetPosition(x, y, z);
 
             {
-                CellCoord pair(Oregon::ComputeCellCoord(x, y));
+                CellCoord pair(MaNGOS::ComputeCellCoord(x, y));
                 Cell cell(pair);
                 cell.SetNoCreate();
 
-                Oregon::AllFriendlyCreaturesInGrid check(me);
-                Oregon::CreatureListSearcher<Oregon::AllFriendlyCreaturesInGrid> searcher(templist, check);
-                TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::AllFriendlyCreaturesInGrid>, GridTypeMapContainer> cSearcher(searcher);
+                MaNGOS::AllFriendlyCreaturesInGrid check(me);
+                MaNGOS::CreatureListSearcher<MaNGOS::AllFriendlyCreaturesInGrid> searcher(templist, check);
+                TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::AllFriendlyCreaturesInGrid>, GridTypeMapContainer> cSearcher(searcher);
                 cell.Visit(pair, cSearcher, *(me->GetMap()), *me, me->GetGridActivationRange());
 
             }

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -243,8 +243,8 @@ void CreatureGroup::LeaderMoveTo(float x, float y, float z)
         float dy = y + std::sin(angle + pathangle) * dist;
         float dz = z;
 
-        Oregon::NormalizeMapCoord(dx);
-        Oregon::NormalizeMapCoord(dy);
+        MaNGOS::NormalizeMapCoord(dx);
+        MaNGOS::NormalizeMapCoord(dy);
 
         if (!member->IsFlying())
             member->UpdateGroundPositionZ(dx, dy, dz);

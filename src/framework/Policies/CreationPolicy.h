@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,13 +15,13 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_CREATIONPOLICY_H
-#define OREGON_CREATIONPOLICY_H
+#ifndef MANGOS_CREATIONPOLICY_H
+#define MANGOS_CREATIONPOLICY_H
 
 #include <stdlib.h>
 #include "Platform/Define.h"
 
-namespace Oregon
+namespace MaNGOS
 {
 // OperatorNew policy creates an object on the heap using new.
 template <class T>

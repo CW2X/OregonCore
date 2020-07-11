@@ -1,9 +1,9 @@
 @ECHO OFF
-@title OregonRealm
+@title MaNGOSRealm
 CLS
 ECHO Initializing Realm (Logon-Server)...
 :1
-start "Oregon Realm" /B /MIN /WAIT oregon-realm.exe -c oregonrealm.conf
+start "MaNGOS Realm" /B /MIN /WAIT mangos-realm.exe -c mangosrealm.conf
 if %errorlevel% == 0 goto end
 goto 1
 :end

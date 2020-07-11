@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -228,7 +228,7 @@ public:
 
         LocaleConstant loc = handler->GetSession()->GetSessionDbcLocale();
         char const* targetName = target->GetName();
-        char const* knownStr = handler->GetOregonString(LANG_KNOWN);
+        char const* knownStr = handler->GetMaNGOSString(LANG_KNOWN);
 
         // Search in CharTitles.dbc
         for (uint32 id = 0; id < sCharTitlesStore.GetNumRows(); id++)
@@ -241,7 +241,7 @@ public:
                     continue;
 
                 char const* activeStr = target && target->GetUInt32Value(PLAYER_CHOSEN_TITLE) == titleInfo->bit_index
-                    ? handler->GetOregonString(LANG_ACTIVE)
+                    ? handler->GetMaNGOSString(LANG_ACTIVE)
                     : "";
 
                 char titleNameStr[80];

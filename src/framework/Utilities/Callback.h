@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,12 +15,12 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_CALLBACK_H
-#define OREGON_CALLBACK_H
+#ifndef MANGOS_CALLBACK_H
+#define MANGOS_CALLBACK_H
 
 // BASE CLASSES
 
-namespace Oregon
+namespace MaNGOS
 {
 template < class Class, typename ParamType1 = void, typename ParamType2 = void, typename ParamType3 = void, typename ParamType4 = void >
 class _Callback
@@ -222,7 +222,7 @@ class _SCallback < >
 
 // GENERIC CALLBACKS
 
-namespace Oregon
+namespace MaNGOS
 {
 class ICallback
 {
@@ -302,7 +302,7 @@ class Callback < Class > : public _ICallback< _Callback < Class > >
 #include "QueryResult.h"
 class QueryResult;
 
-namespace Oregon
+namespace MaNGOS
 {
 class IQueryCallback
 {

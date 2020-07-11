@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -150,7 +150,7 @@ class InstanceSave
         GroupListType m_groupList;
 };
 
-class InstanceSaveManager : public Oregon::Singleton<InstanceSaveManager, Oregon::ClassLevelLockable<InstanceSaveManager, ACE_Thread_Mutex> >
+class InstanceSaveManager : public MaNGOS::Singleton<InstanceSaveManager, MaNGOS::ClassLevelLockable<InstanceSaveManager, ACE_Thread_Mutex> >
 {
         friend class InstanceSave;
     public:
@@ -220,6 +220,6 @@ class InstanceSaveManager : public Oregon::Singleton<InstanceSaveManager, Oregon
         ResetTimeQueue m_resetTimeQueue;
 };
 
-#define sInstanceSaveMgr Oregon::Singleton<InstanceSaveManager>::Instance()
+#define sInstanceSaveMgr MaNGOS::Singleton<InstanceSaveManager>::Instance()
 #endif
 

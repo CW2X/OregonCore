@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -139,7 +139,7 @@ void DynamicObject::Update(uint32 p_time)
     {
         if (m_updateTimer < p_time)
         {
-            Oregon::DynamicObjectUpdater notifier(*this, caster);
+            MaNGOS::DynamicObjectUpdater notifier(*this, caster);
             VisitNearbyObject(GetRadius(), notifier);
             m_updateTimer = 500; // is this official-like?
         }

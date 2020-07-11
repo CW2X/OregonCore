@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_FACTORY_HOLDER
-#define OREGON_FACTORY_HOLDER
+#ifndef MANGOS_FACTORY_HOLDER
+#define MANGOS_FACTORY_HOLDER
 
 #include "Platform/Define.h"
 #include "Utilities/TypeList.h"
@@ -28,7 +28,7 @@ class FactoryHolder
 {
     public:
         typedef ObjectRegistry<FactoryHolder<T, Key >, Key > FactoryHolderRegistry;
-        typedef Oregon::Singleton<FactoryHolderRegistry > FactoryHolderRepository;
+        typedef MaNGOS::Singleton<FactoryHolderRegistry > FactoryHolderRepository;
 
         FactoryHolder(Key k) : i_key(k) {}
         virtual ~FactoryHolder() {}

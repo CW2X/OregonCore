@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGONCORE_LOG_H
-#define OREGONCORE_LOG_H
+#ifndef MANGOSCORE_LOG_H
+#define MANGOSCORE_LOG_H
 
 #include "Common.h"
 #include "Policies/Singleton.h"
@@ -88,9 +88,9 @@ enum ColorTypes
 };
 
 /// Main logging class
-class Log : public Oregon::Singleton<Log, Oregon::ClassLevelLockable<Log, ACE_Thread_Mutex> >
+class Log : public MaNGOS::Singleton<Log, MaNGOS::ClassLevelLockable<Log, ACE_Thread_Mutex> >
 {
-        friend class Oregon::OperatorNew<Log>;
+        friend class MaNGOS::OperatorNew<Log>;
         Log();
         ~Log();
 
@@ -187,23 +187,23 @@ class Log : public Oregon::Singleton<Log, Oregon::ClassLevelLockable<Log, ACE_Th
 };
 
 /// Log class singleton
-#define sLog Oregon::Singleton<Log>::Instance()
+#define sLog MaNGOS::Singleton<Log>::Instance()
 
 #ifndef DEBUG_LOG
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
 /// Works only in debug mode
-#define DEBUG_LOG Oregon::Singleton<Log>::Instance().outDebug
+#define DEBUG_LOG MaNGOS::Singleton<Log>::Instance().outDebug
 #else
 #define DEBUG_LOG(...)
-# endif // OREGON_DEBUG
+# endif // MANGOS_DEBUG
 #endif // DEBUG_LOG
 
 /// Macros meant to be used by scripts
-#define outstring_log Oregon::Singleton<Log>::Instance().outString
-#define detail_log Oregon::Singleton<Log>::Instance().outDetail
-#define debug_log Oregon::Singleton<Log>::Instance().outDebug
-#define error_log Oregon::Singleton<Log>::Instance().outError
-#define error_db_log Oregon::Singleton<Log>::Instance().outErrorDb
+#define outstring_log MaNGOS::Singleton<Log>::Instance().outString
+#define detail_log MaNGOS::Singleton<Log>::Instance().outDetail
+#define debug_log MaNGOS::Singleton<Log>::Instance().outDebug
+#define error_log MaNGOS::Singleton<Log>::Instance().outError
+#define error_db_log MaNGOS::Singleton<Log>::Instance().outErrorDb
 
 #endif
 

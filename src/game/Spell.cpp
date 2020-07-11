@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -441,8 +441,8 @@ void Spell::FillTargetMap()
                             float max_range = GetSpellMaxRange(srange);
                             WorldObject* result = NULL;
 
-                            Oregon::CannibalizeObjectCheck u_check(m_caster, max_range);
-                            Oregon::WorldObjectSearcher<Oregon::CannibalizeObjectCheck > searcher(result, u_check);
+                            MaNGOS::CannibalizeObjectCheck u_check(m_caster, max_range);
+                            MaNGOS::WorldObjectSearcher<MaNGOS::CannibalizeObjectCheck > searcher(result, u_check);
                             m_caster->VisitNearbyGridObject(max_range, searcher);
                             if (!result)
                                 m_caster->VisitNearbyWorldObject(max_range, searcher);
@@ -1473,11 +1473,11 @@ void Spell::SearchAreaTarget(std::list<Unit*>& TagUnitMap, float radius, const u
         break;
     }
 
-    Oregon::SpellNotifierCreatureAndPlayer notifier(*this, TagUnitMap, radius, type, TargetType, pos, entry);
+    MaNGOS::SpellNotifierCreatureAndPlayer notifier(*this, TagUnitMap, radius, type, TargetType, pos, entry);
     if ((m_spellInfo->AttributesEx3 & SPELL_ATTR3_PLAYERS_ONLY) || (TargetType == SPELL_TARGETS_ENTRY && !entry))
     {
         m_caster->GetMap()->VisitWorld(pos->m_positionX, pos->m_positionY, radius, notifier);
-        TagUnitMap.remove_if(Oregon::ObjectTypeIdCheck(TYPEID_PLAYER, false)); // above line will select also pets and totems, remove them
+        TagUnitMap.remove_if(MaNGOS::ObjectTypeIdCheck(TYPEID_PLAYER, false)); // above line will select also pets and totems, remove them
     }
     else
         m_caster->GetMap()->VisitAll(pos->m_positionX, pos->m_positionY, radius, notifier);
@@ -1552,16 +1552,16 @@ WorldObject* Spell::SearchNearbyTarget(float range, SpellTargets TargetType)
     case SPELL_TARGETS_ENEMY:
         {
             Unit* target = NULL;
-            Oregon::AnyUnfriendlyUnitInObjectRangeCheck u_check(m_caster, m_caster, range);
-            Oregon::UnitLastSearcher<Oregon::AnyUnfriendlyUnitInObjectRangeCheck> searcher(target, u_check);
+            MaNGOS::AnyUnfriendlyUnitInObjectRangeCheck u_check(m_caster, m_caster, range);
+            MaNGOS::UnitLastSearcher<MaNGOS::AnyUnfriendlyUnitInObjectRangeCheck> searcher(target, u_check);
             m_caster->VisitNearbyObject(range, searcher);
             return target;
         }
     case SPELL_TARGETS_ALLY:
         {
             Unit* target = NULL;
-            Oregon::AnyFriendlyUnitInObjectRangeCheck u_check(m_caster, m_caster, range);
-            Oregon::UnitLastSearcher<Oregon::AnyFriendlyUnitInObjectRangeCheck> searcher(target, u_check);
+            MaNGOS::AnyFriendlyUnitInObjectRangeCheck u_check(m_caster, m_caster, range);
+            MaNGOS::UnitLastSearcher<MaNGOS::AnyFriendlyUnitInObjectRangeCheck> searcher(target, u_check);
             m_caster->VisitNearbyObject(range, searcher);
             return target;
         }
@@ -2196,7 +2196,7 @@ void Spell::SetTargetMap(uint32 i, uint32 cur)
                 if(sSpellMgr.SpellTargetType[cur] == TARGET_TYPE_AREA_CONE)
                     ResizeUnitListByDistance(unitList,m_caster,m_spellValue->MaxAffectedTargets,true);
                 else
-                    Oregon::RandomResizeList(unitList, m_spellValue->MaxAffectedTargets);
+                    MaNGOS::RandomResizeList(unitList, m_spellValue->MaxAffectedTargets);
             }
             else if (m_spellInfo->Id == 27285)  // Seed of Corruption proc spell
                 unitList.remove(m_targets.getUnitTarget());
@@ -4086,13 +4086,13 @@ SpellCastResult Spell::CheckCast(bool strict)
 
                             if ((*i_spellST)->ConditionValue2)
                             {
-                                CellCoord p(Oregon::ComputeCellCoord(m_caster->GetPositionX(), m_caster->GetPositionY()));
+                                CellCoord p(MaNGOS::ComputeCellCoord(m_caster->GetPositionX(), m_caster->GetPositionY()));
                                 Cell cell(p);
 
-                                Oregon::NearestGameObjectEntryInObjectRangeCheck go_check(*m_caster, (*i_spellST)->ConditionValue2, range);
-                                Oregon::GameObjectLastSearcher<Oregon::NearestGameObjectEntryInObjectRangeCheck> checker(p_GameObject, go_check);
+                                MaNGOS::NearestGameObjectEntryInObjectRangeCheck go_check(*m_caster, (*i_spellST)->ConditionValue2, range);
+                                MaNGOS::GameObjectLastSearcher<MaNGOS::NearestGameObjectEntryInObjectRangeCheck> checker(p_GameObject, go_check);
 
-                                TypeContainerVisitor<Oregon::GameObjectLastSearcher<Oregon::NearestGameObjectEntryInObjectRangeCheck>, GridTypeMapContainer > object_checker(checker);
+                                TypeContainerVisitor<MaNGOS::GameObjectLastSearcher<MaNGOS::NearestGameObjectEntryInObjectRangeCheck>, GridTypeMapContainer > object_checker(checker);
                                 cell.Visit(p, object_checker, *m_caster->GetMap(), *m_caster, range);
 
                                 if (p_GameObject)
@@ -4121,14 +4121,14 @@ SpellCastResult Spell::CheckCast(bool strict)
                         {
                             Creature* p_Creature = NULL;
 
-                            CellCoord p(Oregon::ComputeCellCoord(m_caster->GetPositionX(), m_caster->GetPositionY()));
+                            CellCoord p(MaNGOS::ComputeCellCoord(m_caster->GetPositionX(), m_caster->GetPositionY()));
                             Cell cell(p);
                             cell.SetNoCreate();             // Really don't know what is that???
 
-                            Oregon::NearestCreatureEntryWithLiveStateInObjectRangeCheck u_check(*m_caster, (*i_spellST)->ConditionValue2, (*i_spellST)->ConditionValue1 != SPELL_TARGET_TYPE_DEAD, range);
-                            Oregon::CreatureLastSearcher<Oregon::NearestCreatureEntryWithLiveStateInObjectRangeCheck> searcher(p_Creature, u_check);
+                            MaNGOS::NearestCreatureEntryWithLiveStateInObjectRangeCheck u_check(*m_caster, (*i_spellST)->ConditionValue2, (*i_spellST)->ConditionValue1 != SPELL_TARGET_TYPE_DEAD, range);
+                            MaNGOS::CreatureLastSearcher<MaNGOS::NearestCreatureEntryWithLiveStateInObjectRangeCheck> searcher(p_Creature, u_check);
 
-                            TypeContainerVisitor<Oregon::CreatureLastSearcher<Oregon::NearestCreatureEntryWithLiveStateInObjectRangeCheck>, GridTypeMapContainer >  grid_creature_searcher(searcher);
+                            TypeContainerVisitor<MaNGOS::CreatureLastSearcher<MaNGOS::NearestCreatureEntryWithLiveStateInObjectRangeCheck>, GridTypeMapContainer >  grid_creature_searcher(searcher);
 
                             cell.Visit(p, grid_creature_searcher, *m_caster->GetMap(), *m_caster, range);
 
@@ -5538,14 +5538,14 @@ SpellCastResult Spell::CheckItems()
     // Check spell focus object
     if (m_spellInfo->RequiresSpellFocus)
     {
-        CellCoord p(Oregon::ComputeCellCoord(m_caster->GetPositionX(), m_caster->GetPositionY()));
+        CellCoord p(MaNGOS::ComputeCellCoord(m_caster->GetPositionX(), m_caster->GetPositionY()));
         Cell cell(p);
 
         GameObject* ok = NULL;
-        Oregon::GameObjectFocusCheck go_check(m_caster, m_spellInfo->RequiresSpellFocus);
-        Oregon::GameObjectSearcher<Oregon::GameObjectFocusCheck> checker(ok, go_check);
+        MaNGOS::GameObjectFocusCheck go_check(m_caster, m_spellInfo->RequiresSpellFocus);
+        MaNGOS::GameObjectSearcher<MaNGOS::GameObjectFocusCheck> checker(ok, go_check);
 
-        TypeContainerVisitor<Oregon::GameObjectSearcher<Oregon::GameObjectFocusCheck>, GridTypeMapContainer > object_checker(checker);
+        TypeContainerVisitor<MaNGOS::GameObjectSearcher<MaNGOS::GameObjectFocusCheck>, GridTypeMapContainer > object_checker(checker);
         Map& map = *m_caster->GetMap();
         cell.Visit(p, object_checker, map, *m_caster, map.GetVisibilityRange());
 

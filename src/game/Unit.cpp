@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -1271,7 +1271,7 @@ void Unit::CastSpell(Unit* Victim, SpellEntry const* spellInfo, bool triggered, 
         targets.setDst(Victim);
     }
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     if (castItem)
         DEBUG_LOG("WORLD: cast Item spellId - %i", spellInfo->Id);
     #endif
@@ -1375,7 +1375,7 @@ void Unit::CastSpell(float x, float y, float z, uint32 spellId, bool triggered, 
         return;
     }
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     if (castItem)
         DEBUG_LOG("WORLD: cast Item spellId - %i", spellInfo->Id);
     #endif
@@ -1411,7 +1411,7 @@ void Unit::CastSpell(GameObject* go, uint32 spellId, bool triggered, Item* castI
         return;
     }
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     if (castItem)
         DEBUG_LOG("WORLD: cast Item spellId - %i", spellInfo->Id);
     #endif
@@ -2366,7 +2366,7 @@ void Unit::AttackerStateUpdate (Unit* victim, WeaponAttackType attType, bool ext
     // nullifying the check.
     CombatStart(victim);
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     if (GetTypeId() == TYPEID_PLAYER)
         DEBUG_LOG("AttackerStateUpdate: (Player) %u attacked %u (TypeId: %u) for %u dmg, absorbed %u, blocked %u, resisted %u.",
                   GetGUIDLow(), victim->GetGUIDLow(), victim->GetTypeId(), damageInfo.damage, damageInfo.absorb, damageInfo.blocked_amount, damageInfo.resist);
@@ -12160,8 +12160,8 @@ void Unit::UpdateReactives(uint32 p_time)
 Unit* Unit::SelectNearbyTarget(Unit* exclude, float dist) const
 {
     std::list<Unit* > targets;
-    Oregon::AnyUnfriendlyUnitInObjectRangeCheck u_check(this, this, dist);
-    Oregon::UnitListSearcher<Oregon::AnyUnfriendlyUnitInObjectRangeCheck> searcher(targets, u_check);
+    MaNGOS::AnyUnfriendlyUnitInObjectRangeCheck u_check(this, this, dist);
+    MaNGOS::UnitListSearcher<MaNGOS::AnyUnfriendlyUnitInObjectRangeCheck> searcher(targets, u_check);
     VisitNearbyObject(dist, searcher);
 
     // remove current target
@@ -12194,18 +12194,18 @@ Unit* Unit::SelectNearbyTarget(Unit* exclude, float dist) const
 
 Player* Unit::SelectNearestPlayer(float distance) const
 {
-    CellCoord pair(Oregon::ComputeCellCoord(GetPositionX(), GetPositionY()));
+    CellCoord pair(MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY()));
     Cell cell(pair);
     cell.SetNoCreate();
 
     Player* pPlayer = NULL;
 
     {
-        Oregon::NearestPlayerInObjectRangeCheck creature_check(*this, distance);
-        Oregon::PlayerSearcher<Oregon::NearestPlayerInObjectRangeCheck> searcher(pPlayer, creature_check);
+        MaNGOS::NearestPlayerInObjectRangeCheck creature_check(*this, distance);
+        MaNGOS::PlayerSearcher<MaNGOS::NearestPlayerInObjectRangeCheck> searcher(pPlayer, creature_check);
 
-        TypeContainerVisitor<Oregon::PlayerSearcher<Oregon::NearestPlayerInObjectRangeCheck>, WorldTypeMapContainer> world_player_searcher(searcher);
-        TypeContainerVisitor<Oregon::PlayerSearcher<Oregon::NearestPlayerInObjectRangeCheck>, GridTypeMapContainer> grid_player_searcher(searcher);
+        TypeContainerVisitor<MaNGOS::PlayerSearcher<MaNGOS::NearestPlayerInObjectRangeCheck>, WorldTypeMapContainer> world_player_searcher(searcher);
+        TypeContainerVisitor<MaNGOS::PlayerSearcher<MaNGOS::NearestPlayerInObjectRangeCheck>, GridTypeMapContainer> grid_player_searcher(searcher);
 
         cell.Visit(pair, world_player_searcher, *GetMap(), *this, distance);
         cell.Visit(pair, grid_player_searcher, *GetMap(), *this, distance);
@@ -12643,7 +12643,7 @@ void Unit::RemoveAurasAtChanneledTarget(SpellEntry const* spellInfo, Unit* caste
 bool Unit::SetPosition(float x, float y, float z, float orientation, bool teleport)
 {
     // prevent crash when a bad coord is sent by the client
-    if (!Oregon::IsValidMapCoord(x, y, z, orientation))
+    if (!MaNGOS::IsValidMapCoord(x, y, z, orientation))
     {
         sLog.outDebug("Unit::SetPosition(%f, %f, %f) .. bad coordinates!", x, y, z);
         return false;
@@ -12708,7 +12708,7 @@ void Unit::SendTeleportPacket(Position& pos)
 }
 
 
-/*-----------------------Oregon-----------------------------*/
+/*-----------------------MaNGOS-----------------------------*/
 
 void Unit::Kill(Unit* victim, bool durabilityLoss)
 {
@@ -13600,7 +13600,7 @@ void Unit::UpdateObjectVisibility(bool forced)
     {
         WorldObject::UpdateObjectVisibility(true);
         // call MoveInLineOfSight for nearby creatures
-        Oregon::AIRelocationNotifier notifier(*this);
+        MaNGOS::AIRelocationNotifier notifier(*this);
         VisitNearbyObject(GetVisibilityRange(), notifier);
     }
 }

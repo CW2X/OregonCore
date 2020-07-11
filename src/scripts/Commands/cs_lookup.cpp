@@ -400,7 +400,7 @@ public:
 
                     // include rank in link name
                     if (rank)
-                        ss << handler->GetOregonString(LANG_SPELL_RANK) << rank;
+                        ss << handler->GetMaNGOSString(LANG_SPELL_RANK) << rank;
 
                     if (handler->GetSession())
                         ss << " " << localeNames[loc] << "]|h|r";
@@ -408,15 +408,15 @@ public:
                         ss << " " << localeNames[loc];
 
                     if (talent)
-                        ss << handler->GetOregonString(LANG_TALENT);
+                        ss << handler->GetMaNGOSString(LANG_TALENT);
                     if (passive)
-                        ss << handler->GetOregonString(LANG_PASSIVE);
+                        ss << handler->GetMaNGOSString(LANG_PASSIVE);
                     if (learn)
-                        ss << handler->GetOregonString(LANG_LEARN);
+                        ss << handler->GetMaNGOSString(LANG_LEARN);
                     if (known)
-                        ss << handler->GetOregonString(LANG_KNOWN);
+                        ss << handler->GetMaNGOSString(LANG_KNOWN);
                     if (active)
-                        ss << handler->GetOregonString(LANG_ACTIVE);
+                        ss << handler->GetMaNGOSString(LANG_ACTIVE);
 
                     handler->SendSysMessage(ss.str().c_str());
 
@@ -467,7 +467,7 @@ public:
                     return true;
                 }
 
-                char const* active = activeEvents.find(id) != activeEvents.end() ? handler->GetOregonString(LANG_ACTIVE) : "";
+                char const* active = activeEvents.find(id) != activeEvents.end() ? handler->GetMaNGOSString(LANG_ACTIVE) : "";
 
                 if (handler->GetSession())
                     handler->PSendSysMessage(LANG_EVENT_ENTRY_LIST_CHAT, id, id, eventData.description.c_str(), active);
@@ -546,25 +546,25 @@ public:
                     if (factionState)                               // and then target != NULL also
                     {
                         ReputationRank rank = target->GetReputationMgr().GetRank(factionEntry);
-                        std::string rankName = handler->GetOregonString(ReputationRankStrIndex[rank]);
+                        std::string rankName = handler->GetMaNGOSString(ReputationRankStrIndex[rank]);
 
                         ss << " " << rankName << "|h|r (" << target->GetReputationMgr().GetReputation(factionEntry) << ")";
 
                         if (factionState->Flags & FACTION_FLAG_VISIBLE)
-                            ss << handler->GetOregonString(LANG_FACTION_VISIBLE);
+                            ss << handler->GetMaNGOSString(LANG_FACTION_VISIBLE);
                         if (factionState->Flags & FACTION_FLAG_AT_WAR)
-                            ss << handler->GetOregonString(LANG_FACTION_ATWAR);
+                            ss << handler->GetMaNGOSString(LANG_FACTION_ATWAR);
                         if (factionState->Flags & FACTION_FLAG_PEACE_FORCED)
-                            ss << handler->GetOregonString(LANG_FACTION_PEACE_FORCED);
+                            ss << handler->GetMaNGOSString(LANG_FACTION_PEACE_FORCED);
                         if (factionState->Flags & FACTION_FLAG_HIDDEN)
-                            ss << handler->GetOregonString(LANG_FACTION_HIDDEN);
+                            ss << handler->GetMaNGOSString(LANG_FACTION_HIDDEN);
                         if (factionState->Flags & FACTION_FLAG_INVISIBLE_FORCED)
-                            ss << handler->GetOregonString(LANG_FACTION_INVISIBLE_FORCED);
+                            ss << handler->GetMaNGOSString(LANG_FACTION_INVISIBLE_FORCED);
                         if (factionState->Flags & FACTION_FLAG_INACTIVE)
-                            ss << handler->GetOregonString(LANG_FACTION_INACTIVE);
+                            ss << handler->GetMaNGOSString(LANG_FACTION_INACTIVE);
                     }
                     else
-                        ss << handler->GetOregonString(LANG_FACTION_NOREPUTATION);
+                        ss << handler->GetMaNGOSString(LANG_FACTION_NOREPUTATION);
 
                     handler->SendSysMessage(ss.str().c_str());
                     counter++;
@@ -869,12 +869,12 @@ public:
                                 if (status == QUEST_STATUS_COMPLETE)
                                 {
                                     if (target->GetQuestRewardStatus(qinfo->GetQuestId()))
-                                        statusStr = handler->GetOregonString(LANG_COMMAND_QUEST_REWARDED);
+                                        statusStr = handler->GetMaNGOSString(LANG_COMMAND_QUEST_REWARDED);
                                     else
-                                        statusStr = handler->GetOregonString(LANG_COMMAND_QUEST_COMPLETE);
+                                        statusStr = handler->GetMaNGOSString(LANG_COMMAND_QUEST_COMPLETE);
                                 }
                                 else if (status == QUEST_STATUS_INCOMPLETE)
-                                    statusStr = handler->GetOregonString(LANG_COMMAND_QUEST_ACTIVE);
+                                    statusStr = handler->GetMaNGOSString(LANG_COMMAND_QUEST_ACTIVE);
                             }
 
                             if (handler->GetSession())
@@ -912,12 +912,12 @@ public:
                     if (status == QUEST_STATUS_COMPLETE)
                     {
                         if (target->GetQuestRewardStatus(qinfo->GetQuestId()))
-                            statusStr = handler->GetOregonString(LANG_COMMAND_QUEST_REWARDED);
+                            statusStr = handler->GetMaNGOSString(LANG_COMMAND_QUEST_REWARDED);
                         else
-                            statusStr = handler->GetOregonString(LANG_COMMAND_QUEST_COMPLETE);
+                            statusStr = handler->GetMaNGOSString(LANG_COMMAND_QUEST_COMPLETE);
                     }
                     else if (status == QUEST_STATUS_INCOMPLETE)
-                        statusStr = handler->GetOregonString(LANG_COMMAND_QUEST_ACTIVE);
+                        statusStr = handler->GetMaNGOSString(LANG_COMMAND_QUEST_ACTIVE);
                 }
 
                 if (handler->GetSession())
@@ -995,7 +995,7 @@ public:
 
                     char const* knownStr = "";
                     if (target && target->HasSkill(id))
-                        knownStr = handler->GetOregonString(LANG_KNOWN);
+                        knownStr = handler->GetMaNGOSString(LANG_KNOWN);
 
                     // send skill in "id - [namedlink locale]" format
                     if (handler->GetSession())
@@ -1131,10 +1131,10 @@ public:
                         return true;
                     }
 
-                    char const* knownStr = target && target->HasTitle(titleInfo) ? handler->GetOregonString(LANG_KNOWN) : "";
+                    char const* knownStr = target && target->HasTitle(titleInfo) ? handler->GetMaNGOSString(LANG_KNOWN) : "";
 
                     char const* activeStr = target && target->GetUInt32Value(PLAYER_CHOSEN_TITLE) == titleInfo->bit_index
-                        ? handler->GetOregonString(LANG_ACTIVE)
+                        ? handler->GetMaNGOSString(LANG_ACTIVE)
                         : "";
 
                     char titleNameStr[80];

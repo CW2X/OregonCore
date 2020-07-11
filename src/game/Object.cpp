@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -319,7 +319,7 @@ void Object::_BuildMovementUpdate(ByteBuffer* data, uint8 updateFlags) const
                 *data << (float)ToPlayer()->GetTransOffsetO();
                 *data << (uint32)ToPlayer()->GetTransTime();
             }
-            //Oregon currently not have support for other than player on transport
+            //MaNGOS currently not have support for other than player on transport
         }
 
         // 0x02200000
@@ -1407,8 +1407,8 @@ void WorldObject::GetRandomPoint(const Position& pos, float distance, float& ran
     rand_y = pos.m_positionY + new_dist * sin(angle);
     rand_z = pos.m_positionZ;
 
-    Oregon::NormalizeMapCoord(rand_x);
-    Oregon::NormalizeMapCoord(rand_y);
+    MaNGOS::NormalizeMapCoord(rand_x);
+    MaNGOS::NormalizeMapCoord(rand_y);
     UpdateGroundPositionZ(rand_x, rand_y, rand_z);          // update to LOS height if available
 }
 
@@ -1822,7 +1822,7 @@ void Object::ForceValuesUpdateAtIndex(uint32 i)
     }
 }
 
-namespace Oregon
+namespace MaNGOS
 {
 class MonsterChatBuilder
 {
@@ -1831,7 +1831,7 @@ class MonsterChatBuilder
             : i_object(obj), i_msgtype(msgtype), i_textId(textId), i_language(language), i_targetGUID(targetGUID) {}
         void operator()(WorldPacket& data, int32 loc_idx)
         {
-            char const* text = sObjectMgr.GetOregonString(i_textId, loc_idx);
+            char const* text = sObjectMgr.GetMaNGOSString(i_textId, loc_idx);
 
             // @todo i_object.GetName() also must be localized?
             i_object.BuildMonsterChat(&data, i_msgtype, text, i_language, i_object.GetNameForLocaleIdx(loc_idx), i_targetGUID);
@@ -1844,40 +1844,40 @@ class MonsterChatBuilder
         uint32 i_language;
         uint64 i_targetGUID;
 };
-}                                                           // namespace Oregon
+}                                                           // namespace MaNGOS
 
 void WorldObject::MonsterSay(int32 textId, uint32 language, uint64 TargetGuid)
 {
-    CellCoord p = Oregon::ComputeCellCoord(GetPositionX(), GetPositionY());
+    CellCoord p = MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY());
 
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::MonsterChatBuilder say_build(*this, CHAT_MSG_MONSTER_SAY, textId, language, TargetGuid);
-    Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> say_do(say_build);
-    Oregon::PlayerDistWorker<Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> > say_worker(sWorld.getConfig(CONFIG_LISTEN_RANGE_SAY), say_do);
-    TypeContainerVisitor<Oregon::PlayerDistWorker<Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> >, WorldTypeMapContainer > message(say_worker);
+    MaNGOS::MonsterChatBuilder say_build(*this, CHAT_MSG_MONSTER_SAY, textId, language, TargetGuid);
+    MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> say_do(say_build);
+    MaNGOS::PlayerDistWorker<MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> > say_worker(sWorld.getConfig(CONFIG_LISTEN_RANGE_SAY), say_do);
+    TypeContainerVisitor<MaNGOS::PlayerDistWorker<MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> >, WorldTypeMapContainer > message(say_worker);
     cell.Visit(p, message, *GetMap(), *this, sWorld.getConfig(CONFIG_LISTEN_RANGE_SAY));
 }
 
 void WorldObject::MonsterYell(int32 textId, uint32 language, uint64 TargetGuid)
 {
-    CellCoord p = Oregon::ComputeCellCoord(GetPositionX(), GetPositionY());
+    CellCoord p = MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY());
 
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::MonsterChatBuilder say_build(*this, CHAT_MSG_MONSTER_YELL, textId, language, TargetGuid);
-    Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> say_do(say_build);
-    Oregon::PlayerDistWorker<Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> > say_worker(sWorld.getConfig(CONFIG_LISTEN_RANGE_YELL), say_do);
-    TypeContainerVisitor<Oregon::PlayerDistWorker<Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> >, WorldTypeMapContainer > message(say_worker);
+    MaNGOS::MonsterChatBuilder say_build(*this, CHAT_MSG_MONSTER_YELL, textId, language, TargetGuid);
+    MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> say_do(say_build);
+    MaNGOS::PlayerDistWorker<MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> > say_worker(sWorld.getConfig(CONFIG_LISTEN_RANGE_YELL), say_do);
+    TypeContainerVisitor<MaNGOS::PlayerDistWorker<MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> >, WorldTypeMapContainer > message(say_worker);
     cell.Visit(p, message, *GetMap(), *this, sWorld.getConfig(CONFIG_LISTEN_RANGE_YELL));
 }
 
 void WorldObject::MonsterYellToZone(int32 textId, uint32 language, uint64 TargetGuid)
 {
-    Oregon::MonsterChatBuilder say_build(*this, CHAT_MSG_MONSTER_YELL, textId, language, TargetGuid);
-    Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> say_do(say_build);
+    MaNGOS::MonsterChatBuilder say_build(*this, CHAT_MSG_MONSTER_YELL, textId, language, TargetGuid);
+    MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> say_do(say_build);
 
     uint32 zoneid = GetZoneId();
 
@@ -1889,15 +1889,15 @@ void WorldObject::MonsterYellToZone(int32 textId, uint32 language, uint64 Target
 
 void WorldObject::MonsterTextEmote(int32 textId, uint64 TargetGuid, bool IsBossEmote)
 {
-    CellCoord p = Oregon::ComputeCellCoord(GetPositionX(), GetPositionY());
+    CellCoord p = MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY());
 
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::MonsterChatBuilder say_build(*this, IsBossEmote ? CHAT_MSG_RAID_BOSS_EMOTE : CHAT_MSG_MONSTER_EMOTE, textId, LANG_UNIVERSAL, TargetGuid);
-    Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> say_do(say_build);
-    Oregon::PlayerDistWorker<Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> > say_worker(sWorld.getConfig(CONFIG_LISTEN_RANGE_TEXTEMOTE), say_do);
-    TypeContainerVisitor<Oregon::PlayerDistWorker<Oregon::LocalizedPacketDo<Oregon::MonsterChatBuilder> >, WorldTypeMapContainer > message(say_worker);
+    MaNGOS::MonsterChatBuilder say_build(*this, IsBossEmote ? CHAT_MSG_RAID_BOSS_EMOTE : CHAT_MSG_MONSTER_EMOTE, textId, LANG_UNIVERSAL, TargetGuid);
+    MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> say_do(say_build);
+    MaNGOS::PlayerDistWorker<MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> > say_worker(sWorld.getConfig(CONFIG_LISTEN_RANGE_TEXTEMOTE), say_do);
+    TypeContainerVisitor<MaNGOS::PlayerDistWorker<MaNGOS::LocalizedPacketDo<MaNGOS::MonsterChatBuilder> >, WorldTypeMapContainer > message(say_worker);
     cell.Visit(p, message, *GetMap(), *this, sWorld.getConfig(CONFIG_LISTEN_RANGE_TEXTEMOTE));
 }
 
@@ -1908,7 +1908,7 @@ void WorldObject::MonsterWhisper(int32 textId, uint64 receiver, bool IsBossWhisp
         return;
 
     uint32 loc_idx = player->GetSession()->GetSessionDbLocaleIndex();
-    char const* text = sObjectMgr.GetOregonString(textId, loc_idx);
+    char const* text = sObjectMgr.GetMaNGOSString(textId, loc_idx);
 
     WorldPacket data(SMSG_MESSAGECHAT, 200);
     BuildMonsterChat(&data, IsBossWhisper ? CHAT_MSG_RAID_BOSS_WHISPER : CHAT_MSG_MONSTER_WHISPER, text, LANG_UNIVERSAL, GetName(), receiver);
@@ -1944,7 +1944,7 @@ void Unit::BuildHeartBeatMsg(WorldPacket* data) const
 
 void WorldObject::SendMessageToSetInRange(WorldPacket* data, float dist, bool /*bToSelf*/)
 {
-    Oregon::MessageDistDeliverer notifier(this, data, dist);
+    MaNGOS::MessageDistDeliverer notifier(this, data, dist);
     VisitNearbyWorldObject(dist, notifier);
 }
 
@@ -2304,8 +2304,8 @@ void WorldObject::SummonCreatureGroup(uint8 group, std::list<TempSummon*>* list 
 Creature* WorldObject::FindNearestCreature(uint32 entry, float range, bool alive)
 {
     Creature* creature = NULL;
-    Oregon::NearestCreatureEntryWithLiveStateInObjectRangeCheck checker(*this, entry, alive, range);
-    Oregon::CreatureLastSearcher<Oregon::NearestCreatureEntryWithLiveStateInObjectRangeCheck> searcher(creature, checker);
+    MaNGOS::NearestCreatureEntryWithLiveStateInObjectRangeCheck checker(*this, entry, alive, range);
+    MaNGOS::CreatureLastSearcher<MaNGOS::NearestCreatureEntryWithLiveStateInObjectRangeCheck> searcher(creature, checker);
     VisitNearbyObject(range, searcher);
     return creature;
 }
@@ -2313,8 +2313,8 @@ Creature* WorldObject::FindNearestCreature(uint32 entry, float range, bool alive
 GameObject* WorldObject::FindNearestGameObject(uint32 entry, float range)
 {
     GameObject* go = NULL;
-    Oregon::NearestGameObjectEntryInObjectRangeCheck checker(*this, entry, range);
-    Oregon::GameObjectLastSearcher<Oregon::NearestGameObjectEntryInObjectRangeCheck> searcher(go, checker);
+    MaNGOS::NearestGameObjectEntryInObjectRangeCheck checker(*this, entry, range);
+    MaNGOS::GameObjectLastSearcher<MaNGOS::NearestGameObjectEntryInObjectRangeCheck> searcher(go, checker);
     VisitNearbyGridObject(range, searcher);
     return go;
 }
@@ -2322,34 +2322,34 @@ GameObject* WorldObject::FindNearestGameObject(uint32 entry, float range)
 GameObject* WorldObject::FindNearestGameObjectOfType(GameobjectTypes type, float range) const
 {
     GameObject* go = NULL;
-    Oregon::NearestGameObjectTypeInObjectRangeCheck checker(*this, type, range);
-    Oregon::GameObjectLastSearcher<Oregon::NearestGameObjectTypeInObjectRangeCheck> searcher(go, checker);
+    MaNGOS::NearestGameObjectTypeInObjectRangeCheck checker(*this, type, range);
+    MaNGOS::GameObjectLastSearcher<MaNGOS::NearestGameObjectTypeInObjectRangeCheck> searcher(go, checker);
     VisitNearbyGridObject(range, searcher);
     return go;
 }
 
 void WorldObject::GetGameObjectListWithEntryInGrid(std::list<GameObject*>& gameobjectList, uint32 entry, float maxSearchRange) const
 {
-    CellCoord pair(Oregon::ComputeCellCoord(this->GetPositionX(), this->GetPositionY()));
+    CellCoord pair(MaNGOS::ComputeCellCoord(this->GetPositionX(), this->GetPositionY()));
     Cell cell(pair);
     cell.SetNoCreate();
 
-    Oregon::AllGameObjectsWithEntryInRange check(this, entry, maxSearchRange);
-    Oregon::GameObjectListSearcher<Oregon::AllGameObjectsWithEntryInRange> searcher(gameobjectList, check);
-    TypeContainerVisitor<Oregon::GameObjectListSearcher<Oregon::AllGameObjectsWithEntryInRange>, GridTypeMapContainer> visitor(searcher);
+    MaNGOS::AllGameObjectsWithEntryInRange check(this, entry, maxSearchRange);
+    MaNGOS::GameObjectListSearcher<MaNGOS::AllGameObjectsWithEntryInRange> searcher(gameobjectList, check);
+    TypeContainerVisitor<MaNGOS::GameObjectListSearcher<MaNGOS::AllGameObjectsWithEntryInRange>, GridTypeMapContainer> visitor(searcher);
 
     cell.Visit(pair, visitor, *(this->GetMap()), *this, maxSearchRange);
 }
 
 void WorldObject::GetCreatureListWithEntryInGrid(std::list<Creature*>& creatureList, uint32 entry, float maxSearchRange) const
 {
-    CellCoord pair(Oregon::ComputeCellCoord(this->GetPositionX(), this->GetPositionY()));
+    CellCoord pair(MaNGOS::ComputeCellCoord(this->GetPositionX(), this->GetPositionY()));
     Cell cell(pair);
     cell.SetNoCreate();
 
-    Oregon::AllCreaturesOfEntryInRange check(this, entry, maxSearchRange);
-    Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange> searcher(creatureList, check);
-    TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::AllCreaturesOfEntryInRange>, GridTypeMapContainer> visitor(searcher);
+    MaNGOS::AllCreaturesOfEntryInRange check(this, entry, maxSearchRange);
+    MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange> searcher(creatureList, check);
+    TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::AllCreaturesOfEntryInRange>, GridTypeMapContainer> visitor(searcher);
 
     cell.Visit(pair, visitor, *(this->GetMap()), *this, maxSearchRange);
 }
@@ -2359,8 +2359,8 @@ void WorldObject::GetNearPoint2D(float& x, float& y, float distance2d, float abs
     x = GetPositionX() + (GetObjectSize() + distance2d) * cos(absAngle);
     y = GetPositionY() + (GetObjectSize() + distance2d) * sin(absAngle);
 
-    Oregon::NormalizeMapCoord(x);
-    Oregon::NormalizeMapCoord(y);
+    MaNGOS::NormalizeMapCoord(x);
+    MaNGOS::NormalizeMapCoord(y);
 }
 
 void WorldObject::GetNearPoint(WorldObject const* searcher, float& x, float& y, float& z, float searcher_size, float distance2d, float absAngle) const
@@ -2480,14 +2480,14 @@ void WorldObject::MovePosition(Position& pos, float dist, float angle)
     desty = pos.m_positionY + dist * sin(angle);
 
     // Prevent invalid coordinates here, position is unchanged
-    if (!Oregon::IsValidMapCoord(destx, desty, pos.m_positionZ))
+    if (!MaNGOS::IsValidMapCoord(destx, desty, pos.m_positionZ))
     {
         sLog.outString("WorldObject::MovePosition invalid coordinates X: %f and Y: %f were passed!", destx, desty);
         return;
     }
 
     // Prevent invalid coordinates here, position is unchanged
-    if (!Oregon::IsValidMapCoord(destx, desty))
+    if (!MaNGOS::IsValidMapCoord(destx, desty))
     {
         sLog.outError("Crash alert! WorldObject::MovePositionToFirstCollision invalid coordinates X: %f and Y: %f were passed!", destx, desty);
         return;
@@ -2518,8 +2518,8 @@ void WorldObject::MovePosition(Position& pos, float dist, float angle)
         }
     }
 
-    Oregon::NormalizeMapCoord(pos.m_positionX);
-    Oregon::NormalizeMapCoord(pos.m_positionY);
+    MaNGOS::NormalizeMapCoord(pos.m_positionX);
+    MaNGOS::NormalizeMapCoord(pos.m_positionY);
     UpdateGroundPositionZ(pos.m_positionX, pos.m_positionY, pos.m_positionZ);
     pos.SetOrientation(GetOrientation());
 }
@@ -2534,7 +2534,7 @@ void WorldObject::MovePositionToFirstCollision(Position& pos, float dist, float 
     destz = pos.GetPositionZ();
 
     // Prevent invalid coordinates here, position is unchanged
-    if (!Oregon::IsValidMapCoord(destx, desty))
+    if (!MaNGOS::IsValidMapCoord(destx, desty))
     {
         sLog.outFatal("WorldObject::MovePositionToFirstCollision invalid coordinates X: %f and Y: %f were passed!", destx, desty);
         return;
@@ -2605,8 +2605,8 @@ void WorldObject::MovePositionToFirstCollision(Position& pos, float dist, float 
         destz = prevdz;
     }
 
-    Oregon::NormalizeMapCoord(destx);
-    Oregon::NormalizeMapCoord(desty);
+    MaNGOS::NormalizeMapCoord(destx);
+    MaNGOS::NormalizeMapCoord(desty);
     pos.Relocate(destx, desty, destz);
     pos.SetOrientation(GetOrientation());
 }
@@ -2638,8 +2638,8 @@ void WorldObject::DestroyForNearbyPlayers()
         return;
 
     std::list<Player*> targets;
-    Oregon::AnyPlayerInObjectRangeCheck check(this, GetVisibilityRange(), false);
-    Oregon::PlayerListSearcher<Oregon::AnyPlayerInObjectRangeCheck> searcher(targets, check);
+    MaNGOS::AnyPlayerInObjectRangeCheck check(this, GetVisibilityRange(), false);
+    MaNGOS::PlayerListSearcher<MaNGOS::AnyPlayerInObjectRangeCheck> searcher(targets, check);
     VisitNearbyWorldObject(GetVisibilityRange(), searcher);
     for (std::list<Player*>::const_iterator iter = targets.begin(); iter != targets.end(); ++iter)
     {
@@ -2669,7 +2669,7 @@ void WorldObject::DestroyForNearbyPlayers()
 void WorldObject::UpdateObjectVisibility(bool /*forced*/)
 {
     //updates object's visibility for nearby players
-    Oregon::VisibleChangesNotifier notifier(*this);
+    MaNGOS::VisibleChangesNotifier notifier(*this);
     VisitNearbyWorldObject(GetVisibilityRange(), notifier);
 }
 
@@ -2734,7 +2734,7 @@ struct WorldObjectChangeAccumulator
 
 void WorldObject::BuildUpdate(UpdateDataMapType& data_map)
 {
-    CellCoord p = Oregon::ComputeCellCoord(GetPositionX(), GetPositionY());
+    CellCoord p = MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY());
     Cell cell(p);
     cell.SetNoCreate();
     WorldObjectChangeAccumulator notifier(*this, data_map);

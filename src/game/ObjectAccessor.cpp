@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -30,7 +30,7 @@
 #include "ObjectGuid.h"
 #include "World.h"
 
-#define CLASS_LOCK Oregon::ClassLevelLockable<ObjectAccessor, ACE_Thread_Mutex>
+#define CLASS_LOCK MaNGOS::ClassLevelLockable<ObjectAccessor, ACE_Thread_Mutex>
 INSTANTIATE_SINGLETON_2(ObjectAccessor, CLASS_LOCK);
 INSTANTIATE_CLASS_MUTEX(ObjectAccessor, ACE_Thread_Mutex);
 
@@ -236,7 +236,7 @@ void ObjectAccessor::RemoveCorpse(Corpse* corpse)
             return;
 
         // build mapid*cellid -> guid_set map
-        CellCoord cellCoord = Oregon::ComputeCellCoord(corpse->GetPositionX(), corpse->GetPositionY());
+        CellCoord cellCoord = MaNGOS::ComputeCellCoord(corpse->GetPositionX(), corpse->GetPositionY());
         sObjectMgr.DeleteCorpseCellData(corpse->GetMapId(), cellCoord.GetId(), GUID_LOPART(corpse->GetOwnerGUID()));
 
         i_player2corpse.erase(iter);
@@ -255,7 +255,7 @@ void ObjectAccessor::AddCorpse(Corpse* corpse)
         i_player2corpse[corpse->GetOwnerGUID()] = corpse;
 
         // build mapid*cellid -> guid_set map
-        CellCoord cellCoord = Oregon::ComputeCellCoord(corpse->GetPositionX(), corpse->GetPositionY());
+        CellCoord cellCoord = MaNGOS::ComputeCellCoord(corpse->GetPositionX(), corpse->GetPositionY());
         sObjectMgr.AddCorpseCellData(corpse->GetMapId(), cellCoord.GetId(), GUID_LOPART(corpse->GetOwnerGUID()), corpse->GetInstanceId());
     }
 }

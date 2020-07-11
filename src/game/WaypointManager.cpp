@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -63,8 +63,8 @@ void WaypointMgr::Load()
         float z = fields[4].GetFloat();
         float o = fields[5].GetFloat();
 
-        Oregon::NormalizeMapCoord(x);
-        Oregon::NormalizeMapCoord(y);
+        MaNGOS::NormalizeMapCoord(x);
+        MaNGOS::NormalizeMapCoord(y);
 
         wp->id = fields[1].GetUInt32();
         wp->x = x;
@@ -111,8 +111,8 @@ void WaypointMgr::ReloadPath(uint32 id)
         float z = fields[3].GetFloat();
         float o = fields[4].GetFloat();
 
-        Oregon::NormalizeMapCoord(x);
-        Oregon::NormalizeMapCoord(y);
+        MaNGOS::NormalizeMapCoord(x);
+        MaNGOS::NormalizeMapCoord(y);
 
         wp->id = fields[0].GetUInt32();
         wp->x = x;

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -207,7 +207,7 @@ public:
         target->SetMaxPower(POWER_ENERGY, energym);
         target->SetPower(POWER_ENERGY, energy);
 
-        sLog.outDetail(handler->GetOregonString(LANG_CURRENT_ENERGY), target->GetMaxPower(POWER_ENERGY));
+        sLog.outDetail(handler->GetMaNGOSString(LANG_CURRENT_ENERGY), target->GetMaxPower(POWER_ENERGY));
 
         return true;
     }
@@ -233,7 +233,7 @@ public:
         {
             int32 newmoney = moneyuser + addmoney;
 
-            sLog.outDetail(handler->GetOregonString(LANG_CURRENT_MONEY), moneyuser, addmoney, newmoney);
+            sLog.outDetail(handler->GetMaNGOSString(LANG_CURRENT_MONEY), moneyuser, addmoney, newmoney);
             if (newmoney <= 0)
             {
                 handler->PSendSysMessage(LANG_YOU_TAKE_ALL_MONEY, target->GetName());
@@ -258,7 +258,7 @@ public:
             target->ModifyMoney(addmoney);
         }
 
-        sLog.outDetail(handler->GetOregonString(LANG_NEW_MONEY), moneyuser, addmoney, target->GetMoney());
+        sLog.outDetail(handler->GetMaNGOSString(LANG_NEW_MONEY), moneyuser, addmoney, target->GetMoney());
 
         return true;
     }
@@ -996,7 +996,7 @@ public:
             amount = -42000;
             for (; r < MAX_REPUTATION_RANK; ++r)
             {
-                std::string rank = handler->GetOregonString(ReputationRankStrIndex[r]);
+                std::string rank = handler->GetMaNGOSString(ReputationRankStrIndex[r]);
                 if (rank.empty())
                     continue;
 

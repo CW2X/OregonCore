@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -281,8 +281,8 @@ bool OPvPCapturePoint::Update(uint32 diff)
     }
 
     std::list<Player*> players;
-    Oregon::AnyPlayerInObjectRangeCheck checker(m_capturePoint, radius);
-    Oregon::PlayerListSearcher<Oregon::AnyPlayerInObjectRangeCheck> searcher(players, checker);
+    MaNGOS::AnyPlayerInObjectRangeCheck checker(m_capturePoint, radius);
+    MaNGOS::PlayerListSearcher<MaNGOS::AnyPlayerInObjectRangeCheck> searcher(players, checker);
     m_capturePoint->VisitNearbyWorldObject(radius, searcher);
 
     for (std::list<Player*>::iterator itr = players.begin(); itr != players.end(); ++itr)

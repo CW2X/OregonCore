@@ -1,8 +1,8 @@
 <?php
 
 define('DB_SERVER', '127.0.0.1');
-define('DB_USERNAME', 'oregon');
-define('DB_PASSWORD', 'oregon');
+define('DB_USERNAME', 'mangos');
+define('DB_PASSWORD', 'mangos');
 define('DB_NAME', 'realmd');
 
 try{

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,12 +15,12 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_THREADINGMODEL_H
-#define OREGON_THREADINGMODEL_H
+#ifndef MANGOS_THREADINGMODEL_H
+#define MANGOS_THREADINGMODEL_H
 
 #include "Platform/Define.h"
 
-namespace Oregon
+namespace MaNGOS
 {
 inline void Guard(void*) {}
 
@@ -126,9 +126,9 @@ class ClassLevelLockable
 
 }
 
-template<class T, class MUTEX> MUTEX Oregon::ClassLevelLockable<T, MUTEX>::si_mtx;
+template<class T, class MUTEX> MUTEX MaNGOS::ClassLevelLockable<T, MUTEX>::si_mtx;
 
 #define INSTANTIATE_CLASS_MUTEX(CTYPE,MUTEX) \
-    template class Oregon::ClassLevelLockable<CTYPE, MUTEX >
+    template class MaNGOS::ClassLevelLockable<CTYPE, MUTEX >
 #endif
 

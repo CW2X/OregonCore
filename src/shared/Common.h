@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGONCORE_COMMON_H
-#define OREGONCORE_COMMON_H
+#ifndef MANGOSCORE_COMMON_H
+#define MANGOSCORE_COMMON_H
 
 // config.h needs to be included 1st
 // TODO this thingy looks like hack ,but its not, need to
@@ -24,7 +24,7 @@
 #ifdef HAVE_CONFIG_H
 // Remove Some things that we will define
 // This is in case including another config.h
-// before Oregon config.h
+// before MaNGOS config.h
 #ifdef PACKAGE
 #undef PACKAGE
 #endif //PACKAGE

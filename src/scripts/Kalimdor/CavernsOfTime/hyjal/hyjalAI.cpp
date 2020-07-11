@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -1041,15 +1041,15 @@ void hyjalAI::JustDied(Unit* /*killer*/)
 
 void hyjalAI::HideNearPos(float x, float y)
 {
-    CellCoord pair(Oregon::ComputeCellCoord(x, y));
+    CellCoord pair(MaNGOS::ComputeCellCoord(x, y));
     Cell cell(pair);
     cell.SetNoCreate();
 
     // First get all creatures.
     std::list<Creature*> creatures;
-    Oregon::AllFriendlyCreaturesInGrid creature_check(me);
-    Oregon::CreatureListSearcher<Oregon::AllFriendlyCreaturesInGrid> creature_searcher(creatures, creature_check);
-    TypeContainerVisitor <Oregon::CreatureListSearcher<Oregon::AllFriendlyCreaturesInGrid>, GridTypeMapContainer> creature_visitor(creature_searcher); 
+    MaNGOS::AllFriendlyCreaturesInGrid creature_check(me);
+    MaNGOS::CreatureListSearcher<MaNGOS::AllFriendlyCreaturesInGrid> creature_searcher(creatures, creature_check);
+    TypeContainerVisitor <MaNGOS::CreatureListSearcher<MaNGOS::AllFriendlyCreaturesInGrid>, GridTypeMapContainer> creature_visitor(creature_searcher); 
     cell.Visit(pair, creature_visitor, *(me->GetMap()), *me, me->GetGridActivationRange());
 
     if (!creatures.empty())
@@ -1064,13 +1064,13 @@ void hyjalAI::HideNearPos(float x, float y)
 
 void hyjalAI::RespawnNearPos(float x, float y)
 {
-    CellCoord p(Oregon::ComputeCellCoord(x, y));
+    CellCoord p(MaNGOS::ComputeCellCoord(x, y));
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::RespawnDo u_do;
-    Oregon::WorldObjectWorker<Oregon::RespawnDo> worker(u_do);
-    TypeContainerVisitor<Oregon::WorldObjectWorker<Oregon::RespawnDo>, GridTypeMapContainer > obj_worker(worker);
+    MaNGOS::RespawnDo u_do;
+    MaNGOS::WorldObjectWorker<MaNGOS::RespawnDo> worker(u_do);
+    TypeContainerVisitor<MaNGOS::WorldObjectWorker<MaNGOS::RespawnDo>, GridTypeMapContainer > obj_worker(worker);
     cell.Visit(p, obj_worker, *me->GetMap(), *me, me->GetGridActivationRange());
 }
 
@@ -1095,16 +1095,16 @@ void hyjalAI::WaypointReached(uint32 i)
         }
         //do some talking
         //all alive guards walk near here
-        CellCoord pair(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+        CellCoord pair(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
         Cell cell(pair);
         cell.SetNoCreate();
 
         // First get all creatures.
         std::list<Creature*> creatures;
-        Oregon::AllFriendlyCreaturesInGrid creature_check(me);
-        Oregon::CreatureListSearcher<Oregon::AllFriendlyCreaturesInGrid> creature_searcher(creatures, creature_check);
+        MaNGOS::AllFriendlyCreaturesInGrid creature_check(me);
+        MaNGOS::CreatureListSearcher<MaNGOS::AllFriendlyCreaturesInGrid> creature_searcher(creatures, creature_check);
         TypeContainerVisitor
-        <Oregon::CreatureListSearcher<Oregon::AllFriendlyCreaturesInGrid>,
+        <MaNGOS::CreatureListSearcher<MaNGOS::AllFriendlyCreaturesInGrid>,
         GridTypeMapContainer> creature_visitor(creature_searcher);
 
         cell.Visit(pair, creature_visitor, *(me->GetMap()), *me, me->GetGridActivationRange());
@@ -1137,15 +1137,15 @@ void hyjalAI::DoOverrun(uint32 faction, const uint32 diff)
     {
         if (TeleportTimer <= diff)
         {
-            CellCoord pair(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+            CellCoord pair(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
             Cell cell(pair);
             cell.SetNoCreate();
 
             std::list<Creature*> creatures;
-            Oregon::AllFriendlyCreaturesInGrid creature_check(me);
-            Oregon::CreatureListSearcher<Oregon::AllFriendlyCreaturesInGrid> creature_searcher(creatures, creature_check);
+            MaNGOS::AllFriendlyCreaturesInGrid creature_check(me);
+            MaNGOS::CreatureListSearcher<MaNGOS::AllFriendlyCreaturesInGrid> creature_searcher(creatures, creature_check);
             TypeContainerVisitor
-            <Oregon::CreatureListSearcher<Oregon::AllFriendlyCreaturesInGrid>,
+            <MaNGOS::CreatureListSearcher<MaNGOS::AllFriendlyCreaturesInGrid>,
             GridTypeMapContainer> creature_visitor(creature_searcher);
 
             cell.Visit(pair, creature_visitor, *(me->GetMap()), *me, me->GetGridActivationRange());

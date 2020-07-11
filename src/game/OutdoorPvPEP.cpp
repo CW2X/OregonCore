@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -185,13 +185,13 @@ void OPvPCapturePointEP::ChangeState()
         field = EP_MAP_A[m_TowerType];
         if (((OutdoorPvPEP*)m_PvP)->m_AllianceTowersControlled)
             ((OutdoorPvPEP*)m_PvP)->m_AllianceTowersControlled--;
-        sWorld.SendZoneText(OutdoorPvPEPBuffZones[0], sObjectMgr.GetOregonStringForDBCLocale(EP_LANG_LOOSE_A[m_TowerType]));
+        sWorld.SendZoneText(OutdoorPvPEPBuffZones[0], sObjectMgr.GetMaNGOSStringForDBCLocale(EP_LANG_LOOSE_A[m_TowerType]));
         break;
     case OBJECTIVESTATE_HORDE:
         field = EP_MAP_H[m_TowerType];
         if (((OutdoorPvPEP*)m_PvP)->m_HordeTowersControlled)
             ((OutdoorPvPEP*)m_PvP)->m_HordeTowersControlled--;
-        sWorld.SendZoneText(OutdoorPvPEPBuffZones[0], sObjectMgr.GetOregonStringForDBCLocale(EP_LANG_LOOSE_H[m_TowerType]));
+        sWorld.SendZoneText(OutdoorPvPEPBuffZones[0], sObjectMgr.GetMaNGOSStringForDBCLocale(EP_LANG_LOOSE_H[m_TowerType]));
         break;
     case OBJECTIVESTATE_NEUTRAL_ALLIANCE_CHALLENGE:
     case OBJECTIVESTATE_ALLIANCE_HORDE_CHALLENGE:
@@ -221,14 +221,14 @@ void OPvPCapturePointEP::ChangeState()
         artkit = 2;
         if (((OutdoorPvPEP*)m_PvP)->m_AllianceTowersControlled < 4)
             ((OutdoorPvPEP*)m_PvP)->m_AllianceTowersControlled++;
-        sWorld.SendZoneText(OutdoorPvPEPBuffZones[0], sObjectMgr.GetOregonStringForDBCLocale(EP_LANG_CAPTURE_A[m_TowerType]));
+        sWorld.SendZoneText(OutdoorPvPEPBuffZones[0], sObjectMgr.GetMaNGOSStringForDBCLocale(EP_LANG_CAPTURE_A[m_TowerType]));
         break;
     case OBJECTIVESTATE_HORDE:
         field = EP_MAP_H[m_TowerType];
         artkit = 1;
         if (((OutdoorPvPEP*)m_PvP)->m_HordeTowersControlled < 4)
             ((OutdoorPvPEP*)m_PvP)->m_HordeTowersControlled++;
-        sWorld.SendZoneText(OutdoorPvPEPBuffZones[0], sObjectMgr.GetOregonStringForDBCLocale(EP_LANG_CAPTURE_H[m_TowerType]));
+        sWorld.SendZoneText(OutdoorPvPEPBuffZones[0], sObjectMgr.GetMaNGOSStringForDBCLocale(EP_LANG_CAPTURE_H[m_TowerType]));
         break;
     case OBJECTIVESTATE_NEUTRAL_ALLIANCE_CHALLENGE:
     case OBJECTIVESTATE_ALLIANCE_HORDE_CHALLENGE:

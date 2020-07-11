@@ -1,5 +1,5 @@
 /*
-* This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+* This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
 * under the terms of the GNU General Public License as published by the
@@ -282,7 +282,7 @@ public:
                 if ((*itr) && (*itr)->IsAlive() && !(*itr)->HasFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE))
                     pieceList.push_back(*itr);
 
-            Oregon::RandomResizeList<Unit*>(pieceList, count);
+            MaNGOS::RandomResizeList<Unit*>(pieceList, count);
             return pieceList;
         }
 
@@ -315,8 +315,8 @@ public:
             {
                 std::list<Unit*> unitList;
                 uint32 searchEntry = ChessPieceEntrysAlliance[i];
-                Oregon::AllCreaturesOfEntryInRange u_check(me, searchEntry, 100);
-                Oregon::UnitListSearcher<Oregon::AllCreaturesOfEntryInRange> searcher(unitList, u_check);
+                MaNGOS::AllCreaturesOfEntryInRange u_check(me, searchEntry, 100);
+                MaNGOS::UnitListSearcher<MaNGOS::AllCreaturesOfEntryInRange> searcher(unitList, u_check);
                 me->GetMap()->VisitAll(me->GetPositionX(), me->GetPositionY(), me->GetPositionZ(), searcher);
                 for (std::list<Unit*>::iterator itr = unitList.begin(); itr != unitList.end(); itr++)
                 {
@@ -329,8 +329,8 @@ public:
             {
                 std::list<Unit*> unitList;
                 uint32 searchEntry = ChessPieceEntrysHorde[i];
-                Oregon::AllCreaturesOfEntryInRange u_check(me, searchEntry, 100);
-                Oregon::UnitListSearcher<Oregon::AllCreaturesOfEntryInRange> searcher(unitList, u_check);
+                MaNGOS::AllCreaturesOfEntryInRange u_check(me, searchEntry, 100);
+                MaNGOS::UnitListSearcher<MaNGOS::AllCreaturesOfEntryInRange> searcher(unitList, u_check);
                 me->GetMap()->VisitAll(me->GetPositionX(), me->GetPositionY(), me->GetPositionZ(), searcher);
                 for (std::list<Unit*>::iterator itr = unitList.begin(); itr != unitList.end(); itr++)
                 {
@@ -341,8 +341,8 @@ public:
             //load black fields
             {
                 std::list<Unit*> unitList;
-                Oregon::AllCreaturesOfEntryInRange u_check(me, NPC_BLACK_SQUARE, 100);
-                Oregon::UnitListSearcher<Oregon::AllCreaturesOfEntryInRange> searcher(unitList, u_check);
+                MaNGOS::AllCreaturesOfEntryInRange u_check(me, NPC_BLACK_SQUARE, 100);
+                MaNGOS::UnitListSearcher<MaNGOS::AllCreaturesOfEntryInRange> searcher(unitList, u_check);
                 me->GetMap()->VisitAll(me->GetPositionX(), me->GetPositionY(), me->GetPositionZ(), searcher);
                 for (std::list<Unit*>::iterator itr = unitList.begin(); itr != unitList.end(); itr++)
                 {
@@ -353,8 +353,8 @@ public:
             //load white fields
             {
                 std::list<Unit*> unitList;
-                Oregon::AllCreaturesOfEntryInRange check(me, NPC_WHITE_SQUARE, 100);
-                Oregon::UnitListSearcher<Oregon::AllCreaturesOfEntryInRange> _searcher(unitList, check);
+                MaNGOS::AllCreaturesOfEntryInRange check(me, NPC_WHITE_SQUARE, 100);
+                MaNGOS::UnitListSearcher<MaNGOS::AllCreaturesOfEntryInRange> _searcher(unitList, check);
                 me->GetMap()->VisitAll(me->GetPositionX(), me->GetPositionY(), me->GetPositionZ(), _searcher);
                 for (std::list<Unit*>::iterator itr = unitList.begin(); itr != unitList.end(); itr++)
                 {

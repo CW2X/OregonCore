@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,11 +15,11 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_GRID_H
-#define OREGON_GRID_H
+#ifndef MANGOS_GRID_H
+#define MANGOS_GRID_H
 
 /*
-  Grid is a logical segment of the game world represented inside Oregon.
+  Grid is a logical segment of the game world represented inside MaNGOS.
   Grid is bind at compile time to a particular type of object which
   we call it the object of interested.  There are many types of loader,
   specially, dynamic loader, static loader, or on-demand loader.  There's

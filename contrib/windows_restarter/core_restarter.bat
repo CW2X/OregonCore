@@ -1,9 +1,9 @@
 @ECHO OFF
-@title OregonCore
+@title MaNGOSCore
 CLS
 ECHO Initializing Core (World-Server)...
 :1
-start "Oregon Core" /B /MIN /WAIT oregon-core.exe -c oregoncore.conf
+start "MaNGOS Core" /B /MIN /WAIT mangos-core.exe -c mangoscore.conf
 if %errorlevel% == 0 goto end
 goto 1
 :end

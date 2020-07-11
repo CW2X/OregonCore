@@ -396,8 +396,8 @@ public:
         Field* fields = result->Fetch();
         bool permanent = !fields[6].GetUInt64();
         handler->PSendSysMessage(LANG_BANINFO_IPENTRY,
-            fields[0].GetString(), fields[1].GetString(), permanent ? handler->GetOregonString(LANG_BANINFO_NEVER) : fields[2].GetString(),
-            permanent ? handler->GetOregonString(LANG_BANINFO_INFINITE) : secsToTimeString(fields[3].GetUInt64(), true).c_str(), fields[4].GetString(), fields[5].GetString());
+            fields[0].GetString(), fields[1].GetString(), permanent ? handler->GetMaNGOSString(LANG_BANINFO_NEVER) : fields[2].GetString(),
+            permanent ? handler->GetMaNGOSString(LANG_BANINFO_INFINITE) : secsToTimeString(fields[3].GetUInt64(), true).c_str(), fields[4].GetString(), fields[5].GetString());
 
         return true;
     }
@@ -421,9 +421,9 @@ public:
             if (fields[2].GetBool() && (fields[1].GetUInt64() == (uint64)0 || unbandate >= time(NULL)))
                 active = true;
             bool permanent = (fields[1].GetUInt64() == (uint64)0);
-            std::string bantime = permanent ? handler->GetOregonString(LANG_BANINFO_INFINITE) : secsToTimeString(fields[1].GetUInt64(), true);
+            std::string bantime = permanent ? handler->GetMaNGOSString(LANG_BANINFO_INFINITE) : secsToTimeString(fields[1].GetUInt64(), true);
             handler->PSendSysMessage(LANG_BANINFO_HISTORYENTRY,
-                fields[0].GetString(), bantime.c_str(), active ? handler->GetOregonString(LANG_BANINFO_YES) : handler->GetOregonString(LANG_BANINFO_NO), fields[4].GetString(), fields[5].GetString());
+                fields[0].GetString(), bantime.c_str(), active ? handler->GetMaNGOSString(LANG_BANINFO_YES) : handler->GetMaNGOSString(LANG_BANINFO_NO), fields[4].GetString(), fields[5].GetString());
         } while (result->NextRow());
 
         return true;

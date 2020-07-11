@@ -378,8 +378,8 @@ public:
             return false;
         }
 
-        char const* talentStr = handler->GetOregonString(LANG_TALENT);
-        char const* passiveStr = handler->GetOregonString(LANG_PASSIVE);
+        char const* talentStr = handler->GetMaNGOSString(LANG_TALENT);
+        char const* passiveStr = handler->GetMaNGOSString(LANG_PASSIVE);
 
         Unit::AuraMap const& uAuras = unit->GetAuras();
         handler->PSendSysMessage(LANG_COMMAND_TARGET_LISTAURAS, uAuras.size());

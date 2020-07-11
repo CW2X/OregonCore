@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_SPELLAURAS_H
-#define OREGON_SPELLAURAS_H
+#ifndef MANGOS_SPELLAURAS_H
+#define MANGOS_SPELLAURAS_H
 
 #include "SpellAuraDefines.h"
 
@@ -55,9 +55,9 @@ typedef void(Aura::*pAuraHandler)(bool Apply, bool Real);
 //      (percent auras, stats mods, etc)
 // Second rule: Code must be guarded by if (Real) check if it modifies object state (start/stop attack, send packets to client, etc)
 //
-// Other case choice: each code line moved under if (Real) check is Oregon speedup,
-//      each setting object update field code line moved under if (Real) check is significant Oregon speedup, and less server->client data sends
-//      each packet sending code moved under if (Real) check is _large_ Oregon speedup, and lot less server->client data sends
+// Other case choice: each code line moved under if (Real) check is MaNGOS speedup,
+//      each setting object update field code line moved under if (Real) check is significant MaNGOS speedup, and less server->client data sends
+//      each packet sending code moved under if (Real) check is _large_ MaNGOS speedup, and lot less server->client data sends
 
 class Aura
 {

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -79,9 +79,9 @@ std::string ChatHandler::GetNameLink(Player* chr) const
     return playerLink(chr->GetName());
 }
 
-const char* ChatHandler::GetOregonString(int32 entry) const
+const char* ChatHandler::GetMaNGOSString(int32 entry) const
 {
-    return m_session->GetOregonString(entry);
+    return m_session->GetMaNGOSString(entry);
 }
 
 bool ChatHandler::isAvailable(ChatCommand const& cmd) const
@@ -170,12 +170,12 @@ void ChatHandler::SendGlobalGMSysMessage(const char* str)
 
 void ChatHandler::SendSysMessage(int32 entry)
 {
-    SendSysMessage(GetOregonString(entry));
+    SendSysMessage(GetMaNGOSString(entry));
 }
 
 void ChatHandler::PSendSysMessage(int32 entry, ...)
 {
-    const char* format = GetOregonString(entry);
+    const char* format = GetMaNGOSString(entry);
     va_list ap;
     char str[1024];
     va_start(ap, entry);
@@ -451,7 +451,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
         }
         else if (reader.get() != '|')
         {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
             sLog.outBasic("ChatHandler::isValidChatMessage sequence aborted unexpectedly");
 #endif
             return false;
@@ -460,7 +460,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
         // pipe has always to be followed by at least one char
         if (reader.peek() == '\0')
         {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
             sLog.outBasic("ChatHandler::isValidChatMessage pipe followed by \\0");
 #endif
             return false;
@@ -485,7 +485,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
             }
             else
             {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                 sLog.outBasic("ChatHandler::isValidChatMessage invalid sequence, expected %c but got %c", *validSequenceIterator, commandChar);
 #endif
                 return false;
@@ -494,7 +494,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
         else if (validSequence != validSequenceIterator)
         {
             // no escaped pipes in sequences
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
             sLog.outBasic("ChatHandler::isValidChatMessage got escaped pipe in sequence");
 #endif
             return false;
@@ -511,7 +511,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
                 reader >> c;
                 if (!c)
                 {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                     sLog.outBasic("ChatHandler::isValidChatMessage got \\0 while reading color in |c command");
 #endif
                     return false;
@@ -529,7 +529,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
                     color |= 10 + c - 'a';
                     continue;
                 }
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                 sLog.outBasic("ChatHandler::isValidChatMessage got non hex char '%c' while reading color", c);
 #endif
                 return false;
@@ -547,7 +547,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
                 linkedItem = sObjectMgr.GetItemTemplate(atoi(buffer));
                 if (!linkedItem)
                 {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                     sLog.outBasic("ChatHandler::isValidChatMessage got invalid itemID %u in |item command", atoi(buffer));
 #endif
                     return false;
@@ -555,7 +555,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
 
                 if (color != ItemQualityColors[linkedItem->Quality])
                 {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                     sLog.outBasic("ChatHandler::isValidChatMessage linked item has color %u, but user claims %u", ItemQualityColors[linkedItem->Quality],
                         color);
 #endif
@@ -589,7 +589,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
 
                 if (!linkedQuest)
                 {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                     sLog.outBasic("ChatHandler::isValidChatMessage Questtemplate %u not found", questid);
 #endif
                     return false;
@@ -666,7 +666,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
             }
             else
             {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                 sLog.outBasic("ChatHandler::isValidChatMessage user sent unsupported link type '%s'", buffer);
 #endif
                 return false;
@@ -679,7 +679,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
                 // links start with '['
                 if (reader.get() != '[')
                 {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                     sLog.outBasic("ChatHandler::isValidChatMessage link caption doesn't start with '['");
 #endif
                     return false;
@@ -740,7 +740,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
 
                         if (!ql)
                         {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                             sLog.outBasic("ChatHandler::isValidChatMessage default questname didn't match and there is no locale");
 #endif
                             return false;
@@ -757,7 +757,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
                         }
                         if (!foundName)
                         {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                             sLog.outBasic("ChatHandler::isValidChatMessage no quest locale title matched");
 #endif
                             return false;
@@ -772,7 +772,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
 
                         if (!il)
                         {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                             sLog.outBasic("ChatHandler::isValidChatMessage linked item name doesn't is wrong and there is no localization");
 #endif
                             return false;
@@ -789,7 +789,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
                         }
                         if (!foundName)
                         {
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
                             sLog.outBasic("ChatHandler::isValidChatMessage linked item name wasn't found in any localization");
 #endif
                             return false;
@@ -807,7 +807,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
             // no further payload
             break;
         default:
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
             sLog.outBasic("ChatHandler::isValidChatMessage got invalid command |%c", commandChar);
 #endif
             return false;
@@ -815,7 +815,7 @@ bool ChatHandler::isValidChatMessage(const char* message)
     }
 
     // check if every opened sequence was also closed properly
-#ifdef OREGON_DEBUG
+#ifdef MANGOS_DEBUG
     if (validSequence != validSequenceIterator)
         sLog.outBasic("ChatHandler::isValidChatMessage EOF in active sequence");
 #endif
@@ -1191,13 +1191,13 @@ GameObject* ChatHandler::GetObjectGlobalyWithGuidOrNearWithDbGuid(uint32 lowguid
     if (!obj && sObjectMgr.GetGOData(lowguid))                   // guid is DB guid of object
     {
         // search near player then
-        CellCoord p(Oregon::ComputeCellCoord(pl->GetPositionX(), pl->GetPositionY()));
+        CellCoord p(MaNGOS::ComputeCellCoord(pl->GetPositionX(), pl->GetPositionY()));
         Cell cell(p);
 
-        Oregon::GameObjectWithDbGUIDCheck go_check(*pl, lowguid);
-        Oregon::GameObjectSearcher<Oregon::GameObjectWithDbGUIDCheck> checker(obj, go_check);
+        MaNGOS::GameObjectWithDbGUIDCheck go_check(*pl, lowguid);
+        MaNGOS::GameObjectSearcher<MaNGOS::GameObjectWithDbGUIDCheck> checker(obj, go_check);
 
-        TypeContainerVisitor<Oregon::GameObjectSearcher<Oregon::GameObjectWithDbGUIDCheck>, GridTypeMapContainer > object_checker(checker);
+        TypeContainerVisitor<MaNGOS::GameObjectSearcher<MaNGOS::GameObjectWithDbGUIDCheck>, GridTypeMapContainer > object_checker(checker);
         cell.Visit(p, object_checker, *pl->GetMap(), *pl, pl->GetGridActivationRange());
     }
 
@@ -1284,9 +1284,9 @@ bool ChatHandler::needReportToTarget(Player* chr) const
     return pl != chr && pl->IsVisibleGloballyFor(chr);
 }
 
-const char* CliHandler::GetOregonString(int32 entry) const
+const char* CliHandler::GetMaNGOSString(int32 entry) const
 {
-    return sObjectMgr.GetOregonStringForDBCLocale(entry);
+    return sObjectMgr.GetMaNGOSStringForDBCLocale(entry);
 }
 
 bool CliHandler::isAvailable(ChatCommand const& cmd) const
@@ -1297,7 +1297,7 @@ bool CliHandler::isAvailable(ChatCommand const& cmd) const
 
 std::string CliHandler::GetNameLink() const
 {
-    return GetOregonString(LANG_CONSOLE_COMMAND);
+    return GetMaNGOSString(LANG_CONSOLE_COMMAND);
 }
 
 void CliHandler::SendSysMessage(const char* str)
@@ -1308,7 +1308,7 @@ void CliHandler::SendSysMessage(const char* str)
 
 const char* CliHandler::GetName() const
 {
-    return GetOregonString(LANG_CONSOLE_COMMAND);
+    return GetMaNGOSString(LANG_CONSOLE_COMMAND);
 }
 
 bool CliHandler::needReportToTarget(Player* /*chr*/) const

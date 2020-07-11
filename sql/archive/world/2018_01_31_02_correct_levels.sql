@@ -1,5 +1,5 @@
 # Original work by Malcrom for TrinityCore
-# Ported to OregonCore by Uberhax
+# Ported to MaNGOSCore by Uberhax
 -- The Mechanar
 UPDATE `creature_template` SET `minlevel`=70 WHERE `entry` IN (21523); -- Bloodwarder Physician (1)
 UPDATE `creature_template` SET `maxlevel`=70 WHERE `entry` IN (21539); -- Sunseeker Astromage (1)

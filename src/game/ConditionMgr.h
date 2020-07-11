@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -309,6 +309,6 @@ template <class T> bool CompareValues(ComparisionType type,  T val1, T val2)
     return false;
 }
 
-#define sConditionMgr Oregon::Singleton<ConditionMgr>::Instance()
+#define sConditionMgr MaNGOS::Singleton<ConditionMgr>::Instance()
 
 #endif

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,21 +15,21 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_SINGLETON_H
-#define OREGON_SINGLETON_H
+#ifndef MANGOS_SINGLETON_H
+#define MANGOS_SINGLETON_H
 
 #include "CreationPolicy.h"
 #include "ThreadingModel.h"
 #include "ObjectLifeTime.h"
 
-namespace Oregon
+namespace MaNGOS
 {
 template
 <
     typename T,
-    class ThreadingModel = Oregon::SingleThreaded<T>,
-    class CreatePolicy = Oregon::OperatorNew<T>,
-    class LifeTimePolicy = Oregon::ObjectLifeTime<T>
+    class ThreadingModel = MaNGOS::SingleThreaded<T>,
+    class CreatePolicy = MaNGOS::OperatorNew<T>,
+    class LifeTimePolicy = MaNGOS::ObjectLifeTime<T>
     >
 class Singleton
 {
@@ -105,25 +105,25 @@ Singleton<T, ThreadingModel, CreatePolicy, LifeTimePolicy>::DestroySingleton()
 }
 
 #define INSTANTIATE_SINGLETON_1(TYPE) \
-    namespace Oregon \
+    namespace MaNGOS \
     { \
-        template class Singleton<TYPE, Oregon::SingleThreaded<TYPE>, Oregon::OperatorNew<TYPE>, Oregon::ObjectLifeTime<TYPE> >; \
+        template class Singleton<TYPE, MaNGOS::SingleThreaded<TYPE>, MaNGOS::OperatorNew<TYPE>, MaNGOS::ObjectLifeTime<TYPE> >; \
     }
 
 #define INSTANTIATE_SINGLETON_2(TYPE, THREADINGMODEL) \
-    namespace Oregon \
+    namespace MaNGOS \
     { \
-        template class Singleton<TYPE, THREADINGMODEL, Oregon::OperatorNew<TYPE>, Oregon::ObjectLifeTime<TYPE> >; \
+        template class Singleton<TYPE, THREADINGMODEL, MaNGOS::OperatorNew<TYPE>, MaNGOS::ObjectLifeTime<TYPE> >; \
     }
 
 #define INSTANTIATE_SINGLETON_3(TYPE, THREADINGMODEL, CREATIONPOLICY ) \
-    namespace Oregon \
+    namespace MaNGOS \
     { \
-        template class Singleton<TYPE, THREADINGMODEL, CREATIONPOLICY, Oregon::ObjectLifeTime<TYPE> >; \
+        template class Singleton<TYPE, THREADINGMODEL, CREATIONPOLICY, MaNGOS::ObjectLifeTime<TYPE> >; \
     }
 
 #define INSTANTIATE_SINGLETON_4(TYPE, THREADINGMODEL, CREATIONPOLICY, OBJECTLIFETIME) \
-    namespace Oregon \
+    namespace MaNGOS \
     { \
         template class Singleton<TYPE, THREADINGMODEL, CREATIONPOLICY, OBJECTLIFETIME >; \
     }

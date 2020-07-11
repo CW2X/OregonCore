@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -436,7 +436,7 @@ public:
 
     static std::string PGetParseString(ChatHandler* handler, int32 entry, ...)
     {
-        const char* format = handler->GetOregonString(entry);
+        const char* format = handler->GetMaNGOSString(entry);
         va_list ap;
         char str[1024];
         va_start(ap, entry);

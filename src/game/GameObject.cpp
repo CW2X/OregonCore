@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -397,8 +397,8 @@ void GameObject::Update(uint32 diff)
                     if (owner)
                     {
                         // Hunter trap: Search units which are unfriendly to the trap's owner
-                        Oregon::AnyUnfriendlyNoTotemUnitInObjectRangeCheck checker(this, owner, radius);
-                        Oregon::UnitSearcher<Oregon::AnyUnfriendlyNoTotemUnitInObjectRangeCheck> searcher(ok, checker);
+                        MaNGOS::AnyUnfriendlyNoTotemUnitInObjectRangeCheck checker(this, owner, radius);
+                        MaNGOS::UnitSearcher<MaNGOS::AnyUnfriendlyNoTotemUnitInObjectRangeCheck> searcher(ok, checker);
                         VisitNearbyGridObject(radius, searcher);
                         if (!ok)
                             VisitNearbyWorldObject(radius, searcher);
@@ -407,8 +407,8 @@ void GameObject::Update(uint32 diff)
                     {
                         // Environmental trap: Any player
                         Player* player = NULL;
-                        Oregon::AnyPlayerInObjectRangeCheck checker(this, radius);
-                        Oregon::PlayerSearcher<Oregon::AnyPlayerInObjectRangeCheck> searcher(player, checker);
+                        MaNGOS::AnyPlayerInObjectRangeCheck checker(this, radius);
+                        MaNGOS::PlayerSearcher<MaNGOS::AnyPlayerInObjectRangeCheck> searcher(player, checker);
                         VisitNearbyWorldObject(radius, searcher);
                         ok = player;
                     }
@@ -935,13 +935,13 @@ void GameObject::TriggeringLinkedGameObject(uint32 trapEntry, Unit* target)
     GameObject* trapGO = NULL;
     {
         // using original GO distance
-        CellCoord p(Oregon::ComputeCellCoord(GetPositionX(), GetPositionY()));
+        CellCoord p(MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY()));
         Cell cell(p);
 
-        Oregon::NearestGameObjectEntryInObjectRangeCheck go_check(*target, trapEntry, range);
-        Oregon::GameObjectLastSearcher<Oregon::NearestGameObjectEntryInObjectRangeCheck> checker(trapGO, go_check);
+        MaNGOS::NearestGameObjectEntryInObjectRangeCheck go_check(*target, trapEntry, range);
+        MaNGOS::GameObjectLastSearcher<MaNGOS::NearestGameObjectEntryInObjectRangeCheck> checker(trapGO, go_check);
 
-        TypeContainerVisitor<Oregon::GameObjectLastSearcher<Oregon::NearestGameObjectEntryInObjectRangeCheck>, GridTypeMapContainer > object_checker(checker);
+        TypeContainerVisitor<MaNGOS::GameObjectLastSearcher<MaNGOS::NearestGameObjectEntryInObjectRangeCheck>, GridTypeMapContainer > object_checker(checker);
         cell.Visit(p, object_checker, *GetMap(), *target, range);
     }
 
@@ -955,12 +955,12 @@ GameObject* GameObject::LookupFishingHoleAround(float range)
 {
     GameObject* ok = NULL;
 
-    CellCoord p(Oregon::ComputeCellCoord(GetPositionX(), GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY()));
     Cell cell(p);
-    Oregon::NearestGameObjectFishingHole u_check(*this, range);
-    Oregon::GameObjectSearcher<Oregon::NearestGameObjectFishingHole> checker(ok, u_check);
+    MaNGOS::NearestGameObjectFishingHole u_check(*this, range);
+    MaNGOS::GameObjectSearcher<MaNGOS::NearestGameObjectFishingHole> checker(ok, u_check);
 
-    TypeContainerVisitor<Oregon::GameObjectSearcher<Oregon::NearestGameObjectFishingHole>, GridTypeMapContainer > grid_object_checker(checker);
+    TypeContainerVisitor<MaNGOS::GameObjectSearcher<MaNGOS::NearestGameObjectFishingHole>, GridTypeMapContainer > grid_object_checker(checker);
     cell.Visit(p, grid_object_checker, *GetMap(), *this, range);
 
     return ok;

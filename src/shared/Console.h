@@ -1,6 +1,6 @@
 
-#ifndef OREGON_CONSOLE_H
-#define OREGON_CONSOLE_H
+#ifndef MANGOS_CONSOLE_H
+#define MANGOS_CONSOLE_H
 
 #include "Common.h"
 #include "Policies/Singleton.h"
@@ -59,7 +59,7 @@ class Console
         void SetTitle(const char* title)
         {
             #if PLATFORM == PLATFORM_WINDOWS
-            SetConsoleTitle("OregonCore");
+            SetConsoleTitle("MaNGOSCore");
             #elif PLATFORM == PLATFORM_UNIX
             printf("\033]0;%s\007", title);
             fflush(stdout);
@@ -96,6 +96,6 @@ class Console
         Window* m_cmdOutput;
 };
 
-#define sConsole Oregon::Singleton<Console>::Instance()
+#define sConsole MaNGOS::Singleton<Console>::Instance()
 
 #endif

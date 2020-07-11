@@ -13,12 +13,12 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES ('send money', 3, 'Syn
 INSERT INTO `command` (`name`, `security`, `help`) VALUES ('send message', 3, 'Syntax: .send message $playername $message\r\nSend screen message to player from ADMINISTRATOR.');
 
 -- NEW NPC INFO ADDED, EQUIPMENT
-DELETE FROM `oregon_string` WHERE `entry`=616;
-INSERT INTO `oregon_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES (616, 'EquipmentId: %u (Original: %u).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+DELETE FROM `mangos_string` WHERE `entry`=616;
+INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES (616, 'EquipmentId: %u (Original: %u).', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- NEW NPC NEAR COMMAND ADDED
-DELETE FROM `oregon_string` WHERE `entry`=617;
-INSERT INTO `oregon_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES (617, 'Found near creatures (distance %f): %u ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+DELETE FROM `mangos_string` WHERE `entry`=617;
+INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES (617, 'Found near creatures (distance %f): %u ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 DELETE FROM `command` WHERE `name`='npc near';
 INSERT INTO `command` (`name`, `security`, `help`) VALUES ('npc near', 2, 'Syntax: .npc near #distance\r\nSee all NPCs near you.');
 
@@ -93,8 +93,8 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES ('npc delete item', 3,
 INSERT INTO `command` (`name`, `security`, `help`) VALUES ('npc delete', 3, 'Syntax: .npc delete [#guid]\r\nDelete creature with guid #guid (or the selected if no guid is provided)');
 
 -- NEW GO TAXINODE COMMAND
-DELETE FROM `oregon_string` WHERE `entry`=288;
-INSERT INTO `oregon_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES (288, 'TaxiNode ID %u not found!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+DELETE FROM `mangos_string` WHERE `entry`=288;
+INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`) VALUES (288, 'TaxiNode ID %u not found!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 DELETE FROM `command` WHERE `name`='go taxinode';
 INSERT INTO `command` (`name`, `security`, `help`) VALUES ('go taxinode', 1, 'Syntax: .go taxinode #taxinode\r\nTeleport player to taxinode coordinates. You can look up zone using .lookup taxinode $namepart');
 

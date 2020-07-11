@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -477,7 +477,7 @@ void WorldSession::HandleSellItemOpcode(WorldPacket& recv_data)
 
     recv_data >> vendorguid >> itemguid >> _count;
 
-    // prevent possible overflow, as Oregon uses uint32 for item count
+    // prevent possible overflow, as MaNGOS uses uint32 for item count
     uint32 count = _count;
 
     if (!itemguid)

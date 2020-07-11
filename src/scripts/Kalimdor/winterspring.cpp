@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -73,8 +73,10 @@ class npc_lorax : public CreatureScript
 {
 public: 
     npc_lorax() : CreatureScript("npc_lorax") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -87,7 +89,9 @@ public:
     
         return true;
     }
-    
+    
+
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 /*uiSender*/, uint32 uiAction) override
     {
         switch (uiAction)
@@ -119,8 +123,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -128,8 +134,10 @@ class npc_rivern_frostwind : public CreatureScript
 {
 public: 
     npc_rivern_frostwind() : CreatureScript("npc_rivern_frostwind") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -142,7 +150,9 @@ public:
     
         return true;
     }
-    
+    
+
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 /*uiSender*/, uint32 uiAction) override
     {
         if (uiAction == GOSSIP_ACTION_TRADE)
@@ -150,8 +160,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -159,8 +171,10 @@ class npc_witch_doctor_mauari : public CreatureScript
 {
 public: 
     npc_witch_doctor_mauari() : CreatureScript("npc_witch_doctor_mauari") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, Creature* pCreature) override
     {
         if (pCreature->IsQuestGiver())
@@ -176,7 +190,8 @@ public:
     
         return true;
     }
-    
+    
+
     bool OnGossipSelect(Player* pPlayer, Creature* pCreature, uint32 /*uiSender*/, uint32 uiAction) override
     {
         if (uiAction == GOSSIP_ACTION_INFO_DEF + 1)
@@ -187,8 +202,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 

@@ -1,4 +1,4 @@
-# This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+# This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 #
 # This file is free software; as a special exception the author gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -10,7 +10,7 @@
 
 # Set projectname (must be done AFTER setting configurationtypes)
 
-project(OregonCore)
+project(MaNGOSCore)
 
 # We require CMake >= 3.2
 cmake_minimum_required(VERSION 3.2)

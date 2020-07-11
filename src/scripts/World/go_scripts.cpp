@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -101,7 +101,7 @@ enum eCatFigurine
 ## go_tablet_of_the_seven
 ######*/
 
-//@todo use gossip option ("Transcript the Tablet") instead, if Oregon adds support.
+//@todo use gossip option ("Transcript the Tablet") instead, if MaNGOS adds support.
 
 
 /*#####
@@ -300,16 +300,20 @@ class go_cat_figurine : public GameObjectScript
 {
 public: 
     go_cat_figurine() : GameObjectScript("go_cat_figurine") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* /*pGO*/) override
     {
         if (rand() % 100 < 25) // give 25% chance of summoning tiger
             pPlayer->CastSpell(pPlayer, SPELL_SUMMON_GHOST_SABER, true);
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -317,8 +321,10 @@ class go_northern_crystal_pylon : public GameObjectScript
 {
 public: 
     go_northern_crystal_pylon() : GameObjectScript("go_northern_crystal_pylon") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pGO->GetGoType() == GAMEOBJECT_TYPE_QUESTGIVER)
@@ -332,8 +338,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -341,8 +349,10 @@ class go_eastern_crystal_pylon : public GameObjectScript
 {
 public: 
     go_eastern_crystal_pylon() : GameObjectScript("go_eastern_crystal_pylon") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pGO->GetGoType() == GAMEOBJECT_TYPE_QUESTGIVER)
@@ -356,8 +366,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -365,8 +377,10 @@ class go_western_crystal_pylon : public GameObjectScript
 {
 public: 
     go_western_crystal_pylon() : GameObjectScript("go_western_crystal_pylon") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pGO->GetGoType() == GAMEOBJECT_TYPE_QUESTGIVER)
@@ -380,8 +394,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -389,16 +405,20 @@ class go_barov_journal : public GameObjectScript
 {
 public: 
     go_barov_journal() : GameObjectScript("go_barov_journal") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* /*pGO*/) override
     {
         if (pPlayer->HasSkill(SKILL_TAILORING) && pPlayer->GetBaseSkillValue(SKILL_TAILORING) >= 280 && !pPlayer->HasSpell(26086))
             pPlayer->CastSpell(pPlayer, 26095, false);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -406,16 +426,20 @@ class go_field_repair_bot_74A : public GameObjectScript
 {
 public: 
     go_field_repair_bot_74A() : GameObjectScript("go_field_repair_bot_74A") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* /*pGO*/) override
     {
     	if (pPlayer->HasSkill(SKILL_ENGINEERING) && pPlayer->GetBaseSkillValue(SKILL_ENGINEERING) >= 300 && !pPlayer->HasSpell(22704))
             pPlayer->CastSpell(pPlayer, 22864, false);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -423,8 +447,10 @@ class go_orb_of_command : public GameObjectScript
 {
 public: 
     go_orb_of_command() : GameObjectScript("go_orb_of_command") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pPlayer->GetQuestRewardStatus(QUEST_BLACKHANDS_COMMAND))
@@ -435,7 +461,8 @@ public:
       
         return true;
     }
-    
+    
+
     bool GOHello_go_orb_of_command(Player* pPlayer, GameObject* pGO)
     {
         if (pPlayer->GetQuestRewardStatus(QUEST_BLACKHANDS_COMMAND))
@@ -446,7 +473,8 @@ public:
       
         return true;
     }
-    
+    
+
     bool GOSelect_go_orb_of_command(Player* pPlayer, GameObject* pGO, uint32 Sender, uint32 action)
     {
         switch (action)
@@ -459,7 +487,8 @@ public:
         pPlayer->CLOSE_GOSSIP_MENU();
         return true;
     }
-    
+    
+
     bool OnGossipSelect(Player* pPlayer, GameObject* pGO, uint32 Sender, uint32 action) override
     {
         switch (action)
@@ -472,8 +501,10 @@ public:
         pPlayer->CLOSE_GOSSIP_MENU();
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -481,8 +512,10 @@ class go_shrine_of_the_birds : public GameObjectScript
 {
 public: 
     go_shrine_of_the_birds() : GameObjectScript("go_shrine_of_the_birds") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         uint32 BirdEntry = 0;
@@ -508,8 +541,10 @@ public:
     
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -517,8 +552,10 @@ class go_southfury_moonstone : public GameObjectScript
 {
 public: 
     go_southfury_moonstone() : GameObjectScript("go_southfury_moonstone") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* /*pGO*/) override
     {
         //implicitTarget=48 not implemented as of writing this code, and manual summon may be just ok for our purpose
@@ -529,8 +566,10 @@ public:
     
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -538,16 +577,20 @@ class go_tablet_of_madness : public GameObjectScript
 {
 public: 
     go_tablet_of_madness() : GameObjectScript("go_tablet_of_madness") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* /*pGO*/) override
     {
         if (pPlayer->HasSkill(SKILL_ALCHEMY) && pPlayer->GetSkillValue(SKILL_ALCHEMY) >= 300 && !pPlayer->HasSpell(24266))
             pPlayer->CastSpell(pPlayer, 24267, false);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -555,8 +598,10 @@ class go_tablet_of_the_seven : public GameObjectScript
 {
 public: 
     go_tablet_of_the_seven() : GameObjectScript("go_tablet_of_the_seven") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pGO->GetGoType() != GAMEOBJECT_TYPE_QUESTGIVER)
@@ -567,8 +612,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -576,8 +623,10 @@ class go_jump_a_tron : public GameObjectScript
 {
 public: 
     go_jump_a_tron() : GameObjectScript("go_jump_a_tron") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* /*pGO*/) override
     {
         if (pPlayer->GetQuestStatus(10111) == QUEST_STATUS_INCOMPLETE)
@@ -585,8 +634,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -594,8 +645,10 @@ class go_ethereum_prison : public GameObjectScript
 {
 public: 
     go_ethereum_prison() : GameObjectScript("go_ethereum_prison") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* player, GameObject* go) override
     {
         go->UseDoorOrButton();
@@ -642,8 +695,10 @@ public:
     
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -651,8 +706,10 @@ class go_ethereum_stasis : public GameObjectScript
 {
 public: 
     go_ethereum_stasis() : GameObjectScript("go_ethereum_stasis") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* player, GameObject* go) override
     {
         go->UseDoorOrButton();
@@ -664,8 +721,10 @@ public:
     
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -673,8 +732,10 @@ class go_resonite_cask : public GameObjectScript
 {
 public: 
     go_resonite_cask() : GameObjectScript("go_resonite_cask") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* /*pPlayer*/, GameObject* pGO) override
     {
         if (pGO->GetGoType() == GAMEOBJECT_TYPE_GOOBER)
@@ -682,8 +743,10 @@ public:
     
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -691,8 +754,10 @@ class go_sacred_fire_of_life : public GameObjectScript
 {
 public: 
     go_sacred_fire_of_life() : GameObjectScript("go_sacred_fire_of_life") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pGO->GetGoType() == GAMEOBJECT_TYPE_GOOBER)
@@ -700,8 +765,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -709,8 +776,10 @@ class go_iruxos : public GameObjectScript
 {
 public: 
     go_iruxos() : GameObjectScript("go_iruxos") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* /*pGO*/) override
     {
         if (pPlayer->GetQuestStatus(5381) == QUEST_STATUS_INCOMPLETE)
@@ -718,8 +787,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -727,8 +798,10 @@ class go_fel_crystalforge : public GameObjectScript
 {
 public: 
     go_fel_crystalforge() : GameObjectScript("go_fel_crystalforge") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pGO->GetGoType() == GAMEOBJECT_TYPE_QUESTGIVER) /* != GAMEOBJECT_TYPE_QUESTGIVER) */
@@ -741,7 +814,8 @@ public:
     
         return true;
     }
-    
+    
+
     bool OnGossipSelect(Player* pPlayer, GameObject* pGO, uint32 /*uiSender*/, uint32 uiAction) override
     {
         pPlayer->PlayerTalkClass->ClearMenus();
@@ -765,8 +839,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -774,8 +850,10 @@ class go_bashir_crystalforge : public GameObjectScript
 {
 public: 
     go_bashir_crystalforge() : GameObjectScript("go_bashir_crystalforge") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pGO->GetGoType() == GAMEOBJECT_TYPE_QUESTGIVER) /* != GAMEOBJECT_TYPE_QUESTGIVER) */
@@ -788,7 +866,9 @@ public:
     
         return true;
     }
-    
+    
+
+
     bool OnGossipSelect(Player* pPlayer, GameObject* pGO, uint32 /*uiSender*/, uint32 uiAction) override
     {
         pPlayer->PlayerTalkClass->ClearMenus();
@@ -812,8 +892,10 @@ public:
         }
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -821,8 +903,10 @@ class go_matrix_punchograph : public GameObjectScript
 {
 public: 
     go_matrix_punchograph() : GameObjectScript("go_matrix_punchograph") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         switch (pGO->GetEntry())
@@ -860,8 +944,10 @@ public:
         }
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -869,8 +955,10 @@ class go_blood_filled_orb : public GameObjectScript
 {
 public: 
     go_blood_filled_orb() : GameObjectScript("go_blood_filled_orb") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         if (pGO->GetGoType() == GAMEOBJECT_TYPE_GOOBER)
@@ -878,8 +966,10 @@ public:
     
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -887,8 +977,10 @@ class go_soulwell : public GameObjectScript
 {
 public: 
     go_soulwell() : GameObjectScript("go_soulwell") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         Unit* caster = pGO->GetOwner();
@@ -923,8 +1015,10 @@ public:
         pPlayer->CastSpell(pPlayer, newSpell, true);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -932,8 +1026,10 @@ class go_hive_pod : public GameObjectScript
 {
 public: 
     go_hive_pod() : GameObjectScript("go_hive_pod") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* pGO) override
     {
         pPlayer->SendLoot(pGO->GetGUID(), LOOT_CORPSE);
@@ -941,8 +1037,10 @@ public:
         pGO->SummonCreature(NPC_HIVE_AMBUSHER, pGO->GetPositionX(), pGO->GetPositionY() + 1, pGO->GetPositionZ(), pGO->GetAngle(pPlayer), TEMPSUMMON_TIMED_OR_DEAD_DESPAWN, 60000);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -950,16 +1048,20 @@ class go_the_ravens_claw : public GameObjectScript
 {
 public: 
     go_the_ravens_claw() : GameObjectScript("go_the_ravens_claw") { }
-    
-    
+    
+
+    
+
     bool OnGossipHello(Player* pPlayer, GameObject* /*pGO*/) override
     {
         if (pPlayer->HasItemCount(ITEM_ESSENCE_INFUSED_MOONSTONE, 1))
             pPlayer->DestroyItemCount(ITEM_ESSENCE_INFUSED_MOONSTONE, 1, true);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 

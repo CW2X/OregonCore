@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -245,7 +245,7 @@ public:
                 return false;
             }
         }
-        CellCoord cell_val = Oregon::ComputeCellCoord(obj->GetPositionX(), obj->GetPositionY());
+        CellCoord cell_val = MaNGOS::ComputeCellCoord(obj->GetPositionX(), obj->GetPositionY());
         Cell cell(cell_val);
 
         uint32 zone_id = obj->GetZoneId();
@@ -264,7 +264,7 @@ public:
         float ground_z = map->GetHeight(obj->GetPositionX(), obj->GetPositionY(), MAX_HEIGHT);
         float floor_z = map->GetHeight(obj->GetPositionX(), obj->GetPositionY(), obj->GetPositionZ());
 
-        GridCoord p = Oregon::ComputeGridCoord(obj->GetPositionX(), obj->GetPositionY());
+        GridCoord p = MaNGOS::ComputeGridCoord(obj->GetPositionX(), obj->GetPositionY());
 
         int gx = 63 - p.x_coord;
         int gy = 63 - p.y_coord;
@@ -293,7 +293,7 @@ public:
             handler->GetName(),
             (obj->GetTypeId() == TYPEID_PLAYER ? "player" : "creature"), obj->GetName(),
             (obj->GetTypeId() == TYPEID_PLAYER ? "GUID" : "Entry"), (obj->GetTypeId() == TYPEID_PLAYER ? obj->GetGUIDLow() : obj->GetEntry()));
-        sLog.outDebug(handler->GetOregonString(LANG_MAP_POSITION),
+        sLog.outDebug(handler->GetMaNGOSString(LANG_MAP_POSITION),
             obj->GetMapId(), (mapEntry ? mapEntry->name[sWorld.GetDefaultDbcLocale()] : "<unknown>"),
             zone_id, (zoneEntry ? zoneEntry->area_name[sWorld.GetDefaultDbcLocale()] : "<unknown>"),
             area_id, (areaEntry ? areaEntry->area_name[sWorld.GetDefaultDbcLocale()] : "<unknown>"),
@@ -625,7 +625,7 @@ public:
         }
         else if (uint64 guid = sObjectMgr.GetPlayerGUIDByName(name))
         {
-            handler->PSendSysMessage(LANG_SUMMONING, name.c_str(), handler->GetOregonString(LANG_OFFLINE));
+            handler->PSendSysMessage(LANG_SUMMONING, name.c_str(), handler->GetMaNGOSString(LANG_OFFLINE));
 
             Player* _player = handler->GetSession()->GetPlayer();
             Player::SavePositionInDB(_player->GetMapId(),
@@ -806,13 +806,13 @@ public:
 
             if (!sSpellStore.LookupEntry(spell_id))
             {
-                handler->PSendSysMessage(LANG_UNKNOWN_SPELL, target == handler->GetSession()->GetPlayer() ? handler->GetOregonString(LANG_YOU) : target->GetName());
+                handler->PSendSysMessage(LANG_UNKNOWN_SPELL, target == handler->GetSession()->GetPlayer() ? handler->GetMaNGOSString(LANG_YOU) : target->GetName());
                 handler->SetSentErrorMessage(true);
                 return false;
             }
 
             target->RemoveSpellCooldown(spell_id, true);
-            handler->PSendSysMessage(LANG_REMOVE_COOLDOWN, spell_id, target == handler->GetSession()->GetPlayer() ? handler->GetOregonString(LANG_YOU) : target->GetName());
+            handler->PSendSysMessage(LANG_REMOVE_COOLDOWN, spell_id, target == handler->GetSession()->GetPlayer() ? handler->GetMaNGOSString(LANG_YOU) : target->GetName());
         }
         return true;
     }
@@ -1081,14 +1081,14 @@ public:
 
             g_team = data->team;
 
-            std::string team_name = handler->GetOregonString(LANG_COMMAND_GRAVEYARD_NOTEAM);
+            std::string team_name = handler->GetMaNGOSString(LANG_COMMAND_GRAVEYARD_NOTEAM);
 
             if (g_team == 0)
-                team_name = handler->GetOregonString(LANG_COMMAND_GRAVEYARD_ANY);
+                team_name = handler->GetMaNGOSString(LANG_COMMAND_GRAVEYARD_ANY);
             else if (g_team == HORDE)
-                team_name = handler->GetOregonString(LANG_COMMAND_GRAVEYARD_HORDE);
+                team_name = handler->GetMaNGOSString(LANG_COMMAND_GRAVEYARD_HORDE);
             else if (g_team == ALLIANCE)
-                team_name = handler->GetOregonString(LANG_COMMAND_GRAVEYARD_ALLIANCE);
+                team_name = handler->GetMaNGOSString(LANG_COMMAND_GRAVEYARD_ALLIANCE);
 
             handler->PSendSysMessage(LANG_COMMAND_GRAVEYARDNEAREST, g_id, team_name.c_str(), player->GetZoneId());
         }
@@ -1097,11 +1097,11 @@ public:
             std::string team_name;
 
             if (g_team == 0)
-                team_name = handler->GetOregonString(LANG_COMMAND_GRAVEYARD_ANY);
+                team_name = handler->GetMaNGOSString(LANG_COMMAND_GRAVEYARD_ANY);
             else if (g_team == HORDE)
-                team_name = handler->GetOregonString(LANG_COMMAND_GRAVEYARD_HORDE);
+                team_name = handler->GetMaNGOSString(LANG_COMMAND_GRAVEYARD_HORDE);
             else if (g_team == ALLIANCE)
-                team_name = handler->GetOregonString(LANG_COMMAND_GRAVEYARD_ALLIANCE);
+                team_name = handler->GetMaNGOSString(LANG_COMMAND_GRAVEYARD_ALLIANCE);
 
             if (g_team == ~uint32(0))
                 handler->PSendSysMessage(LANG_COMMAND_ZONENOGRAVEYARDS, player->GetZoneId());
@@ -1226,7 +1226,7 @@ public:
         if (!plTarget)
             plTarget = pl;
 
-        sLog.outDetail(handler->GetOregonString(LANG_ADDITEM), itemId, count);
+        sLog.outDetail(handler->GetMaNGOSString(LANG_ADDITEM), itemId, count);
 
         ItemTemplate const* pProto = sObjectMgr.GetItemTemplate(itemId);
         if (!pProto)
@@ -1305,7 +1305,7 @@ public:
         if (!plTarget)
             plTarget = pl;
 
-        sLog.outDetail(handler->GetOregonString(LANG_ADDITEMSET), itemsetId);
+        sLog.outDetail(handler->GetMaNGOSString(LANG_ADDITEMSET), itemsetId);
 
         bool found = false;
         for (uint32 id = 0; id < sItemStorage.MaxEntry; id++)
@@ -1558,11 +1558,11 @@ public:
             Class = fields[5].GetUInt8();
         }
 
-        std::string username = handler->GetOregonString(LANG_ERROR);
-        std::string email = handler->GetOregonString(LANG_ERROR);
-        std::string last_ip = handler->GetOregonString(LANG_ERROR);
+        std::string username = handler->GetMaNGOSString(LANG_ERROR);
+        std::string email = handler->GetMaNGOSString(LANG_ERROR);
+        std::string last_ip = handler->GetMaNGOSString(LANG_ERROR);
         uint32 security = 0;
-        std::string last_login = handler->GetOregonString(LANG_ERROR);
+        std::string last_login = handler->GetMaNGOSString(LANG_ERROR);
 
         QueryResult_AutoPtr result = LoginDatabase.PQuery("SELECT a.username,aa.gmlevel,a.email,a.last_ip,a.last_login "
             "FROM account a "
@@ -1585,7 +1585,7 @@ public:
                 last_login = fields[4].GetCppString();
 
                 uint32 ip = inet_addr(last_ip.c_str());
-#if OREGON_ENDIAN == BIGENDIAN
+#if MANGOS_ENDIAN == BIGENDIAN
                 EndianConvertReverse(ip);
 #endif
 
@@ -1605,7 +1605,7 @@ public:
             }
         }
 
-        handler->PSendSysMessage(LANG_PINFO_ACCOUNT, (target ? "" : handler->GetOregonString(LANG_OFFLINE)), name.c_str(), GUID_LOPART(targetGUID), username.c_str(), accId, email.c_str(), security, last_ip.c_str(), last_login.c_str(), latency);
+        handler->PSendSysMessage(LANG_PINFO_ACCOUNT, (target ? "" : handler->GetMaNGOSString(LANG_OFFLINE)), name.c_str(), GUID_LOPART(targetGUID), username.c_str(), accId, email.c_str(), security, last_ip.c_str(), last_login.c_str(), latency);
 
         std::string race_s, Class_s;
         switch (race)
@@ -1698,22 +1698,22 @@ public:
                 else
                     FactionName = "#Not found#";
                 ReputationRank rank = target->GetReputationMgr().GetRank(factionEntry);
-                std::string rankName = handler->GetOregonString(ReputationRankStrIndex[rank]);
+                std::string rankName = handler->GetMaNGOSString(ReputationRankStrIndex[rank]);
                 std::ostringstream ss;
                 ss << itr->second.ID << ": |cffffffff|Hfaction:" << itr->second.ID << "|h[" << FactionName << "]|h|r " << rankName << "|h|r (" << target->GetReputationMgr().GetReputation(factionEntry) << ")";
 
                 if (itr->second.Flags & FACTION_FLAG_VISIBLE)
-                    ss << handler->GetOregonString(LANG_FACTION_VISIBLE);
+                    ss << handler->GetMaNGOSString(LANG_FACTION_VISIBLE);
                 if (itr->second.Flags & FACTION_FLAG_AT_WAR)
-                    ss << handler->GetOregonString(LANG_FACTION_ATWAR);
+                    ss << handler->GetMaNGOSString(LANG_FACTION_ATWAR);
                 if (itr->second.Flags & FACTION_FLAG_PEACE_FORCED)
-                    ss << handler->GetOregonString(LANG_FACTION_PEACE_FORCED);
+                    ss << handler->GetMaNGOSString(LANG_FACTION_PEACE_FORCED);
                 if (itr->second.Flags & FACTION_FLAG_HIDDEN)
-                    ss << handler->GetOregonString(LANG_FACTION_HIDDEN);
+                    ss << handler->GetMaNGOSString(LANG_FACTION_HIDDEN);
                 if (itr->second.Flags & FACTION_FLAG_INVISIBLE_FORCED)
-                    ss << handler->GetOregonString(LANG_FACTION_INVISIBLE_FORCED);
+                    ss << handler->GetMaNGOSString(LANG_FACTION_INVISIBLE_FORCED);
                 if (itr->second.Flags & FACTION_FLAG_INACTIVE)
-                    ss << handler->GetOregonString(LANG_FACTION_INACTIVE);
+                    ss << handler->GetMaNGOSString(LANG_FACTION_INACTIVE);
 
                 handler->SendSysMessage(ss.str().c_str());
             }
@@ -1745,14 +1745,14 @@ public:
             return true;
         }
 
-        CellCoord p(Oregon::ComputeCellCoord(pl->GetPositionX(), pl->GetPositionY()));
+        CellCoord p(MaNGOS::ComputeCellCoord(pl->GetPositionX(), pl->GetPositionY()));
         Cell cell(p);
         cell.SetNoCreate();
 
-        Oregon::RespawnDo u_do;
-        Oregon::WorldObjectWorker<Oregon::RespawnDo> worker(u_do);
+        MaNGOS::RespawnDo u_do;
+        MaNGOS::WorldObjectWorker<MaNGOS::RespawnDo> worker(u_do);
 
-        TypeContainerVisitor<Oregon::WorldObjectWorker<Oregon::RespawnDo>, GridTypeMapContainer > obj_worker(worker);
+        TypeContainerVisitor<MaNGOS::WorldObjectWorker<MaNGOS::RespawnDo>, GridTypeMapContainer > obj_worker(worker);
         cell.Visit(p, obj_worker, *pl->GetMap(), *pl, pl->GetGridActivationRange());
 
         return true;

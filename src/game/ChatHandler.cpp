@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -168,7 +168,7 @@ void WorldSession::HandleMessagechatOpcode(WorldPacket& recv_data)
         if (!_player->CanSpeak())
         {
             std::string timeStr = secsToTimeString(m_muteTime - time(NULL));
-            SendNotification(GetOregonString(LANG_WAIT_BEFORE_SPEAKING), timeStr.c_str());
+            SendNotification(GetMaNGOSString(LANG_WAIT_BEFORE_SPEAKING), timeStr.c_str());
             return;
         }
 
@@ -182,7 +182,7 @@ void WorldSession::HandleMessagechatOpcode(WorldPacket& recv_data)
         recv_data >> msg;
         if (ChatHandler(this).ParseCommands(msg.c_str()) == 0)
         {
-            SendNotification(GetOregonString(LANG_GM_SILENCE), GetPlayer()->GetName());
+            SendNotification(GetMaNGOSString(LANG_GM_SILENCE), GetPlayer()->GetName());
             return;
         }
     }
@@ -283,7 +283,7 @@ void WorldSession::HandleMessagechatOpcode(WorldPacket& recv_data)
 
             if (GetPlayer()->HasAura(1852, 0) && !player->IsGameMaster())
             {
-                SendNotification(GetOregonString(LANG_GM_SILENCE), GetPlayer()->GetName());
+                SendNotification(GetMaNGOSString(LANG_GM_SILENCE), GetPlayer()->GetName());
                 return;
             }
 
@@ -482,7 +482,7 @@ void WorldSession::HandleMessagechatOpcode(WorldPacket& recv_data)
                 if (!msg.empty() || !_player->isAFK())
                 {
                     if (msg.empty())
-                        _player->autoReplyMsg = GetOregonString(LANG_PLAYER_AFK_DEFAULT);
+                        _player->autoReplyMsg = GetMaNGOSString(LANG_PLAYER_AFK_DEFAULT);
                     else
                         _player->autoReplyMsg = msg;
                 }
@@ -503,7 +503,7 @@ void WorldSession::HandleMessagechatOpcode(WorldPacket& recv_data)
             if (!msg.empty() || !_player->isDND())
             {
                 if (msg.empty())
-                    _player->autoReplyMsg = GetOregonString(LANG_PLAYER_DND_DEFAULT);
+                    _player->autoReplyMsg = GetMaNGOSString(LANG_PLAYER_DND_DEFAULT);
                 else
                     _player->autoReplyMsg = msg;
             }
@@ -540,7 +540,7 @@ void WorldSession::HandleTextEmoteOpcode(WorldPacket& recv_data)
     if (!GetPlayer()->CanSpeak())
     {
         std::string timeStr = secsToTimeString(m_muteTime - time(NULL));
-        SendNotification(GetOregonString(LANG_WAIT_BEFORE_SPEAKING), timeStr.c_str());
+        SendNotification(GetMaNGOSString(LANG_WAIT_BEFORE_SPEAKING), timeStr.c_str());
         return;
     }
 

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -198,7 +198,7 @@ public:
             pPlayer->CLOSE_GOSSIP_MENU();
             ((npc_escortAI*)(pCreature->AI()))->Start(true, true, pPlayer->GetGUID());
     
-            return true;                                        // prevent OREGON core handling
+            return true;                                        // prevent MANGOS core handling
         }
     
         if (uiAction == GOSSIP_ACTION_INFO_DEF + 2)
@@ -206,7 +206,7 @@ public:
             pPlayer->CLOSE_GOSSIP_MENU();
             ((npc_escortAI*)(pCreature->AI()))->Start(false, false, pPlayer->GetGUID());
     
-            return true;                                        // prevent OREGON core handling
+            return true;                                        // prevent MANGOS core handling
         }
     
         if (uiAction == GOSSIP_ACTION_INFO_DEF + 3)
@@ -214,7 +214,7 @@ public:
             pPlayer->CLOSE_GOSSIP_MENU();
             ((npc_escortAI*)(pCreature->AI()))->Start(false, false, pPlayer->GetGUID());
     
-            return true;                                        // prevent OREGON core handling
+            return true;                                        // prevent MANGOS core handling
         }
         return false;
     }

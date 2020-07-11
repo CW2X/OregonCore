@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -195,7 +195,7 @@ public:
         {
             DoScriptText(SAY_GAMESBEGIN_2, me);
 
-            //Oregon::Singleton<MapManager>::Instance().GetMap(me->GetMapId(), me)->GetPlayers().begin();
+            //MaNGOS::Singleton<MapManager>::Instance().GetMap(me->GetMapId(), me)->GetPlayers().begin();
             /*
             list <Player*>::const_iterator i = MapManager::Instance().GetMap(me->GetMapId(), me)->GetPlayers().begin();
 
@@ -309,7 +309,7 @@ public:
                         //Make super invis
                         DoCast(me, 8149);
 
-                        //Teleport self to a hiding spot (this causes errors in the Oregon log but no real issues)
+                        //Teleport self to a hiding spot (this causes errors in the MaNGOS log but no real issues)
                         DoTeleportTo(HIDE_X, HIDE_Y, HIDE_Z);
                         me->AddUnitState(UNIT_STATE_FLEEING);
 

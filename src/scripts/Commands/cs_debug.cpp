@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -676,14 +676,14 @@ public:
         if (isint32)
         {
             iValue = (uint32)atoi(py);
-            sLog.outDebug(handler->GetOregonString(LANG_SET_UINT), GUID_LOPART(guid), Opcode, iValue);
+            sLog.outDebug(handler->GetMaNGOSString(LANG_SET_UINT), GUID_LOPART(guid), Opcode, iValue);
             target->SetUInt32Value(Opcode, iValue);
             handler->PSendSysMessage(LANG_SET_UINT_FIELD, GUID_LOPART(guid), Opcode, iValue);
         }
         else
         {
             fValue = (float)atof(py);
-            sLog.outDebug(handler->GetOregonString(LANG_SET_FLOAT), GUID_LOPART(guid), Opcode, fValue);
+            sLog.outDebug(handler->GetMaNGOSString(LANG_SET_FLOAT), GUID_LOPART(guid), Opcode, fValue);
             target->SetFloatValue(Opcode, fValue);
             handler->PSendSysMessage(LANG_SET_FLOAT_FIELD, GUID_LOPART(guid), Opcode, fValue);
         }
@@ -727,13 +727,13 @@ public:
         if (isint32)
         {
             iValue = target->GetUInt32Value(Opcode);
-            sLog.outDebug(handler->GetOregonString(LANG_GET_UINT), GUID_LOPART(guid), Opcode, iValue);
+            sLog.outDebug(handler->GetMaNGOSString(LANG_GET_UINT), GUID_LOPART(guid), Opcode, iValue);
             handler->PSendSysMessage(LANG_GET_UINT_FIELD, GUID_LOPART(guid), Opcode, iValue);
         }
         else
         {
             fValue = target->GetFloatValue(Opcode);
-            sLog.outDebug(handler->GetOregonString(LANG_GET_FLOAT), GUID_LOPART(guid), Opcode, fValue);
+            sLog.outDebug(handler->GetMaNGOSString(LANG_GET_FLOAT), GUID_LOPART(guid), Opcode, fValue);
             handler->PSendSysMessage(LANG_GET_FLOAT_FIELD, GUID_LOPART(guid), Opcode, fValue);
         }
 
@@ -760,7 +760,7 @@ public:
             return false;
         }
 
-        sLog.outDebug(handler->GetOregonString(LANG_CHANGE_32BIT), Opcode, Value);
+        sLog.outDebug(handler->GetMaNGOSString(LANG_CHANGE_32BIT), Opcode, Value);
 
         int CurrentValue = (int)handler->GetSession()->GetPlayer()->GetUInt32Value(Opcode);
 

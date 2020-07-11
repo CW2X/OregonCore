@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_BYTECONVERTER_H
-#define OREGON_BYTECONVERTER_H
+#ifndef MANGOS_BYTECONVERTER_H
+#define MANGOS_BYTECONVERTER_H
 
 /*
   ByteConverter reverse your byte order.  This is used
@@ -44,7 +44,7 @@ template<typename T> inline void apply(T* val)
 }
 }
 
-#if OREGON_ENDIAN == OREGON_BIGENDIAN
+#if MANGOS_ENDIAN == MANGOS_BIGENDIAN
 template<typename T> inline void EndianConvert(T& val)
 {
     ByteConverter::apply<T>(&val);

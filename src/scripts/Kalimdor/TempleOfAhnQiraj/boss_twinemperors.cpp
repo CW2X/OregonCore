@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -332,15 +332,15 @@ struct boss_twinemperorsAI : public ScriptedAI
 
     Creature* RespawnNearbyBugsAndGetOne()
     {
-        CellCoord p(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+        CellCoord p(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
         Cell cell(p);
         cell.SetNoCreate();
 
         std::list<Creature*> unitList;
 
         AnyBugCheck u_check(me, 150);
-        Oregon::CreatureListSearcher<AnyBugCheck> searcher(unitList, u_check);
-        TypeContainerVisitor<Oregon::CreatureListSearcher<AnyBugCheck>, GridTypeMapContainer >  grid_creature_searcher(searcher);
+        MaNGOS::CreatureListSearcher<AnyBugCheck> searcher(unitList, u_check);
+        TypeContainerVisitor<MaNGOS::CreatureListSearcher<AnyBugCheck>, GridTypeMapContainer >  grid_creature_searcher(searcher);
         cell.Visit(p, grid_creature_searcher, *(me->GetMap()), *me, me->GetGridActivationRange());
 
         Creature* nearb = NULL;

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -684,15 +684,15 @@ void AreaAura::Update(uint32 diff)
                 break;
             case AREA_AURA_FRIEND:
                 {
-                    Oregon::AnyFriendlyUnitInObjectRangeCheck u_check(caster, caster, m_radius);
-                    Oregon::UnitListSearcher<Oregon::AnyFriendlyUnitInObjectRangeCheck> searcher(targets, u_check);
+                    MaNGOS::AnyFriendlyUnitInObjectRangeCheck u_check(caster, caster, m_radius);
+                    MaNGOS::UnitListSearcher<MaNGOS::AnyFriendlyUnitInObjectRangeCheck> searcher(targets, u_check);
                     caster->VisitNearbyObject(m_radius, searcher);
                     break;
                 }
             case AREA_AURA_ENEMY:
                 {
-                    Oregon::AnyAoETargetUnitInObjectRangeCheck u_check(caster, caster, m_radius); // No GetCharmer in searcher
-                    Oregon::UnitListSearcher<Oregon::AnyAoETargetUnitInObjectRangeCheck> searcher(targets, u_check);
+                    MaNGOS::AnyAoETargetUnitInObjectRangeCheck u_check(caster, caster, m_radius); // No GetCharmer in searcher
+                    MaNGOS::UnitListSearcher<MaNGOS::AnyAoETargetUnitInObjectRangeCheck> searcher(targets, u_check);
                     caster->VisitNearbyObject(m_radius, searcher);
                     break;
                 }
@@ -3375,8 +3375,8 @@ void Aura::HandleFeignDeath(bool apply, bool Real)
         */
 
         std::list<Unit*> targets;
-        Oregon::AnyUnfriendlyUnitInObjectRangeCheck u_check(m_target, m_target, m_target->GetMap()->GetVisibilityRange());
-        Oregon::UnitListSearcher<Oregon::AnyUnfriendlyUnitInObjectRangeCheck> searcher(targets, u_check);
+        MaNGOS::AnyUnfriendlyUnitInObjectRangeCheck u_check(m_target, m_target, m_target->GetMap()->GetVisibilityRange());
+        MaNGOS::UnitListSearcher<MaNGOS::AnyUnfriendlyUnitInObjectRangeCheck> searcher(targets, u_check);
         m_target->VisitNearbyObject(m_target->GetMap()->GetVisibilityRange(), searcher);
         for (std::list<Unit*>::iterator iter = targets.begin(); iter != targets.end(); ++iter)
         {
@@ -3491,8 +3491,8 @@ void Aura::HandleModStealth(bool apply, bool Real)
         }
 
         std::list<Unit*> targets;
-        Oregon::AnyUnfriendlyUnitInObjectRangeCheck u_check(m_target, m_target, m_target->GetMap()->GetVisibilityRange());
-        Oregon::UnitListSearcher<Oregon::AnyUnfriendlyUnitInObjectRangeCheck> searcher(targets, u_check);
+        MaNGOS::AnyUnfriendlyUnitInObjectRangeCheck u_check(m_target, m_target, m_target->GetMap()->GetVisibilityRange());
+        MaNGOS::UnitListSearcher<MaNGOS::AnyUnfriendlyUnitInObjectRangeCheck> searcher(targets, u_check);
         m_target->VisitNearbyObject(m_target->GetMap()->GetVisibilityRange(), searcher);
         for (std::list<Unit*>::iterator iter = targets.begin(); iter != targets.end(); ++iter)
         {

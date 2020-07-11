@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_BAG_H
-#define OREGON_BAG_H
+#ifndef MANGOS_BAG_H
+#define MANGOS_BAG_H
 
 // Maximum 36 Slots ((CONTAINER_END - CONTAINER_FIELD_SLOT_1)/2
 #define MAX_BAG_SIZE 36                                     // 2.0.12

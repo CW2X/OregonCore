@@ -70,7 +70,7 @@ public:
         if (!*args)
             return false;
 
-        std::string str = handler->GetOregonString(LANG_GLOBAL_NOTIFY);
+        std::string str = handler->GetMaNGOSString(LANG_GLOBAL_NOTIFY);
         str += args;
 
         WorldPacket data(SMSG_NOTIFICATION, (str.size() + 1));
@@ -86,7 +86,7 @@ public:
         if (!*args)
             return false;
 
-        std::string str = handler->GetOregonString(LANG_GM_NOTIFY);
+        std::string str = handler->GetMaNGOSString(LANG_GM_NOTIFY);
         str += args;
 
         WorldPacket data(SMSG_NOTIFICATION, (str.size() + 1));
@@ -100,7 +100,7 @@ public:
     {
         if (!*args)
         {
-            handler->PSendSysMessage(LANG_COMMAND_WHISPERACCEPTING, handler->GetSession()->GetPlayer()->isAcceptWhispers() ? handler->GetOregonString(LANG_ON) : handler->GetOregonString(LANG_OFF));
+            handler->PSendSysMessage(LANG_COMMAND_WHISPERACCEPTING, handler->GetSession()->GetPlayer()->isAcceptWhispers() ? handler->GetMaNGOSString(LANG_ON) : handler->GetMaNGOSString(LANG_OFF));
             return true;
         }
 

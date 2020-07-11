@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_TYPECONTAINER_H
-#define OREGON_TYPECONTAINER_H
+#ifndef MANGOS_TYPECONTAINER_H
+#define MANGOS_TYPECONTAINER_H
 
 /*
  * Here, you'll find a series of containers that allow you to hold multiple
@@ -65,13 +65,13 @@ class TypeMapContainer
     public:
         template<class SPECIFIC_TYPE> size_t Count() const
         {
-            return Oregon::Count(i_elements, (SPECIFIC_TYPE*)NULL);
+            return MaNGOS::Count(i_elements, (SPECIFIC_TYPE*)NULL);
         }
 
         // inserts a specific object into the container
         template<class SPECIFIC_TYPE> bool insert(SPECIFIC_TYPE* obj)
         {
-            SPECIFIC_TYPE* t = Oregon::Insert(i_elements, obj);
+            SPECIFIC_TYPE* t = MaNGOS::Insert(i_elements, obj);
             return (t != NULL);
         }
 

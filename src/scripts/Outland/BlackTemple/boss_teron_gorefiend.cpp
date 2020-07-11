@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -176,7 +176,7 @@ public:
                 if (pUnit && pUnit->IsAlive())
                     targets.push_back(pUnit);
             }
-            targets.sort(Oregon::ObjectDistanceOrderPred(me));
+            targets.sort(MaNGOS::ObjectDistanceOrderPred(me));
             Unit* pTarget = targets.front();
             if (pTarget && me->IsWithinDistInMap(pTarget, me->GetAttackDistance(pTarget)))
             {
@@ -343,7 +343,7 @@ public:
         {
             /************************************************************************/
             /** NOTE FOR FUTURE DEVELOPER: PROPERLY IMPLEMENT THE GHOST PORTION *****/
-            /** ONLY AFTER Oregon FULLY IMPLEMENTS MIND CONTROL ABILITIES      *****/
+            /** ONLY AFTER MaNGOS FULLY IMPLEMENTS MIND CONTROL ABILITIES      *****/
             /**  THE CURRENT CODE IN THIS FUNCTION IS ONLY THE BEGINNING OF    *****/
             /**   WHAT IS FULLY NECESSARY FOR GOREFIEND TO BE 100% COMPLETE    *****/
             /************************************************************************/

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGONCORE_QUEST_H
-#define OREGONCORE_QUEST_H
+#ifndef MANGOSCORE_QUEST_H
+#define MANGOSCORE_QUEST_H
 
 #include "Platform/Define.h"
 #include "Database/DatabaseEnv.h"
@@ -135,7 +135,7 @@ enum QuestFlags
 enum QuestSpecialFlags
 {
     QUEST_SPECIAL_FLAGS_NONE                 = 0x000,
-    // Oregon flags for set SpecialFlags in DB if required but used only at server
+    // MaNGOS flags for set SpecialFlags in DB if required but used only at server
     QUEST_SPECIAL_FLAGS_REPEATABLE           = 0x001,   // Set by 1 in SpecialFlags from DB
     QUEST_SPECIAL_FLAGS_EXPLORATION_OR_EVENT = 0x002,   // Set by 2 in SpecialFlags from DB (if required area explore, spell SPELL_EFFECT_QUEST_COMPLETE casting, table `*_script` command SCRIPT_COMMAND_QUEST_EXPLORED use, set from script DLL)
     QUEST_SPECIAL_FLAGS_AUTO_ACCEPT          = 0x004,   // Set by 4 in SpecialFlags in DB if the quest is to be auto-accepted.    
@@ -143,7 +143,7 @@ enum QuestSpecialFlags
     
     QUEST_SPECIAL_FLAGS_DB_ALLOWED = QUEST_SPECIAL_FLAGS_REPEATABLE | QUEST_SPECIAL_FLAGS_EXPLORATION_OR_EVENT | QUEST_SPECIAL_FLAGS_CAST,
 
-    // Oregon flags for internal use only
+    // MaNGOS flags for internal use only
     QUEST_SPECIAL_FLAGS_DELIVER              = 0x080,     // Internal flag computed only
     QUEST_SPECIAL_FLAGS_SPEAKTO              = 0x100,     // Internal flag computed only
     QUEST_SPECIAL_FLAGS_KILL                 = 0x200,     // Internal flag computed only

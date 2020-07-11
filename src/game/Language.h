@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,10 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __OREGON_LANGUAGE_H
-#define __OREGON_LANGUAGE_H
+#ifndef __MANGOS_LANGUAGE_H
+#define __MANGOS_LANGUAGE_H
 
-enum OregonStrings
+enum MaNGOSStrings
 {
     // for chat commands
     LANG_SELECT_CHAR_OR_CREATURE        = 1,
@@ -840,7 +840,7 @@ enum OregonStrings
     LANG_COMMAND_TICKETLISTADDCOMMENT   = 2024,
     LANG_COMMAND_TICKETLISTAGECREATE    = 2025,
 
-    // Oregon strings                     5000-9999
+    // MaNGOS strings                     5000-9999
     LANG_COMMAND_FREEZE                 = 5000,
     LANG_COMMAND_FREEZE_ERROR           = 5001,
     LANG_COMMAND_FREEZE_WRONG           = 5002,
@@ -857,7 +857,7 @@ enum OregonStrings
 
     LANG_FLEE                           = 5030,
     LANG_CALL_FOR_HELP                  = 5035,
-    // Room for more Oregon strings       5013-9999
+    // Room for more MaNGOS strings       5013-9999
 
     // Used for GM Announcements
     LANG_GM_BROADCAST                    = 6613,

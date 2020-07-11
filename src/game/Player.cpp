@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -155,7 +155,7 @@ inline void KillRewarder::_InitGroupData()
                         _maxLevel = lvl;
                     // 2.4. _maxNotGrayMember - maximum level of alive group member within reward distance,
                     //      for whom victim is not gray;
-                    uint32 grayLevel = Oregon::XP::GetGrayLevel(lvl);
+                    uint32 grayLevel = MaNGOS::XP::GetGrayLevel(lvl);
                     if (_victim->getLevel() > grayLevel && (!_maxNotGrayMember || _maxNotGrayMember->getLevel() < lvl))
                         _maxNotGrayMember = member;
                 }
@@ -175,7 +175,7 @@ inline void KillRewarder::_InitXP(Player* player)
     // * otherwise, not in PvP;
     // * not if killer is on vehicle.
     if (_isBattleGround || (!_isPvP))
-        _xp = Oregon::XP::Gain(player, _victim, _isBattleGround);
+        _xp = MaNGOS::XP::Gain(player, _victim, _isBattleGround);
 
     if (_xp && !_isBattleGround && _victim) // pussywizard: npcs with relatively low hp give lower exp
         if (_victim->GetTypeId() == TYPEID_UNIT)
@@ -286,7 +286,7 @@ void KillRewarder::_RewardGroup()
             {
                 // 3.1.2. Alter group rate if group is in raid (not for battlegrounds).
                 const bool isRaid = !_isPvP && sMapStore.LookupEntry(_killer->GetMapId())->IsRaid() && _group->isRaidGroup();
-                _groupRate = Oregon::XP::xp_in_group_rate(_count, isRaid);
+                _groupRate = MaNGOS::XP::xp_in_group_rate(_count, isRaid);
             }
 
             // 3.1.3. Reward each group member (even dead or corpse) within reward distance.
@@ -2192,7 +2192,7 @@ void Player::Regenerate(Powers power)
             bool recentCast = IsUnderLastManaUseEffect();
             float ManaIncreaseRate = sWorld.getRate(RATE_POWER_MANA);
 
-            if (recentCast) // Oregon Updates Mana in intervals of 2s, which is correct
+            if (recentCast) // MaNGOS Updates Mana in intervals of 2s, which is correct
                 addvalue = GetFloatValue(PLAYER_FIELD_MOD_MANA_REGEN_INTERRUPT) * ManaIncreaseRate * 2.00f;
 
             else
@@ -2663,7 +2663,7 @@ void Player::GiveLevel(uint32 level, bool ignoreRAF)
 
     GetSession()->SendPacket(&data);
 
-    SetUInt32Value(PLAYER_NEXT_LEVEL_XP, Oregon::XP::xp_to_level(level));
+    SetUInt32Value(PLAYER_NEXT_LEVEL_XP, MaNGOS::XP::xp_to_level(level));
 
     //update level, max level of skills
     m_Played_time[PLAYED_TIME_LEVEL] = 0;                               // Level Played Time reset
@@ -2749,7 +2749,7 @@ void Player::InitStatsForLevel(bool reapplyMods)
     sObjectMgr.GetPlayerLevelInfo(getRace(), getClass(), getLevel(), &info);
 
     SetUInt32Value(PLAYER_FIELD_MAX_LEVEL, sWorld.getConfig(CONFIG_MAX_PLAYER_LEVEL));
-    SetUInt32Value(PLAYER_NEXT_LEVEL_XP, Oregon::XP::xp_to_level(getLevel()));
+    SetUInt32Value(PLAYER_NEXT_LEVEL_XP, MaNGOS::XP::xp_to_level(getLevel()));
 
     // reset before any aura state sources (health set/aura apply)
     SetUInt32Value(UNIT_FIELD_AURASTATE, 0);
@@ -5431,7 +5431,7 @@ void Player::UpdateWeaponSkill(WeaponAttackType attType)
 void Player::UpdateCombatSkills(Unit* victim, WeaponAttackType attType, MeleeHitOutcome /*outcome*/, bool defence)
 {
     uint32 plevel = getLevel();                             // if defense than victim == attacker
-    uint32 greylevel = Oregon::XP::GetGrayLevel(plevel);
+    uint32 greylevel = MaNGOS::XP::GetGrayLevel(plevel);
     uint32 moblevel = victim->getLevelForTarget(this);
     if (moblevel < greylevel)
         return;
@@ -5834,7 +5834,7 @@ void Player::removeActionButton(uint8 button)
 bool Player::SetPosition(float x, float y, float z, float orientation, bool teleport)
 {
     // prevent crash when a bad coord is sent by the client
-    if (!Oregon::IsValidMapCoord(x, y, z, orientation))
+    if (!MaNGOS::IsValidMapCoord(x, y, z, orientation))
     {
         DEBUG_LOG("Player::SetPosition(%f, %f, %f, %f, %d) .. bad coordinates for player %d!", x, y, z, orientation, teleport, GetGUIDLow());
         return false;
@@ -5893,7 +5893,7 @@ void Player::SendMessageToSetInRange(WorldPacket* data, float dist, bool self)
     if (self)
         GetSession()->SendPacket(data);
 
-    Oregon::MessageDistDeliverer notifier(this, data, dist);
+    MaNGOS::MessageDistDeliverer notifier(this, data, dist);
     VisitNearbyWorldObject(dist, notifier);
 }
 
@@ -5902,7 +5902,7 @@ void Player::SendMessageToSetInRange(WorldPacket* data, float dist, bool self, b
     if (self)
         GetSession()->SendPacket(data);
 
-    Oregon::MessageDistDeliverer notifier(this, data, dist, own_team_only);
+    MaNGOS::MessageDistDeliverer notifier(this, data, dist, own_team_only);
     VisitNearbyWorldObject(dist, notifier);
 }
 
@@ -6055,7 +6055,7 @@ ReputationRank Player::GetReputationRank(uint32 faction) const
 int32 Player::CalculateReputationGain(uint32 creatureOrQuestLevel, int32 rep, bool for_quest)
 {
     // for grey creature kill received 20%, in other case 100.
-    int32 percent = (!for_quest && (creatureOrQuestLevel <= Oregon::XP::GetGrayLevel(getLevel()))) ? 20 : 100;
+    int32 percent = (!for_quest && (creatureOrQuestLevel <= MaNGOS::XP::GetGrayLevel(getLevel()))) ? 20 : 100;
 
     int32 repMod = GetTotalAuraModifier(SPELL_AURA_MOD_REPUTATION_GAIN);
 
@@ -13273,7 +13273,7 @@ void Player::RewardQuest(Quest const* pQuest, uint32 reward, Object* questGiver,
 
     // honor reward
     if (pQuest->GetRewHonorableKills())
-        RewardHonor(NULL, 0, Oregon::Honor::hk_honor_at_level(getLevel(), pQuest->GetRewHonorableKills()));
+        RewardHonor(NULL, 0, MaNGOS::Honor::hk_honor_at_level(getLevel(), pQuest->GetRewHonorableKills()));
 
     // title reward
     if (pQuest->GetCharTitleId())
@@ -13838,7 +13838,7 @@ void Player::SetQuestStatus(uint32 quest_id, QuestStatus status)
     UpdateForQuestsGO();
 }
 
-// not used in Oregon, but used in scripting code
+// not used in MaNGOS, but used in scripting code
 uint32 Player::GetReqKillOrCastCurrentCount(uint32 quest_id, int32 entry)
 {
     Quest const* qInfo = sObjectMgr.GetQuestTemplate(quest_id);
@@ -13905,7 +13905,7 @@ void Player::AreaExploredOrEventHappens(uint32 questId)
     }
 }
 
-//not used in Oregond, function for external script library
+//not used in MaNGOSd, function for external script library
 void Player::GroupEventHappens(uint32 questId, WorldObject const* pEventObject)
 {
     if (Group* pGroup = GetGroup())
@@ -14786,7 +14786,7 @@ bool Player::LoadFromDB(uint32 guid, SqlQueryHolder* holder)
 
         m_movementInfo.SetTransportData(transGUID, fields[27].GetFloat(), fields[28].GetFloat(), fields[29].GetFloat(), fields[30].GetFloat(), 0);
 
-        if (!Oregon::IsValidMapCoord(
+        if (!MaNGOS::IsValidMapCoord(
                 GetPositionX() + m_movementInfo.GetTransportPos()->GetPositionX(), GetPositionY() + m_movementInfo.GetTransportPos()->GetPositionY(),
                 GetPositionZ() + m_movementInfo.GetTransportPos()->GetPositionZ(), GetOrientation() + m_movementInfo.GetTransportPos()->GetOrientation()) ||
             // transport size limited
@@ -14904,7 +14904,7 @@ bool Player::LoadFromDB(uint32 guid, SqlQueryHolder* holder)
                     SendTransferAborted(map->GetId(), TRANSFER_ABORT_DIFFICULTY2);
                     break;
                 case Map::CANNOT_ENTER_INSTANCE_BIND_MISMATCH:
-                    ChatHandler(GetSession()).PSendSysMessage(GetSession()->GetOregonString(LANG_INSTANCE_BIND_MISMATCH), map->GetMapName());
+                    ChatHandler(GetSession()).PSendSysMessage(GetSession()->GetMaNGOSString(LANG_INSTANCE_BIND_MISMATCH), map->GetMapName());
                     break;
                 case Map::CANNOT_ENTER_TOO_MANY_INSTANCES:
                     SendTransferAborted(map->GetId(), TRANSFER_ABORT_TOO_MANY_INSTANCES);
@@ -15526,7 +15526,7 @@ void Player::_LoadInventory(QueryResult_AutoPtr result, uint32 timediff)
         // send by mail problematic items
         while (!problematicItems.empty())
         {
-            std::string subject = GetSession()->GetOregonString(LANG_NOT_EQUIPPED_ITEM);
+            std::string subject = GetSession()->GetMaNGOSString(LANG_NOT_EQUIPPED_ITEM);
 
             // fill mail
             MailDraft draft(subject);
@@ -16069,7 +16069,7 @@ InstancePlayerBind* Player::BindToInstance(InstanceSave* save, bool permanent, b
         bind.save = save;
         bind.perm = permanent;
         
-        #ifdef OREGON_DEBUG
+        #ifdef MANGOS_DEBUG
         if (!load)
             DEBUG_LOG("Player::BindToInstance: %s(%d) is now bound to map %d, instance %d, difficulty %d", GetName(), GetGUIDLow(), save->GetMapId(), save->GetInstanceId(), save->GetDifficulty());
         #endif
@@ -16249,7 +16249,7 @@ bool Player::Satisfy(AccessRequirement const* ar, uint32 target_map, bool report
             if (report)
             {
                 if (missingItem)
-                    GetSession()->SendAreaTriggerMessage(GetSession()->GetOregonString(LANG_LEVEL_MINREQUIRED_AND_ITEM), ar->levelMin, sObjectMgr.GetItemTemplate(missingItem)->Name1);
+                    GetSession()->SendAreaTriggerMessage(GetSession()->GetMaNGOSString(LANG_LEVEL_MINREQUIRED_AND_ITEM), ar->levelMin, sObjectMgr.GetItemTemplate(missingItem)->Name1);
                 else if (missingKey)
                 {
                     // on screen chat
@@ -16262,7 +16262,7 @@ bool Player::Satisfy(AccessRequirement const* ar, uint32 target_map, bool report
                 else if (missingQuest)
                     GetSession()->SendAreaTriggerMessage("%s", ar->questFailedText.c_str());
                 else if (LevelMin)
-                    GetSession()->SendAreaTriggerMessage(GetSession()->GetOregonString(LANG_LEVEL_MINREQUIRED), LevelMin);
+                    GetSession()->SendAreaTriggerMessage(GetSession()->GetMaNGOSString(LANG_LEVEL_MINREQUIRED), LevelMin);
                 // @todo implement LevelMax
             }
             return false;
@@ -16949,7 +16949,7 @@ void Player::_SaveTutorials()
 
 void Player::outDebugValues() const
 {
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     if (!sLog.IsOutDebug())                                  // optimize disabled debug output
         return;
 
@@ -18978,7 +18978,7 @@ void Player::UpdateVisibilityOf(WorldObject* target)
             target->DestroyForPlayer(this);
             m_clientGUIDs.erase(target->GetGUID());
 
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
                 sLog.outDebug("Object %u (Type: %u) out of range for player %u. Distance = %f", target->GetGUIDLow(), target->GetTypeId(), GetGUIDLow(), GetDistance(target));
             #endif
         }
@@ -18991,7 +18991,7 @@ void Player::UpdateVisibilityOf(WorldObject* target)
             if (target->GetTypeId() != TYPEID_GAMEOBJECT || !((GameObject*)target)->IsTransport())
                 m_clientGUIDs.insert(target->GetGUID());
 
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
                 sLog.outDebug("Object %u (Type: %u) is visible now for player %u. Distance = %f", target->GetGUIDLow(), target->GetTypeId(), GetGUIDLow(), GetDistance(target));
             #endif
 
@@ -19042,7 +19042,7 @@ void Player::UpdateVisibilityOf(T* target, UpdateData& data, std::set<Unit*>& vi
             target->BuildOutOfRangeUpdateBlock(&data);
             m_clientGUIDs.erase(target->GetGUID());
 
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
                 sLog.outDebug("Object %u (Type: %u, Entry: %u) is out of range for player %u. Distance = %f", target->GetGUIDLow(), target->GetTypeId(), target->GetEntry(), GetGUIDLow(), GetDistance(target));
             #endif
         }
@@ -19054,7 +19054,7 @@ void Player::UpdateVisibilityOf(T* target, UpdateData& data, std::set<Unit*>& vi
             target->BuildCreateUpdateBlockForPlayer(&data, this);
             UpdateVisibilityOf_helper(m_clientGUIDs, target, visibleNow);
 
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
                 sLog.outDebug("Object %u (Type: %u, Entry: %u) is visible now for player %u. Distance = %f", target->GetGUIDLow(), target->GetTypeId(), target->GetEntry(), GetGUIDLow(), GetDistance(target));
             #endif
         }
@@ -19081,7 +19081,7 @@ void Player::UpdateObjectVisibility(bool forced)
 void Player::UpdateVisibilityForPlayer()
 {
     // updates visibility of all objects around point of view for current player
-    Oregon::VisibleNotifier notifier(*this);
+    MaNGOS::VisibleNotifier notifier(*this);
     m_seer->VisitNearbyObject(GetSightRange(), notifier);
     notifier.SendToSelf();   // send gathered data
 }
@@ -19814,7 +19814,7 @@ void Player::AutoUnequipOffhandIfNeed()
         offItem->DeleteFromInventoryDB();                   // deletes item from character's inventory
         offItem->SaveToDB();                                // recursive and not have transaction guard into self, item not in inventory and can be save standalone
 
-        std::string subject = GetSession()->GetOregonString(LANG_NOT_EQUIPPED_ITEM);
+        std::string subject = GetSession()->GetMaNGOSString(LANG_NOT_EQUIPPED_ITEM);
         MailDraft(subject).AddItem(offItem).SendMailTo(this, MailSender(this, MAIL_STATIONERY_GM), MAIL_CHECK_MASK_COPIED);
 
         CharacterDatabase.CommitTransaction();
@@ -19960,7 +19960,7 @@ uint32 Player::GetResurrectionSpellId()
 bool Player::isHonorOrXPTarget(Unit* victim) const
 {
     uint32 v_level = victim->getLevel();
-    uint32 k_grey  = Oregon::XP::GetGrayLevel(getLevel());
+    uint32 k_grey  = MaNGOS::XP::GetGrayLevel(getLevel());
 
     // Victim level less gray level
     if (v_level <= k_grey)
@@ -20419,7 +20419,7 @@ bool ItemPosCount::isContainedIn(ItemPosCountVec const& vec) const
 }
 
 //***********************************
-//-------------Oregon---------------
+//-------------MaNGOS---------------
 //***********************************
 
 void Player::HandleFallDamage(MovementInfo& movementInfo)
@@ -20613,7 +20613,7 @@ void Player::SetTitle(CharTitlesEntry const* title, bool lost)
     GetSession()->SendPacket(&data);
 }
 
-/*-----------------------Oregon--------------------------*/
+/*-----------------------MaNGOS--------------------------*/
 bool Player::isTotalImmunity()
 {
     AuraList const& immune = GetAurasByType(SPELL_AURA_SCHOOL_IMMUNITY);

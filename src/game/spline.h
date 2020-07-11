@@ -1,5 +1,5 @@
 /*
-* This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+* This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
 * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef OREGON_SPLINE_H
-#define OREGON_SPLINE_H
+#ifndef MANGOS_SPLINE_H
+#define MANGOS_SPLINE_H
 
 #include "typedefs.h"
 #include "G3D/Vector3.h"
@@ -208,4 +208,4 @@ namespace Movement
 
 #include "spline.impl.h"
 
-#endif // OREGON_SPLINE_H
+#endif // MANGOS_SPLINE_H

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -78,16 +78,16 @@ TotemAI::UpdateAI(const uint32 /*diff*/)
         !victim->isTargetableForAttack() || !i_totem.IsWithinDistInMap(victim, max_range) ||
         i_totem.IsFriendlyTo(victim) || !i_totem.CanSeeOrDetect(victim))
     {
-        CellCoord p(Oregon::ComputeCellCoord(i_totem.GetPositionX(), i_totem.GetPositionY()));
+        CellCoord p(MaNGOS::ComputeCellCoord(i_totem.GetPositionX(), i_totem.GetPositionY()));
         Cell cell(p);
 
         victim = NULL;
 
-        Oregon::NearestAttackableUnitInObjectRangeCheck u_check(&i_totem, me->GetCharmerOrOwnerOrSelf(), max_range);
-        Oregon::UnitLastSearcher<Oregon::NearestAttackableUnitInObjectRangeCheck> checker(victim, u_check);
+        MaNGOS::NearestAttackableUnitInObjectRangeCheck u_check(&i_totem, me->GetCharmerOrOwnerOrSelf(), max_range);
+        MaNGOS::UnitLastSearcher<MaNGOS::NearestAttackableUnitInObjectRangeCheck> checker(victim, u_check);
 
-        TypeContainerVisitor<Oregon::UnitLastSearcher<Oregon::NearestAttackableUnitInObjectRangeCheck>, GridTypeMapContainer > grid_object_checker(checker);
-        TypeContainerVisitor<Oregon::UnitLastSearcher<Oregon::NearestAttackableUnitInObjectRangeCheck>, WorldTypeMapContainer > world_object_checker(checker);
+        TypeContainerVisitor<MaNGOS::UnitLastSearcher<MaNGOS::NearestAttackableUnitInObjectRangeCheck>, GridTypeMapContainer > grid_object_checker(checker);
+        TypeContainerVisitor<MaNGOS::UnitLastSearcher<MaNGOS::NearestAttackableUnitInObjectRangeCheck>, WorldTypeMapContainer > world_object_checker(checker);
 
         //@todo Backport mangos-0.12 r638: [7667] Add to CreatureAI field pointing to creature itself
         //cell.Visit(p, grid_object_checker,  *m_creature.GetMap(), *m_creature, max_range);

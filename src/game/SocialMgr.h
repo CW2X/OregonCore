@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __OREGON_SOCIALMGR_H
-#define __OREGON_SOCIALMGR_H
+#ifndef __MANGOS_SOCIALMGR_H
+#define __MANGOS_SOCIALMGR_H
 
 #include "Policies/Singleton.h"
 #include "Database/DatabaseEnv.h"
@@ -163,6 +163,6 @@ class SocialMgr
         SocialMap m_socialMap;
 };
 
-#define sSocialMgr Oregon::Singleton<SocialMgr>::Instance()
+#define sSocialMgr MaNGOS::Singleton<SocialMgr>::Instance()
 #endif
 

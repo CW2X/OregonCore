@@ -1,5 +1,5 @@
 /*
- * Originally written by Rochet2 - Copyright (C) 2018+ Oregoncore <https://oregon-core.net/>, released under GNU AGPL v3 license: https://github.com/OregonCore/OregonCore
+ * Originally written by Rochet2 - Copyright (C) 2018+ MaNGOScore <https://mangos-core.net/>, released under GNU AGPL v3 license: https://github.com/MaNGOSCore/MaNGOSCore
  */
 
 #ifndef _DATA_MAP_H_

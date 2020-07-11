@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -87,7 +87,7 @@ void WorldSession::SendNameQueryOpcodeFromDBCallBack(QueryResult_AutoPtr result,
     std::string name = fields[1].GetCppString();
     uint32 field     = 0;
     if (name == "")
-        name         = session->GetOregonString(LANG_NON_EXIST_CHARACTER);
+        name         = session->GetMaNGOSString(LANG_NON_EXIST_CHARACTER);
     else
         field        = fields[2].GetUInt32();
 

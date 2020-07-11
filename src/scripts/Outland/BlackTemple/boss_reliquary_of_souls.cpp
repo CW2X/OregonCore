@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -415,7 +415,7 @@ public:
             }
             if (targets.empty())
                 return; // No targets added for some reason. No point continuing.
-            targets.sort(Oregon::ObjectDistanceOrderPred(me)); // Sort players by distance.
+            targets.sort(MaNGOS::ObjectDistanceOrderPred(me)); // Sort players by distance.
             targets.resize(1); // Only need closest target.
             Unit* pTarget = targets.front(); // Get the first target.
             if (pTarget)

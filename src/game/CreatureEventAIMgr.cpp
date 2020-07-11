@@ -1,6 +1,6 @@
 
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -36,7 +36,7 @@ void CreatureEventAIMgr::LoadCreatureEventAI_Texts(bool check_entry_use)
     m_CreatureEventAI_TextMap.clear();
 
     // Load EventAI Text
-    sObjectMgr.LoadOregonStrings(WorldDatabase, "creature_ai_texts", MIN_CREATURE_AI_TEXT_STRING_ID, MAX_CREATURE_AI_TEXT_STRING_ID);
+    sObjectMgr.LoadMaNGOSStrings(WorldDatabase, "creature_ai_texts", MIN_CREATURE_AI_TEXT_STRING_ID, MAX_CREATURE_AI_TEXT_STRING_ID);
 
     // Gather Additional data from EventAI Texts
     QueryResult_AutoPtr result = WorldDatabase.Query("SELECT entry, sound, type, language, emote FROM creature_ai_texts");
@@ -64,7 +64,7 @@ void CreatureEventAIMgr::LoadCreatureEventAI_Texts(bool check_entry_use)
             }
 
             // range negative (don't must be happen, loaded from same table)
-            if (!sObjectMgr.GetOregonStringLocale(i))
+            if (!sObjectMgr.GetMaNGOSStringLocale(i))
             {
                 sLog.outErrorDb("CreatureEventAI:  Entry %i in table creature_ai_texts not found", i);
                 continue;
@@ -168,7 +168,7 @@ void CreatureEventAIMgr::LoadCreatureEventAI_Summons(bool check_entry_use)
             temp.orientation = fields[4].GetFloat();
             temp.SpawnTimeSecs = fields[5].GetUInt32();
 
-            if (!Oregon::IsValidMapCoord(temp.position_x, temp.position_y, temp.position_z, temp.orientation))
+            if (!MaNGOS::IsValidMapCoord(temp.position_x, temp.position_y, temp.position_z, temp.orientation))
             {
                 sLog.outErrorDb("CreatureEventAI:  Summon id %u has invalid coordinates (%f,%f,%f,%f), skipping.", i, temp.position_x, temp.position_y, temp.position_z, temp.orientation);
                 continue;

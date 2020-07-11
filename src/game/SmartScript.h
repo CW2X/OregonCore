@@ -1,5 +1,5 @@
 /*
-* This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+* This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
 * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
 * with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef OREGON_SMARTSCRIPT_H
-#define OREGON_SMARTSCRIPT_H
+#ifndef MANGOS_SMARTSCRIPT_H
+#define MANGOS_SMARTSCRIPT_H
 
 #include "Common.h"
 #include "Creature.h"
@@ -179,13 +179,13 @@ class SmartScript
         {
             GameObject* gameObject = NULL;
 
-            CellCoord p(Oregon::ComputeCellCoord(searchObject->GetPositionX(), searchObject->GetPositionY()));
+            CellCoord p(MaNGOS::ComputeCellCoord(searchObject->GetPositionX(), searchObject->GetPositionY()));
             Cell cell(p);
 
-            Oregon::GameObjectWithDbGUIDCheck goCheck(*searchObject, guid);
-            Oregon::GameObjectSearcher<Oregon::GameObjectWithDbGUIDCheck> checker(gameObject, goCheck);
+            MaNGOS::GameObjectWithDbGUIDCheck goCheck(*searchObject, guid);
+            MaNGOS::GameObjectSearcher<MaNGOS::GameObjectWithDbGUIDCheck> checker(gameObject, goCheck);
 
-            TypeContainerVisitor<Oregon::GameObjectSearcher<Oregon::GameObjectWithDbGUIDCheck>, GridTypeMapContainer > objectChecker(checker);
+            TypeContainerVisitor<MaNGOS::GameObjectSearcher<MaNGOS::GameObjectWithDbGUIDCheck>, GridTypeMapContainer > objectChecker(checker);
             cell.Visit(p, objectChecker, *searchObject->GetMap(), *searchObject, searchObject->GetGridActivationRange());
 
             return gameObject;
@@ -195,13 +195,13 @@ class SmartScript
         {
             Creature* creature = NULL;
             
-            CellCoord p(Oregon::ComputeCellCoord(searchObject->GetPositionX(), searchObject->GetPositionY()));
+            CellCoord p(MaNGOS::ComputeCellCoord(searchObject->GetPositionX(), searchObject->GetPositionY()));
             Cell cell(p);
 
-            Oregon::CreatureWithDbGUIDCheck target_check(searchObject, guid);
-            Oregon::CreatureSearcher<Oregon::CreatureWithDbGUIDCheck> checker(creature, target_check);
+            MaNGOS::CreatureWithDbGUIDCheck target_check(searchObject, guid);
+            MaNGOS::CreatureSearcher<MaNGOS::CreatureWithDbGUIDCheck> checker(creature, target_check);
 
-            TypeContainerVisitor<Oregon::CreatureSearcher <Oregon::CreatureWithDbGUIDCheck>, GridTypeMapContainer > unit_checker(checker);
+            TypeContainerVisitor<MaNGOS::CreatureSearcher <MaNGOS::CreatureWithDbGUIDCheck>, GridTypeMapContainer > unit_checker(checker);
             cell.Visit(p, unit_checker, *searchObject->GetMap(), *searchObject, searchObject->GetGridActivationRange());
 
             return creature;

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -172,7 +172,7 @@ public:
         }
         else if (uint64 guid = sObjectMgr.GetPlayerGUIDByName(name.c_str()))
         {
-            handler->PSendSysMessage(LANG_TELEPORTING_TO, name.c_str(), handler->GetOregonString(LANG_OFFLINE), tele->name.c_str());
+            handler->PSendSysMessage(LANG_TELEPORTING_TO, name.c_str(), handler->GetMaNGOSString(LANG_OFFLINE), tele->name.c_str());
             Player::SavePositionInDB(tele->mapId, tele->position_x, tele->position_y, tele->position_z, tele->orientation,
                 MapManager::Instance().GetZoneId(tele->mapId, tele->position_x, tele->position_y, tele->position_z), guid);
         }

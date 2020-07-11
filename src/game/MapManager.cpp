@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -27,7 +27,7 @@
 #include "Corpse.h"
 #include "ObjectMgr.h"
 
-#define CLASS_LOCK Oregon::ClassLevelLockable<MapManager, ACE_Thread_Mutex>
+#define CLASS_LOCK MaNGOS::ClassLevelLockable<MapManager, ACE_Thread_Mutex>
 INSTANTIATE_SINGLETON_2(MapManager, CLASS_LOCK);
 INSTANTIATE_CLASS_MUTEX(MapManager, ACE_Thread_Mutex);
 
@@ -87,7 +87,7 @@ void MapManager::checkAndCorrectGridStatesArray()
             ok = false;
             si_GridStates[i] = i_GridStates[i];
         }
-        #if 0 // OREGON_DEBUG
+        #if 0 // MANGOS_DEBUG
         // inner class checking only when compiled with debug
         if (!si_GridStates[i]->checkMagic())
         {
@@ -255,7 +255,7 @@ void MapManager::DoDelayedMovesAndRemoves()
 
 bool MapManager::ExistMapAndVMap(uint32 mapid, float x, float y)
 {
-    GridCoord p = Oregon::ComputeGridCoord(x, y);
+    GridCoord p = MaNGOS::ComputeGridCoord(x, y);
 
     int gx = (MAX_NUMBER_OF_GRIDS - 1) - p.x_coord;
     int gy = (MAX_NUMBER_OF_GRIDS - 1) - p.y_coord;

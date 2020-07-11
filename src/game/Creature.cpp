@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -738,13 +738,13 @@ void Creature::DoFleeToGetAssistance()
     {
         Creature* creature = NULL;
 
-        CellCoord p(Oregon::ComputeCellCoord(GetPositionX(), GetPositionY()));
+        CellCoord p(MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY()));
         Cell cell(p);
         cell.SetNoCreate();
-        Oregon::NearestAssistCreatureInCreatureRangeCheck u_check(this, GetVictim(), radius);
-        Oregon::CreatureLastSearcher<Oregon::NearestAssistCreatureInCreatureRangeCheck> searcher(creature, u_check);
+        MaNGOS::NearestAssistCreatureInCreatureRangeCheck u_check(this, GetVictim(), radius);
+        MaNGOS::CreatureLastSearcher<MaNGOS::NearestAssistCreatureInCreatureRangeCheck> searcher(creature, u_check);
 
-        TypeContainerVisitor<Oregon::CreatureLastSearcher<Oregon::NearestAssistCreatureInCreatureRangeCheck>, GridTypeMapContainer > grid_creature_searcher(searcher);
+        TypeContainerVisitor<MaNGOS::CreatureLastSearcher<MaNGOS::NearestAssistCreatureInCreatureRangeCheck>, GridTypeMapContainer > grid_creature_searcher(searcher);
 
         cell.Visit(p, grid_creature_searcher, *GetMap(), *this, radius);
 
@@ -1886,18 +1886,18 @@ SpellEntry const* Creature::reachWithSpellCure(Unit* victim)
 // select nearest hostile unit within the given distance (regardless of threat list).
 Unit* Creature::SelectNearestTarget(float dist, bool playerOnly /* = false */) const
 {
-    CellCoord p(Oregon::ComputeCellCoord(GetPositionX(), GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
     Unit* target = NULL;
 
     {
-        Oregon::NearestHostileUnitCheck u_check(this, dist, playerOnly);
-        Oregon::UnitLastSearcher<Oregon::NearestHostileUnitCheck> searcher(target, u_check);
+        MaNGOS::NearestHostileUnitCheck u_check(this, dist, playerOnly);
+        MaNGOS::UnitLastSearcher<MaNGOS::NearestHostileUnitCheck> searcher(target, u_check);
 
-        TypeContainerVisitor<Oregon::UnitLastSearcher<Oregon::NearestHostileUnitCheck>, WorldTypeMapContainer > world_unit_searcher(searcher);
-        TypeContainerVisitor<Oregon::UnitLastSearcher<Oregon::NearestHostileUnitCheck>, GridTypeMapContainer >  grid_unit_searcher(searcher);
+        TypeContainerVisitor<MaNGOS::UnitLastSearcher<MaNGOS::NearestHostileUnitCheck>, WorldTypeMapContainer > world_unit_searcher(searcher);
+        TypeContainerVisitor<MaNGOS::UnitLastSearcher<MaNGOS::NearestHostileUnitCheck>, GridTypeMapContainer >  grid_unit_searcher(searcher);
 
         cell.Visit(p, world_unit_searcher, *GetMap(), *this, dist);
         cell.Visit(p, grid_unit_searcher, *GetMap(), *this, dist);
@@ -1909,7 +1909,7 @@ Unit* Creature::SelectNearestTarget(float dist, bool playerOnly /* = false */) c
 // select nearest hostile unit within the given attack distance (i.e. distance is ignored if > than ATTACK_DISTANCE), regardless of threat list.
 Unit* Creature::SelectNearestTargetInAttackDistance(float dist) const
 {
-    CellCoord p(Oregon::ComputeCellCoord(GetPositionX(), GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
@@ -1921,11 +1921,11 @@ Unit* Creature::SelectNearestTargetInAttackDistance(float dist) const
         dist = ATTACK_DISTANCE;
     }
 
-    Oregon::NearestHostileUnitInAttackDistanceCheck u_check(this, dist);
-    Oregon::UnitLastSearcher<Oregon::NearestHostileUnitInAttackDistanceCheck> searcher(target, u_check);
+    MaNGOS::NearestHostileUnitInAttackDistanceCheck u_check(this, dist);
+    MaNGOS::UnitLastSearcher<MaNGOS::NearestHostileUnitInAttackDistanceCheck> searcher(target, u_check);
 
-    TypeContainerVisitor<Oregon::UnitLastSearcher<Oregon::NearestHostileUnitInAttackDistanceCheck>, WorldTypeMapContainer > world_unit_searcher(searcher);
-    TypeContainerVisitor<Oregon::UnitLastSearcher<Oregon::NearestHostileUnitInAttackDistanceCheck>, GridTypeMapContainer >  grid_unit_searcher(searcher);
+    TypeContainerVisitor<MaNGOS::UnitLastSearcher<MaNGOS::NearestHostileUnitInAttackDistanceCheck>, WorldTypeMapContainer > world_unit_searcher(searcher);
+    TypeContainerVisitor<MaNGOS::UnitLastSearcher<MaNGOS::NearestHostileUnitInAttackDistanceCheck>, GridTypeMapContainer >  grid_unit_searcher(searcher);
 
     cell.Visit(p, world_unit_searcher, *GetMap(), *this, ATTACK_DISTANCE > dist ? ATTACK_DISTANCE : dist);
     cell.Visit(p, grid_unit_searcher, *GetMap(), *this, ATTACK_DISTANCE > dist ? ATTACK_DISTANCE : dist);
@@ -1958,14 +1958,14 @@ void Creature::CallAssistance()
             std::list<Creature*> assistList;
 
             {
-                CellCoord p(Oregon::ComputeCellCoord(GetPositionX(), GetPositionY()));
+                CellCoord p(MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY()));
                 Cell cell(p);
                 cell.SetNoCreate();
 
-                Oregon::AnyAssistCreatureInRangeCheck u_check(this, GetVictim(), radius);
-                Oregon::CreatureListSearcher<Oregon::AnyAssistCreatureInRangeCheck> searcher(assistList, u_check);
+                MaNGOS::AnyAssistCreatureInRangeCheck u_check(this, GetVictim(), radius);
+                MaNGOS::CreatureListSearcher<MaNGOS::AnyAssistCreatureInRangeCheck> searcher(assistList, u_check);
 
-                TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::AnyAssistCreatureInRangeCheck>, GridTypeMapContainer >  grid_creature_searcher(searcher);
+                TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::AnyAssistCreatureInRangeCheck>, GridTypeMapContainer >  grid_creature_searcher(searcher);
 
                 cell.Visit(p, grid_creature_searcher, *GetMap(), *this, radius);
             }
@@ -1990,14 +1990,14 @@ void Creature::CallForHelp(float radius)
     if (radius <= 0.0f || !GetVictim() || IsPet() || isCharmed())
         return;
 
-    CellCoord p(Oregon::ComputeCellCoord(GetPositionX(), GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(GetPositionX(), GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::CallOfHelpCreatureInRangeDo u_do(this, GetVictim(), radius);
-    Oregon::CreatureWorker<Oregon::CallOfHelpCreatureInRangeDo> worker(u_do);
+    MaNGOS::CallOfHelpCreatureInRangeDo u_do(this, GetVictim(), radius);
+    MaNGOS::CreatureWorker<MaNGOS::CallOfHelpCreatureInRangeDo> worker(u_do);
 
-    TypeContainerVisitor<Oregon::CreatureWorker<Oregon::CallOfHelpCreatureInRangeDo>, GridTypeMapContainer >  grid_creature_searcher(worker);
+    TypeContainerVisitor<MaNGOS::CreatureWorker<MaNGOS::CallOfHelpCreatureInRangeDo>, GridTypeMapContainer >  grid_creature_searcher(worker);
 
     cell.Visit(p, grid_creature_searcher, *GetMap(), *this, radius);
 }
@@ -2761,8 +2761,8 @@ Unit* Creature::SelectNearestHostileUnitInAggroRange(bool useLOS) const
     Unit* target = NULL;
 
     {
-        Oregon::NearestHostileUnitInAggroRangeCheck u_check(this, useLOS);
-        Oregon::UnitSearcher<Oregon::NearestHostileUnitInAggroRangeCheck> searcher(target, u_check);
+        MaNGOS::NearestHostileUnitInAggroRangeCheck u_check(this, useLOS);
+        MaNGOS::UnitSearcher<MaNGOS::NearestHostileUnitInAggroRangeCheck> searcher(target, u_check);
 
         VisitNearbyGridObject(MAX_AGGRO_RADIUS, searcher);
     }

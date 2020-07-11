@@ -106,7 +106,7 @@ if (isset($_POST["register"])) {
 	<link rel="stylesheet" href="static/css/fullcalendar.min.css">
 	<link rel="stylesheet" href="static/css/bootadmin.min.css">
 
-	<title>Register | OregonCore</title>
+	<title>Register | MaNGOSCore</title>
 </head>
 
 <body class="bg-light">
@@ -114,7 +114,7 @@ if (isset($_POST["register"])) {
 		<div class="row h-100 justify-content-center align-items-center">
 			<div class="col-md-6">
 				<div class="panel panel-login">
-					<h1 class="text-center mb-4">OregonCore</h1>
+					<h1 class="text-center mb-4">MaNGOSCore</h1>
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">

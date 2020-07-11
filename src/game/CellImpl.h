@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_CELLIMPL_H
-#define OREGON_CELLIMPL_H
+#ifndef MANGOS_CELLIMPL_H
+#define MANGOS_CELLIMPL_H
 
 #include <cmath>
 
@@ -36,7 +36,7 @@ inline Cell::Cell(CellCoord const& p)
 
 inline Cell::Cell(float x, float y)
 {
-    CellCoord p = Oregon::ComputeCellCoord(x, y);
+    CellCoord p = MaNGOS::ComputeCellCoord(x, y);
     data.Part.grid_x = p.x_coord / MAX_NUMBER_OF_CELLS;
     data.Part.grid_y = p.y_coord / MAX_NUMBER_OF_CELLS;
     data.Part.cell_x = p.x_coord % MAX_NUMBER_OF_CELLS;
@@ -49,12 +49,12 @@ inline CellArea Cell::CalculateCellArea(float x, float y, float radius)
 {
     if (radius <= 0.0f)
     {
-        CellCoord center = Oregon::ComputeCellCoord(x, y).normalize();
+        CellCoord center = MaNGOS::ComputeCellCoord(x, y).normalize();
         return CellArea(center, center);
     }
 
-    CellCoord centerX = Oregon::ComputeCellCoord(x - radius, y - radius).normalize();
-    CellCoord centerY = Oregon::ComputeCellCoord(x + radius, y + radius).normalize();
+    CellCoord centerX = MaNGOS::ComputeCellCoord(x - radius, y - radius).normalize();
+    CellCoord centerY = MaNGOS::ComputeCellCoord(x + radius, y + radius).normalize();
 
     return CellArea(centerX, centerY);
 }

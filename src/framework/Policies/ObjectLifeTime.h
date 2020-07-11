@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,15 +15,15 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_OBJECTLIFETIME_H
-#define OREGON_OBJECTLIFETIME_H
+#ifndef MANGOS_OBJECTLIFETIME_H
+#define MANGOS_OBJECTLIFETIME_H
 
 #include <stdexcept>
 #include "Platform/Define.h"
 
 typedef void (* Destroyer)(void);
 
-namespace Oregon
+namespace MaNGOS
 {
 void at_exit( void (*func)() );
 

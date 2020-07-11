@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -60,7 +60,7 @@ enum SpellNotifyPushType
 
 bool IsQuestTameSpell(uint32 spellId);
 
-namespace Oregon
+namespace MaNGOS
 {
 struct SpellNotifierCreatureAndPlayer;
 }
@@ -249,7 +249,7 @@ enum SpellTargets
 
 class Spell
 {
-        friend struct Oregon::SpellNotifierCreatureAndPlayer;
+        friend struct MaNGOS::SpellNotifierCreatureAndPlayer;
         friend void Unit::SetCurrentCastedSpell(Spell* pSpell);
     public:
 
@@ -700,7 +700,7 @@ class Spell
         bool m_skipCheck;
 };
 
-namespace Oregon
+namespace MaNGOS
 {
 struct SpellNotifierCreatureAndPlayer
 {

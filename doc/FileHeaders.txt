@@ -8,7 +8,7 @@ But remember we don't change the header of files in the /dep folder.
 Header for Core Files (even possible without MaNGOS or/and Trinity):
 --- SNIP ---
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -28,7 +28,7 @@ Header for Core Files (even possible without MaNGOS or/and Trinity):
 Header for Script Files:
 --- SNIP ---
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -47,7 +47,7 @@ Header for Script Files:
 
 Header for CMake Files:
 --- SNIP ---
-# This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+# This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 #
 # This file is free software; as a special exception the author gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -64,4 +64,4 @@ WILL need to expand the copyright headers accordingly.
 Thank you for using these headers when you add new files/modify already existing
 files!
 
- - The OregonCore developers
+ - The MaNGOSCore developers

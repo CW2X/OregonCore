@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_REFERENCEHOLDER_H
-#define OREGON_REFERENCEHOLDER_H
+#ifndef MANGOS_REFERENCEHOLDER_H
+#define MANGOS_REFERENCEHOLDER_H
 
 /* ReferenceHolder holds the actualy referenced obejct as well the refence
    count.  The ReferenecHolder implements as a policy base object and

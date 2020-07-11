@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -340,7 +340,7 @@ public:
         }
     
         //This is a hack. Spellcast will make creature aggro but that is not
-        //supposed to happen (Oregon not implemented/not found way to detect this spell kind)
+        //supposed to happen (MaNGOS not implemented/not found way to detect this spell kind)
         void DoUglyHack()
         {
             me->RemoveAllAuras();

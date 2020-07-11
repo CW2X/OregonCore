@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -956,7 +956,7 @@ class WorldObject : public Object, public WorldLocation
         bool CanDetectStealthOf(WorldObject const* obj, bool checkAlert = false) const;
 };
 
-namespace Oregon
+namespace MaNGOS
 {
 // Binary predicate to sort WorldObjects based on the distance to a reference WorldObject
 class ObjectDistanceOrderPred

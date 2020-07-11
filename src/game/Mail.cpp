@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -468,7 +468,7 @@ void WorldSession::HandleTakeItem(WorldPacket& recv_data)
                     sender_accId = sObjectMgr.GetPlayerAccountIdByGUID(sender_guid);
 
                     if (!sObjectMgr.GetPlayerNameByGUID(sender_guid, sender_name))
-                        sender_name = sObjectMgr.GetOregonStringForDBCLocale(LANG_UNKNOWN);
+                        sender_name = sObjectMgr.GetMaNGOSStringForDBCLocale(LANG_UNKNOWN);
                 }
                 sLog.outCommand(GetAccountId(), "GM %s (Account: %u) receive mail item: %s (Entry: %u Count: %u) and send COD money: %u to player: %s (Account: %u)",
                                 GetPlayerName(), GetAccountId(), it->GetProto()->Name1, it->GetEntry(), it->GetCount(), m->COD, sender_name.c_str(), sender_accId);

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGONCORE_CHAT_H
-#define OREGONCORE_CHAT_H
+#ifndef MANGOSCORE_CHAT_H
+#define MANGOSCORE_CHAT_H
 
 #include "SharedDefines.h"
 
@@ -71,7 +71,7 @@ public:
     }
 
     // function with different implementation for chat/console
-    virtual const char* GetOregonString(int32 entry) const;
+    virtual const char* GetMaNGOSString(int32 entry) const;
     virtual void SendSysMessage(const char* str);
 
     char* extractQuotedArg(char* args);
@@ -179,7 +179,7 @@ public:
     explicit CliHandler(void* callbackArg, Print* zprint) : m_callbackArg(callbackArg), m_print(zprint) {}
 
     // overwrite functions
-    const char* GetOregonString(int32 entry) const;
+    const char* GetMaNGOSString(int32 entry) const;
     bool isAvailable(ChatCommand const& cmd) const;
     void SendSysMessage(const char* str);
     char const* GetName() const;

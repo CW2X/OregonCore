@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_DEFINE_H
-#define OREGON_DEFINE_H
+#ifndef MANGOS_DEFINE_H
+#define MANGOS_DEFINE_H
 
 #include <cstdint>
 
@@ -26,34 +26,34 @@
 
 #include "Platform/CompilerDefs.h"
 
-#define OREGON_LITTLEENDIAN 0
-#define OREGON_BIGENDIAN    1
+#define MANGOS_LITTLEENDIAN 0
+#define MANGOS_BIGENDIAN    1
 
-#if !defined(OREGON_ENDIAN)
+#if !defined(MANGOS_ENDIAN)
 #  if defined (ACE_BIG_ENDIAN)
-#    define OREGON_ENDIAN OREGON_BIGENDIAN
+#    define MANGOS_ENDIAN MANGOS_BIGENDIAN
 #  else //ACE_BYTE_ORDER != ACE_BIG_ENDIAN
-#    define OREGON_ENDIAN OREGON_LITTLEENDIAN
+#    define MANGOS_ENDIAN MANGOS_LITTLEENDIAN
 #  endif //ACE_BYTE_ORDER
-#endif //OREGON_ENDIAN
+#endif //MANGOS_ENDIAN
 
 #if PLATFORM == PLATFORM_WINDOWS
-#  define OREGON_PATH_MAX MAX_PATH
+#  define MANGOS_PATH_MAX MAX_PATH
 #  ifndef DECLSPEC_NORETURN
 #    define DECLSPEC_NORETURN __declspec(noreturn)
 #  endif //DECLSPEC_NORETURN
 #else //PLATFORM != PLATFORM_WINDOWS
-#  define OREGON_PATH_MAX PATH_MAX
+#  define MANGOS_PATH_MAX PATH_MAX
 #  define DECLSPEC_NORETURN
 #endif //PLATFORM
 
 #if !defined(COREDEBUG)
-#  define OREGON_INLINE inline
+#  define MANGOS_INLINE inline
 #else //COREDEBUG
-#  if !defined(OREGON_DEBUG)
-#    define OREGON_DEBUG
-#  endif //OREGON_DEBUG
-#  define OREGON_INLINE
+#  if !defined(MANGOS_DEBUG)
+#    define MANGOS_DEBUG
+#  endif //MANGOS_DEBUG
+#  define MANGOS_INLINE
 #endif //!COREDEBUG
 
 #if COMPILER == COMPILER_GNU
@@ -75,5 +75,5 @@ typedef std::uint8_t uint8;
 
 typedef std::uint64_t OBJECT_HANDLE;
 
-#endif //OREGON_DEFINE_H
+#endif //MANGOS_DEFINE_H
 

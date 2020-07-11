@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -272,13 +272,13 @@ inline GameObject* Map::_FindGameObject(WorldObject* searchObject, uint32 guid) 
 {
     GameObject* gameobject = NULL;
 
-    CellCoord p(Oregon::ComputeCellCoord(searchObject->GetPositionX(), searchObject->GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(searchObject->GetPositionX(), searchObject->GetPositionY()));
     Cell cell(p);
 
-    Oregon::GameObjectWithDbGUIDCheck goCheck(*searchObject, guid);
-    Oregon::GameObjectSearcher<Oregon::GameObjectWithDbGUIDCheck> checker(gameobject, goCheck);
+    MaNGOS::GameObjectWithDbGUIDCheck goCheck(*searchObject, guid);
+    MaNGOS::GameObjectSearcher<MaNGOS::GameObjectWithDbGUIDCheck> checker(gameobject, goCheck);
 
-    TypeContainerVisitor<Oregon::GameObjectSearcher<Oregon::GameObjectWithDbGUIDCheck>, GridTypeMapContainer > objectChecker(checker);
+    TypeContainerVisitor<MaNGOS::GameObjectSearcher<MaNGOS::GameObjectWithDbGUIDCheck>, GridTypeMapContainer > objectChecker(checker);
     cell.Visit(p, objectChecker, *searchObject->GetMap(), *searchObject, searchObject->GetGridActivationRange());
 
     return gameobject;
@@ -389,7 +389,7 @@ void Map::ScriptsProcess()
                 {
                     uint64 targetGUID = target ? target->GetGUID() : 0;
                     uint32 loc_idx = pSource->GetSession()->GetSessionDbLocaleIndex();
-                    std::string text(sObjectMgr.GetOregonString(step.script->Talk.TextID, loc_idx));
+                    std::string text(sObjectMgr.GetMaNGOSString(step.script->Talk.TextID, loc_idx));
 
                     switch (step.script->Talk.ChatType)
                     {
@@ -839,13 +839,13 @@ void Map::ScriptsProcess()
                 WorldObject* wSource = dynamic_cast <WorldObject*> (source);
                 if (wSource) //using grid searcher
                 {
-                    CellCoord p(Oregon::ComputeCellCoord(wSource->GetPositionX(), wSource->GetPositionY()));
+                    CellCoord p(MaNGOS::ComputeCellCoord(wSource->GetPositionX(), wSource->GetPositionY()));
                     Cell cell(p);
 
-                    Oregon::CreatureWithDbGUIDCheck target_check(wSource, step.script->CallScript.CreatureEntry);
-                    Oregon::CreatureSearcher<Oregon::CreatureWithDbGUIDCheck> checker(cTarget, target_check);
+                    MaNGOS::CreatureWithDbGUIDCheck target_check(wSource, step.script->CallScript.CreatureEntry);
+                    MaNGOS::CreatureSearcher<MaNGOS::CreatureWithDbGUIDCheck> checker(cTarget, target_check);
 
-                    TypeContainerVisitor<Oregon::CreatureSearcher <Oregon::CreatureWithDbGUIDCheck>, GridTypeMapContainer > unit_checker(checker);
+                    TypeContainerVisitor<MaNGOS::CreatureSearcher <MaNGOS::CreatureWithDbGUIDCheck>, GridTypeMapContainer > unit_checker(checker);
                     cell.Visit(p, unit_checker, *wSource->GetMap(), *wSource, wSource->GetGridActivationRange());
                 }
                 else //check hashmap holders

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -120,10 +120,10 @@ class Database
         bool DirectPExecute(const char* format, ...) ATTR_PRINTF(2, 3);
         bool DirectExecute(PreparedStatement* stmt, PreparedValues& values, va_list* args);
 
-        // Writes SQL commands to a LOG file (see Oregond.conf "LogSQL")
+        // Writes SQL commands to a LOG file (see MaNGOSd.conf "LogSQL")
         bool PExecuteLog(const char* format, ...) ATTR_PRINTF(2, 3);
 
-        // Writes SQL commands to a LOG file (see Oregond.conf "LogSQL")
+        // Writes SQL commands to a LOG file (see MaNGOSd.conf "LogSQL")
         // but runs via PreparedStatements
         bool PreparedExecuteLog(const char* sql, const char* format = NULL, ...);
         bool PreparedExecuteLog(const char* sql, PreparedValues& values);

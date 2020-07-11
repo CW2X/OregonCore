@@ -1,5 +1,5 @@
 /*
-* This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+* This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
 * under the terms of the GNU General Public License as published by the
@@ -240,7 +240,7 @@ void CreatureTextMgr::SendChatPacket(WorldObject* source, Builder const& builder
     }
 
     float dist = GetRangeForChatType(msgType);
-    Oregon::PlayerDistWorker<CreatureTextLocalizer<Builder> > worker(dist, localizer);
+    MaNGOS::PlayerDistWorker<CreatureTextLocalizer<Builder> > worker(dist, localizer);
     source->VisitNearbyWorldObject(dist, worker);
 }
 

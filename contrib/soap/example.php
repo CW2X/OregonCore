@@ -14,7 +14,7 @@ $command = "server info";
 $client = new SoapClient(NULL,
 array(
     "location" => "http://$host:$soapport/",
-    "uri" => "urn:Oregon",
+    "uri" => "urn:MaNGOS",
     "style" => SOAP_RPC,
     'login' => $username,
     'password' => $password

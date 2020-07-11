@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_TYPELIST_H
-#define OREGON_TYPELIST_H
+#ifndef MANGOS_TYPELIST_H
+#define MANGOS_TYPELIST_H
 
 /*
   TypeList is the most simple but yet the most powerfull class of all.  It holds

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -53,8 +53,8 @@ RandomMovementGenerator<Creature>::_setRandomLocation(Creature& creature)
     ny = Y + distanceY;
 
     // prevent invalid coordinates generation
-    Oregon::NormalizeMapCoord(nx);
-    Oregon::NormalizeMapCoord(ny);
+    MaNGOS::NormalizeMapCoord(nx);
+    MaNGOS::NormalizeMapCoord(ny);
 
     dist = (nx - X) * (nx - X) + (ny - Y) * (ny - Y);
     

@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -91,5 +91,5 @@ class TicketMgr
 };
 
 #endif
-#define ticketmgr Oregon::Singleton<TicketMgr>::Instance()
+#define ticketmgr MaNGOS::Singleton<TicketMgr>::Instance()
 

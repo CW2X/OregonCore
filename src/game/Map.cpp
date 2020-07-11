@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -283,7 +283,7 @@ void Map::AddToGrid(Corpse* obj, Cell const& cell)
 void Map::SwitchGridContainers(Creature* obj, bool on)
 {
     ASSERT(!obj->IsPermanentWorldObject());
-    CellCoord p = Oregon::ComputeCellCoord(obj->GetPositionX(), obj->GetPositionY());
+    CellCoord p = MaNGOS::ComputeCellCoord(obj->GetPositionX(), obj->GetPositionY());
     if (p.x_coord >= TOTAL_NUMBER_OF_CELLS_PER_MAP || p.y_coord >= TOTAL_NUMBER_OF_CELLS_PER_MAP)
     {
         sLog.outError("Map::SwitchGridContainers: Object " UI64FMTD " has invalid coordinates X:%f Y:%f grid cell [%u:%u]", obj->GetGUID(), obj->GetPositionX(), obj->GetPositionY(), p.x_coord, p.y_coord);
@@ -410,7 +410,7 @@ bool Map::AddPlayerToMap(Player* player)
     // Check if we are adding to correct map
     ASSERT (player->GetMap() == this);
 
-    CellCoord p = Oregon::ComputeCellCoord(player->GetPositionX(), player->GetPositionY());
+    CellCoord p = MaNGOS::ComputeCellCoord(player->GetPositionX(), player->GetPositionY());
     if (p.x_coord >= TOTAL_NUMBER_OF_CELLS_PER_MAP || p.y_coord >= TOTAL_NUMBER_OF_CELLS_PER_MAP)
     {
         sLog.outError("Map::AddToMap: Player (GUID: %u) has invalid coordinates X:%f Y:%f grid cell [%u:%u]", player->GetGUIDLow(), player->GetPositionX(), player->GetPositionY(), p.x_coord, p.y_coord);
@@ -444,7 +444,7 @@ bool Map::AddToMap(T *obj)
         return true;
     }
 
-    CellCoord p = Oregon::ComputeCellCoord(obj->GetPositionX(), obj->GetPositionY());
+    CellCoord p = MaNGOS::ComputeCellCoord(obj->GetPositionX(), obj->GetPositionY());
     ASSERT(p.IsCoordValid());
     if (p.x_coord >= TOTAL_NUMBER_OF_CELLS_PER_MAP || p.y_coord >= TOTAL_NUMBER_OF_CELLS_PER_MAP)
     {
@@ -472,7 +472,7 @@ bool Map::AddToMap(T *obj)
     return true;
 }
 
-void Map::VisitNearbyCellsOf(WorldObject* obj, TypeContainerVisitor<Oregon::ObjectUpdater, GridTypeMapContainer> &gridVisitor, TypeContainerVisitor<Oregon::ObjectUpdater, WorldTypeMapContainer> &worldVisitor)
+void Map::VisitNearbyCellsOf(WorldObject* obj, TypeContainerVisitor<MaNGOS::ObjectUpdater, GridTypeMapContainer> &gridVisitor, TypeContainerVisitor<MaNGOS::ObjectUpdater, WorldTypeMapContainer> &worldVisitor)
 {
     // Check for valid position
     if (!obj->IsPositionValid())
@@ -518,11 +518,11 @@ void Map::Update(const uint32& t_diff)
     // update active cells around players and active objects
     resetMarkedCells();
 
-    Oregon::ObjectUpdater updater(t_diff);
+    MaNGOS::ObjectUpdater updater(t_diff);
     // for creature
-    TypeContainerVisitor<Oregon::ObjectUpdater, GridTypeMapContainer  > grid_object_update(updater);
+    TypeContainerVisitor<MaNGOS::ObjectUpdater, GridTypeMapContainer  > grid_object_update(updater);
     // for pets
-    TypeContainerVisitor<Oregon::ObjectUpdater, WorldTypeMapContainer > world_object_update(updater);
+    TypeContainerVisitor<MaNGOS::ObjectUpdater, WorldTypeMapContainer > world_object_update(updater);
 
     // the player iterator is stored in the map object
     // to make sure calls to Map::RemoveFromMap don't invalidate it
@@ -644,10 +644,10 @@ void Map::ProcessRelocationNotifies(const uint32& diff)
                 Cell cell(pair);
                 cell.SetNoCreate();
 
-                Oregon::DelayedUnitRelocation cell_relocationCreature(cell, pair, *this, monsterSightRadius);
-                Oregon::DelayedUnitRelocation cell_relocationPlayer(cell, pair, *this, MAX_VISIBILITY_DISTANCE);
-                TypeContainerVisitor<Oregon::DelayedUnitRelocation, GridTypeMapContainer  > grid_object_relocation(cell_relocationCreature);
-                TypeContainerVisitor<Oregon::DelayedUnitRelocation, WorldTypeMapContainer > world_object_relocation(cell_relocationPlayer);
+                MaNGOS::DelayedUnitRelocation cell_relocationCreature(cell, pair, *this, monsterSightRadius);
+                MaNGOS::DelayedUnitRelocation cell_relocationPlayer(cell, pair, *this, MAX_VISIBILITY_DISTANCE);
+                TypeContainerVisitor<MaNGOS::DelayedUnitRelocation, GridTypeMapContainer  > grid_object_relocation(cell_relocationCreature);
+                TypeContainerVisitor<MaNGOS::DelayedUnitRelocation, WorldTypeMapContainer > world_object_relocation(cell_relocationPlayer);
                 Visit(cell, grid_object_relocation);
                 Visit(cell, world_object_relocation);
             }
@@ -769,7 +769,7 @@ Map::CreatureRelocation(Creature* creature, float x, float y, float z, float ang
     // delay creature move for grid/cell to grid/cell moves
     if (old_cell.DiffCell(new_cell) || old_cell.DiffGrid(new_cell))
     {
-        #ifdef OREGON_DEBUG
+        #ifdef MANGOS_DEBUG
         sLog.outMap("Creature (GUID: %u Entry: %u) added to moving list from grid[%u,%u]cell[%u,%u] to grid[%u,%u]cell[%u,%u].", creature->GetGUIDLow(), creature->GetEntry(), old_cell.GridX(), old_cell.GridY(), old_cell.CellX(), old_cell.CellY(), new_cell.GridX(), new_cell.GridY(), new_cell.CellX(), new_cell.CellY());
         #endif
         AddCreatureToMoveList(creature, x, y, z, ang);
@@ -803,7 +803,7 @@ void Map::MoveAllCreaturesInMoveList()
         i_creaturesToMove.erase(iter);
 
         // calculate cells
-        CellCoord new_val = Oregon::ComputeCellCoord(cm.x, cm.y);
+        CellCoord new_val = MaNGOS::ComputeCellCoord(cm.x, cm.y);
         Cell new_cell(new_val);
 
         // do move or do move to respawn or remove creature if previous all fail
@@ -821,7 +821,7 @@ void Map::MoveAllCreaturesInMoveList()
             if (!CreatureRespawnRelocation(c))
             {
                 // ... or unload (if respawn grid also not loaded)
-                #ifdef OREGON_DEBUG
+                #ifdef MANGOS_DEBUG
                 sLog.outMap("Creature (GUID: %u Entry: %u) cannot be move to unloaded respawn grid.", c->GetGUIDLow(), c->GetEntry());
                 #endif
                 // crash fix for pets moving to unloaded cells.
@@ -842,7 +842,7 @@ bool Map::CreatureCellRelocation(Creature* c, Cell new_cell)
         // if in same cell then none do
         if (old_cell.DiffCell(new_cell))
         {
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
             sLog.outMap("Creature (GUID: %u Entry: %u) moved in grid[%u,%u] from cell[%u,%u] to cell[%u,%u].", c->GetGUIDLow(), c->GetEntry(), old_cell.GridX(), old_cell.GridY(), old_cell.CellX(), old_cell.CellY(), new_cell.CellX(), new_cell.CellY());
             #endif
 
@@ -851,7 +851,7 @@ bool Map::CreatureCellRelocation(Creature* c, Cell new_cell)
         }
         else
         {
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
             sLog.outMap("Creature (GUID: %u Entry: %u) moved in same grid[%u,%u]cell[%u,%u].", c->GetGUIDLow(), c->GetEntry(), old_cell.GridX(), old_cell.GridY(), old_cell.CellX(), old_cell.CellY());
             #endif
         }
@@ -864,7 +864,7 @@ bool Map::CreatureCellRelocation(Creature* c, Cell new_cell)
     {
         EnsureGridLoadedForActiveObject(new_cell, c);
 
-        #ifdef OREGON_DEBUG
+        #ifdef MANGOS_DEBUG
         sLog.outMap("Active creature (GUID: %u Entry: %u) moved from grid[%u,%u]cell[%u,%u] to grid[%u,%u]cell[%u,%u].", c->GetGUIDLow(), c->GetEntry(), old_cell.GridX(), old_cell.GridY(), old_cell.CellX(), old_cell.CellY(), new_cell.GridX(), new_cell.GridY(), new_cell.CellX(), new_cell.CellY());
         #endif
 
@@ -877,7 +877,7 @@ bool Map::CreatureCellRelocation(Creature* c, Cell new_cell)
     // in diff. loaded grid normal creature
     if (IsGridLoaded(GridCoord(new_cell.GridX(), new_cell.GridY())))
     {
-        #ifdef OREGON_DEBUG
+        #ifdef MANGOS_DEBUG
         sLog.outMap("Creature (GUID: %u Entry: %u) moved from grid[%u,%u]cell[%u,%u] to grid[%u,%u]cell[%u,%u].", c->GetGUIDLow(), c->GetEntry(), old_cell.GridX(), old_cell.GridY(), old_cell.CellX(), old_cell.CellY(), new_cell.GridX(), new_cell.GridY(), new_cell.CellX(), new_cell.CellY());
         #endif
 
@@ -889,7 +889,7 @@ bool Map::CreatureCellRelocation(Creature* c, Cell new_cell)
     }
 
     // fail to move: normal creature attempt move to unloaded grid
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     sLog.outMap("Creature (GUID: %u Entry: %u) attempted to move from grid[%u,%u]cell[%u,%u] to unloaded grid[%u,%u]cell[%u,%u].", c->GetGUIDLow(), c->GetEntry(), old_cell.GridX(), old_cell.GridY(), old_cell.CellX(), old_cell.CellY(), new_cell.GridX(), new_cell.GridY(), new_cell.CellX(), new_cell.CellY());
     #endif
     return false;
@@ -905,7 +905,7 @@ bool Map::CreatureRespawnRelocation(Creature* c)
     c->CombatStop();
     c->GetMotionMaster()->Clear();
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     sLog.outMap("Creature (GUID: %u Entry: %u) moved from grid[%u,%u]cell[%u,%u] to respawn grid[%u,%u]cell[%u,%u].", c->GetGUIDLow(), c->GetEntry(), c->GetCurrentCell().GridX(), c->GetCurrentCell().GridY(), c->GetCurrentCell().CellX(), c->GetCurrentCell().CellY(), resp_cell.GridX(), resp_cell.GridY(), resp_cell.CellX(), resp_cell.CellY());
     #endif
 
@@ -1928,18 +1928,18 @@ const char* Map::GetMapName() const
 void Map::UpdateObjectVisibility(WorldObject* obj, Cell cell, CellCoord cellpair)
 {
     cell.SetNoCreate();
-    Oregon::VisibleChangesNotifier notifier(*obj);
-    TypeContainerVisitor<Oregon::VisibleChangesNotifier, WorldTypeMapContainer > player_notifier(notifier);
+    MaNGOS::VisibleChangesNotifier notifier(*obj);
+    TypeContainerVisitor<MaNGOS::VisibleChangesNotifier, WorldTypeMapContainer > player_notifier(notifier);
     cell.Visit(cellpair, player_notifier, *this, *obj, obj->GetVisibilityRange());
 }
 
 void Map::UpdateObjectsVisibilityFor(Player* player, Cell cell, CellCoord cellpair)
 {
-    Oregon::VisibleNotifier notifier(*player);
+    MaNGOS::VisibleNotifier notifier(*player);
 
     cell.SetNoCreate();
-    TypeContainerVisitor<Oregon::VisibleNotifier, WorldTypeMapContainer > world_notifier(notifier);
-    TypeContainerVisitor<Oregon::VisibleNotifier, GridTypeMapContainer  > grid_notifier(notifier);
+    TypeContainerVisitor<MaNGOS::VisibleNotifier, WorldTypeMapContainer > world_notifier(notifier);
+    TypeContainerVisitor<MaNGOS::VisibleNotifier, GridTypeMapContainer  > grid_notifier(notifier);
     cell.Visit(cellpair, world_notifier, *this, *player->m_seer, player->GetVisibilityRange());
     cell.Visit(cellpair, grid_notifier,  *this, *player->m_seer, player->GetVisibilityRange());
 
@@ -2178,7 +2178,7 @@ bool Map::ActiveObjectsNearGrid(NGridType const& ngrid) const
     {
         Player* plr = iter->GetSource();
 
-        CellCoord p = Oregon::ComputeCellCoord(plr->GetPositionX(), plr->GetPositionY());
+        CellCoord p = MaNGOS::ComputeCellCoord(plr->GetPositionX(), plr->GetPositionY());
         if ((cell_min.x_coord <= p.x_coord && p.x_coord <= cell_max.x_coord) &&
             (cell_min.y_coord <= p.y_coord && p.y_coord <= cell_max.y_coord))
             return true;
@@ -2188,7 +2188,7 @@ bool Map::ActiveObjectsNearGrid(NGridType const& ngrid) const
     {
         WorldObject* obj = *iter;
 
-        CellCoord p = Oregon::ComputeCellCoord(obj->GetPositionX(), obj->GetPositionY());
+        CellCoord p = MaNGOS::ComputeCellCoord(obj->GetPositionX(), obj->GetPositionY());
         if ((cell_min.x_coord <= p.x_coord && p.x_coord <= cell_max.x_coord) &&
             (cell_min.y_coord <= p.y_coord && p.y_coord <= cell_max.y_coord))
             return true;
@@ -2206,12 +2206,12 @@ void Map::AddToActive(Creature* c)
     {
         float x, y, z;
         c->GetRespawnPosition(x, y, z);
-        GridCoord p = Oregon::ComputeGridCoord(x, y);
+        GridCoord p = MaNGOS::ComputeGridCoord(x, y);
         if (getNGrid(p.x_coord, p.y_coord))
             getNGrid(p.x_coord, p.y_coord)->incUnloadActiveLock();
         else
         {
-            GridCoord p2 = Oregon::ComputeGridCoord(c->GetPositionX(), c->GetPositionY());
+            GridCoord p2 = MaNGOS::ComputeGridCoord(c->GetPositionX(), c->GetPositionY());
             sLog.outError("Active creature (GUID: %u Entry: %u) added to grid[%u,%u] but spawn grid[%u,%u] not loaded.",
                           c->GetGUIDLow(), c->GetEntry(), p.x_coord, p.y_coord, p2.x_coord, p2.y_coord);
         }
@@ -2227,12 +2227,12 @@ void Map::RemoveFromActive(Creature* c)
     {
         float x, y, z;
         c->GetRespawnPosition(x, y, z);
-        GridCoord p = Oregon::ComputeGridCoord(x, y);
+        GridCoord p = MaNGOS::ComputeGridCoord(x, y);
         if (getNGrid(p.x_coord, p.y_coord))
             getNGrid(p.x_coord, p.y_coord)->decUnloadActiveLock();
         else
         {
-            GridCoord p2 = Oregon::ComputeGridCoord(c->GetPositionX(), c->GetPositionY());
+            GridCoord p2 = MaNGOS::ComputeGridCoord(c->GetPositionX(), c->GetPositionY());
             sLog.outError("Active creature (GUID: %u Entry: %u) removed from grid[%u,%u] but spawn grid[%u,%u] not loaded.",
                           c->GetGUIDLow(), c->GetEntry(), p.x_coord, p.y_coord, p2.x_coord, p2.y_coord);
         }

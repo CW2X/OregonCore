@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -342,7 +342,7 @@ bool Database::_Query(const char* sql, MYSQL_RES** pResult, MYSQL_FIELD** pField
     {
         // guarded block for thread-safe mySQL request
         ACE_Guard<ACE_Thread_Mutex> query_connection_guard(mMutex);
-        #ifdef OREGON_DEBUG
+        #ifdef MANGOS_DEBUG
         uint32 _s = getMSTime();
         #endif
         if (mysql_query(mMysql, sql))
@@ -353,7 +353,7 @@ bool Database::_Query(const char* sql, MYSQL_RES** pResult, MYSQL_FIELD** pField
         }
         else
         {
-            #ifdef OREGON_DEBUG
+            #ifdef MANGOS_DEBUG
             // prevent recursive death
             unsigned long oldMask = sLog.GetDBLogMask();
             sLog.SetDBLogMask(oldMask & ~(1 << LOG_TYPE_DEBUG));
@@ -466,7 +466,7 @@ bool Database::DirectExecute(bool lock, const char* sql)
     if (lock)
         mMutex.acquire();
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
     uint32 _s = getMSTime();
     #endif
     if (mysql_query(mMysql, sql))
@@ -479,7 +479,7 @@ bool Database::DirectExecute(bool lock, const char* sql)
     }
     else
     {
-        #ifdef OREGON_DEBUG
+        #ifdef MANGOS_DEBUG
         // prevent recursive death
         unsigned long oldMask = sLog.GetDBLogMask();
         sLog.SetDBLogMask(oldMask & ~(1 << LOG_TYPE_DEBUG));
@@ -522,7 +522,7 @@ bool Database::_TransactionCmd(const char* sql)
         sLog.outError("SQL ERROR: %s", mysql_error(mMysql));
         return false;
     }
-    #if OREGON_DEBUG
+    #if MANGOS_DEBUG
     else
         DEBUG_LOG("SQL: %s", sql);
     #endif

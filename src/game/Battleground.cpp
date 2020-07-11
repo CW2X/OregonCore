@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -28,7 +28,7 @@
 #include "GridNotifiersImpl.h"
 #include "ScriptMgr.h"
 
-namespace Oregon
+namespace MaNGOS
 {
 class BattlegroundChatBuilder
 {
@@ -37,7 +37,7 @@ class BattlegroundChatBuilder
             : i_msgtype(msgtype), i_textId(textId), i_source(source), i_args(args) {}
         void operator()(WorldPacket& data, int32 loc_idx)
         {
-            char const* text = sObjectMgr.GetOregonString(i_textId, loc_idx);
+            char const* text = sObjectMgr.GetMaNGOSString(i_textId, loc_idx);
 
             if (i_args)
             {
@@ -82,9 +82,9 @@ class Battleground2ChatBuilder
             : i_msgtype(msgtype), i_textId(textId), i_source(source), i_arg1(arg1), i_arg2(arg2) {}
         void operator()(WorldPacket& data, int32 loc_idx)
         {
-            char const* text = sObjectMgr.GetOregonString(i_textId, loc_idx);
-            char const* arg1str = i_arg1 ? sObjectMgr.GetOregonString(i_arg1, loc_idx) : "";
-            char const* arg2str = i_arg2 ? sObjectMgr.GetOregonString(i_arg2, loc_idx) : "";
+            char const* text = sObjectMgr.GetMaNGOSString(i_textId, loc_idx);
+            char const* arg1str = i_arg1 ? sObjectMgr.GetMaNGOSString(i_arg1, loc_idx) : "";
+            char const* arg2str = i_arg2 ? sObjectMgr.GetMaNGOSString(i_arg2, loc_idx) : "";
 
             char str [2048];
             snprintf(str, 2048, text, arg1str, arg2str );
@@ -108,7 +108,7 @@ class Battleground2ChatBuilder
         int32 i_arg1;
         int32 i_arg2;
 };
-}                                                           // namespace Oregon
+}                                                           // namespace MaNGOS
 
 template<class Do>
 void Battleground::BroadcastWorker(Do& _do)
@@ -943,7 +943,7 @@ void Battleground::SendRewardMarkByMail(Player* plr, uint32 mark, uint32 count)
                     subject = il->Name[loc_idx];
 
         // text
-        std::string textFormat = plr->GetSession()->GetOregonString(LANG_BG_MARK_BY_MAIL);
+        std::string textFormat = plr->GetSession()->GetMaNGOSString(LANG_BG_MARK_BY_MAIL);
         char textBuf[300];
         snprintf(textBuf, 300, textFormat.c_str(), GetName(), GetName());
         uint32 itemTextId = sObjectMgr.CreateItemText(textBuf);
@@ -1691,8 +1691,8 @@ bool Battleground::AddSpiritGuide(uint32 type, float x, float y, float z, float 
 
 void Battleground::SendMessageToAll(int32 entry, ChatMsg type, Player const* source)
 {
-    Oregon::BattlegroundChatBuilder bg_builder(type, entry, source);
-    Oregon::LocalizedPacketDo<Oregon::BattlegroundChatBuilder> bg_do(bg_builder);
+    MaNGOS::BattlegroundChatBuilder bg_builder(type, entry, source);
+    MaNGOS::LocalizedPacketDo<MaNGOS::BattlegroundChatBuilder> bg_do(bg_builder);
     BroadcastWorker(bg_do);
 }
 
@@ -1701,8 +1701,8 @@ void Battleground::PSendMessageToAll(int32 entry, ChatMsg type, Player const* so
     va_list ap;
     va_start(ap, source);
 
-    Oregon::BattlegroundChatBuilder bg_builder(type, entry, source, &ap);
-    Oregon::LocalizedPacketDo<Oregon::BattlegroundChatBuilder> bg_do(bg_builder);
+    MaNGOS::BattlegroundChatBuilder bg_builder(type, entry, source, &ap);
+    MaNGOS::LocalizedPacketDo<MaNGOS::BattlegroundChatBuilder> bg_do(bg_builder);
     BroadcastWorker(bg_do);
 
     va_end(ap);
@@ -1710,8 +1710,8 @@ void Battleground::PSendMessageToAll(int32 entry, ChatMsg type, Player const* so
 
 void Battleground::SendMessage2ToAll(int32 entry, ChatMsg type, Player const* source, int32 arg1, int32 arg2)
 {
-    Oregon::Battleground2ChatBuilder bg_builder(type, entry, source, arg1, arg2);
-    Oregon::LocalizedPacketDo<Oregon::Battleground2ChatBuilder> bg_do(bg_builder);
+    MaNGOS::Battleground2ChatBuilder bg_builder(type, entry, source, arg1, arg2);
+    MaNGOS::LocalizedPacketDo<MaNGOS::Battleground2ChatBuilder> bg_do(bg_builder);
     BroadcastWorker(bg_do);
 }
 
@@ -1725,10 +1725,10 @@ void Battleground::EndNow()
 }
 
 // Battleground messages are localized using the dbc lang, they are not client language dependent
-const char* Battleground::GetOregonString(int32 entry)
+const char* Battleground::GetMaNGOSString(int32 entry)
 {
     // FIXME: now we have different DBC locales and need localized message for each target client
-    return sObjectMgr.GetOregonStringForDBCLocale(entry);
+    return sObjectMgr.GetMaNGOSStringForDBCLocale(entry);
 }
 
 /*

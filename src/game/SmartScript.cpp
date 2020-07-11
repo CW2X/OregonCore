@@ -1,5 +1,5 @@
 /*
-* This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+* This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
 *
 * This program is free software; you can redistribute it and/or modify it
 * under the terms of the GNU General Public License as published by the
@@ -36,17 +36,17 @@
 #include "GameEventMgr.h"
 #include "ScriptMgr.h"
 
-class OregonStringTextBuilder
+class MaNGOSStringTextBuilder
 {
     public:
-        OregonStringTextBuilder(WorldObject* obj, ChatMsg msgtype, int32 id, uint32 language, WorldObject* target)
+        MaNGOSStringTextBuilder(WorldObject* obj, ChatMsg msgtype, int32 id, uint32 language, WorldObject* target)
             : _source(obj), _msgType(msgtype), _textId(id), _language(language), _target(target)
         {
         }
 
         size_t operator()(WorldPacket* data, int locale) const
         {
-            std::string text = sObjectMgr.GetOregonString(_textId, locale);
+            std::string text = sObjectMgr.GetMaNGOSString(_textId, locale);
 
             return CreatureTextMgr::BuildMonsterChat(data, _source, _msgType, text, Language(_language), _target, locale);
         }
@@ -763,7 +763,7 @@ void SmartScript::ProcessAction(SmartScriptHolder& e, Unit* unit, uint32 var0, u
             me->DoFleeToGetAssistance();
             if (e.action.flee.withEmote)
             {
-                OregonStringTextBuilder builder(me, CHAT_MSG_MONSTER_EMOTE, LANG_FLEE, LANG_UNIVERSAL, NULL);
+                MaNGOSStringTextBuilder builder(me, CHAT_MSG_MONSTER_EMOTE, LANG_FLEE, LANG_UNIVERSAL, NULL);
                 sCreatureTextMgr->SendChatPacket(me, builder, CHAT_MSG_MONSTER_EMOTE);
             }
             sLog.outDebug("SmartScript::ProcessAction:: SMART_ACTION_FLEE_FOR_ASSIST: Creature %u DoFleeToGetAssistance", me->GetGUIDLow());
@@ -1005,7 +1005,7 @@ void SmartScript::ProcessAction(SmartScriptHolder& e, Unit* unit, uint32 var0, u
                 me->CallForHelp((float)e.action.callHelp.range);
                 if (e.action.callHelp.withEmote)
                 {
-                    OregonStringTextBuilder builder(me, CHAT_MSG_MONSTER_EMOTE, LANG_CALL_FOR_HELP, LANG_UNIVERSAL, NULL);
+                    MaNGOSStringTextBuilder builder(me, CHAT_MSG_MONSTER_EMOTE, LANG_CALL_FOR_HELP, LANG_UNIVERSAL, NULL);
                     sCreatureTextMgr->SendChatPacket(me, builder, CHAT_MSG_MONSTER_EMOTE);
                 }
                 sLog.outDebug("SmartScript::ProcessAction: SMART_ACTION_CALL_FOR_HELP: Creature %u", me->GetGUIDLow());
@@ -2735,8 +2735,8 @@ ObjectList* SmartScript::GetWorldObjectsInDist(float dist)
 
     if (obj)
     {
-        Oregon::AllWorldObjectsInRange u_check(obj, dist);
-        Oregon::WorldObjectListSearcher<Oregon::AllWorldObjectsInRange> searcher(*targets, u_check);
+        MaNGOS::AllWorldObjectsInRange u_check(obj, dist);
+        MaNGOS::WorldObjectListSearcher<MaNGOS::AllWorldObjectsInRange> searcher(*targets, u_check);
         obj->VisitNearbyObject(dist, searcher);
     }
     return targets;
@@ -3601,16 +3601,16 @@ Unit* SmartScript::DoSelectLowestHpFriendly(float range, uint32 MinHPDiff)
     if (!me)
         return NULL;
 
-    CellCoord p(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
     Unit* unit = NULL;
 
-    Oregon::MostHPMissingInRange u_check(me, range, MinHPDiff);
-    Oregon::UnitLastSearcher<Oregon::MostHPMissingInRange> searcher(unit, u_check);
+    MaNGOS::MostHPMissingInRange u_check(me, range, MinHPDiff);
+    MaNGOS::UnitLastSearcher<MaNGOS::MostHPMissingInRange> searcher(unit, u_check);
 
-    TypeContainerVisitor<Oregon::UnitLastSearcher<Oregon::MostHPMissingInRange>, GridTypeMapContainer >  grid_unit_searcher(searcher);
+    TypeContainerVisitor<MaNGOS::UnitLastSearcher<MaNGOS::MostHPMissingInRange>, GridTypeMapContainer >  grid_unit_searcher(searcher);
 
     cell.Visit(p, grid_unit_searcher, *me->GetMap(), *me, range);
     return unit;
@@ -3621,14 +3621,14 @@ void SmartScript::DoFindFriendlyCC(std::list<Creature*>& _list, float range)
     if (!me)
         return;
 
-    CellCoord p(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::FriendlyCCedInRange u_check(me, range);
-    Oregon::CreatureListSearcher<Oregon::FriendlyCCedInRange> searcher(_list, u_check);
+    MaNGOS::FriendlyCCedInRange u_check(me, range);
+    MaNGOS::CreatureListSearcher<MaNGOS::FriendlyCCedInRange> searcher(_list, u_check);
 
-    TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::FriendlyCCedInRange>, GridTypeMapContainer >  grid_creature_searcher(searcher);
+    TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::FriendlyCCedInRange>, GridTypeMapContainer >  grid_creature_searcher(searcher);
 
     cell.Visit(p, grid_creature_searcher, *me->GetMap(), *me, range);
 }
@@ -3638,14 +3638,14 @@ void SmartScript::DoFindFriendlyMissingBuff(std::list<Creature*>& list, float ra
     if (!me)
         return;
 
-    CellCoord p(Oregon::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
+    CellCoord p(MaNGOS::ComputeCellCoord(me->GetPositionX(), me->GetPositionY()));
     Cell cell(p);
     cell.SetNoCreate();
 
-    Oregon::FriendlyMissingBuffInRange u_check(me, range, spellid);
-    Oregon::CreatureListSearcher<Oregon::FriendlyMissingBuffInRange> searcher(list, u_check);
+    MaNGOS::FriendlyMissingBuffInRange u_check(me, range, spellid);
+    MaNGOS::CreatureListSearcher<MaNGOS::FriendlyMissingBuffInRange> searcher(list, u_check);
 
-    TypeContainerVisitor<Oregon::CreatureListSearcher<Oregon::FriendlyMissingBuffInRange>, GridTypeMapContainer >  grid_creature_searcher(searcher);
+    TypeContainerVisitor<MaNGOS::CreatureListSearcher<MaNGOS::FriendlyMissingBuffInRange>, GridTypeMapContainer >  grid_creature_searcher(searcher);
 
     cell.Visit(p, grid_creature_searcher, *me->GetMap(), *me, range);
 }
@@ -3656,8 +3656,8 @@ Unit* SmartScript::DoFindClosestFriendlyInRange(float range, bool playerOnly)
         return NULL;
 
     Unit* unit = NULL;
-    Oregon::AnyFriendlyUnitInObjectRangeCheck u_check(me, me, range, playerOnly);
-    Oregon::UnitLastSearcher<Oregon::AnyFriendlyUnitInObjectRangeCheck> searcher(unit, u_check);
+    MaNGOS::AnyFriendlyUnitInObjectRangeCheck u_check(me, me, range, playerOnly);
+    MaNGOS::UnitLastSearcher<MaNGOS::AnyFriendlyUnitInObjectRangeCheck> searcher(unit, u_check);
     me->VisitNearbyObject(range, searcher);
     return unit;
 }

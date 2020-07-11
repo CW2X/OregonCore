@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -235,7 +235,7 @@ FILE* Log::openGmlogPerAccount(uint64 account)
     if (m_gmlog_filename_format.empty())
         return NULL;
 
-    char namebuf[OREGON_PATH_MAX];
+    char namebuf[MANGOS_PATH_MAX];
     snprintf(namebuf, sizeof(namebuf), m_gmlog_filename_format.c_str(), account);
     return fopen(namebuf, "ab");
 }

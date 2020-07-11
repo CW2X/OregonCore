@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -47,7 +47,7 @@ void SystemMgr::LoadVersion()
 
 void SystemMgr::LoadScriptTexts()
 {
-    LoadOregonStrings(WorldDatabase, "script_texts", TEXT_SOURCE_RANGE, 1 + (TEXT_SOURCE_RANGE * 2));
+    LoadMaNGOSStrings(WorldDatabase, "script_texts", TEXT_SOURCE_RANGE, 1 + (TEXT_SOURCE_RANGE * 2));
 
     QueryResult_AutoPtr Result = WorldDatabase.Query("SELECT entry, sound, type, language, emote FROM script_texts");
 
@@ -103,7 +103,7 @@ void SystemMgr::LoadScriptTexts()
 
 void SystemMgr::LoadScriptTextsCustom()
 {
-    LoadOregonStrings(WorldDatabase, "custom_texts", TEXT_SOURCE_RANGE * 2, 1 + (TEXT_SOURCE_RANGE * 3));
+    LoadMaNGOSStrings(WorldDatabase, "custom_texts", TEXT_SOURCE_RANGE * 2, 1 + (TEXT_SOURCE_RANGE * 3));
 
     QueryResult_AutoPtr Result = WorldDatabase.Query("SELECT entry, sound, type, language, emote FROM custom_texts");
 

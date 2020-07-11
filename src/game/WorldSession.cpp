@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -97,7 +97,7 @@ void WorldSession::SendPacket(WorldPacket const* packet)
     if (!m_Socket)
         return;
 
-    #ifdef OREGON_DEBUG
+    #ifdef MANGOS_DEBUG
 
     // Code for network use statistic
     static uint64 sendPacketCount = 0;
@@ -131,7 +131,7 @@ void WorldSession::SendPacket(WorldPacket const* packet)
         sendLastPacketBytes = packet->wpos();               // wpos is real written size
     }
 
-    #endif                                                  // !OREGON_DEBUG
+    #endif                                                  // !MANGOS_DEBUG
 
     if (m_Socket->SendPacket(*packet) == -1)
         m_Socket->CloseSocket();
@@ -526,7 +526,7 @@ void WorldSession::SendNotification(const char* format, ...)
 
 void WorldSession::SendNotification(int32 string_id, ...)
 {
-    char const* format = GetOregonString(string_id);
+    char const* format = GetMaNGOSString(string_id);
     if (format)
     {
         va_list ap;
@@ -542,9 +542,9 @@ void WorldSession::SendNotification(int32 string_id, ...)
     }
 }
 
-const char* WorldSession::GetOregonString(int32 entry) const
+const char* WorldSession::GetMaNGOSString(int32 entry) const
 {
-    return sObjectMgr.GetOregonString(entry, GetSessionDbLocaleIndex());
+    return sObjectMgr.GetMaNGOSString(entry, GetSessionDbLocaleIndex());
 }
 
 void WorldSession::Handle_NULL(WorldPacket& recvPacket)

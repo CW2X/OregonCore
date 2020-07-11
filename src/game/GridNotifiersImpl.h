@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGON_GRIDNOTIFIERSIMPL_H
-#define OREGON_GRIDNOTIFIERSIMPL_H
+#ifndef MANGOS_GRIDNOTIFIERSIMPL_H
+#define MANGOS_GRIDNOTIFIERSIMPL_H
 
 #include "GridNotifiers.h"
 #include "WorldPacket.h"
@@ -28,7 +28,7 @@
 
 template<class T>
 inline void
-Oregon::VisibleNotifier::Visit(GridRefManager<T>& m)
+MaNGOS::VisibleNotifier::Visit(GridRefManager<T>& m)
 {
 
     for (typename GridRefManager<T>::iterator iter = m.begin(); iter != m.end(); ++iter)
@@ -39,7 +39,7 @@ Oregon::VisibleNotifier::Visit(GridRefManager<T>& m)
 }
 
 inline void
-Oregon::ObjectUpdater::Visit(CreatureMapType& m)
+MaNGOS::ObjectUpdater::Visit(CreatureMapType& m)
 {
     for (CreatureMapType::iterator iter = m.begin(); iter != m.end(); ++iter)
         if (iter->GetSource()->IsInWorld())
@@ -51,7 +51,7 @@ Oregon::ObjectUpdater::Visit(CreatureMapType& m)
 // WorldObject searchers & workers
 
 template<class Check>
-void Oregon::WorldObjectSearcher<Check>::Visit(GameObjectMapType& m)
+void MaNGOS::WorldObjectSearcher<Check>::Visit(GameObjectMapType& m)
 {
     // already found
     if (i_object)
@@ -68,7 +68,7 @@ void Oregon::WorldObjectSearcher<Check>::Visit(GameObjectMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectSearcher<Check>::Visit(PlayerMapType& m)
+void MaNGOS::WorldObjectSearcher<Check>::Visit(PlayerMapType& m)
 {
     // already found
     if (i_object)
@@ -85,7 +85,7 @@ void Oregon::WorldObjectSearcher<Check>::Visit(PlayerMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectSearcher<Check>::Visit(CreatureMapType& m)
+void MaNGOS::WorldObjectSearcher<Check>::Visit(CreatureMapType& m)
 {
     // already found
     if (i_object)
@@ -102,7 +102,7 @@ void Oregon::WorldObjectSearcher<Check>::Visit(CreatureMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectSearcher<Check>::Visit(CorpseMapType& m)
+void MaNGOS::WorldObjectSearcher<Check>::Visit(CorpseMapType& m)
 {
     // already found
     if (i_object)
@@ -119,7 +119,7 @@ void Oregon::WorldObjectSearcher<Check>::Visit(CorpseMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectSearcher<Check>::Visit(DynamicObjectMapType& m)
+void MaNGOS::WorldObjectSearcher<Check>::Visit(DynamicObjectMapType& m)
 {
     // already found
     if (i_object)
@@ -136,7 +136,7 @@ void Oregon::WorldObjectSearcher<Check>::Visit(DynamicObjectMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectListSearcher<Check>::Visit(PlayerMapType& m)
+void MaNGOS::WorldObjectListSearcher<Check>::Visit(PlayerMapType& m)
 {
     for (PlayerMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -144,7 +144,7 @@ void Oregon::WorldObjectListSearcher<Check>::Visit(PlayerMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectListSearcher<Check>::Visit(CreatureMapType& m)
+void MaNGOS::WorldObjectListSearcher<Check>::Visit(CreatureMapType& m)
 {
     for (CreatureMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -152,7 +152,7 @@ void Oregon::WorldObjectListSearcher<Check>::Visit(CreatureMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectListSearcher<Check>::Visit(CorpseMapType& m)
+void MaNGOS::WorldObjectListSearcher<Check>::Visit(CorpseMapType& m)
 {
     for (CorpseMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -160,7 +160,7 @@ void Oregon::WorldObjectListSearcher<Check>::Visit(CorpseMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectListSearcher<Check>::Visit(GameObjectMapType& m)
+void MaNGOS::WorldObjectListSearcher<Check>::Visit(GameObjectMapType& m)
 {
     for (GameObjectMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -168,7 +168,7 @@ void Oregon::WorldObjectListSearcher<Check>::Visit(GameObjectMapType& m)
 }
 
 template<class Check>
-void Oregon::WorldObjectListSearcher<Check>::Visit(DynamicObjectMapType& m)
+void MaNGOS::WorldObjectListSearcher<Check>::Visit(DynamicObjectMapType& m)
 {
     for (DynamicObjectMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -178,7 +178,7 @@ void Oregon::WorldObjectListSearcher<Check>::Visit(DynamicObjectMapType& m)
 // Gameobject searchers
 
 template<class Check>
-void Oregon::GameObjectSearcher<Check>::Visit(GameObjectMapType& m)
+void MaNGOS::GameObjectSearcher<Check>::Visit(GameObjectMapType& m)
 {
     // already found
     if (i_object)
@@ -195,7 +195,7 @@ void Oregon::GameObjectSearcher<Check>::Visit(GameObjectMapType& m)
 }
 
 template<class Check>
-void Oregon::GameObjectLastSearcher<Check>::Visit(GameObjectMapType& m)
+void MaNGOS::GameObjectLastSearcher<Check>::Visit(GameObjectMapType& m)
 {
     for (GameObjectMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
     {
@@ -205,7 +205,7 @@ void Oregon::GameObjectLastSearcher<Check>::Visit(GameObjectMapType& m)
 }
 
 template<class Check>
-void Oregon::GameObjectListSearcher<Check>::Visit(GameObjectMapType& m)
+void MaNGOS::GameObjectListSearcher<Check>::Visit(GameObjectMapType& m)
 {
     for (GameObjectMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -215,7 +215,7 @@ void Oregon::GameObjectListSearcher<Check>::Visit(GameObjectMapType& m)
 // Unit searchers
 
 template<class Check>
-void Oregon::UnitSearcher<Check>::Visit(CreatureMapType& m)
+void MaNGOS::UnitSearcher<Check>::Visit(CreatureMapType& m)
 {
     // already found
     if (i_object)
@@ -232,7 +232,7 @@ void Oregon::UnitSearcher<Check>::Visit(CreatureMapType& m)
 }
 
 template<class Check>
-void Oregon::UnitSearcher<Check>::Visit(PlayerMapType& m)
+void MaNGOS::UnitSearcher<Check>::Visit(PlayerMapType& m)
 {
     // already found
     if (i_object)
@@ -249,7 +249,7 @@ void Oregon::UnitSearcher<Check>::Visit(PlayerMapType& m)
 }
 
 template<class Check>
-void Oregon::UnitLastSearcher<Check>::Visit(CreatureMapType& m)
+void MaNGOS::UnitLastSearcher<Check>::Visit(CreatureMapType& m)
 {
     for (CreatureMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
     {
@@ -259,7 +259,7 @@ void Oregon::UnitLastSearcher<Check>::Visit(CreatureMapType& m)
 }
 
 template<class Check>
-void Oregon::UnitLastSearcher<Check>::Visit(PlayerMapType& m)
+void MaNGOS::UnitLastSearcher<Check>::Visit(PlayerMapType& m)
 {
     for (PlayerMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
     {
@@ -269,7 +269,7 @@ void Oregon::UnitLastSearcher<Check>::Visit(PlayerMapType& m)
 }
 
 template<class Check>
-void Oregon::UnitListSearcher<Check>::Visit(PlayerMapType& m)
+void MaNGOS::UnitListSearcher<Check>::Visit(PlayerMapType& m)
 {
     for (PlayerMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -277,7 +277,7 @@ void Oregon::UnitListSearcher<Check>::Visit(PlayerMapType& m)
 }
 
 template<class Check>
-void Oregon::UnitListSearcher<Check>::Visit(CreatureMapType& m)
+void MaNGOS::UnitListSearcher<Check>::Visit(CreatureMapType& m)
 {
     for (CreatureMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -287,7 +287,7 @@ void Oregon::UnitListSearcher<Check>::Visit(CreatureMapType& m)
 // Creature searchers
 
 template<class Check>
-void Oregon::CreatureSearcher<Check>::Visit(CreatureMapType& m)
+void MaNGOS::CreatureSearcher<Check>::Visit(CreatureMapType& m)
 {
     // already found
     if (i_object)
@@ -304,7 +304,7 @@ void Oregon::CreatureSearcher<Check>::Visit(CreatureMapType& m)
 }
 
 template<class Check>
-void Oregon::CreatureLastSearcher<Check>::Visit(CreatureMapType& m)
+void MaNGOS::CreatureLastSearcher<Check>::Visit(CreatureMapType& m)
 {
     for (CreatureMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
     {
@@ -314,7 +314,7 @@ void Oregon::CreatureLastSearcher<Check>::Visit(CreatureMapType& m)
 }
 
 template<class Check>
-void Oregon::CreatureListSearcher<Check>::Visit(CreatureMapType& m)
+void MaNGOS::CreatureListSearcher<Check>::Visit(CreatureMapType& m)
 {
     for (CreatureMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -322,7 +322,7 @@ void Oregon::CreatureListSearcher<Check>::Visit(CreatureMapType& m)
 }
 
 template<class Check>
-void Oregon::PlayerListSearcher<Check>::Visit(PlayerMapType& m)
+void MaNGOS::PlayerListSearcher<Check>::Visit(PlayerMapType& m)
 {
     for (PlayerMapType::iterator itr = m.begin(); itr != m.end(); ++itr)
         if (i_check(itr->GetSource()))
@@ -330,7 +330,7 @@ void Oregon::PlayerListSearcher<Check>::Visit(PlayerMapType& m)
 }
 
 template<class Check>
-void Oregon::PlayerSearcher<Check>::Visit(PlayerMapType& m)
+void MaNGOS::PlayerSearcher<Check>::Visit(PlayerMapType& m)
 {
     // already found
     if (i_object)
@@ -347,7 +347,7 @@ void Oregon::PlayerSearcher<Check>::Visit(PlayerMapType& m)
 }
 
 template<class Builder>
-void Oregon::LocalizedPacketDo<Builder>::operator()(Player* p)
+void MaNGOS::LocalizedPacketDo<Builder>::operator()(Player* p)
 {
     uint32 loc_idx = p->GetSession()->GetSessionDbLocaleIndex();
     uint32 cache_idx = loc_idx + 1;
@@ -372,7 +372,7 @@ void Oregon::LocalizedPacketDo<Builder>::operator()(Player* p)
 }
 
 template<class Builder>
-void Oregon::LocalizedPacketListDo<Builder>::operator()(Player* p)
+void MaNGOS::LocalizedPacketListDo<Builder>::operator()(Player* p)
 {
     uint32 loc_idx = p->GetSession()->GetSessionDbLocaleIndex();
     uint32 cache_idx = loc_idx + 1;
@@ -395,5 +395,5 @@ void Oregon::LocalizedPacketListDo<Builder>::operator()(Player* p)
         p->SendDirectMessage((*data_list)[i]);
 }
 
-#endif                                                      // OREGON_GRIDNOTIFIERSIMPL_H
+#endif                                                      // MANGOS_GRIDNOTIFIERSIMPL_H
 

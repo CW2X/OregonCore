@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -161,8 +161,10 @@ class item_only_for_flight : public ItemScript
 {
 public: 
     item_only_for_flight() : ItemScript("item_only_for_flight") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* pPlayer, Item* pItem, SpellCastTargets const& /*targets*/) override
     {
         uint32 itemId = pItem->GetEntry();
@@ -189,8 +191,10 @@ public:
         pPlayer->SendEquipError(EQUIP_ERR_CANT_DO_RIGHT_NOW, pItem, NULL);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -198,8 +202,10 @@ class item_attuned_crystal_cores : public ItemScript
 {
 public: 
     item_attuned_crystal_cores() : ItemScript("item_attuned_crystal_cores") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT &&
@@ -210,8 +216,10 @@ public:
         player->SendEquipError(EQUIP_ERR_CANT_DO_RIGHT_NOW, _Item, NULL);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -219,8 +227,10 @@ class item_disciplinary_rod : public ItemScript
 {
 public: 
     item_disciplinary_rod() : ItemScript("item_disciplinary_rod") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT &&
@@ -230,8 +240,10 @@ public:
         player->SendEquipError(EQUIP_ERR_CANT_DO_RIGHT_NOW, _Item, NULL);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -239,8 +251,10 @@ class item_draenei_fishing_net : public ItemScript
 {
 public: 
     item_draenei_fishing_net() : ItemScript("item_draenei_fishing_net") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* pPlayer, Item* /*pItem*/, SpellCastTargets const& /*targets*/) override
     {
         //if (targets.getGOTarget() && targets.getGOTarget()->GetTypeId() == TYPEID_GAMEOBJECT &&
@@ -270,8 +284,10 @@ public:
         //}
         return false;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -279,8 +295,10 @@ class item_gor_dreks_ointment : public ItemScript
 {
 public: 
     item_gor_dreks_ointment() : ItemScript("item_gor_dreks_ointment") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* pPlayer, Item* pItem, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT &&
@@ -290,8 +308,10 @@ public:
         pPlayer->SendEquipError(EQUIP_ERR_CANT_DO_RIGHT_NOW, pItem, NULL);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -299,8 +319,10 @@ class item_muiseks_vessel : public ItemScript
 {
 public: 
     item_muiseks_vessel() : ItemScript("item_muiseks_vessel") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         Unit* uTarget = targets.getUnitTarget();
@@ -356,8 +378,10 @@ public:
         player->SendEquipError(EQUIP_ERR_NONE, _Item, NULL);    // break spell
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -365,8 +389,10 @@ class item_inoculating_crystal : public ItemScript
 {
 public: 
     item_inoculating_crystal() : ItemScript("item_inoculating_crystal") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT &&
@@ -381,8 +407,10 @@ public:
         player->SendEquipError(EQUIP_ERR_NONE, _Item, NULL);    // break spell
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -390,8 +418,10 @@ class item_razorthorn_flayer_gland : public ItemScript
 {
 public: 
     item_razorthorn_flayer_gland() : ItemScript("item_razorthorn_flayer_gland") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT &&
@@ -401,8 +431,10 @@ public:
         player->SendEquipError(EQUIP_ERR_YOU_CAN_NEVER_USE_THAT_ITEM, _Item, NULL);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -410,8 +442,10 @@ class item_tame_beast_rods : public ItemScript
 {
 public: 
     item_tame_beast_rods() : ItemScript("item_tame_beast_rods") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         uint32 itemSpell = _Item->GetProto()->Spells[0].SpellId;
@@ -489,8 +523,10 @@ public:
         player->SendEquipError(EQUIP_ERR_NONE, _Item, NULL);    // break spell
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -498,8 +534,10 @@ class item_soul_cannon : public ItemScript
 {
 public: 
     item_soul_cannon() : ItemScript("item_soul_cannon") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         // allow use
@@ -511,8 +549,10 @@ public:
         player->SendEquipError(EQUIP_ERR_YOU_CAN_NEVER_USE_THAT_ITEM, _Item, NULL);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -520,8 +560,10 @@ class item_sparrowhawk_net : public ItemScript
 {
 public: 
     item_sparrowhawk_net() : ItemScript("item_sparrowhawk_net") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT &&
@@ -531,8 +573,10 @@ public:
         player->SendEquipError(EQUIP_ERR_YOU_CAN_NEVER_USE_THAT_ITEM, _Item, NULL);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -540,8 +584,10 @@ class item_voodoo_charm : public ItemScript
 {
 public: 
     item_voodoo_charm() : ItemScript("item_voodoo_charm") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT && targets.getUnitTarget()->isDead() &&
@@ -556,8 +602,10 @@ public:
         player->SendEquipError(EQUIP_ERR_NONE, _Item, NULL);    // break spell
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -565,8 +613,10 @@ class item_yehkinyas_bramble : public ItemScript
 {
 public: 
     item_yehkinyas_bramble() : ItemScript("item_yehkinyas_bramble") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (player->GetQuestStatus(3520) == QUEST_STATUS_INCOMPLETE)
@@ -589,8 +639,10 @@ public:
         player->SendEquipError(EQUIP_ERR_NONE, _Item, NULL);    // break spell
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -598,8 +650,10 @@ class item_chest_of_containment_coffers : public ItemScript
 {
 public: 
     item_chest_of_containment_coffers() : ItemScript("item_chest_of_containment_coffers") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT && targets.getUnitTarget()->IsAlive() &&
@@ -614,8 +668,10 @@ public:
         player->SendEquipError(EQUIP_ERR_NONE, _Item, NULL);    // break spell
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 
@@ -623,8 +679,10 @@ class item_battery : public ItemScript
 {
 public: 
     item_battery() : ItemScript("item_battery") { }
-    
-    
+    
+
+    
+
     bool OnUse(Player* player, Item* _Item, SpellCastTargets const& targets) override
     {
         if (targets.getUnitTarget() && targets.getUnitTarget()->GetTypeId() == TYPEID_UNIT &&
@@ -635,8 +693,10 @@ public:
         player->SendEquipError(EQUIP_ERR_CANT_DO_RIGHT_NOW, _Item, NULL);
         return true;
     }
-    
-    
+    
+
+    
+
     
 };
 

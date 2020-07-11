@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -44,7 +44,7 @@ void SqlQuery::Execute(Database* db)
 void SqlResultQueue::Update()
 {
     // execute the callbacks waiting in the synchronization queue
-    Oregon::IQueryCallback* callback;
+    MaNGOS::IQueryCallback* callback;
     while (next(callback))
     {
         callback->Execute();
@@ -52,7 +52,7 @@ void SqlResultQueue::Update()
     }
 }
 
-bool SqlQueryHolder::Execute(Oregon::IQueryCallback* callback, SqlDelayThread* thread, SqlResultQueue* queue)
+bool SqlQueryHolder::Execute(MaNGOS::IQueryCallback* callback, SqlDelayThread* thread, SqlResultQueue* queue)
 {
     if (!callback || !thread || !queue)
         return false;

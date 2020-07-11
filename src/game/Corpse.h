@@ -1,5 +1,5 @@
 /*
- * This file is part of the OregonCore Project. See AUTHORS file for Copyright information
+ * This file is part of the MaNGOSCore Project. See AUTHORS file for Copyright information
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -15,8 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OREGONCORE_CORPSE_H
-#define OREGONCORE_CORPSE_H
+#ifndef MANGOSCORE_CORPSE_H
+#define MANGOSCORE_CORPSE_H
 
 #include "Object.h"
 #include "Database/DatabaseEnv.h"
