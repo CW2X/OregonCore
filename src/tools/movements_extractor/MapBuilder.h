@@ -25,8 +25,8 @@
 #include "TerrainBuilder.h"
 #include "IntermediateValues.h"
 
-#include "IVMapManager.h"
-#include "WorldModel.h"
+#include "../game/vmap/IVMapManager.h"
+#include "../game/vmap/WorldModel.h"
 
 #include "Recast.h"
 #include "DetourNavMesh.h"

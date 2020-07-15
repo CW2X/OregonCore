@@ -22,7 +22,7 @@
 #include <G3D/Vector3.h>
 #include <G3D/AABox.h>
 #include <G3D/Ray.h>
-#include "vmap/BoundingIntervalHierarchy.h"
+#include "BoundingIntervalHierarchy.h"
 
 #include "Platform/Define.h"
 

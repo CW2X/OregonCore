@@ -30,3 +30,7 @@ if( SERVERS )
   add_subdirectory(mangosd)
 endif()
 
+if(TOOLS)
+  add_subdirectory(game/vmap)
+  add_subdirectory(tools)
+endif(TOOLS)

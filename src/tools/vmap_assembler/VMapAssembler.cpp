@@ -18,7 +18,7 @@
 #include <string>
 #include <iostream>
 
-#include "TileAssembler.h"
+#include "../game/vmap/TileAssembler.h"
 
 int main(int argc, char* argv[])
 {

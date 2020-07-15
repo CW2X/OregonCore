@@ -20,9 +20,9 @@
 
 #include "MMapCommon.h"
 #include "MangosMap.h"
-#include "../../src/game/MoveMapSharedDefines.h"
+#include "../game/MotionGenerators/MoveMapSharedDefines.h"
 
-#include "WorldModel.h"
+#include "../game/vmap/WorldModel.h"
 
 #include "G3D/Array.h"
 #include "G3D/Vector3.h"

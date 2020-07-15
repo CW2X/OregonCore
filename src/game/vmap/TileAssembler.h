@@ -23,8 +23,8 @@
 #include <map>
 #include <set>
 
-#include "vmap/ModelInstance.h"
-#include "vmap/WorldModel.h"
+#include "ModelInstance.h"
+#include "WorldModel.h"
 
 namespace VMAP
 {

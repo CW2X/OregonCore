@@ -18,8 +18,8 @@
 #include "MMapCommon.h"
 #include "MapBuilder.h"
 
-#include "MapTree.h"
-#include "ModelInstance.h"
+#include "../game/vmap/MapTree.h"
+#include "../game/vmap/ModelInstance.h"
 
 #include "DetourNavMeshBuilder.h"
 #include "DetourCommon.h"
